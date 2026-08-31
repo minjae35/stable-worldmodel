@@ -2,7 +2,7 @@ import logging
 import os
 from pathlib import Path
 
-os.environ['MUJOCO_GL'] = 'glfw'
+os.environ.setdefault('MUJOCO_GL', 'glfw')
 import hydra
 import numpy as np
 from omegaconf import DictConfig, OmegaConf
