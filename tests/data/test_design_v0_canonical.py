@@ -77,9 +77,12 @@ def test_episode_split_is_deterministic():
 
 def test_pusht_episode_split_sizes():
     train, val = episode_split(PUSHT_EXPECTED_EPISODES)
-    assert len(train) == 1800
-    assert len(val) == 200
+    train_n = int(PUSHT_EXPECTED_EPISODES * TRAIN_FRACTION)
+    val_n = PUSHT_EXPECTED_EPISODES - train_n
+    assert len(train) == train_n == 16816
+    assert len(val) == val_n == 1869
     assert TRAIN_FRACTION == 0.9
+    assert sorted(train + val) == list(range(PUSHT_EXPECTED_EPISODES))
 
 
 def test_episode_split_rejects_empty_side():
@@ -177,11 +180,14 @@ def test_pusht_tree_metadata_and_lfs_checksum():
 
 
 def test_pusht_count_and_h5_stats(tmp_path):
-    verify_pusht_counts(2000, 297_806)
+    verify_pusht_counts(
+        PUSHT_EXPECTED_EPISODES,
+        PUSHT_EXPECTED_TRANSITIONS,
+    )
     with pytest.raises(ValueError, match='episode count'):
-        verify_pusht_counts(1999, 297_806)
+        verify_pusht_counts(1999, PUSHT_EXPECTED_TRANSITIONS)
     with pytest.raises(ValueError, match='transition count'):
-        verify_pusht_counts(2000, 1)
+        verify_pusht_counts(PUSHT_EXPECTED_EPISODES, 1)
 
     h5py = pytest.importorskip('h5py')
     path = tmp_path / 'tiny.h5'
