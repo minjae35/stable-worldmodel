@@ -9,11 +9,20 @@ from torch import nn
 from torch.utils.data import Dataset
 from omegaconf import OmegaConf
 
+from scripts.data.design_v0.manifest import (
+    build_split_manifest,
+    write_json,
+)
 from scripts.train.design_v0 import (
     DesignV0TrainingModule,
     build_checkpoint_metadata,
     build_design_v0_data,
-    split_environment_datasets,
+    clip_indices_for_episodes,
+    effective_action_dim,
+    load_episode_split_manifest,
+    resolve_dataset_path,
+    split_datasets_with_episode_manifests,
+    validate_environment_action_dims,
 )
 from stable_worldmodel.wm.design_v0 import (
     DesignV0Core,
@@ -22,26 +31,74 @@ from stable_worldmodel.wm.design_v0 import (
 
 
 K, H, D = 2, 2, 4
+FRAMESKIP = 5
 
 
-class _EnvironmentDataset(Dataset):
-    def __init__(self, length: int, action_dim: int):
-        self.length = length
-        self.action_dim = action_dim
+class _EpisodeClipDataset(Dataset):
+    """Clip dataset with frameskip-flattened actions, matching SWM Dataset."""
+
+    def __init__(
+        self,
+        num_episodes: int,
+        raw_action_dim: int,
+        *,
+        episode_length: int = 24,
+        num_steps: int = K + H,
+        frameskip: int = FRAMESKIP,
+    ):
+        self.num_episodes = num_episodes
+        self.raw_action_dim = raw_action_dim
+        self.episode_length = episode_length
+        self.num_steps = num_steps
+        self.frameskip = frameskip
+        self.effective_action_dim = raw_action_dim * frameskip
+        self.span = num_steps * frameskip
+        self.lengths = [episode_length] * num_episodes
+        self.clip_indices = [
+            (episode_index, start)
+            for episode_index, length in enumerate(self.lengths)
+            if length >= self.span
+            for start in range(length - self.span + 1)
+        ]
 
     def __len__(self):
-        return self.length
+        return len(self.clip_indices)
 
-    def __getitem__(self, index):
-        pixels = torch.arange(
-            (K + H) * D, dtype=torch.float32
-        ).reshape(K + H, 1, 2, 2)
-        pixels = pixels + float(index)
+    def load_episode(self, episode_idx: int) -> dict:
         action = torch.full(
-            (K + H, self.action_dim),
-            float(index + 1) / self.length,
+            (self.episode_length, self.raw_action_dim),
+            float(episode_idx),
+        )
+        pixels = torch.full(
+            (self.episode_length, 1, 2, 2),
+            float(episode_idx),
         )
         return {'pixels': pixels, 'action': action}
+
+    def __getitem__(self, index):
+        episode_index, start = self.clip_indices[index]
+        pixels = torch.full(
+            (self.num_steps, 1, 2, 2),
+            float(episode_index),
+        )
+        action = torch.full(
+            (self.num_steps, self.effective_action_dim),
+            float(episode_index),
+        )
+        del start
+        return {'pixels': pixels, 'action': action}
+
+
+def _core(max_action_dim: int, num_environments: int):
+    return DesignV0Core(
+        FrozenVisualEncoder(_StubBackbone()),
+        history_size=K,
+        max_action_dim=max_action_dim,
+        action_embedding_dim=5,
+        num_environments=num_environments,
+        environment_embedding_dim=3,
+        dynamics_hidden_dim=8,
+    )
 
 
 class _StubBackbone(nn.Module):
@@ -57,53 +114,183 @@ class _StubBackbone(nn.Module):
         )
 
 
-def _core(max_action_dim: int, num_environments: int):
-    return DesignV0Core(
-        FrozenVisualEncoder(_StubBackbone()),
-        history_size=K,
-        max_action_dim=max_action_dim,
-        action_embedding_dim=5,
-        num_environments=num_environments,
-        environment_embedding_dim=3,
-        dynamics_hidden_dim=8,
+def _fixture_manifest(
+    environment: str,
+    num_episodes: int,
+    *,
+    artifact_sha256: str = 'artifact-sha',
+    split_manifest_sha256: str = 'split-sha',
+):
+    payload = build_split_manifest(
+        environment=environment,
+        artifact_path=f'fixture://{environment}',
+        num_episodes=num_episodes,
+        artifact_sha256=artifact_sha256,
     )
+    payload['split_manifest_sha256'] = split_manifest_sha256
+    return payload
 
 
-def _split(datasets):
-    identifiers = {name: f'fixture://{name}' for name in datasets}
-    return split_environment_datasets(
+def _split(datasets, **sha_overrides):
+    manifests = {}
+    artifact_ids = {}
+    artifact_paths = {}
+    split_manifest_ids = {}
+    for name, dataset in datasets.items():
+        extra = sha_overrides.get(name, {})
+        manifests[name] = _fixture_manifest(
+            name,
+            len(dataset.lengths),
+            artifact_sha256=extra.get('artifact_sha256', f'{name}-art'),
+            split_manifest_sha256=extra.get(
+                'split_manifest_sha256', f'{name}-split'
+            ),
+        )
+        artifact_ids[name] = f'design_v0/{name.lower()}'
+        artifact_paths[name] = f'/cache/datasets/design_v0/{name.lower()}'
+        split_manifest_ids[name] = f'design_v0/splits/{name.lower()}.json'
+    return split_datasets_with_episode_manifests(
         datasets,
-        train_fraction=0.75,
-        split_seed=123,
-        dataset_identifiers=identifiers,
+        manifests,
+        artifact_ids=artifact_ids,
+        artifact_paths=artifact_paths,
+        split_manifest_ids=split_manifest_ids,
     )
 
 
-def test_environment_split_is_identical_across_run_compositions():
-    pusht = _EnvironmentDataset(length=20, action_dim=2)
+def test_resolve_dataset_path_uses_cache_root(tmp_path, monkeypatch):
+    monkeypatch.delenv('STABLEWM_HOME', raising=False)
+    resolved = resolve_dataset_path(
+        'design_v0/tworoom_expert.lance',
+        cache_dir=tmp_path,
+    )
+    assert resolved == (
+        tmp_path / 'datasets' / 'design_v0' / 'tworoom_expert.lance'
+    )
+    assert not str(resolved).startswith('/home/')
+
+
+def test_load_episode_split_manifest_round_trip(tmp_path):
+    payload = _fixture_manifest('PushT', 20)
+    path = write_json(tmp_path / 'pusht.json', payload)
+    loaded = load_episode_split_manifest(path)
+    assert loaded['train_episode_indices'] == payload[
+        'train_episode_indices'
+    ]
+    assert loaded['val_episode_indices'] == payload['val_episode_indices']
+    assert loaded['split_manifest_sha256']
+    assert set(loaded['train_episode_indices']).isdisjoint(
+        loaded['val_episode_indices']
+    )
+
+
+def test_episode_split_is_identical_across_run_compositions():
+    pusht = _EpisodeClipDataset(num_episodes=20, raw_action_dim=2)
     per_train, per_val, per_meta = _split({'PushT': pusht})
     joint_train, joint_val, joint_meta = _split(
         {
-            'TwoRoom': _EnvironmentDataset(length=12, action_dim=2),
+            'TwoRoom': _EpisodeClipDataset(num_episodes=12, raw_action_dim=2),
             'PushT': pusht,
-            'OGBCube': _EnvironmentDataset(length=28, action_dim=5),
+            'OGBCube': _EpisodeClipDataset(num_episodes=28, raw_action_dim=5),
         }
     )
 
+    assert (
+        per_meta['environments']['PushT']['train_episode_indices']
+        == joint_meta['environments']['PushT']['train_episode_indices']
+    )
+    assert (
+        per_meta['environments']['PushT']['val_episode_indices']
+        == joint_meta['environments']['PushT']['val_episode_indices']
+    )
     assert per_train['PushT'].indices == joint_train['PushT'].indices
     assert per_val['PushT'].indices == joint_val['PushT'].indices
-    assert (
-        per_meta['environments']['PushT']
-        == joint_meta['environments']['PushT']
-    )
+
+
+def test_train_and_val_episode_sets_do_not_leak():
+    datasets = {
+        'TwoRoom': _EpisodeClipDataset(num_episodes=12, raw_action_dim=2),
+        'PushT': _EpisodeClipDataset(num_episodes=20, raw_action_dim=2),
+        'OGBCube': _EpisodeClipDataset(num_episodes=28, raw_action_dim=5),
+    }
+    train, val, metadata = _split(datasets)
+    for name, dataset in datasets.items():
+        train_episodes = set(
+            metadata['environments'][name]['train_episode_indices']
+        )
+        val_episodes = set(
+            metadata['environments'][name]['val_episode_indices']
+        )
+        assert train_episodes.isdisjoint(val_episodes)
+        train_eps = {
+            dataset.clip_indices[index][0]
+            for index in train[name].indices
+        }
+        val_eps = {
+            dataset.clip_indices[index][0]
+            for index in val[name].indices
+        }
+        assert train_eps <= train_episodes
+        assert val_eps <= val_episodes
+        assert train_eps.isdisjoint(val_eps)
+
+
+def test_effective_action_dim_is_raw_times_frameskip():
+    assert effective_action_dim(2, 5) == 10
+    assert effective_action_dim(5, 5) == 25
+    with pytest.raises(ValueError, match='positive'):
+        effective_action_dim(2, 0)
+
+
+def test_validate_environment_action_dims_uses_raw_then_effective():
+    assert validate_environment_action_dims(
+        'TwoRoom',
+        raw_action_dim=2,
+        clip_action_dim=10,
+        frameskip=5,
+    ) == {
+        'raw_action_dim': 2,
+        'frameskip': 5,
+        'effective_action_dim': 10,
+        'action_block_dim': 10,
+    }
+    assert validate_environment_action_dims(
+        'OGBCube',
+        raw_action_dim=5,
+        clip_action_dim=25,
+        frameskip=5,
+    )['effective_action_dim'] == 25
+    with pytest.raises(ValueError, match='raw action dim mismatch'):
+        validate_environment_action_dims(
+            'TwoRoom',
+            raw_action_dim=5,
+            clip_action_dim=25,
+            frameskip=5,
+        )
+    with pytest.raises(ValueError, match='effective action dim mismatch'):
+        validate_environment_action_dims(
+            'TwoRoom',
+            raw_action_dim=2,
+            clip_action_dim=2,
+            frameskip=5,
+        )
+
+
+def test_fixture_dataset_keeps_raw_and_flattened_clip_dims():
+    dataset = _EpisodeClipDataset(num_episodes=4, raw_action_dim=2)
+    assert dataset.load_episode(0)['action'].shape[-1] == 2
+    assert dataset[0]['action'].shape[-1] == 10
+    ogb = _EpisodeClipDataset(num_episodes=4, raw_action_dim=5)
+    assert ogb.load_episode(0)['action'].shape[-1] == 5
+    assert ogb[0]['action'].shape[-1] == 25
 
 
 def test_explicit_exposure_balances_unequal_environment_datasets():
     train, val, metadata = _split(
         {
-            'TwoRoom': _EnvironmentDataset(length=12, action_dim=2),
-            'PushT': _EnvironmentDataset(length=20, action_dim=2),
-            'OGBCube': _EnvironmentDataset(length=28, action_dim=5),
+            'TwoRoom': _EpisodeClipDataset(num_episodes=12, raw_action_dim=2),
+            'PushT': _EpisodeClipDataset(num_episodes=20, raw_action_dim=2),
+            'OGBCube': _EpisodeClipDataset(num_episodes=28, raw_action_dim=5),
         }
     )
     data = build_design_v0_data(
@@ -122,16 +309,47 @@ def test_explicit_exposure_balances_unequal_environment_datasets():
     ] == 6
     for batch in data.train_loader:
         assert batch['pixels'].shape == (6, K + H, 1, 2, 2)
-        assert batch['action'].shape == (6, K + H, 5)
-        assert batch['action_mask'].shape == (6, K + H, 5)
+        assert batch['action'].shape == (6, K + H, 25)
+        assert batch['action_mask'].shape == (6, K + H, 25)
         assert torch.bincount(
             batch['env_id'], minlength=3
         ).tolist() == [2, 2, 2]
 
 
+def test_action_padding_is_10_10_25_with_joint_max_25():
+    train, val, metadata = _split(
+        {
+            'TwoRoom': _EpisodeClipDataset(num_episodes=12, raw_action_dim=2),
+            'PushT': _EpisodeClipDataset(num_episodes=20, raw_action_dim=2),
+            'OGBCube': _EpisodeClipDataset(num_episodes=28, raw_action_dim=5),
+        }
+    )
+    data = build_design_v0_data(
+        train,
+        val,
+        split_metadata=metadata,
+        per_environment_batch_size=1,
+        steps_per_epoch=1,
+        validation_steps=1,
+        sampler_seed=456,
+    )
+    assert data.train_dataset.action_dims == (10, 10, 25)
+    assert data.train_dataset.max_action_dim == 25
+    batch = next(iter(data.train_loader))
+    assert batch['action'].shape[-1] == 25
+    # env order is TwoRoom, PushT, OGBCube.
+    masks = {
+        int(env_id): batch['action_mask'][index, 0]
+        for index, env_id in enumerate(batch['env_id'].tolist())
+    }
+    assert masks[0].tolist() == [True] * 10 + [False] * 15
+    assert masks[1].tolist() == [True] * 10 + [False] * 15
+    assert masks[2].tolist() == [True] * 25
+
+
 def test_per_environment_run_uses_the_same_balanced_data_path():
     train, val, metadata = _split(
-        {'PushT': _EnvironmentDataset(length=20, action_dim=2)}
+        {'PushT': _EpisodeClipDataset(num_episodes=20, raw_action_dim=2)}
     )
     data = build_design_v0_data(
         train,
@@ -154,8 +372,8 @@ def test_per_environment_run_uses_the_same_balanced_data_path():
 def test_checkpoint_metadata_preserves_mapping_split_and_exposure():
     train, val, split_metadata = _split(
         {
-            'PushT': _EnvironmentDataset(length=20, action_dim=2),
-            'OGBCube': _EnvironmentDataset(length=28, action_dim=5),
+            'PushT': _EpisodeClipDataset(num_episodes=20, raw_action_dim=2),
+            'OGBCube': _EpisodeClipDataset(num_episodes=28, raw_action_dim=5),
         }
     )
     data = build_design_v0_data(
@@ -167,7 +385,7 @@ def test_checkpoint_metadata_preserves_mapping_split_and_exposure():
         validation_steps=1,
         sampler_seed=456,
     )
-    core = _core(max_action_dim=5, num_environments=2)
+    core = _core(max_action_dim=25, num_environments=2)
     cfg = OmegaConf.create(
         {
             'wm': {'horizon': H},
@@ -175,15 +393,26 @@ def test_checkpoint_metadata_preserves_mapping_split_and_exposure():
             'image_size': 2,
             'loader': {'sampler_seed': 456},
             'seed': 789,
-            'split': {'seed': 123, 'train_fraction': 0.75},
         }
     )
     metadata = build_checkpoint_metadata(
         cfg,
         data,
         {
-            'PushT': {'name': 'fixture://PushT', 'frameskip': 1},
-            'OGBCube': {'name': 'fixture://OGBCube', 'frameskip': 1},
+            'PushT': {
+                'name': 'design_v0/pusht_expert_train.h5',
+                'frameskip': FRAMESKIP,
+                'raw_action_dim': 2,
+                'effective_action_dim': 10,
+                'action_block_dim': 10,
+            },
+            'OGBCube': {
+                'name': 'design_v0/ogbcube/cube_single_front_expert.lance',
+                'frameskip': FRAMESKIP,
+                'raw_action_dim': 5,
+                'effective_action_dim': 25,
+                'action_block_dim': 25,
+            },
         },
         core,
     )
@@ -192,16 +421,34 @@ def test_checkpoint_metadata_preserves_mapping_split_and_exposure():
     assert metadata['env_to_id'] == {'PushT': 0, 'OGBCube': 1}
     assert metadata['split'] == split_metadata
     assert metadata['exposure'] == data.exposure_metadata
-    assert metadata['action_dims'] == {'PushT': 2, 'OGBCube': 5}
-    assert metadata['max_action_dim'] == 5
+    assert metadata['raw_action_dims'] == {'PushT': 2, 'OGBCube': 5}
+    assert metadata['effective_action_dims'] == {'PushT': 10, 'OGBCube': 25}
+    assert metadata['action_dims'] == {'PushT': 10, 'OGBCube': 25}
+    assert metadata['max_action_dim'] == 25
+    assert metadata['history_size'] == K
+    assert metadata['horizon'] == H
+    pusht = metadata['datasets']['PushT']
+    assert pusht['artifact_sha256'] == 'PushT-art'
+    assert pusht['split_manifest_sha256'] == 'PushT-split'
+    assert pusht['train_episodes'] == 18
+    assert pusht['val_episodes'] == 2
+    assert pusht['raw_action_dim'] == 2
+    assert pusht['frameskip'] == FRAMESKIP
+    assert pusht['effective_action_dim'] == 10
+    assert pusht['action_block_dim'] == 10
+    ogb = metadata['datasets']['OGBCube']
+    assert ogb['raw_action_dim'] == 5
+    assert ogb['frameskip'] == FRAMESKIP
+    assert ogb['effective_action_dim'] == 25
+    assert ogb['action_block_dim'] == 25
 
 
 def test_one_batch_training_and_checkpoint_round_trip(tmp_path):
     train, val, split_metadata = _split(
         {
-            'TwoRoom': _EnvironmentDataset(length=12, action_dim=2),
-            'PushT': _EnvironmentDataset(length=20, action_dim=2),
-            'OGBCube': _EnvironmentDataset(length=28, action_dim=5),
+            'TwoRoom': _EpisodeClipDataset(num_episodes=12, raw_action_dim=2),
+            'PushT': _EpisodeClipDataset(num_episodes=20, raw_action_dim=2),
+            'OGBCube': _EpisodeClipDataset(num_episodes=28, raw_action_dim=5),
         }
     )
     data = build_design_v0_data(
@@ -282,7 +529,7 @@ def test_one_batch_training_and_checkpoint_round_trip(tmp_path):
     assert 'state_dict' in checkpoint
 
     restored = DesignV0TrainingModule(
-        _core(max_action_dim=5, num_environments=3),
+        _core(max_action_dim=25, num_environments=3),
         optimizer_config={'type': 'SGD', 'lr': 1e-3},
         checkpoint_metadata=metadata,
     )
@@ -292,7 +539,7 @@ def test_one_batch_training_and_checkpoint_round_trip(tmp_path):
         torch.testing.assert_close(value, restored.state_dict()[name])
 
     mismatched = DesignV0TrainingModule(
-        _core(max_action_dim=5, num_environments=3),
+        _core(max_action_dim=25, num_environments=3),
         optimizer_config={'type': 'SGD', 'lr': 1e-3},
         checkpoint_metadata={
             **metadata,
@@ -301,3 +548,34 @@ def test_one_batch_training_and_checkpoint_round_trip(tmp_path):
     )
     with pytest.raises(ValueError, match='env_to_id'):
         mismatched.on_load_checkpoint(checkpoint)
+
+    sha_mismatch_split = {
+        **split_metadata,
+        'environments': {
+            **split_metadata['environments'],
+            'PushT': {
+                **split_metadata['environments']['PushT'],
+                'artifact_sha256': 'other-artifact',
+            },
+        },
+    }
+    sha_mismatched = DesignV0TrainingModule(
+        _core(max_action_dim=25, num_environments=3),
+        optimizer_config={'type': 'SGD', 'lr': 1e-3},
+        checkpoint_metadata={
+            **metadata,
+            'split': sha_mismatch_split,
+        },
+    )
+    with pytest.raises(ValueError, match='artifact/split'):
+        sha_mismatched.on_load_checkpoint(checkpoint)
+
+
+def test_clip_indices_only_keep_selected_episodes():
+    dataset = _EpisodeClipDataset(num_episodes=10, raw_action_dim=2)
+    selected = [0, 3, 9]
+    clip_indices = clip_indices_for_episodes(dataset, selected)
+    episodes = {
+        dataset.clip_indices[index][0] for index in clip_indices
+    }
+    assert episodes == set(selected)

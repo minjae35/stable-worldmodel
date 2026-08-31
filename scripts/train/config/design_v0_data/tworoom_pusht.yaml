@@ -2,7 +2,8 @@
 
 environments:
   TwoRoom:
-    name: tworoom.h5
+    name: design_v0/tworoom_expert.lance
+    split_manifest: design_v0/splits/tworoom.json
     frameskip: 5
     keys_to_load:
       - pixels
@@ -10,7 +11,8 @@ environments:
     keys_to_cache:
       - action
   PushT:
-    name: pusht_expert_train.lance
+    name: design_v0/pusht_expert_train.h5
+    split_manifest: design_v0/splits/pusht.json
     frameskip: 5
     keys_to_load:
       - pixels

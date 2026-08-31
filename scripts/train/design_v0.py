@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import hashlib
 import json
 import os
 from collections.abc import Mapping
@@ -31,10 +30,26 @@ from stable_worldmodel.wm.design_v0 import (
     DesignV0Objective,
     FrozenVisualEncoder,
 )
+from scripts.data.design_v0.manifest import (
+    indices_sha256,
+    sha256_file,
+)
+from scripts.data.design_v0.spec import (
+    EXPECTED_ACTION_DIMS,
+    cache_root,
+)
 
 
-SPLIT_VERSION = 'design_v0_per_environment_v1'
+SPLIT_VERSION = 'design_v0_canonical_episode_v1'
 METADATA_VERSION = 1
+_RESUME_SPLIT_KEYS = (
+    'artifact_id',
+    'artifact_sha256',
+    'split_manifest_id',
+    'split_manifest_sha256',
+    'train_indices_sha256',
+    'val_indices_sha256',
+)
 
 
 @dataclass
@@ -69,82 +84,174 @@ def get_img_preprocessor(
     )
 
 
-def environment_split_seed(base_seed: int, environment_name: str) -> int:
-    """Derive a stable per-environment seed independent of run composition."""
-    payload = (
-        f'{SPLIT_VERSION}:{int(base_seed)}:{environment_name}'.encode()
-    )
-    digest = hashlib.sha256(payload).digest()
-    return int.from_bytes(digest[:8], byteorder='little') % (2**63 - 1)
+def datasets_root(cache_dir: str | Path | None = None) -> Path:
+    """Return ``<cache>/datasets`` without a machine-specific path."""
+    return cache_root(cache_dir) / 'datasets'
 
 
-def _indices_digest(indices: list[int]) -> str:
-    encoded = ','.join(str(index) for index in indices).encode()
-    return hashlib.sha256(encoded).hexdigest()
+def resolve_dataset_path(
+    name: str,
+    cache_dir: str | Path | None = None,
+) -> Path:
+    path = Path(name)
+    if not path.is_absolute():
+        path = datasets_root(cache_dir) / path
+    return path
 
 
-def split_environment_datasets(
+def load_episode_split_manifest(path: str | Path) -> dict[str, Any]:
+    """Load and validate a canonical episode-level split manifest."""
+    manifest_path = Path(path)
+    payload = json.loads(manifest_path.read_text())
+    if payload.get('unit') != 'episode':
+        raise ValueError(
+            f'Split manifest {manifest_path} must use unit=episode, '
+            f'got {payload.get("unit")!r}'
+        )
+    train = [int(index) for index in payload['train_episode_indices']]
+    val = [int(index) for index in payload['val_episode_indices']]
+    if set(train).intersection(val):
+        raise ValueError(
+            f'Split manifest {manifest_path} leaks episodes between train/val'
+        )
+    if indices_sha256(train) != payload['train_indices_sha256']:
+        raise ValueError(
+            f'Split manifest {manifest_path} train checksum mismatch'
+        )
+    if indices_sha256(val) != payload['val_indices_sha256']:
+        raise ValueError(
+            f'Split manifest {manifest_path} val checksum mismatch'
+        )
+    if not train or not val:
+        raise ValueError(
+            f'Split manifest {manifest_path} needs non-empty train and val'
+        )
+    payload = dict(payload)
+    payload['train_episode_indices'] = train
+    payload['val_episode_indices'] = val
+    payload['split_manifest_sha256'] = sha256_file(manifest_path)
+    return payload
+
+
+def clip_indices_for_episodes(
+    dataset: Dataset,
+    episode_ids: list[int],
+) -> list[int]:
+    """Return clip indices whose source episode is in ``episode_ids``."""
+    if not hasattr(dataset, 'clip_indices'):
+        raise TypeError(
+            'dataset must expose clip_indices so clips can be built '
+            'from selected episodes'
+        )
+    allowed = {int(episode_id) for episode_id in episode_ids}
+    return [
+        clip_index
+        for clip_index, (episode_index, _start) in enumerate(
+            dataset.clip_indices
+        )
+        if int(episode_index) in allowed
+    ]
+
+
+def split_datasets_with_episode_manifests(
     datasets: Mapping[str, Dataset],
+    manifests: Mapping[str, Mapping[str, Any]],
     *,
-    train_fraction: float,
-    split_seed: int,
-    dataset_identifiers: Mapping[str, str] | None = None,
+    artifact_ids: Mapping[str, str] | None = None,
+    artifact_paths: Mapping[str, str] | None = None,
+    split_manifest_ids: Mapping[str, str] | None = None,
 ) -> tuple[
     dict[str, Subset],
     dict[str, Subset],
     dict[str, Any],
 ]:
-    """Split every environment deterministically with an independent RNG."""
-    if not 0.0 < train_fraction < 1.0:
-        raise ValueError('train_fraction must be strictly between 0 and 1')
+    """Select canonical train/val episodes, then keep only those K+H clips."""
+    if tuple(datasets) != tuple(manifests):
+        raise ValueError(
+            'Episode manifests must cover the same environments as datasets, '
+            f'got datasets={list(datasets)} manifests={list(manifests)}'
+        )
 
     train_datasets: dict[str, Subset] = {}
     val_datasets: dict[str, Subset] = {}
     environments: dict[str, Any] = {}
 
     for environment_name, dataset in datasets.items():
-        length = len(dataset)
-        train_length = int(length * train_fraction)
-        val_length = length - train_length
-        if train_length <= 0 or val_length <= 0:
+        payload = dict(manifests[environment_name])
+        manifest_environment = payload.get('environment')
+        if (
+            manifest_environment is not None
+            and manifest_environment != environment_name
+        ):
             raise ValueError(
-                f'Environment {environment_name!r} needs non-empty train and '
-                f'validation splits, got length={length}, '
-                f'train={train_length}, val={val_length}'
+                f'Split manifest environment {manifest_environment!r} '
+                f'does not match config key {environment_name!r}'
             )
-
-        derived_seed = environment_split_seed(
-            split_seed, environment_name
+        num_episodes = int(payload['num_episodes'])
+        lengths = getattr(dataset, 'lengths', None)
+        if lengths is not None and int(len(lengths)) != num_episodes:
+            raise ValueError(
+                f'{environment_name} episode count mismatch: dataset has '
+                f'{len(lengths)}, manifest has {num_episodes}'
+            )
+        train_episodes = [int(i) for i in payload['train_episode_indices']]
+        val_episodes = [int(i) for i in payload['val_episode_indices']]
+        if set(train_episodes).intersection(val_episodes):
+            raise ValueError(
+                f'{environment_name} train/val episode sets overlap'
+            )
+        train_clip_indices = clip_indices_for_episodes(
+            dataset, train_episodes
         )
-        generator = torch.Generator().manual_seed(derived_seed)
-        permutation = torch.randperm(
-            length, generator=generator
-        ).tolist()
-        train_indices = permutation[:train_length]
-        val_indices = permutation[train_length:]
-
+        val_clip_indices = clip_indices_for_episodes(dataset, val_episodes)
+        if not train_clip_indices or not val_clip_indices:
+            raise ValueError(
+                f'{environment_name} needs clips in both splits after '
+                f'selecting episodes, got train_clips='
+                f'{len(train_clip_indices)}, val_clips='
+                f'{len(val_clip_indices)}'
+            )
         train_datasets[environment_name] = Subset(
-            dataset, train_indices
+            dataset, train_clip_indices
         )
-        val_datasets[environment_name] = Subset(dataset, val_indices)
+        val_datasets[environment_name] = Subset(dataset, val_clip_indices)
         environments[environment_name] = {
             'dataset': (
-                dataset_identifiers[environment_name]
-                if dataset_identifiers is not None
+                artifact_ids[environment_name]
+                if artifact_ids is not None
                 else environment_name
             ),
-            'dataset_length': length,
-            'derived_seed': derived_seed,
-            'train_length': train_length,
-            'validation_length': val_length,
-            'train_indices_sha256': _indices_digest(train_indices),
-            'validation_indices_sha256': _indices_digest(val_indices),
+            'artifact_id': (
+                None
+                if artifact_ids is None
+                else artifact_ids[environment_name]
+            ),
+            'artifact_path': (
+                None
+                if artifact_paths is None
+                else str(artifact_paths[environment_name])
+            ),
+            'artifact_sha256': payload.get('artifact_sha256'),
+            'split_manifest_id': (
+                None
+                if split_manifest_ids is None
+                else split_manifest_ids[environment_name]
+            ),
+            'split_manifest_sha256': payload.get('split_manifest_sha256'),
+            'num_episodes': num_episodes,
+            'train_episodes': len(train_episodes),
+            'val_episodes': len(val_episodes),
+            'train_clips': len(train_clip_indices),
+            'val_clips': len(val_clip_indices),
+            'train_episode_indices': train_episodes,
+            'val_episode_indices': val_episodes,
+            'train_indices_sha256': indices_sha256(train_episodes),
+            'val_indices_sha256': indices_sha256(val_episodes),
         }
 
     metadata = {
         'version': SPLIT_VERSION,
-        'base_seed': int(split_seed),
-        'train_fraction': float(train_fraction),
+        'unit': 'episode',
         'environments': environments,
     }
     return train_datasets, val_datasets, metadata
@@ -352,22 +459,102 @@ class DesignV0TrainingModule(pl.LightningModule):
         saved = checkpoint.get('design_v0_metadata')
         if saved is None:
             raise ValueError('Checkpoint is missing design_v0_metadata')
-        for key in ('env_to_id', 'split'):
-            if saved.get(key) != self.checkpoint_metadata.get(key):
-                raise ValueError(
-                    f'Checkpoint {key} does not match the current run'
-                )
+        current = self.checkpoint_metadata
+        if saved.get('env_to_id') != current.get('env_to_id'):
+            raise ValueError(
+                'Checkpoint env_to_id does not match the current run'
+            )
+        saved_split = _resume_split_identity(saved)
+        current_split = _resume_split_identity(current)
+        if saved_split != current_split:
+            raise ValueError(
+                'Checkpoint artifact/split identity does not match '
+                'the current run'
+            )
+
+
+def _resume_split_identity(metadata: Mapping[str, Any]) -> dict[str, Any]:
+    environments = metadata.get('split', {}).get('environments', {})
+    identity = {}
+    for name, spec in environments.items():
+        identity[name] = {
+            key: spec.get(key) for key in _RESUME_SPLIT_KEYS
+        }
+    return identity
+
+
+def effective_action_dim(raw_action_dim: int, frameskip: int) -> int:
+    """Return the flattened model action width ``raw * frameskip``."""
+    if int(raw_action_dim) <= 0 or int(frameskip) <= 0:
+        raise ValueError(
+            'raw_action_dim and frameskip must be positive, '
+            f'got {raw_action_dim}, {frameskip}'
+        )
+    return int(raw_action_dim) * int(frameskip)
+
+
+def validate_environment_action_dims(
+    environment_name: str,
+    *,
+    raw_action_dim: int,
+    clip_action_dim: int,
+    frameskip: int,
+) -> dict[str, int]:
+    """Check raw env dim, then clip dim == raw * frameskip."""
+    expected_raw = EXPECTED_ACTION_DIMS.get(environment_name)
+    if expected_raw is not None and int(raw_action_dim) != int(expected_raw):
+        raise ValueError(
+            f'{environment_name} raw action dim mismatch: '
+            f'got {raw_action_dim}, expected {expected_raw}'
+        )
+    effective = effective_action_dim(raw_action_dim, frameskip)
+    if int(clip_action_dim) != effective:
+        raise ValueError(
+            f'{environment_name} effective action dim mismatch: '
+            f'clip={clip_action_dim}, expected '
+            f'{raw_action_dim}*{frameskip}={effective}'
+        )
+    return {
+        'raw_action_dim': int(raw_action_dim),
+        'frameskip': int(frameskip),
+        'effective_action_dim': effective,
+        'action_block_dim': effective,
+    }
+
+
+def _action_last_dim(action: Any) -> int:
+    if not hasattr(action, 'shape') or len(action.shape) == 0:
+        raise ValueError('action must have a feature axis')
+    return int(action.shape[-1])
+
+
+def _infer_raw_action_dim(dataset: Dataset) -> int:
+    if not hasattr(dataset, 'load_episode'):
+        raise TypeError(
+            'dataset must expose load_episode to read raw action dim'
+        )
+    episode = dataset.load_episode(0)
+    if 'action' not in episode:
+        raise KeyError('episode is missing action')
+    return _action_last_dim(episode['action'])
+
+
+def _infer_clip_action_dim(dataset: Dataset) -> int:
+    sample = dataset[0]
+    if 'action' not in sample:
+        raise KeyError('dataset sample is missing action')
+    return _action_last_dim(sample['action'])
 
 
 def load_environment_datasets(
     cfg: DictConfig,
 ) -> tuple[dict[str, Dataset], dict[str, dict[str, Any]]]:
-    """Load and preprocess the ordered environment datasets from config."""
+    """Load canonical artifacts and preprocess the ordered environments."""
     datasets: dict[str, Dataset] = {}
     specifications: dict[str, dict[str, Any]] = {}
-    cache_dir = cfg.get('cache_dir') or os.environ.get(
-        'LOCAL_DATASET_DIR'
-    )
+    cache_dir = cfg.get('cache_dir')
+    if cache_dir is None or cache_dir == '':
+        cache_dir = os.environ.get('STABLEWM_HOME')
     clip_steps = int(cfg.wm.history_size + cfg.wm.horizon)
 
     for environment_name, environment_cfg in cfg.data.environments.items():
@@ -375,13 +562,25 @@ def load_environment_datasets(
             environment_cfg, resolve=True
         )
         dataset_name = specification.pop('name')
+        split_manifest_id = specification.pop('split_manifest')
         specification['num_steps'] = clip_steps
         specification.setdefault('keys_to_load', ['pixels', 'action'])
+        artifact_path = resolve_dataset_path(dataset_name, cache_dir)
+        split_path = resolve_dataset_path(split_manifest_id, cache_dir)
         dataset = swm.data.load_dataset(
             dataset_name,
             cache_dir=cache_dir,
             transform=None,
             **specification,
+        )
+        frameskip = int(specification.get('frameskip', 1))
+        raw_action_dim = _infer_raw_action_dim(dataset)
+        clip_action_dim = _infer_clip_action_dim(dataset)
+        action_dims = validate_environment_action_dims(
+            environment_name,
+            raw_action_dim=raw_action_dim,
+            clip_action_dim=clip_action_dim,
+            frameskip=frameskip,
         )
         dataset.transform = get_img_preprocessor(
             image_size=int(cfg.image_size)
@@ -389,6 +588,11 @@ def load_environment_datasets(
         datasets[environment_name] = dataset
         specifications[environment_name] = {
             'name': dataset_name,
+            'artifact_id': dataset_name,
+            'artifact_path': str(artifact_path),
+            'split_manifest_id': split_manifest_id,
+            'split_manifest_path': str(split_path),
+            **action_dims,
             **specification,
         }
     return datasets, specifications
@@ -402,19 +606,57 @@ def build_checkpoint_metadata(
 ) -> dict[str, Any]:
     """Build the metadata required to reproduce and safely resume a run."""
     environment_names = list(data.train_dataset.env_names)
-    action_dims = dict(
+    effective_action_dims = dict(
         zip(environment_names, data.train_dataset.action_dims)
     )
     resolved_config = OmegaConf.to_container(cfg, resolve=True)
+    datasets_meta = {}
+    raw_action_dims = {}
+    for name in environment_names:
+        spec = dict(dataset_specifications[name])
+        split_env = data.split_metadata['environments'][name]
+        frameskip = int(spec.get('frameskip', 1))
+        raw_dim = int(
+            spec.get(
+                'raw_action_dim',
+                effective_action_dims[name] // max(frameskip, 1),
+            )
+        )
+        effective = int(
+            spec.get(
+                'effective_action_dim',
+                effective_action_dims[name],
+            )
+        )
+        raw_action_dims[name] = raw_dim
+        datasets_meta[name] = {
+            **spec,
+            'artifact_id': split_env.get('artifact_id', spec.get('name')),
+            'artifact_path': split_env.get(
+                'artifact_path', spec.get('artifact_path')
+            ),
+            'artifact_sha256': split_env.get('artifact_sha256'),
+            'split_manifest_id': split_env.get('split_manifest_id'),
+            'split_manifest_sha256': split_env.get(
+                'split_manifest_sha256'
+            ),
+            'train_episodes': split_env.get('train_episodes'),
+            'val_episodes': split_env.get('val_episodes'),
+            'raw_action_dim': raw_dim,
+            'frameskip': frameskip,
+            'effective_action_dim': effective,
+            'action_block_dim': int(
+                spec.get('action_block_dim', effective)
+            ),
+        }
     return {
         'schema_version': METADATA_VERSION,
         'env_names': environment_names,
         'env_to_id': dict(data.train_dataset.env_to_id),
-        'datasets': {
-            name: dict(dataset_specifications[name])
-            for name in environment_names
-        },
-        'action_dims': action_dims,
+        'datasets': datasets_meta,
+        'raw_action_dims': raw_action_dims,
+        'effective_action_dims': effective_action_dims,
+        'action_dims': effective_action_dims,
         'max_action_dim': data.train_dataset.max_action_dim,
         'history_size': core.history_size,
         'horizon': int(cfg.wm.horizon),
@@ -462,16 +704,25 @@ def run(cfg: DictConfig) -> None:
     pl.seed_everything(int(cfg.seed), workers=True)
 
     datasets, dataset_specifications = load_environment_datasets(cfg)
-    dataset_identifiers = {
-        name: specification['name']
-        for name, specification in dataset_specifications.items()
-    }
+    manifests = {}
+    artifact_ids = {}
+    artifact_paths = {}
+    split_manifest_ids = {}
+    for name, specification in dataset_specifications.items():
+        payload = load_episode_split_manifest(
+            specification['split_manifest_path']
+        )
+        manifests[name] = payload
+        artifact_ids[name] = specification['artifact_id']
+        artifact_paths[name] = specification['artifact_path']
+        split_manifest_ids[name] = specification['split_manifest_id']
     train_datasets, val_datasets, split_metadata = (
-        split_environment_datasets(
+        split_datasets_with_episode_manifests(
             datasets,
-            train_fraction=float(cfg.split.train_fraction),
-            split_seed=int(cfg.split.seed),
-            dataset_identifiers=dataset_identifiers,
+            manifests,
+            artifact_ids=artifact_ids,
+            artifact_paths=artifact_paths,
+            split_manifest_ids=split_manifest_ids,
         )
     )
     data = build_design_v0_data(

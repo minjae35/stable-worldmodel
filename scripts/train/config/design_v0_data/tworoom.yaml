@@ -2,7 +2,8 @@
 
 environments:
   TwoRoom:
-    name: tworoom.h5
+    name: design_v0/tworoom_expert.lance
+    split_manifest: design_v0/splits/tworoom.json
     frameskip: 5
     keys_to_load:
       - pixels

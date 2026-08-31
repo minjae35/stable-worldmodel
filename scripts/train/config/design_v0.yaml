@@ -15,10 +15,6 @@ cache_dir: null
 
 image_size: 224
 
-split:
-  seed: ???
-  train_fraction: ???
-
 wm:
   history_size: ???
   horizon: ???

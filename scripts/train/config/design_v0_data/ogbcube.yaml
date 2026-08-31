@@ -2,7 +2,8 @@
 
 environments:
   OGBCube:
-    name: ogbench/cube_single_expert.h5
+    name: design_v0/ogbcube/cube_single_front_expert.lance
+    split_manifest: design_v0/splits/ogbcube.json
     frameskip: 5
     keys_to_load:
       - pixels
