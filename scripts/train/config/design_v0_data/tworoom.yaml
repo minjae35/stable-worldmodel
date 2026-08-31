@@ -1,0 +1,11 @@
+# @package data
+
+environments:
+  TwoRoom:
+    name: tworoom.h5
+    frameskip: 5
+    keys_to_load:
+      - pixels
+      - action
+    keys_to_cache:
+      - action

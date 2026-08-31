@@ -1,0 +1,11 @@
+# @package data
+
+environments:
+  PushT:
+    name: pusht_expert_train.lance
+    frameskip: 5
+    keys_to_load:
+      - pixels
+      - action
+    keys_to_cache:
+      - action

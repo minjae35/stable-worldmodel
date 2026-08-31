@@ -1,0 +1,55 @@
+defaults:
+  - _self_
+  - launcher: local
+  - design_v0_data: pusht
+
+hydra:
+  job:
+    chdir: true
+
+output_model_name: design_v0
+subdir: ${hydra:job.id}
+resume_checkpoint: null
+seed: 42
+cache_dir: null
+
+image_size: 224
+
+split:
+  seed: ???
+  train_fraction: ???
+
+wm:
+  history_size: ???
+  horizon: ???
+
+backbone:
+  name: ???
+
+model:
+  action_embedding_dim: ???
+  environment_embedding_dim: ???
+  dynamics_hidden_dim: ???
+
+loader:
+  per_environment_batch_size: ???
+  steps_per_epoch: ???
+  validation_steps: ???
+  sampler_seed: ???
+  num_workers: 6
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 2
+
+optimizer:
+  type: ???
+  lr: ???
+  weight_decay: ???
+
+trainer:
+  max_epochs: ???
+  accelerator: auto
+  devices: 1
+  precision: ???
+  gradient_clip_val: ???
+  num_sanity_val_steps: 1
