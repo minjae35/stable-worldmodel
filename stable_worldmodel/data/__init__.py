@@ -6,6 +6,10 @@ from .normalization import (
     ZScoreScaler,
     get_scaler,
 )
+from .multi_env import (
+    BalancedEnvironmentBatchSampler,
+    MultiEnvironmentDataset,
+)
 from .utils import column_normalizer
 from .buffer import ReplayBuffer, classic_filter
 from .format import (
@@ -66,6 +70,8 @@ __all__ = [
     'IdentityScaler',
     'ImageDataset',
     'LeRobotAdapter',
+    'BalancedEnvironmentBatchSampler',
+    'MultiEnvironmentDataset',
     'PercentileScaler',
     'ReplayBuffer',
     'WRITE_MODES',
