@@ -48,7 +48,7 @@ def test_tworoom_pusht_ogbcube_balanced_batch():
     datasets = {
         'TwoRoom': _EnvironmentDataset('TwoRoom', action_dim=2),
         'PushT': _EnvironmentDataset('PushT', action_dim=2),
-        'OGBCube': _EnvironmentDataset('OGBCube', action_dim=7),
+        'OGBCube': _EnvironmentDataset('OGBCube', action_dim=5),
     }
     dataset = MultiEnvironmentDataset(datasets)
     sampler = BalancedEnvironmentBatchSampler(
@@ -61,15 +61,15 @@ def test_tworoom_pusht_ogbcube_balanced_batch():
     batch = next(iter(DataLoader(dataset, batch_sampler=sampler)))
 
     assert batch['pixels'].shape == (6, 3, 3, 8, 8)
-    assert batch['action'].shape == (6, 3, 7)
-    assert batch['action_mask'].shape == (6, 3, 7)
+    assert batch['action'].shape == (6, 3, 5)
+    assert batch['action_mask'].shape == (6, 3, 5)
     assert batch['env_id'].shape == (6,)
     assert batch['env_id'].tolist() == [0, 0, 1, 1, 2, 2]
 
     assert torch.count_nonzero(batch['action'][:4, :, 2:]) == 0
     assert not batch['action_mask'][:4, :, 2:].any()
     assert batch['action_mask'][:4, :, :2].all()
-    assert batch['action_mask'][4:, :, :7].all()
+    assert batch['action_mask'][4:, :, :5].all()
 
 
 def test_heterogeneous_environment_schemas_collate_canonical_fields():
@@ -86,7 +86,7 @@ def test_heterogeneous_environment_schemas_collate_canonical_fields():
         ),
         'OGBCube': _EnvironmentDataset(
             'OGBCube',
-            action_dim=7,
+            action_dim=5,
             extra_fields=('observation',),
         ),
     }
@@ -102,8 +102,8 @@ def test_heterogeneous_environment_schemas_collate_canonical_fields():
 
     assert set(batch) == {'pixels', 'action', 'action_mask', 'env_id'}
     assert batch['pixels'].shape == (6, 3, 3, 8, 8)
-    assert batch['action'].shape == (6, 3, 7)
-    assert batch['action_mask'].shape == (6, 3, 7)
+    assert batch['action'].shape == (6, 3, 5)
+    assert batch['action_mask'].shape == (6, 3, 5)
     assert batch['env_id'].shape == (6,)
     assert torch.bincount(batch['env_id'], minlength=3).tolist() == [2, 2, 2]
 
@@ -127,7 +127,7 @@ def test_balanced_sampler_ignores_environment_dataset_size():
         {
             'TwoRoom': _EnvironmentDataset('TwoRoom', 2, length=2),
             'PushT': _EnvironmentDataset('PushT', 2, length=5),
-            'OGBCube': _EnvironmentDataset('OGBCube', 7, length=8),
+            'OGBCube': _EnvironmentDataset('OGBCube', 5, length=8),
         }
     )
     sampler = BalancedEnvironmentBatchSampler(

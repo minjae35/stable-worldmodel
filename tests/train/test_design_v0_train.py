@@ -86,7 +86,7 @@ def test_environment_split_is_identical_across_run_compositions():
         {
             'TwoRoom': _EnvironmentDataset(length=12, action_dim=2),
             'PushT': pusht,
-            'OGBCube': _EnvironmentDataset(length=28, action_dim=7),
+            'OGBCube': _EnvironmentDataset(length=28, action_dim=5),
         }
     )
 
@@ -103,7 +103,7 @@ def test_explicit_exposure_balances_unequal_environment_datasets():
         {
             'TwoRoom': _EnvironmentDataset(length=12, action_dim=2),
             'PushT': _EnvironmentDataset(length=20, action_dim=2),
-            'OGBCube': _EnvironmentDataset(length=28, action_dim=7),
+            'OGBCube': _EnvironmentDataset(length=28, action_dim=5),
         }
     )
     data = build_design_v0_data(
@@ -122,8 +122,8 @@ def test_explicit_exposure_balances_unequal_environment_datasets():
     ] == 6
     for batch in data.train_loader:
         assert batch['pixels'].shape == (6, K + H, 1, 2, 2)
-        assert batch['action'].shape == (6, K + H, 7)
-        assert batch['action_mask'].shape == (6, K + H, 7)
+        assert batch['action'].shape == (6, K + H, 5)
+        assert batch['action_mask'].shape == (6, K + H, 5)
         assert torch.bincount(
             batch['env_id'], minlength=3
         ).tolist() == [2, 2, 2]
@@ -155,7 +155,7 @@ def test_checkpoint_metadata_preserves_mapping_split_and_exposure():
     train, val, split_metadata = _split(
         {
             'PushT': _EnvironmentDataset(length=20, action_dim=2),
-            'OGBCube': _EnvironmentDataset(length=28, action_dim=7),
+            'OGBCube': _EnvironmentDataset(length=28, action_dim=5),
         }
     )
     data = build_design_v0_data(
@@ -167,7 +167,7 @@ def test_checkpoint_metadata_preserves_mapping_split_and_exposure():
         validation_steps=1,
         sampler_seed=456,
     )
-    core = _core(max_action_dim=7, num_environments=2)
+    core = _core(max_action_dim=5, num_environments=2)
     cfg = OmegaConf.create(
         {
             'wm': {'horizon': H},
@@ -192,8 +192,8 @@ def test_checkpoint_metadata_preserves_mapping_split_and_exposure():
     assert metadata['env_to_id'] == {'PushT': 0, 'OGBCube': 1}
     assert metadata['split'] == split_metadata
     assert metadata['exposure'] == data.exposure_metadata
-    assert metadata['action_dims'] == {'PushT': 2, 'OGBCube': 7}
-    assert metadata['max_action_dim'] == 7
+    assert metadata['action_dims'] == {'PushT': 2, 'OGBCube': 5}
+    assert metadata['max_action_dim'] == 5
 
 
 def test_one_batch_training_and_checkpoint_round_trip(tmp_path):
@@ -201,7 +201,7 @@ def test_one_batch_training_and_checkpoint_round_trip(tmp_path):
         {
             'TwoRoom': _EnvironmentDataset(length=12, action_dim=2),
             'PushT': _EnvironmentDataset(length=20, action_dim=2),
-            'OGBCube': _EnvironmentDataset(length=28, action_dim=7),
+            'OGBCube': _EnvironmentDataset(length=28, action_dim=5),
         }
     )
     data = build_design_v0_data(
@@ -282,7 +282,7 @@ def test_one_batch_training_and_checkpoint_round_trip(tmp_path):
     assert 'state_dict' in checkpoint
 
     restored = DesignV0TrainingModule(
-        _core(max_action_dim=7, num_environments=3),
+        _core(max_action_dim=5, num_environments=3),
         optimizer_config={'type': 'SGD', 'lr': 1e-3},
         checkpoint_metadata=metadata,
     )
@@ -292,7 +292,7 @@ def test_one_batch_training_and_checkpoint_round_trip(tmp_path):
         torch.testing.assert_close(value, restored.state_dict()[name])
 
     mismatched = DesignV0TrainingModule(
-        _core(max_action_dim=7, num_environments=3),
+        _core(max_action_dim=5, num_environments=3),
         optimizer_config={'type': 'SGD', 'lr': 1e-3},
         checkpoint_metadata={
             **metadata,

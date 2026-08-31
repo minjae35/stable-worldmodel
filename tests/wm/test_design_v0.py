@@ -127,18 +127,18 @@ def test_environment_embedding_conditions_shared_dynamics():
 def test_end_to_end_core_returns_one_residual_next_latent():
     core = _make_core(
         history_size=3,
-        max_action_dim=7,
+        max_action_dim=5,
         num_environments=3,
     )
     pixels = torch.arange(
         3 * 3 * 1 * 2 * 2, dtype=torch.float32
     ).reshape(3, 3, 1, 2, 2)
-    action = torch.zeros(3, 7)
+    action = torch.zeros(3, 5)
     action_mask = torch.tensor(
         [
-            [True, True, False, False, False, False, False],
-            [True, True, False, False, False, False, False],
-            [True, True, True, True, True, True, True],
+            [True, True, False, False, False],
+            [True, True, False, False, False],
+            [True, True, True, True, True],
         ]
     )
     env_id = torch.tensor([0, 1, 2], dtype=torch.long)
