@@ -16,36 +16,36 @@ cache_dir: null
 image_size: 224
 
 wm:
-  history_size: ???
-  horizon: ???
+  history_size: 2
+  horizon: 3
 
 backbone:
-  name: ???
+  name: dinov2_small
 
 model:
-  action_embedding_dim: ???
-  environment_embedding_dim: ???
-  dynamics_hidden_dim: ???
+  action_embedding_dim: 128
+  environment_embedding_dim: 32
+  dynamics_hidden_dim: 2048
 
 loader:
-  per_environment_batch_size: ???
-  steps_per_epoch: ???
-  validation_steps: ???
-  sampler_seed: ???
+  per_environment_batch_size: 16
+  steps_per_epoch: 1000
+  validation_steps: 100
+  sampler_seed: 3072
   num_workers: 6
   pin_memory: true
   persistent_workers: true
   prefetch_factor: 2
 
 optimizer:
-  type: ???
-  lr: ???
-  weight_decay: ???
+  type: AdamW
+  lr: 3e-4
+  weight_decay: 1e-4
 
 trainer:
-  max_epochs: ???
+  max_epochs: 30
   accelerator: auto
   devices: 1
-  precision: ???
-  gradient_clip_val: ???
+  precision: bf16-mixed
+  gradient_clip_val: 1.0
   num_sanity_val_steps: 1

@@ -19,6 +19,8 @@ from scripts.train.design_v0 import (
     build_design_v0_data,
     clip_indices_for_episodes,
     effective_action_dim,
+    global_grad_l2_norm,
+    gradient_clip_applied,
     load_episode_split_manifest,
     resolve_dataset_path,
     split_datasets_with_episode_manifests,
@@ -569,6 +571,66 @@ def test_one_batch_training_and_checkpoint_round_trip(tmp_path):
     )
     with pytest.raises(ValueError, match='artifact/split'):
         sha_mismatched.on_load_checkpoint(checkpoint)
+
+
+def test_gradient_clip_applied_uses_post_clip_norm():
+    # Too-early harness: both readings happen before Lightning clips.
+    assert not gradient_clip_applied(8.816, 8.816, 1.0)
+    assert gradient_clip_applied(8.816, 1.0, 1.0)
+    assert gradient_clip_applied(8.816, 1.004, 1.0)
+    assert not gradient_clip_applied(8.816, 1.1, 1.0)
+    # No clip event is required when the pre-clip norm is already below.
+    assert gradient_clip_applied(0.5, 0.5, 1.0)
+    assert not gradient_clip_applied(float('nan'), 1.0, 1.0)
+
+
+def test_lightning_norm_clip_is_observed_in_configure_gradient_clipping():
+    class _ClipProbe(pl.LightningModule):
+        def __init__(self):
+            super().__init__()
+            self.net = nn.Linear(8, 8, bias=False)
+            nn.init.zeros_(self.net.weight)
+            self.observations: list[tuple[float, float]] = []
+
+        def training_step(self, batch, batch_idx):
+            del batch_idx
+            return (self.net(batch) - 50.0).pow(2).mean()
+
+        def configure_optimizers(self):
+            return torch.optim.SGD(self.parameters(), lr=0.1)
+
+        def configure_gradient_clipping(
+            self, optimizer, gradient_clip_val, gradient_clip_algorithm
+        ):
+            pre = global_grad_l2_norm(self)
+            super().configure_gradient_clipping(
+                optimizer, gradient_clip_val, gradient_clip_algorithm
+            )
+            post = global_grad_l2_norm(self)
+            self.observations.append((pre, post))
+
+    module = _ClipProbe()
+    dataset = [torch.ones(8) for _ in range(1)]
+    loader = torch.utils.data.DataLoader(dataset, batch_size=1)
+    trainer = pl.Trainer(
+        accelerator='cpu',
+        devices=1,
+        max_epochs=1,
+        limit_train_batches=1,
+        limit_val_batches=0,
+        num_sanity_val_steps=0,
+        gradient_clip_val=1.0,
+        logger=False,
+        enable_checkpointing=False,
+        enable_model_summary=False,
+    )
+    trainer.fit(module, train_dataloaders=loader)
+    assert trainer.gradient_clip_val == 1.0
+    assert len(module.observations) == 1
+    pre, post = module.observations[0]
+    assert pre > 1.0
+    assert post <= 1.0 + 5e-3
+    assert gradient_clip_applied(pre, post, 1.0)
 
 
 def test_clip_indices_only_keep_selected_episodes():

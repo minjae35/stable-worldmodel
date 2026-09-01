@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import math
 import os
 from collections.abc import Mapping
 from copy import deepcopy
@@ -365,6 +366,43 @@ def build_design_v0_data(
         split_metadata=deepcopy(split_metadata),
         exposure_metadata=exposure_metadata,
     )
+
+
+def global_grad_l2_norm(module: nn.Module) -> float:
+    """Return the global L2 norm of ``module`` gradients, matching clip-by-norm."""
+    squared = [
+        parameter.grad.detach().float().pow(2).sum()
+        for parameter in module.parameters()
+        if parameter.grad is not None
+    ]
+    if not squared:
+        return float('nan')
+    return float(torch.stack(squared).sum().sqrt())
+
+
+def gradient_clip_applied(
+    pre_clip_norm: float,
+    post_clip_norm: float,
+    clip_val: float,
+    *,
+    atol: float = 5e-3,
+) -> bool:
+    """Return whether post-clip global L2 matches Lightning norm clipping.
+
+    Observe these norms around ``configure_gradient_clipping``, which runs at
+    the actual clip site.  Measuring both ``on_after_backward`` and
+    ``on_before_optimizer_step`` is invalid: Lightning clips after the latter.
+    """
+    if not (
+        math.isfinite(pre_clip_norm)
+        and math.isfinite(post_clip_norm)
+        and math.isfinite(clip_val)
+        and clip_val > 0
+    ):
+        return False
+    if pre_clip_norm > clip_val + 1e-4:
+        return post_clip_norm <= clip_val + atol
+    return post_clip_norm <= pre_clip_norm + atol
 
 
 class DesignV0TrainingModule(pl.LightningModule):
