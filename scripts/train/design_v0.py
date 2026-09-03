@@ -380,6 +380,19 @@ def global_grad_l2_norm(module: nn.Module) -> float:
     return float(torch.stack(squared).sum().sqrt())
 
 
+def multi_step_mse_metrics(
+    predicted: torch.Tensor, target: torch.Tensor
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """Return ``(loss, per_horizon_mse)`` using the training objective formula.
+
+    Matches ``DesignV0Objective``: mean squared error over batch and latent
+    dim per horizon, then mean over horizons.  Used only to score already
+    computed ``predicted``/``target`` tensors for logging.
+    """
+    per_horizon_mse = (predicted - target).pow(2).mean(dim=(0, 2))
+    return per_horizon_mse.mean(), per_horizon_mse
+
+
 def gradient_clip_applied(
     pre_clip_norm: float,
     post_clip_norm: float,
@@ -432,17 +445,33 @@ class DesignV0TrainingModule(pl.LightningModule):
             batch['env_id'],
         )
 
-    def _shared_step(
-        self, batch: dict[str, torch.Tensor], stage: str
-    ) -> torch.Tensor:
-        output = self(batch)
+    def _environment_id_mapping(self) -> dict[str, int]:
+        metadata = self.checkpoint_metadata
+        env_to_id = metadata.get('env_to_id')
+        if env_to_id:
+            return {
+                str(name): int(env_id)
+                for name, env_id in env_to_id.items()
+            }
+        names = metadata.get('env_names') or ()
+        return {
+            str(name): index for index, name in enumerate(names)
+        }
+
+    def _log_stage_metrics(
+        self,
+        output: Mapping[str, torch.Tensor],
+        batch: dict[str, torch.Tensor],
+        stage: str,
+    ) -> None:
+        batch_size = int(batch['pixels'].shape[0])
         self.log(
             f'{stage}/loss',
             output['loss'],
             on_step=stage == 'train',
             on_epoch=True,
             sync_dist=False,
-            batch_size=batch['pixels'].shape[0],
+            batch_size=batch_size,
         )
         for horizon, value in enumerate(output['per_horizon_mse'], start=1):
             self.log(
@@ -451,8 +480,51 @@ class DesignV0TrainingModule(pl.LightningModule):
                 on_step=False,
                 on_epoch=True,
                 sync_dist=False,
-                batch_size=batch['pixels'].shape[0],
+                batch_size=batch_size,
             )
+
+    def _log_per_environment_validation(
+        self,
+        output: Mapping[str, torch.Tensor],
+        batch: dict[str, torch.Tensor],
+    ) -> None:
+        env_id = batch['env_id']
+        predicted = output['predicted']
+        target = output['target']
+        mapping = self._environment_id_mapping()
+        for name, environment_id in sorted(
+            mapping.items(), key=lambda item: item[1]
+        ):
+            mask = env_id == environment_id
+            count = int(mask.sum())
+            if count == 0:
+                continue
+            loss, per_horizon_mse = multi_step_mse_metrics(
+                predicted[mask], target[mask]
+            )
+            self.log(
+                f'validation/{name}/loss',
+                loss,
+                on_step=False,
+                on_epoch=True,
+                sync_dist=False,
+                batch_size=count,
+            )
+            for horizon, value in enumerate(per_horizon_mse, start=1):
+                self.log(
+                    f'validation/{name}/mse_h{horizon}',
+                    value,
+                    on_step=False,
+                    on_epoch=True,
+                    sync_dist=False,
+                    batch_size=count,
+                )
+
+    def _shared_step(
+        self, batch: dict[str, torch.Tensor], stage: str
+    ) -> torch.Tensor:
+        output = self(batch)
+        self._log_stage_metrics(output, batch, stage)
         return output['loss']
 
     def training_step(
@@ -465,7 +537,10 @@ class DesignV0TrainingModule(pl.LightningModule):
         self, batch: dict[str, torch.Tensor], batch_idx: int
     ) -> torch.Tensor:
         del batch_idx
-        return self._shared_step(batch, 'validation')
+        output = self(batch)
+        self._log_stage_metrics(output, batch, 'validation')
+        self._log_per_environment_validation(output, batch)
+        return output['loss']
 
     def configure_optimizers(self):
         config = dict(self.optimizer_config)
