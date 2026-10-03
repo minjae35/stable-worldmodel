@@ -1,0 +1,8 @@
+# 7-env pilot (experiment-1.md Section 6). Run only after Stage 1 passes.
+stage: pilot
+config: scripts/rdwm/configs/exp1.yaml
+gpus: auto
+extra_args: [--ckpt-every, '1000']
+jobs:
+  - {variant: B, seed: 0, envs: [pusht, tworoom, cube, scene, reacher, pointmaze, antmaze], updates: 7000}
+  - {variant: C, seed: 0, envs: [pusht, tworoom, cube, scene, reacher, pointmaze, antmaze], updates: 7000}

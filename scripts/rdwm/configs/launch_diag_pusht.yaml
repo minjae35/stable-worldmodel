@@ -1,0 +1,20 @@
+# PushT action-conditioning diagnostic (not part of the v1 matrix).
+# Frozen architecture and hyperparameters; only the update budget and
+# checkpoint points differ.
+# - B rerun of Stage 1 with checkpoints at 100/500/1000.
+# - A PushT specialist, 5000 updates. Its schedule is the PushT subsequence
+#   of a PushT+Cube generalist schedule (10000 updates).
+stage: diag_pusht
+config: scripts/rdwm/configs/exp1.yaml
+gpus: [0, 1]
+jobs:
+  - variant: A
+    seed: 0
+    envs: [pusht]
+    updates: 5000
+    extra_args: [--schedule-envs, 'pusht,cube', --ckpt-every, '1000', --ckpt-steps, '100,500']
+  - variant: B
+    seed: 0
+    envs: [pusht, cube]
+    updates: 1000
+    extra_args: [--ckpt-every, '500', --ckpt-steps, '100']

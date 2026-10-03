@@ -1,0 +1,9 @@
+# Stage 1 — 2-env smoke (experiment-1.md Section 6).
+# B and C each run 1,000 updates on PushT + Cube. GPU ids are physical ids.
+stage: stage1_smoke
+config: scripts/rdwm/configs/exp1.yaml
+gpus: [0, 1]
+extra_args: [--ckpt-every, '500']
+jobs:
+  - {variant: B, seed: 0, envs: [pusht, cube], updates: 1000}
+  - {variant: C, seed: 0, envs: [pusht, cube], updates: 1000}

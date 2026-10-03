@@ -1,0 +1,14 @@
+# Full v1 matrix (experiment-1.md Section 6). Do not launch before the
+# 7-env pilot passes. One seed first; add seeds 1, 2 after the protocol is fixed.
+# Queue order per seed: B, C, D (70k) then the seven A specialists (10k).
+# Each A specialist starts from step 0 with one warmup+cosine over 10,000
+# updates. diag_pusht checkpoints are not official results: the PushT 5k->10k
+# continuation rebound a finished 5k cosine onto a 10k schedule.
+# gpus: auto -> this process's CUDA_VISIBLE_DEVICES (or every GPU).
+stage: full
+config: scripts/rdwm/configs/exp1.yaml
+gpus: auto
+matrix:
+  seeds: [0]
+  generalists: [B, C, D]
+  specialists: true

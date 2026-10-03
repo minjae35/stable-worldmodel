@@ -1,0 +1,128 @@
+# Experiment 1 config. Source of truth: scripts/rdwm/experiment-1.md.
+# Frozen values (Section 2, 4, 5) are checked by tests/rdwm/exp1/test_config.py.
+# Change them only with a revision of experiment-1.md.
+
+revision: exp1-v1
+
+paths:
+  data_root: /workspace/rdwm_data
+  run_root: /workspace/rdwm_runs/exp1
+  cache_root: /workspace/rdwm_runs/exp1/cache
+
+# Canonical env order. Shared initialization is built over this order.
+envs:
+  pusht:
+    local: lewm-pusht/train.lance
+    hf_repo: fracapuano/lewm-pusht
+    hf_revision: 26983123e22d0a871e52c0886c0aaee48f55e77c
+    native_hw: 224
+    action_dim: 2
+  tworoom:
+    local: lewm-tworooms/train.lance
+    hf_repo: fracapuano/lewm-tworooms
+    hf_revision: a6dc0810c55cffb74500906735fa6e9ac323810c
+    native_hw: 224
+    action_dim: 2
+  cube:
+    local: lewm-cube/train.lance
+    hf_repo: fracapuano/lewm-cube
+    hf_revision: 3838cba3575393ccc4e0cf1571d425b1b9514b86
+    native_hw: 224
+    action_dim: 5
+  scene:
+    local: rdwm-ogbench-scene/train.lance
+    hf_repo: mjb4835/rdwm-ogbench-scene
+    hf_revision: null
+    native_hw: 64
+    action_dim: 5
+  reacher:
+    local: lewm-reacher/train.lance
+    hf_repo: fracapuano/lewm-reacher
+    hf_revision: 852681f88696cd00b0c8cd6eb3baf5eddfba1a65
+    native_hw: 224
+    action_dim: 2
+  pointmaze:
+    local: rdwm-pointmaze/train.lance
+    hf_repo: mjb4835/rdwm-pointmaze
+    hf_revision: null
+    native_hw: 224
+    action_dim: 2
+  antmaze:
+    local: rdwm-ogbench-antmaze/train.lance
+    hf_repo: mjb4835/rdwm-ogbench-antmaze
+    hf_revision: null
+    native_hw: 64
+    action_dim: 8
+
+model:                      # Section 2 (frozen)
+  image_size: 224
+  patch_size: 14
+  encoder_width: 192
+  encoder_depth: 12
+  encoder_heads: 3
+  encoder_mlp: 768
+  pool: 2                   # 16x16 encoder tokens -> 8x8 = 64 dynamics tokens
+  projector_hidden: 768
+  action_block: 5
+  action_hidden: 192
+  dim: 192
+  dyn_depth: 6
+  dyn_heads: 3
+  dyn_head_dim: 64
+  dyn_ffn: 768
+  dyn_dropout: 0.1
+  max_frames: 3
+  head_hidden: 768
+  adapter_rank: 32          # Section 3, variant C only
+  adapter_blocks: [5, 6]    # 1-indexed dynamics blocks
+
+variants:                   # Section 3 (frozen definitions)
+  A: {name: independent_specialist, pooled: false, adapters: false, single_env: true}
+  B: {name: dense_generalist,       pooled: false, adapters: false, single_env: false}
+  C: {name: rdwm,                   pooled: false, adapters: true,  single_env: false}
+  D: {name: pooled_generalist,      pooled: true,  adapters: false, single_env: false}
+
+data:                       # Section 4 (frozen)
+  num_obs: 5
+  obs_stride: 5
+  history_probs: {3: 0.8, 2: 0.1, 1: 0.1}
+  imagenet_mean: [0.485, 0.456, 0.406]
+  imagenet_std: [0.229, 0.224, 0.225]
+  action_std_floor: 1.0e-3
+  # Not frozen in the doc: episode split ratio and order. Provisional.
+  split: {order: contiguous, val_frac: 0.1, test_frac: 0.1}
+  # Not frozen (Section 7): loader throughput knobs.
+  num_workers: 8
+  prefetch_factor: 4
+
+train:                      # Section 4 (frozen)
+  batch_size: 32
+  lr: 5.0e-5
+  weight_decay: 1.0e-3
+  warmup_frac: 0.01
+  grad_clip: 1.0
+  loss_weights: {t1: 0.5, t2: 0.5, sigreg: 0.09}
+  sigreg: {num_proj: 1024, knots: 17, positions: 8}
+  bf16: true
+  budgets: {A: 10000, B: 70000, C: 70000, D: 70000}
+  seeds: [0, 1, 2]
+  log_every: 10
+  ckpt_every: 5000
+
+cem:                        # Section 5 (frozen)
+  num_samples: 300
+  n_steps: 30
+  topk: 30
+  horizon: 5
+  receding_horizon: 1
+  history: 3
+  # Not specified in the doc; Stable-WM CEM defaults.
+  init_std: 1.0
+  warm_start: true
+
+eval:                       # Section 5 (frozen)
+  goal_offset: 25
+  exec_budget: 50
+  test_pairs: 100
+  pilot_val_pairs: 20
+  pair_seed: 0
