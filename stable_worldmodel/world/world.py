@@ -198,6 +198,8 @@ class World:
         goal_offset: int | None = None,
         eval_budget: int | None = None,
         callables: list[dict] | None = None,
+        record_trace: bool = False,
+        step_callback: Callable[[int], None] | None = None,
     ) -> dict:
         """Run the attached policy and return aggregated metrics.
 
@@ -228,6 +230,11 @@ class World:
             start_steps: Starting step within each dataset episode.
             goal_offset: Offset from each start step that defines the goal.
             eval_budget: Max env steps per episode in dataset mode.
+            record_trace: When True, dataset eval also returns ``traces``,
+                a per-env list of pose-error snapshots (initial state, then
+                each executed step). This does not change termination.
+            step_callback: Called with the number of completed env steps
+                during dataset eval.
             callables: Per-env setup calls applied on the unwrapped env
                 after reset. Each spec is
                 ``{'method': name, 'args': {arg_name: {'value': ...,
@@ -250,6 +257,8 @@ class World:
                 callables,
                 video,
                 mode,
+                record_trace=record_trace,
+                step_callback=step_callback,
             )
         mode = reset_mode or 'auto'
         return self._evaluate(episodes, seed, options, video, mode)
@@ -532,6 +541,8 @@ class World:
         callables,
         video,
         mode,
+        record_trace: bool = False,
+        step_callback: Callable[[int], None] | None = None,
     ) -> dict:
         n = len(episodes_idx)
         assert n == self.num_envs
@@ -613,10 +624,34 @@ class World:
             'seeds': seeds,
         }
         frames: dict[int, list] = defaultdict(list) if video else None
+        traces: list[list[dict]] | None = (
+            [[] for _ in range(n)] if record_trace else None
+        )
+        completed_steps = 0
+
+        def _record(world, i: int, official: bool) -> None:
+            core = world.envs.envs[i].unwrapped
+            if not hasattr(core, 'pose_errors') or core.goal_state is None:
+                return
+            err = core.pose_errors(core.goal_state, core._get_obs())
+            err['step'] = len(traces[i])
+            err['official_success'] = bool(official)
+            traces[i].append(err)
+
+        if traces is not None:
+            for i in range(n):
+                _record(self, i, False)
 
         def on_step(world, mask):
+            nonlocal completed_steps
             world.infos.update(deepcopy(goal_snapshot))
             results['episode_successes'] |= world.terminateds
+            if traces is not None:
+                for i in np.where(np.asarray(mask, dtype=bool))[0]:
+                    _record(world, int(i), bool(world.terminateds[i]))
+            completed_steps += 1
+            if step_callback is not None:
+                step_callback(completed_steps)
             if frames is not None:
                 for i in range(world.num_envs):
                     f = world.infos['pixels'][i]
@@ -624,6 +659,8 @@ class World:
                     frames[i].append(np.asarray(frame).copy())
 
         self._run(max_steps=eval_budget, mode=mode, on_step=on_step)
+        if traces is not None:
+            results['traces'] = traces
 
         results['success_rate'] = (
             float(results['episode_successes'].sum()) / n * 100.0

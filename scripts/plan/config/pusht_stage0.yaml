@@ -1,0 +1,34 @@
+defaults:
+  - pusht
+  - _self_
+
+seed: 42
+policy: quentinll/lewm-pusht
+
+# LeWM predictor was trained with history_size=3 and frameskip=5.
+# Replan every action block; keep the remaining plan as the CEM warm start.
+plan_config:
+  horizon: 5
+  receding_horizon: 1
+  action_block: 5
+  history_len: 3
+
+solver:
+  num_samples: 300
+  n_steps: 30
+  topk: 30
+  batch_size: 1
+  device: cuda
+
+eval:
+  num_eval: 10
+  goal_offset_steps: 25
+  eval_budget: 50
+  img_size: 224
+  dataset_name: hf://datasets/fracapuano/lewm-pusht/train.lance
+  heldout_fraction: 0.1
+  check_goal_alignment: true
+  output_dir: ${hydra:runtime.cwd}/results/stage0
+
+output:
+  filename: stage0_results.txt

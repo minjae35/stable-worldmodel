@@ -350,26 +350,41 @@ class PushT(gym.Env):
         truncated = False
         return observation, reward, terminated, truncated, info
 
-    def eval_state(self, goal_state, cur_state):
-        # success if position difference is < 20, and angle difference < np.pi/9
-        goal_state = np.asarray(goal_state, dtype=np.float64)
-        cur_state = np.asarray(cur_state, dtype=np.float64)
-        pos_diff = np.linalg.norm(goal_state[:4] - cur_state[:4])
+    def pose_errors(self, goal_state, cur_state):
+        """Component errors used by the official full-state success check.
 
-        # Compare angles modulo the block's rotational symmetry: square/+ match
-        # every 90 degrees, and Z/I match every 180 degrees. Other shapes use
-        # a full rotation, preserving the original orientation check.
+        Full-state success is unchanged: the L2 norm over agent position and
+        block position is below 20 and the block angle error is below π/9.
+        Object-only success applies that same angle test to the block
+        position alone and is a diagnostic, not the task criterion.
+        """
+        goal_state = np.asarray(goal_state, dtype=np.float64).reshape(-1)
+        cur_state = np.asarray(cur_state, dtype=np.float64).reshape(-1)
+        agent = float(np.linalg.norm(goal_state[:2] - cur_state[:2]))
+        block = float(np.linalg.norm(goal_state[2:4] - cur_state[2:4]))
+        full_pos = float(np.linalg.norm(goal_state[:4] - cur_state[:4]))
         block_shape = self.shapes[
             int(self.variation_space['block']['shape'].value)
         ]
         symmetry = self.shape_symmetry_angles.get(block_shape, 2 * np.pi)
-        angle_diff = np.abs(goal_state[4] - cur_state[4]) % symmetry
-        angle_diff = np.minimum(angle_diff, symmetry - angle_diff)
+        angle = float(np.abs(goal_state[4] - cur_state[4]) % symmetry)
+        angle = float(min(angle, symmetry - angle))
+        full_success = bool(full_pos < 20 and angle < np.pi / 9)
+        object_success = bool(block < 20 and angle < np.pi / 9)
+        return {
+            'agent_pos': agent,
+            'block_pos': block,
+            'block_angle': angle,
+            'full_pos': full_pos,
+            'full_success': full_success,
+            'object_success': object_success,
+            'state_dist': float(np.linalg.norm(goal_state - cur_state)),
+        }
 
-        success = pos_diff < 20 and angle_diff < np.pi / 9
-        state_dist = np.linalg.norm(goal_state - cur_state)
-
-        return success, state_dist
+    def eval_state(self, goal_state, cur_state):
+        # success if position difference is < 20, and angle difference < np.pi/9
+        err = self.pose_errors(goal_state, cur_state)
+        return err['full_success'], err['state_dist']
 
     def render(self):
         return self._render_frame(self.render_mode)

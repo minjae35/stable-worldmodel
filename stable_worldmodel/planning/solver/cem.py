@@ -66,10 +66,26 @@ class CEMSolver:
         self._action_dim = int(np.prod(action_space.shape[1:]))
         self._configured = True
 
-        if not isinstance(action_space, Box):
+        if isinstance(action_space, Box):
+            # Candidates are shaped (..., action_dim * action_block) with the
+            # per-step bounds tiled in the same order as a flattened block.
+            # ``low`` may be per-env (N, D) or a single Box (D,).
+            low = np.asarray(action_space.low, dtype=np.float64)
+            high = np.asarray(action_space.high, dtype=np.float64)
+            step_low = low.reshape(-1, low.shape[-1])[0]
+            step_high = high.reshape(-1, high.shape[-1])[0]
+            self._action_low = torch.tensor(
+                step_low, device=self.device, dtype=self.dtype
+            ).repeat(self._config.action_block)
+            self._action_high = torch.tensor(
+                step_high, device=self.device, dtype=self.dtype
+            ).repeat(self._config.action_block)
+        else:
             logger.warning(
                 f'Action space is discrete, got {type(action_space)}. CEMSolver may not work as expected.'
             )
+            self._action_low = None
+            self._action_high = None
 
     @property
     def n_envs(self) -> int:
@@ -149,6 +165,8 @@ class CEMSolver:
         mean, var = self.init_action_distrib(total_envs, init_action)
         mean = mean.to(self.device)
         var = var.to(self.device)
+        if self._action_low is not None:
+            mean = mean.clamp(self._action_low, self._action_high)
 
         for cb in self.callbacks:
             cb.reset()
@@ -210,6 +228,15 @@ class CEMSolver:
 
                 # Force the first sample to be the current mean
                 candidates[:, 0] = batch_mean
+
+                # Keep every candidate inside the solver action space. When
+                # the policy normalizes actions, that space is the preimage
+                # of the simulator bounds, so the scored action is the one
+                # that will actually be executed.
+                if self._action_low is not None:
+                    candidates = candidates.clamp(
+                        self._action_low, self._action_high
+                    )
 
                 # Evaluate candidates
                 costs = self.cost.get_cost(expanded_infos, candidates)
@@ -277,9 +304,14 @@ class CEMSolver:
             # Store history/metadata
             outputs['costs'].extend(final_batch_cost)
 
+        if self._action_low is not None:
+            mean = mean.clamp(self._action_low, self._action_high)
+
         outputs['actions'] = mean.detach().cpu()
         outputs['mean'] = [mean.detach().cpu()]
         outputs['var'] = [var.detach().cpu()]
+        outputs['solve_time'] = time.time() - start_time
+        outputs['n_envs_solved'] = total_envs
 
         if self.callbacks:
             outputs['callbacks'] = {}
@@ -287,5 +319,12 @@ class CEMSolver:
                 cb.end_solve()
                 outputs['callbacks'][cb.output_key] = cb.history
 
-        print(f'CEM solve time: {time.time() - start_time:.4f} seconds')
+        logger.info(
+            'CEM solve time: %.4f seconds (n_envs=%s)',
+            outputs['solve_time'],
+            total_envs,
+        )
+        callback = getattr(self, 'progress_callback', None)
+        if callback is not None:
+            callback(outputs['solve_time'], total_envs)
         return outputs

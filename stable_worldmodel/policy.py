@@ -369,6 +369,9 @@ class WorldModelPolicy(BasePolicy):
         self._action_buffer: list[deque[torch.Tensor]] | None = None
         self._next_init: torch.Tensor | None = None
         self._history_buffer: HistoryBuffer | None = None
+        self.solve_times: list[float] = []
+        self.solve_batches: list[int] = []
+        self.executed_actions: list[np.ndarray] = []
 
     @property
     def flatten_receding_horizon(self) -> int:
@@ -383,12 +386,18 @@ class WorldModelPolicy(BasePolicy):
         """
         self.env = env
         n_envs = getattr(env, 'num_envs', 1)
+        self.solve_times = []
+        self.solve_batches = []
+        self.executed_actions = []
         self.solver.configure(
-            action_space=env.action_space, n_envs=n_envs, config=self.cfg
+            action_space=self._solver_action_space(env.action_space),
+            n_envs=n_envs,
+            config=self.cfg,
         )
         self._action_buffer = [
             deque(maxlen=self.flatten_receding_horizon) for _ in range(n_envs)
         ]
+        self.reset_episode_state()
         if self.cfg.history_len > 1:
             max_len = self.cfg.history_max_len
             if max_len is None:
@@ -407,6 +416,18 @@ class WorldModelPolicy(BasePolicy):
         assert isinstance(self.solver, Solver), (
             'Solver must implement the Solver protocol'
         )
+
+    def reset_episode_state(self) -> None:
+        """Drop plan state so the next episode starts from a fresh history."""
+        if self._action_buffer is not None:
+            for buf in self._action_buffer:
+                buf.clear()
+        self._next_init = None
+        if self._history_buffer is not None:
+            self._history_buffer.reset()
+        self.solve_times = []
+        self.solve_batches = []
+        self.executed_actions = []
 
     def get_action(self, info_dict: dict, **kwargs: Any) -> np.ndarray:
         """Get action via planning with the world model.
@@ -495,6 +516,11 @@ class WorldModelPolicy(BasePolicy):
             )
 
             outputs = self.solver(sliced, init_action=sliced_init)
+            if 'solve_time' in outputs:
+                self.solve_times.append(float(outputs['solve_time']))
+                self.solve_batches.append(
+                    int(outputs.get('n_envs_solved', len(replan_idx)))
+                )
 
             actions = outputs['actions']
             keep_horizon = self.cfg.receding_horizon
@@ -535,8 +561,45 @@ class WorldModelPolicy(BasePolicy):
 
         if 'action' in self.process:
             action = self.process['action'].inverse_transform(action)
+            # Solver samples in normalized coordinates and is clamped to
+            # the preimage of this box. Clip once more so float error
+            # cannot leave the simulator range.
+            action = self._clip_to_action_space(action)
 
+        self.executed_actions.append(np.array(action, copy=True))
         return action
+
+    def _solver_action_space(self, action_space: Any) -> Any:
+        """Action space in the coordinates the solver samples.
+
+        The world model is trained on z-scored actions, so CEM must search
+        in that space. Bounds are the image of the simulator box under the
+        same scaler; clamping there keeps executed actions inside the
+        simulator range. Without a scaler the raw action space is used.
+        """
+        scaler = self.process.get('action') if self.process else None
+        if scaler is None or not hasattr(action_space, 'low'):
+            return action_space
+        low = np.asarray(action_space.low, dtype=np.float64)
+        high = np.asarray(action_space.high, dtype=np.float64)
+        feat = int(low.shape[-1]) if low.ndim else 1
+        low_n = np.asarray(
+            scaler.transform(low.reshape(-1, feat)), dtype=np.float32
+        ).reshape(low.shape)
+        high_n = np.asarray(
+            scaler.transform(high.reshape(-1, feat)), dtype=np.float32
+        ).reshape(high.shape)
+        low_n, high_n = np.minimum(low_n, high_n), np.maximum(low_n, high_n)
+        return type(action_space)(low=low_n, high=high_n, dtype=np.float32)
+
+    def _clip_to_action_space(self, action: np.ndarray) -> np.ndarray:
+        """Clip a raw action to the simulator box."""
+        space = getattr(self.env, 'single_action_space', None)
+        if space is None or not hasattr(space, 'low'):
+            return action
+        low = np.asarray(space.low, dtype=np.float32)
+        high = np.asarray(space.high, dtype=np.float32)
+        return np.clip(action, low, high).astype(np.float32, copy=False)
 
 
 # Alias for backward compatibility and type hinting

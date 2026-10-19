@@ -231,3 +231,11 @@ results/
 local_scripts/
 CLAUDE.md
 uv.lock
+
+# Local experiment data. The Stage 0 pair list is committed under
+# scripts/plan/config/. Datasets, checkpoints, videos, and run logs are not.
+*.pth
+*.pt
+*.ckpt
+*.lance
+*.jsonl
