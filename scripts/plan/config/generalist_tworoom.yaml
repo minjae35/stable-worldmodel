@@ -1,0 +1,12 @@
+defaults:
+  - tworoom
+  - _self_
+
+active_env: tworoom
+policy: lewm_generalist/weights_last.pt
+
+plan_config:
+  history_len: 3
+
+eval:
+  dataset_name: hf://datasets/fracapuano/lewm-tworooms/train.lance

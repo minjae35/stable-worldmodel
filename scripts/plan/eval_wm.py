@@ -198,6 +198,16 @@ def run(cfg: DictConfig):
 
     if policy != 'random':
         model = swm.wm.utils.load_pretrained(cfg.policy)
+        active_env = cfg.get('active_env', None)
+        if active_env:
+            setter = getattr(model, 'set_active_env', None)
+            if setter is None:
+                raise RuntimeError(
+                    f'active_env={active_env} but '
+                    f'{type(model).__name__} has no set_active_env'
+                )
+            setter(str(active_env))
+            print(f'[eval] active_env={active_env}')
         if cfg.get('bf16', False):
             model = model.to(torch.bfloat16)
         model = model.to('cuda')

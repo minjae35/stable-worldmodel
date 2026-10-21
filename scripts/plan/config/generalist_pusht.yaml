@@ -1,0 +1,14 @@
+defaults:
+  - pusht
+  - _self_
+
+# One generalist checkpoint. history_len matches LeWM history_size.
+# The checked-in pusht.yaml leaves history_len unset (default 1).
+active_env: pusht
+policy: lewm_generalist/weights_last.pt
+
+plan_config:
+  history_len: 3
+
+eval:
+  dataset_name: hf://datasets/fracapuano/lewm-pusht/train.lance

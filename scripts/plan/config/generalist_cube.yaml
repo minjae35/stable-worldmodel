@@ -1,0 +1,18 @@
+defaults:
+  - cube
+  - _self_
+
+active_env: cube
+policy: lewm_generalist/weights_last.pt
+
+plan_config:
+  history_len: 3
+
+# lewm-cube frames were rendered with an opaque arm. The OGBench default
+# leaves the arm transparent and does not match those pixels.
+world:
+  ob_type: pixels
+  pixel_transparent_arm: false
+
+eval:
+  dataset_name: hf://datasets/fracapuano/lewm-cube/train.lance
