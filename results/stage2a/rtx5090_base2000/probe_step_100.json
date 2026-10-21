@@ -1,0 +1,72 @@
+{
+  "label": "base100",
+  "weights": "results/stage2a/rtx5090_base2000/weights_step_100.pt",
+  "detach_pred_target": false,
+  "pusht": {
+    "cls": {
+      "dim_std_median": 0.004132125526666641,
+      "dim_std_mean": 0.004199320916086435,
+      "dim_std_min": 0.00256242579780519,
+      "std": 0.9999996423721313
+    },
+    "projector": {
+      "dim_std_median": 0.00830299686640501,
+      "dim_std_mean": 0.008308179676532745,
+      "dim_std_min": 0.005347650498151779,
+      "std": 0.21282222867012024
+    },
+    "pred_loss": 0.16405847668647766,
+    "sigreg_loss": 14.1875,
+    "encoder_grad_norm": 16.158218383789062,
+    "finite": true
+  },
+  "tworoom": {
+    "cls": {
+      "dim_std_median": 0.0007916305912658572,
+      "dim_std_mean": 0.0008516263915225863,
+      "dim_std_min": 0.00032070683664642274,
+      "std": 0.9999996423721313
+    },
+    "projector": {
+      "dim_std_median": 0.0016516965115442872,
+      "dim_std_mean": 0.0017513943603262305,
+      "dim_std_min": 0.000770334736444056,
+      "std": 0.19486640393733978
+    },
+    "pred_loss": 0.15622392296791077,
+    "sigreg_loss": 13.9375,
+    "encoder_grad_norm": 14.562889099121094,
+    "finite": true
+  },
+  "cube": {
+    "cls": {
+      "dim_std_median": 0.023787938058376312,
+      "dim_std_mean": 0.02731013298034668,
+      "dim_std_min": 0.01085592620074749,
+      "std": 0.9999998807907104
+    },
+    "projector": {
+      "dim_std_median": 0.06222030892968178,
+      "dim_std_mean": 0.07019662111997604,
+      "dim_std_min": 0.03084312193095684,
+      "std": 0.44274842739105225
+    },
+    "pred_loss": 0.30884283781051636,
+    "sigreg_loss": 17.625,
+    "encoder_grad_norm": 22.260852813720703,
+    "finite": true
+  },
+  "pusht_tworoom_cosine": 0.6519484519958496,
+  "joint_encoder_grad_norm": 6.39017915725708,
+  "joint_predictor_grad_norm": 0.06686609238386154,
+  "joint_projector_grad_norm": 3.587022066116333,
+  "encoder_nonzero_params": [
+    5501376,
+    5501376
+  ],
+  "predictor_nonzero_params": [
+    10791360,
+    10791360
+  ],
+  "cosine_full_vs_cube": 0.5340275764465332
+}

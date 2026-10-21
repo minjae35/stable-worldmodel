@@ -1,0 +1,960 @@
+2026-10-21 04:54:18,954 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a
+2026-10-21 04:54:18,954 INFO rank 0 world 1
+2026-10-21 04:54:24,462 INFO schedule_steps=2055400 lr=5e-05 effective_per_env=32 dropped=1
+2026-10-21 04:54:24,463 INFO stop_after_epoch=1 with schedule_steps=2055400
+2026-10-21 04:55:28,167 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:28,397 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:28,534 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:28,763 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:28,920 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:29,056 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:29,215 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:29,377 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:29,539 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:29,677 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:29,815 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:29,952 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:30,135 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:30,313 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:30,492 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:30,628 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:30,784 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:30,943 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:31,101 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:31,237 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:31,396 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:31,545 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:31,721 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:31,867 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:32,053 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:32,236 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:32,418 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:32,567 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:32,753 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:32,925 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:33,179 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:33,355 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:33,493 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:33,638 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:33,789 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:33,945 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:34,097 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:34,255 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:34,395 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:34,541 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:34,682 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:34,825 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:34,966 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:35,106 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:35,245 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:35,401 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:35,561 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:35,720 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:35,888 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:36,049 INFO step 50 loss=1.6380090713500977 pred=0.23175911605358124 sigreg=15.625 lr=1.21630826116571e-07 pusht=1.4756250381469727 tworoom=1.4799844026565552 cube=1.9662303924560547 gpu_peak_mb=9730.83154296875
+2026-10-21 04:55:36,049 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:36,189 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:36,327 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:36,465 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:36,616 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:36,774 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:36,941 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:37,104 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:37,261 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:37,412 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:37,573 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:37,723 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:37,873 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:38,023 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:38,171 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:38,318 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:38,471 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:38,617 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:38,764 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:38,912 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:39,061 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:39,209 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:39,363 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:40,183 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:40,329 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:40,474 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:40,620 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:40,768 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:40,926 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:41,094 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:41,250 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:41,411 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:41,577 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:41,731 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:41,888 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:42,050 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:42,210 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:42,359 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:42,508 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:42,670 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:42,836 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:43,002 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:43,162 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:43,317 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:43,479 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:43,636 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:43,798 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:43,957 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:44,128 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:44,288 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:44,447 INFO step 100 loss=1.5660436153411865 pred=0.20666861534118652 sigreg=15.125 lr=2.43261652233142e-07 pusht=1.4420130252838135 tworoom=1.4316297769546509 cube=1.8244881629943848 gpu_peak_mb=9730.83154296875
+2026-10-21 04:55:44,448 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:44,608 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:44,783 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:44,943 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:45,105 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:45,269 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:45,430 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:45,594 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:45,759 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:45,913 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:46,071 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:46,235 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:46,393 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:46,553 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:46,711 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:46,875 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:47,041 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:47,201 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:47,363 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:47,517 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:47,680 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:47,841 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:48,003 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:48,168 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:48,332 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:48,490 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:48,644 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:48,799 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:48,972 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:49,139 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:49,300 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:49,470 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:49,642 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:49,807 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:49,975 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:50,142 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:50,309 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:50,480 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:50,652 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:50,824 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:50,995 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:51,163 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:51,330 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:51,498 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:51,661 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:51,827 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:51,991 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:52,154 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:52,318 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:52,479 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:52,643 INFO step 150 loss=1.5100996494293213 pred=0.18197469413280487 sigreg=14.75 lr=3.64892478349713e-07 pusht=1.4101662635803223 tworoom=1.3979132175445557 cube=1.7222195863723755 gpu_peak_mb=9730.83154296875
+2026-10-21 04:55:52,643 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:52,809 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:52,976 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:53,139 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:53,308 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:53,478 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:53,644 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:53,819 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:54,003 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:54,185 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:54,370 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:54,552 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:54,749 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:54,934 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:55,122 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:55,286 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:55,454 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:55,625 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:55,789 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:55,943 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:56,100 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:56,258 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:56,438 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:56,615 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:56,785 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:56,944 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:57,119 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:57,293 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:57,446 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:57,598 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:57,743 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:57,894 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:58,033 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:58,175 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:58,316 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:58,459 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:58,601 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:58,746 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:58,893 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:59,053 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:59,270 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:59,485 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:59,721 WARNING no optimizer checkpoint to promote
+2026-10-21 04:55:59,887 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:00,061 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:00,222 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:00,385 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:00,554 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:00,732 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:00,904 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:01,098 INFO step 200 loss=1.4512709379196167 pred=0.15439598262310028 sigreg=14.375 lr=4.86523304466284e-07 pusht=1.374842882156372 tworoom=1.363630771636963 cube=1.5997142791748047 gpu_peak_mb=9730.83154296875
+2026-10-21 04:56:01,099 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:01,277 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:01,453 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:01,641 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:01,856 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:02,031 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:02,204 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:02,376 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:02,537 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:02,716 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:02,883 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:03,055 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:03,237 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:03,421 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:03,606 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:03,793 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:03,965 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:04,138 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:04,308 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:04,482 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:04,656 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:04,895 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:05,069 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:05,259 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:05,446 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:05,631 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:05,805 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:06,009 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:06,182 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:06,352 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:06,524 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:06,698 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:06,872 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:07,051 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:07,230 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:07,410 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:07,582 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:07,759 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:07,937 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:08,126 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:08,321 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:08,505 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:08,688 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:08,889 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:09,095 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:09,342 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:09,559 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:09,768 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:09,971 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:10,164 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:10,341 INFO step 250 loss=1.3944716453552246 pred=0.1288466602563858 sigreg=14.0625 lr=6.081541305828549e-07 pusht=1.3466295003890991 tworoom=1.344435453414917 cube=1.4845374822616577 gpu_peak_mb=9730.83154296875
+2026-10-21 04:56:10,342 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:10,525 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:10,712 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:10,880 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:11,052 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:11,222 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:11,391 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:11,575 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:11,775 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:11,967 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:12,157 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:12,328 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:12,515 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:12,718 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:12,921 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:13,119 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:13,312 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:13,507 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:13,698 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:13,896 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:14,094 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:14,287 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:14,476 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:14,669 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:14,858 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:15,050 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:15,242 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:15,430 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:15,625 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:15,813 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:16,002 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:16,194 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:16,379 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:16,546 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:16,721 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:16,872 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:17,009 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:17,146 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:17,285 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:17,423 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:17,559 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:17,695 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:17,833 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:17,971 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:18,108 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:18,245 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:18,383 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:18,520 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:18,657 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:18,796 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:18,932 INFO step 300 loss=1.3394825458526611 pred=0.10510760545730591 sigreg=13.6875 lr=7.29784956699426e-07 pusht=1.3112238645553589 tworoom=1.3089088201522827 cube=1.406127691268921 gpu_peak_mb=9730.83154296875
+2026-10-21 04:56:18,932 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:19,069 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:19,205 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:19,341 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:19,475 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:19,610 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:19,745 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:19,881 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:20,018 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:20,153 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:20,288 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:20,425 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:20,566 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:20,705 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:20,843 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:20,979 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:21,115 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:21,252 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:21,388 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:21,522 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:21,659 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:21,796 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:21,930 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:22,067 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:22,203 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:22,340 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:22,477 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:22,613 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:22,749 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:22,888 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:23,027 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:23,166 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:23,303 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:23,441 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:23,578 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:23,717 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:23,855 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:23,992 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:24,129 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:24,264 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:24,399 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:24,538 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:24,673 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:24,808 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:24,944 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:25,080 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:25,215 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:25,351 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:25,487 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:25,625 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:25,761 INFO step 350 loss=1.2964234352111816 pred=0.08548590540885925 sigreg=13.4375 lr=8.51415782815997e-07 pusht=1.2766801118850708 tworoom=1.2751579284667969 cube=1.3296196460723877 gpu_peak_mb=9730.83154296875
+2026-10-21 04:56:25,761 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:25,898 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:26,033 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:26,170 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:26,306 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:26,442 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:26,578 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:26,722 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:26,856 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:26,992 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:27,128 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:27,265 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:27,401 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:27,537 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:27,672 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:27,809 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:27,945 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:28,083 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:28,222 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:28,372 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:28,510 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:28,655 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:28,797 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:28,943 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:29,085 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:29,225 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:29,371 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:29,508 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:29,644 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:29,780 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:29,918 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:30,054 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:30,187 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:30,323 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:30,457 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:30,593 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:30,729 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:30,866 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:31,000 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:31,137 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:31,274 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:31,409 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:31,547 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:31,682 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:31,817 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:31,954 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:32,090 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:32,229 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:32,365 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:32,501 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:32,635 INFO step 400 loss=1.262609839439392 pred=0.06729737669229507 sigreg=13.3125 lr=9.73046608932568e-07 pusht=1.2526535987854004 tworoom=1.2590690851211548 cube=1.2839194536209106 gpu_peak_mb=9730.83154296875
+2026-10-21 04:56:32,635 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:32,772 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:32,909 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:33,046 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:33,182 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:33,318 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:33,453 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:33,590 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:33,725 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:33,860 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:33,996 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:34,135 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:34,273 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:34,410 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:34,549 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:34,686 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:34,822 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:34,968 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:35,104 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:35,245 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:35,382 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:35,519 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:35,656 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:35,792 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:35,930 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:36,069 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:36,207 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:36,344 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:36,478 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:36,617 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:36,755 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:36,892 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:37,029 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:37,167 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:37,304 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:37,442 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:37,579 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:37,718 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:37,856 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:37,994 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:38,130 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:38,268 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:38,404 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:38,543 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:38,680 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:38,816 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:38,953 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:39,086 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:39,224 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:39,361 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:39,497 INFO step 450 loss=1.226470708847046 pred=0.054595768451690674 sigreg=13.0625 lr=1.094677435049139e-06 pusht=1.2307218313217163 tworoom=1.2373601198196411 cube=1.2347677946090698 gpu_peak_mb=9730.83154296875
+2026-10-21 04:56:39,497 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:39,635 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:39,772 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:39,908 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:40,043 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:40,179 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:40,316 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:40,451 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:40,587 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:40,722 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:40,857 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:40,993 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:41,128 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:41,265 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:41,401 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:41,536 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:41,671 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:41,809 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:41,947 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:42,084 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:42,219 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:42,355 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:42,489 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:42,626 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:42,761 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:42,898 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:43,036 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:43,170 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:43,307 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:43,445 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:43,581 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:43,718 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:43,855 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:43,989 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:44,124 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:44,262 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:44,398 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:44,534 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:44,670 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:44,806 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:44,941 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:45,079 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:45,216 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:45,353 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:45,491 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:45,626 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:45,761 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:45,899 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:46,035 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:46,170 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:46,307 INFO step 500 loss=1.2003767490386963 pred=0.04412670433521271 sigreg=12.875 lr=1.2163082611657098e-06 pusht=1.2182848453521729 tworoom=1.2177048921585083 cube=1.1729528903961182 gpu_peak_mb=9730.83154296875
+2026-10-21 04:56:46,307 WARNING no optimizer checkpoint to promote
+2026-10-21 04:56:47,219 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 04:56:55,187 INFO step 550 loss=1.1769334077835083 pred=0.036308448761701584 sigreg=12.6875 lr=1.3379390872822809e-06 pusht=1.1935468912124634 tworoom=1.2013458013534546 cube=1.1437201499938965 gpu_peak_mb=9730.83154296875
+2026-10-21 04:57:04,221 INFO step 600 loss=1.1573436260223389 pred=0.032343585044145584 sigreg=12.5 lr=1.459569913398852e-06 pusht=1.1868776082992554 tworoom=1.1866612434387207 cube=1.090679407119751 gpu_peak_mb=9730.83154296875
+2026-10-21 04:57:11,069 INFO step 650 loss=1.1402981281280518 pred=0.030923163518309593 sigreg=12.3125 lr=1.5812007395154228e-06 pusht=1.1822781562805176 tworoom=1.1819432973861694 cube=1.0605792999267578 gpu_peak_mb=9730.83154296875
+2026-10-21 04:57:17,929 INFO step 700 loss=1.119287371635437 pred=0.033349815756082535 sigreg=12.0625 lr=1.702831565631994e-06 pusht=1.1712719202041626 tworoom=1.1789523363113403 cube=1.0154502391815186 gpu_peak_mb=9730.83154296875
+2026-10-21 04:57:24,882 INFO step 750 loss=1.1052501201629639 pred=0.03493766114115715 sigreg=11.875 lr=1.8244623917485646e-06 pusht=1.1690815687179565 tworoom=1.1690783500671387 cube=0.9736843109130859 gpu_peak_mb=9730.83154296875
+2026-10-21 04:57:31,787 INFO step 800 loss=1.0850392580032349 pred=0.03816421702504158 sigreg=11.625 lr=1.946093217865136e-06 pusht=1.167554497718811 tworoom=1.1675266027450562 cube=0.9239426851272583 gpu_peak_mb=9730.83154296875
+2026-10-21 04:57:38,694 INFO step 850 loss=1.0757631063461304 pred=0.04451311379671097 sigreg=11.4375 lr=2.0677240439817067e-06 pusht=1.1590121984481812 tworoom=1.1670571565628052 cube=0.8934075236320496 gpu_peak_mb=9730.83154296875
+2026-10-21 04:57:45,593 INFO step 900 loss=1.0627775192260742 pred=0.04715251550078392 sigreg=11.3125 lr=2.189354870098278e-06 pusht=1.1585445404052734 tworoom=1.1584843397140503 cube=0.8752098679542542 gpu_peak_mb=9730.83154296875
+2026-10-21 04:57:52,560 INFO step 950 loss=1.051730751991272 pred=0.05173073336482048 sigreg=11.125 lr=2.310985696214849e-06 pusht=1.1578166484832764 tworoom=1.157753825187683 cube=0.8318092226982117 gpu_peak_mb=9730.83154296875
+2026-10-21 04:57:59,534 INFO step 1000 loss=1.0445064306259155 pred=0.04841264709830284 sigreg=11.0625 lr=2.4326165223314197e-06 pusht=1.1575651168823242 tworoom=1.157515048980713 cube=0.8184390068054199 gpu_peak_mb=9730.83154296875
+2026-10-21 04:58:00,274 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 04:58:07,041 INFO step 1050 loss=1.0491724014282227 pred=0.049172453582286835 sigreg=11.125 lr=2.554247348447991e-06 pusht=1.1573638916015625 tworoom=1.1573363542556763 cube=0.8250045776367188 gpu_peak_mb=9730.83154296875
+2026-10-21 04:58:13,934 INFO step 1100 loss=1.0329947471618652 pred=0.04471347853541374 sigreg=11.0 lr=2.6758781745645617e-06 pusht=1.1573888063430786 tworoom=1.157192587852478 cube=0.7883090376853943 gpu_peak_mb=9730.83154296875
+2026-10-21 04:58:20,845 INFO step 1150 loss=1.022438883781433 pred=0.04197010025382042 sigreg=10.875 lr=2.7975090006811326e-06 pusht=1.1572450399398804 tworoom=1.1571416854858398 cube=0.7529297471046448 gpu_peak_mb=9730.83154296875
+2026-10-21 04:58:27,736 INFO step 1200 loss=1.0308640003204346 pred=0.046488963067531586 sigreg=10.9375 lr=2.919139826797704e-06 pusht=1.1574270725250244 tworoom=1.1571766138076782 cube=0.7701756954193115 gpu_peak_mb=9730.83154296875
+2026-10-21 04:58:34,602 INFO step 1250 loss=1.0250740051269531 pred=0.04460522159934044 sigreg=10.875 lr=3.0407706529142747e-06 pusht=1.157259464263916 tworoom=1.1571182012557983 cube=0.7608442306518555 gpu_peak_mb=9730.83154296875
+2026-10-21 04:58:41,452 INFO step 1300 loss=1.0174853801727295 pred=0.0370166078209877 sigreg=10.875 lr=3.1624014790308455e-06 pusht=1.1572908163070679 tworoom=1.1571341753005981 cube=0.7263122797012329 gpu_peak_mb=9730.83154296875
+2026-10-21 04:58:48,324 INFO step 1350 loss=1.0032075643539429 pred=0.030551288276910782 sigreg=10.8125 lr=3.2840323051474168e-06 pusht=1.1572355031967163 tworoom=1.1571077108383179 cube=0.6913731098175049 gpu_peak_mb=9730.83154296875
+2026-10-21 04:58:55,479 INFO step 1400 loss=1.0089292526245117 pred=0.03627298027276993 sigreg=10.8125 lr=3.405663131263988e-06 pusht=1.157907247543335 tworoom=1.1579992771148682 cube=0.7147874236106873 gpu_peak_mb=9730.83154296875
+2026-10-21 04:59:02,700 INFO step 1450 loss=1.015574336051941 pred=0.0351056233048439 sigreg=10.875 lr=3.527293957380559e-06 pusht=1.1571067571640015 tworoom=1.1570390462875366 cube=0.7325772643089294 gpu_peak_mb=9730.83154296875
+2026-10-21 04:59:10,579 INFO step 1500 loss=1.0033305883407593 pred=0.034580644220113754 sigreg=10.75 lr=3.6489247834971293e-06 pusht=1.158050298690796 tworoom=1.1580309867858887 cube=0.686098039150238 gpu_peak_mb=9730.83154296875
+2026-10-21 04:59:11,329 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 04:59:18,099 INFO step 1550 loss=0.9998856782913208 pred=0.027229413390159607 sigreg=10.8125 lr=3.7705556096137005e-06 pusht=1.157183051109314 tworoom=1.1570935249328613 cube=0.6775678992271423 gpu_peak_mb=9730.83154296875
+2026-10-21 04:59:24,989 INFO step 1600 loss=0.9963960647583008 pred=0.035458553582429886 sigreg=10.6875 lr=3.892186435730272e-06 pusht=1.1575247049331665 tworoom=1.1574264764785767 cube=0.6703307628631592 gpu_peak_mb=9730.83154296875
+2026-10-21 04:59:31,921 INFO step 1650 loss=1.0025758743286133 pred=0.04163834825158119 sigreg=10.6875 lr=4.013817261846843e-06 pusht=1.1576241254806519 tworoom=1.1576334238052368 cube=0.6963761448860168 gpu_peak_mb=9730.83154296875
+2026-10-21 04:59:38,781 INFO step 1700 loss=0.9925392270088196 pred=0.035507965832948685 sigreg=10.625 lr=4.1354480879634135e-06 pusht=1.15731680393219 tworoom=1.1572704315185547 cube=0.6630303859710693 gpu_peak_mb=9730.83154296875
+2026-10-21 04:59:45,654 INFO step 1750 loss=0.9782920479774475 pred=0.029073286801576614 sigreg=10.5625 lr=4.257078914079985e-06 pusht=1.1569429636001587 tworoom=1.1569048166275024 cube=0.6210283041000366 gpu_peak_mb=9730.83154296875
+2026-10-21 04:59:52,566 INFO step 1800 loss=0.9985480904579163 pred=0.04151684790849686 sigreg=10.625 lr=4.378709740196556e-06 pusht=1.1579245328903198 tworoom=1.1578601598739624 cube=0.6642345786094666 gpu_peak_mb=9730.83154296875
+2026-10-21 04:59:59,441 INFO step 1850 loss=0.9765723943710327 pred=0.039072372019290924 sigreg=10.4375 lr=4.500340566313126e-06 pusht=1.1570656299591064 tworoom=1.156960129737854 cube=0.6235039234161377 gpu_peak_mb=9730.83154296875
+2026-10-21 05:00:06,367 INFO step 1900 loss=1.0038453340530396 pred=0.046814098954200745 sigreg=10.625 lr=4.621971392429698e-06 pusht=1.1569045782089233 tworoom=1.1568206548690796 cube=0.686091959476471 gpu_peak_mb=9730.83154296875
+2026-10-21 05:00:13,273 INFO step 1950 loss=0.9890274405479431 pred=0.04371495544910431 sigreg=10.5 lr=4.7436022185462685e-06 pusht=1.1571491956710815 tworoom=1.1570717096328735 cube=0.645048975944519 gpu_peak_mb=9730.83154296875
+2026-10-21 05:00:20,187 INFO step 2000 loss=0.9903700351715088 pred=0.04505752772092819 sigreg=10.5 lr=4.865233044662839e-06 pusht=1.1570067405700684 tworoom=1.1569766998291016 cube=0.6610329747200012 gpu_peak_mb=9730.83154296875
+2026-10-21 05:00:20,963 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:00:27,708 INFO step 2050 loss=0.9948245286941528 pred=0.04951203987002373 sigreg=10.5 lr=4.986863870779411e-06 pusht=1.1580342054367065 tworoom=1.1658668518066406 cube=0.6605725288391113 gpu_peak_mb=9730.83154296875
+2026-10-21 05:00:34,589 INFO step 2100 loss=0.9696905016899109 pred=0.04781549796462059 sigreg=10.25 lr=5.108494696895982e-06 pusht=1.1567919254302979 tworoom=1.1567963361740112 cube=0.597436249256134 gpu_peak_mb=9730.83154296875
+2026-10-21 05:00:41,513 INFO step 2150 loss=0.9684549570083618 pred=0.046579986810684204 sigreg=10.25 lr=5.230125523012552e-06 pusht=1.1568089723587036 tworoom=1.15674889087677 cube=0.5976665019989014 gpu_peak_mb=9730.83154296875
+2026-10-21 05:00:48,408 INFO step 2200 loss=0.9835605621337891 pred=0.04996682330965996 sigreg=10.375 lr=5.3517563491291235e-06 pusht=1.1574581861495972 tworoom=1.1575015783309937 cube=0.6376751661300659 gpu_peak_mb=9730.83154296875
+2026-10-21 05:00:55,374 INFO step 2250 loss=0.9627869725227356 pred=0.044818215072155 sigreg=10.1875 lr=5.473387175245694e-06 pusht=1.1569700241088867 tworoom=1.1569740772247314 cube=0.5724635720252991 gpu_peak_mb=9730.83154296875
+2026-10-21 05:01:02,397 INFO step 2300 loss=0.9681305885314941 pred=0.04625556990504265 sigreg=10.25 lr=5.595018001362265e-06 pusht=1.157165288925171 tworoom=1.1571705341339111 cube=0.5783370733261108 gpu_peak_mb=9730.83154296875
+2026-10-21 05:01:09,346 INFO step 2350 loss=0.9546003341674805 pred=0.04444408416748047 sigreg=10.125 lr=5.716648827478837e-06 pusht=1.1568859815597534 tworoom=1.156837821006775 cube=0.5520303249359131 gpu_peak_mb=9730.83154296875
+2026-10-21 05:01:16,274 INFO step 2400 loss=0.9802091717720032 pred=0.04661543294787407 sigreg=10.375 lr=5.838279653595408e-06 pusht=1.1583293676376343 tworoom=1.1583290100097656 cube=0.6220160126686096 gpu_peak_mb=9730.83154296875
+2026-10-21 05:01:23,309 INFO step 2450 loss=0.9590020179748535 pred=0.04884577915072441 sigreg=10.125 lr=5.9599104797119785e-06 pusht=1.157487154006958 tworoom=1.1574569940567017 cube=0.5679214000701904 gpu_peak_mb=9730.83154296875
+2026-10-21 05:01:30,206 INFO step 2500 loss=0.9374146461486816 pred=0.03897712007164955 sigreg=10.0 lr=6.081541305828549e-06 pusht=1.1571087837219238 tworoom=1.1571158170700073 cube=0.4999723732471466 gpu_peak_mb=9730.83154296875
+2026-10-21 05:01:30,983 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:01:37,809 INFO step 2550 loss=0.9486517310142517 pred=0.042401742190122604 sigreg=10.0625 lr=6.20317213194512e-06 pusht=1.1570929288864136 tworoom=1.1570707559585571 cube=0.5220259428024292 gpu_peak_mb=9730.83154296875
+2026-10-21 05:01:44,765 INFO step 2600 loss=0.9593353271484375 pred=0.0491790734231472 sigreg=10.125 lr=6.324802958061691e-06 pusht=1.1572855710983276 tworoom=1.157260775566101 cube=0.5654128193855286 gpu_peak_mb=9730.83154296875
+2026-10-21 05:01:51,869 INFO step 2650 loss=0.9473822116851807 pred=0.052850984036922455 sigreg=9.9375 lr=6.446433784178263e-06 pusht=1.1569404602050781 tworoom=1.1568670272827148 cube=0.5166205167770386 gpu_peak_mb=9730.83154296875
+2026-10-21 05:01:58,793 INFO step 2700 loss=0.9449166655540466 pred=0.04647914320230484 sigreg=10.0 lr=6.5680646102948335e-06 pusht=1.1571035385131836 tworoom=1.157070279121399 cube=0.5166698098182678 gpu_peak_mb=9730.83154296875
+2026-10-21 05:02:05,766 INFO step 2750 loss=0.9329043030738831 pred=0.03446682542562485 sigreg=10.0 lr=6.689695436411404e-06 pusht=1.1569514274597168 tworoom=1.156947374343872 cube=0.4789547324180603 gpu_peak_mb=9730.83154296875
+2026-10-21 05:02:12,680 INFO step 2800 loss=0.93830406665802 pred=0.03205407038331032 sigreg=10.0625 lr=6.811326262527976e-06 pusht=1.1570255756378174 tworoom=1.1570193767547607 cube=0.4911016821861267 gpu_peak_mb=9730.83154296875
+2026-10-21 05:02:19,619 INFO step 2850 loss=0.944634199142456 pred=0.03838418051600456 sigreg=10.0625 lr=6.932957088644547e-06 pusht=1.157386064529419 tworoom=1.157541275024414 cube=0.5092096924781799 gpu_peak_mb=9730.83154296875
+2026-10-21 05:02:27,137 INFO step 2900 loss=0.9542407393455505 pred=0.03627197444438934 sigreg=10.1875 lr=7.054587914761118e-06 pusht=1.1574339866638184 tworoom=1.1575767993927002 cube=0.5359926223754883 gpu_peak_mb=9730.83154296875
+2026-10-21 05:02:34,106 INFO step 2950 loss=0.9383795857429504 pred=0.03994206339120865 sigreg=10.0 lr=7.176218740877689e-06 pusht=1.1569194793701172 tworoom=1.1568448543548584 cube=0.5013742446899414 gpu_peak_mb=9730.83154296875
+2026-10-21 05:02:41,001 INFO step 3000 loss=0.9294650554656982 pred=0.03493382781744003 sigreg=9.9375 lr=7.2978495669942585e-06 pusht=1.1569392681121826 tworoom=1.1569048166275024 cube=0.4628324508666992 gpu_peak_mb=9730.83154296875
+2026-10-21 05:02:41,770 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:02:48,596 INFO step 3050 loss=0.9428401589393616 pred=0.04440267011523247 sigreg=10.0 lr=7.41948039311083e-06 pusht=1.156719446182251 tworoom=1.1566932201385498 cube=0.5209671854972839 gpu_peak_mb=9730.83154296875
+2026-10-21 05:02:55,496 INFO step 3100 loss=0.9580870270729065 pred=0.0401182696223259 sigreg=10.1875 lr=7.541111219227401e-06 pusht=1.1568089723587036 tworoom=1.1567732095718384 cube=0.5528663992881775 gpu_peak_mb=9730.83154296875
+2026-10-21 05:03:02,458 INFO step 3150 loss=0.9432300329208374 pred=0.04479255527257919 sigreg=10.0 lr=7.662742045343973e-06 pusht=1.157640814781189 tworoom=1.1577231884002686 cube=0.5201855301856995 gpu_peak_mb=9730.83154296875
+2026-10-21 05:03:09,566 INFO step 3200 loss=0.914495050907135 pred=0.0316825695335865 sigreg=9.8125 lr=7.784372871460544e-06 pusht=1.1566873788833618 tworoom=1.156652569770813 cube=0.434051513671875 gpu_peak_mb=9730.83154296875
+2026-10-21 05:03:16,472 INFO step 3250 loss=0.9486976861953735 pred=0.03854146599769592 sigreg=10.125 lr=7.906003697577114e-06 pusht=1.1571303606033325 tworoom=1.157090187072754 cube=0.5299195051193237 gpu_peak_mb=9730.83154296875
+2026-10-21 05:03:23,388 INFO step 3300 loss=0.9336400032043457 pred=0.035202525556087494 sigreg=10.0 lr=8.027634523693685e-06 pusht=1.1567319631576538 tworoom=1.1566803455352783 cube=0.47969526052474976 gpu_peak_mb=9730.83154296875
+2026-10-21 05:03:30,380 INFO step 3350 loss=0.9242118000984192 pred=0.033586807548999786 sigreg=9.875 lr=8.149265349810256e-06 pusht=1.1568968296051025 tworoom=1.1569141149520874 cube=0.4490588903427124 gpu_peak_mb=9730.83154296875
+2026-10-21 05:03:37,322 INFO step 3400 loss=0.9246365427970886 pred=0.034011561423540115 sigreg=9.875 lr=8.270896175926827e-06 pusht=1.156663179397583 tworoom=1.1566436290740967 cube=0.45474347472190857 gpu_peak_mb=9730.83154296875
+2026-10-21 05:03:44,251 INFO step 3450 loss=0.9321707487106323 pred=0.03373325616121292 sigreg=10.0 lr=8.392527002043398e-06 pusht=1.1567736864089966 tworoom=1.1567904949188232 cube=0.4790418744087219 gpu_peak_mb=9730.83154296875
+2026-10-21 05:03:51,191 INFO step 3500 loss=0.913816511631012 pred=0.03491024300456047 sigreg=9.75 lr=8.51415782815997e-06 pusht=1.1570593118667603 tworoom=1.1571084260940552 cube=0.41946929693222046 gpu_peak_mb=9730.83154296875
+2026-10-21 05:03:51,974 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:03:58,797 INFO step 3550 loss=0.9114508032798767 pred=0.0325445681810379 sigreg=9.75 lr=8.635788654276541e-06 pusht=1.1566392183303833 tworoom=1.1566250324249268 cube=0.41522884368896484 gpu_peak_mb=9730.83154296875
+2026-10-21 05:04:05,752 INFO step 3600 loss=0.9264999032020569 pred=0.03587488457560539 sigreg=9.875 lr=8.757419480393112e-06 pusht=1.1569361686706543 tworoom=1.1569480895996094 cube=0.4636622667312622 gpu_peak_mb=9730.83154296875
+2026-10-21 05:04:12,675 INFO step 3650 loss=0.9265142679214478 pred=0.03588927537202835 sigreg=9.875 lr=8.879050306509681e-06 pusht=1.1566557884216309 tworoom=1.1566224098205566 cube=0.45649901032447815 gpu_peak_mb=9730.83154296875
+2026-10-21 05:04:19,603 INFO step 3700 loss=0.9307752847671509 pred=0.04015031084418297 sigreg=9.875 lr=9.000681132626252e-06 pusht=1.1566416025161743 tworoom=1.1566078662872314 cube=0.46735772490501404 gpu_peak_mb=9730.83154296875
+2026-10-21 05:04:26,512 INFO step 3750 loss=0.9044157266616821 pred=0.03332199528813362 sigreg=9.6875 lr=9.122311958742824e-06 pusht=1.1570216417312622 tworoom=1.156978726387024 cube=0.39143437147140503 gpu_peak_mb=9730.83154296875
+2026-10-21 05:04:33,431 INFO step 3800 loss=0.9375432133674622 pred=0.039105694741010666 sigreg=10.0 lr=9.243942784859395e-06 pusht=1.1573293209075928 tworoom=1.1574538946151733 cube=0.4900338053703308 gpu_peak_mb=9730.83154296875
+2026-10-21 05:04:40,442 INFO step 3850 loss=0.9080008268356323 pred=0.029094550758600235 sigreg=9.75 lr=9.365573610975966e-06 pusht=1.1569770574569702 tworoom=1.1569744348526 cube=0.3983321785926819 gpu_peak_mb=9730.83154296875
+2026-10-21 05:04:47,527 INFO step 3900 loss=0.9161426424980164 pred=0.03333016484975815 sigreg=9.8125 lr=9.487204437092537e-06 pusht=1.1566812992095947 tworoom=1.1566815376281738 cube=0.43115895986557007 gpu_peak_mb=9730.83154296875
+2026-10-21 05:04:54,441 INFO step 3950 loss=0.9027100205421448 pred=0.035522542893886566 sigreg=9.625 lr=9.608835263209108e-06 pusht=1.156739592552185 tworoom=1.1567789316177368 cube=0.39461156725883484 gpu_peak_mb=9730.83154296875
+2026-10-21 05:05:01,346 INFO step 4000 loss=0.9148191809654236 pred=0.03200668841600418 sigreg=9.8125 lr=9.730466089325679e-06 pusht=1.1567680835723877 tworoom=1.1567569971084595 cube=0.4231199324131012 gpu_peak_mb=9730.83154296875
+2026-10-21 05:05:02,117 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:05:08,939 INFO step 4050 loss=0.911808431148529 pred=0.03290218114852905 sigreg=9.75 lr=9.852096915442251e-06 pusht=1.1569771766662598 tworoom=1.156930923461914 cube=0.41761094331741333 gpu_peak_mb=9730.83154296875
+2026-10-21 05:05:15,885 INFO step 4100 loss=0.9087436199188232 pred=0.02983735501766205 sigreg=9.75 lr=9.973727741558822e-06 pusht=1.1569346189498901 tworoom=1.156906247138977 cube=0.400671124458313 gpu_peak_mb=9730.83154296875
+2026-10-21 05:05:22,847 INFO step 4150 loss=0.9053572416305542 pred=0.03426346182823181 sigreg=9.6875 lr=1.0095358567675393e-05 pusht=1.1565922498703003 tworoom=1.1565957069396973 cube=0.39507120847702026 gpu_peak_mb=9730.83154296875
+2026-10-21 05:05:29,763 INFO step 4200 loss=0.9015206098556519 pred=0.034333132207393646 sigreg=9.625 lr=1.0216989393791964e-05 pusht=1.1566768884658813 tworoom=1.1566704511642456 cube=0.383402019739151 gpu_peak_mb=9730.83154296875
+2026-10-21 05:05:37,302 INFO step 4250 loss=0.9141693711280823 pred=0.03526310995221138 sigreg=9.75 lr=1.0338620219908534e-05 pusht=1.1566033363342285 tworoom=1.1566323041915894 cube=0.41950690746307373 gpu_peak_mb=9730.83154296875
+2026-10-21 05:05:44,235 INFO step 4300 loss=0.8839370012283325 pred=0.028468236327171326 sigreg=9.5 lr=1.0460251046025104e-05 pusht=1.1568630933761597 tworoom=1.1568745374679565 cube=0.3361201286315918 gpu_peak_mb=9730.83154296875
+2026-10-21 05:05:51,173 INFO step 4350 loss=0.8803197741508484 pred=0.032663531601428986 sigreg=9.4375 lr=1.0581881872141676e-05 pusht=1.1568102836608887 tworoom=1.1568033695220947 cube=0.33125191926956177 gpu_peak_mb=9730.83154296875
+2026-10-21 05:05:58,119 INFO step 4400 loss=0.8851547241210938 pred=0.029685966670513153 sigreg=9.5 lr=1.0703512698258247e-05 pusht=1.1569864749908447 tworoom=1.156955599784851 cube=0.3415221571922302 gpu_peak_mb=9730.83154296875
+2026-10-21 05:06:05,139 INFO step 4450 loss=0.8994157910346985 pred=0.03222830593585968 sigreg=9.625 lr=1.0825143524374818e-05 pusht=1.1565942764282227 tworoom=1.1565732955932617 cube=0.37531423568725586 gpu_peak_mb=9730.83154296875
+2026-10-21 05:06:12,181 INFO step 4500 loss=0.8718978762626648 pred=0.024241622537374496 sigreg=9.4375 lr=1.0946774350491389e-05 pusht=1.156620979309082 tworoom=1.1566165685653687 cube=0.30245599150657654 gpu_peak_mb=9730.83154296875
+2026-10-21 05:06:12,946 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:06:19,833 INFO step 4550 loss=0.8810893297195435 pred=0.03343306854367256 sigreg=9.4375 lr=1.106840517660796e-05 pusht=1.1566909551620483 tworoom=1.1566683053970337 cube=0.3318617641925812 gpu_peak_mb=9730.83154296875
+2026-10-21 05:06:26,852 INFO step 4600 loss=0.8868058919906616 pred=0.03133713826537132 sigreg=9.5 lr=1.119003600272453e-05 pusht=1.1565994024276733 tworoom=1.1565706729888916 cube=0.3492007851600647 gpu_peak_mb=9730.83154296875
+2026-10-21 05:06:33,858 INFO step 4650 loss=0.8800455331802368 pred=0.024576811119914055 sigreg=9.5 lr=1.1311666828841103e-05 pusht=1.156614065170288 tworoom=1.156600832939148 cube=0.31227338314056396 gpu_peak_mb=9730.83154296875
+2026-10-21 05:06:40,948 INFO step 4700 loss=0.8695396184921265 pred=0.021883398294448853 sigreg=9.4375 lr=1.1433297654957674e-05 pusht=1.1565918922424316 tworoom=1.156583547592163 cube=0.29837319254875183 gpu_peak_mb=9730.83154296875
+2026-10-21 05:06:47,894 INFO step 4750 loss=0.9039790630340576 pred=0.03679158538579941 sigreg=9.625 lr=1.1554928481074245e-05 pusht=1.1568602323532104 tworoom=1.1569079160690308 cube=0.39035671949386597 gpu_peak_mb=9730.83154296875
+2026-10-21 05:06:54,881 INFO step 4800 loss=0.8744323253631592 pred=0.030682329088449478 sigreg=9.375 lr=1.1676559307190815e-05 pusht=1.1567202806472778 tworoom=1.1566931009292603 cube=0.30597734451293945 gpu_peak_mb=9730.83154296875
+2026-10-21 05:07:01,846 INFO step 4850 loss=0.8736598491668701 pred=0.026003574952483177 sigreg=9.4375 lr=1.1798190133307386e-05 pusht=1.1566143035888672 tworoom=1.1565953493118286 cube=0.310699462890625 gpu_peak_mb=9730.83154296875
+2026-10-21 05:07:08,774 INFO step 4900 loss=0.8724390864372253 pred=0.02478284016251564 sigreg=9.4375 lr=1.1919820959423957e-05 pusht=1.1566225290298462 tworoom=1.1566287279129028 cube=0.309925377368927 gpu_peak_mb=9730.83154296875
+2026-10-21 05:07:15,784 INFO step 4950 loss=0.8746995329856873 pred=0.0270432960242033 sigreg=9.4375 lr=1.2041451785540528e-05 pusht=1.1566321849822998 tworoom=1.1566264629364014 cube=0.3127930462360382 gpu_peak_mb=9730.83154296875
+2026-10-21 05:07:22,752 INFO step 5000 loss=0.879855751991272 pred=0.024386998265981674 sigreg=9.5 lr=1.2163082611657099e-05 pusht=1.1566221714019775 tworoom=1.1566290855407715 cube=0.3116675913333893 gpu_peak_mb=9730.83154296875
+2026-10-21 05:07:23,509 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:07:30,393 INFO step 5050 loss=0.867539644241333 pred=0.023789657279849052 sigreg=9.375 lr=1.228471343777367e-05 pusht=1.1565090417861938 tworoom=1.1565228700637817 cube=0.28079795837402344 gpu_peak_mb=9730.83154296875
+2026-10-21 05:07:37,644 INFO step 5100 loss=0.8667985796928406 pred=0.019142339006066322 sigreg=9.4375 lr=1.240634426389024e-05 pusht=1.1565923690795898 tworoom=1.1566113233566284 cube=0.28035616874694824 gpu_peak_mb=9730.83154296875
+2026-10-21 05:07:44,714 INFO step 5150 loss=0.8668512105941772 pred=0.023101195693016052 sigreg=9.375 lr=1.2527975090006811e-05 pusht=1.156694769859314 tworoom=1.15666663646698 cube=0.286215603351593 gpu_peak_mb=9730.83154296875
+2026-10-21 05:07:51,821 INFO step 5200 loss=0.8703708648681641 pred=0.0227146428078413 sigreg=9.4375 lr=1.2649605916123382e-05 pusht=1.156522512435913 tworoom=1.1565278768539429 cube=0.2970857322216034 gpu_peak_mb=9730.83154296875
+2026-10-21 05:07:58,879 INFO step 5250 loss=0.8697102069854736 pred=0.025960180908441544 sigreg=9.375 lr=1.2771236742239955e-05 pusht=1.1564927101135254 tworoom=1.1564894914627075 cube=0.294195294380188 gpu_peak_mb=9730.83154296875
+2026-10-21 05:08:05,834 INFO step 5300 loss=0.8616317510604858 pred=0.017881745472550392 sigreg=9.375 lr=1.2892867568356525e-05 pusht=1.1566319465637207 tworoom=1.1566364765167236 cube=0.2579549551010132 gpu_peak_mb=9730.83154296875
+2026-10-21 05:08:12,904 INFO step 5350 loss=0.870500922203064 pred=0.02284466288983822 sigreg=9.4375 lr=1.3014498394473096e-05 pusht=1.1566393375396729 tworoom=1.1566461324691772 cube=0.301146924495697 gpu_peak_mb=9730.83154296875
+2026-10-21 05:08:19,952 INFO step 5400 loss=0.8720375895500183 pred=0.024381358176469803 sigreg=9.4375 lr=1.3136129220589667e-05 pusht=1.1565948724746704 tworoom=1.1565989255905151 cube=0.30194246768951416 gpu_peak_mb=9730.83154296875
+2026-10-21 05:08:26,948 INFO step 5450 loss=0.8661697506904602 pred=0.022419773042201996 sigreg=9.375 lr=1.3257760046706238e-05 pusht=1.1567389965057373 tworoom=1.1567740440368652 cube=0.28304317593574524 gpu_peak_mb=9730.83154296875
+2026-10-21 05:08:33,962 INFO step 5500 loss=0.8785232305526733 pred=0.023054450750350952 sigreg=9.5 lr=1.3379390872822809e-05 pusht=1.1568491458892822 tworoom=1.1568591594696045 cube=0.3199082016944885 gpu_peak_mb=9730.83154296875
+2026-10-21 05:08:34,915 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:08:42,427 INFO step 5550 loss=0.8622609972953796 pred=0.018511004745960236 sigreg=9.375 lr=1.350102169893938e-05 pusht=1.156550407409668 tworoom=1.1565316915512085 cube=0.2688180208206177 gpu_peak_mb=9730.83154296875
+2026-10-21 05:08:49,517 INFO step 5600 loss=0.8657585978507996 pred=0.02200857177376747 sigreg=9.375 lr=1.3622652525055952e-05 pusht=1.1566286087036133 tworoom=1.1566449403762817 cube=0.2752131521701813 gpu_peak_mb=9730.83154296875
+2026-10-21 05:08:56,547 INFO step 5650 loss=0.8665955662727356 pred=0.018939290195703506 sigreg=9.4375 lr=1.3744283351172523e-05 pusht=1.1566194295883179 tworoom=1.1566309928894043 cube=0.28067684173583984 gpu_peak_mb=9730.83154296875
+2026-10-21 05:09:03,559 INFO step 5700 loss=0.8679633140563965 pred=0.020307034254074097 sigreg=9.4375 lr=1.3865914177289094e-05 pusht=1.1567431688308716 tworoom=1.1567295789718628 cube=0.2972530722618103 gpu_peak_mb=9730.83154296875
+2026-10-21 05:09:10,555 INFO step 5750 loss=0.8614997863769531 pred=0.017749762162566185 sigreg=9.375 lr=1.3987545003405665e-05 pusht=1.1565791368484497 tworoom=1.1566098928451538 cube=0.27033373713493347 gpu_peak_mb=9730.83154296875
+2026-10-21 05:09:17,623 INFO step 5800 loss=0.8637315034866333 pred=0.019981488585472107 sigreg=9.375 lr=1.4109175829522235e-05 pusht=1.156511902809143 tworoom=1.1565109491348267 cube=0.2664528787136078 gpu_peak_mb=9730.83154296875
+2026-10-21 05:09:24,683 INFO step 5850 loss=0.8555885553359985 pred=0.015744823962450027 sigreg=9.3125 lr=1.4230806655638806e-05 pusht=1.156569004058838 tworoom=1.156550407409668 cube=0.2477869838476181 gpu_peak_mb=9730.83154296875
+2026-10-21 05:09:31,664 INFO step 5900 loss=0.8564456701278687 pred=0.016601931303739548 sigreg=9.3125 lr=1.4352437481755379e-05 pusht=1.156655192375183 tworoom=1.1566568613052368 cube=0.2472359985113144 gpu_peak_mb=9730.83154296875
+2026-10-21 05:09:38,764 INFO step 5950 loss=0.8647794723510742 pred=0.017123237252235413 sigreg=9.4375 lr=1.4474068307871946e-05 pusht=1.1565338373184204 tworoom=1.1565375328063965 cube=0.2871263921260834 gpu_peak_mb=9730.83154296875
+2026-10-21 05:09:45,705 INFO step 6000 loss=0.8568592071533203 pred=0.01701544225215912 sigreg=9.3125 lr=1.4595699133988517e-05 pusht=1.156611680984497 tworoom=1.1566082239151 cube=0.2544279992580414 gpu_peak_mb=9730.83154296875
+2026-10-21 05:09:46,495 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:09:53,335 INFO step 6050 loss=0.8582420349121094 pred=0.01839827187359333 sigreg=9.3125 lr=1.4717329960105088e-05 pusht=1.1565905809402466 tworoom=1.1565920114517212 cube=0.25666069984436035 gpu_peak_mb=9730.83154296875
+2026-10-21 05:10:00,281 INFO step 6100 loss=0.8547729253768921 pred=0.014929193072021008 sigreg=9.3125 lr=1.483896078622166e-05 pusht=1.1564955711364746 tworoom=1.1565052270889282 cube=0.2464352250099182 gpu_peak_mb=9730.83154296875
+2026-10-21 05:10:07,315 INFO step 6150 loss=0.8599587082862854 pred=0.016208721324801445 sigreg=9.375 lr=1.4960591612338231e-05 pusht=1.1565937995910645 tworoom=1.1565935611724854 cube=0.25789976119995117 gpu_peak_mb=9730.83154296875
+2026-10-21 05:10:14,308 INFO step 6200 loss=0.8595147728919983 pred=0.0157647542655468 sigreg=9.375 lr=1.5082222438454802e-05 pusht=1.1564791202545166 tworoom=1.1564903259277344 cube=0.2675279974937439 gpu_peak_mb=9730.83154296875
+2026-10-21 05:10:21,371 INFO step 6250 loss=0.8580209016799927 pred=0.018177131190896034 sigreg=9.3125 lr=1.5203853264571373e-05 pusht=1.1566888093948364 tworoom=1.1567368507385254 cube=0.24891817569732666 gpu_peak_mb=9730.83154296875
+2026-10-21 05:10:28,492 INFO step 6300 loss=0.8578387498855591 pred=0.014088744297623634 sigreg=9.375 lr=1.5325484090687945e-05 pusht=1.1565033197402954 tworoom=1.156505823135376 cube=0.2585539221763611 gpu_peak_mb=9730.83154296875
+2026-10-21 05:10:35,545 INFO step 6350 loss=0.8546247482299805 pred=0.0147809823974967 sigreg=9.3125 lr=1.5447114916804516e-05 pusht=1.1564507484436035 tworoom=1.156445860862732 cube=0.23925882577896118 gpu_peak_mb=9730.83154296875
+2026-10-21 05:10:42,427 INFO step 6400 loss=0.8523101806640625 pred=0.012466403655707836 sigreg=9.3125 lr=1.5568745742921087e-05 pusht=1.1566003561019897 tworoom=1.1566170454025269 cube=0.22906458377838135 gpu_peak_mb=9730.83154296875
+2026-10-21 05:10:49,346 INFO step 6450 loss=0.8676729202270508 pred=0.02392289787530899 sigreg=9.375 lr=1.5690376569037658e-05 pusht=1.1568000316619873 tworoom=1.1567975282669067 cube=0.29332736134529114 gpu_peak_mb=9730.83154296875
+2026-10-21 05:10:56,370 INFO step 6500 loss=0.8527246117591858 pred=0.012880876660346985 sigreg=9.3125 lr=1.581200739515423e-05 pusht=1.156551480293274 tworoom=1.156550407409668 cube=0.22944699227809906 gpu_peak_mb=9730.83154296875
+2026-10-21 05:10:57,176 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:11:04,011 INFO step 6550 loss=0.8584345579147339 pred=0.018590806052088737 sigreg=9.3125 lr=1.59336382212708e-05 pusht=1.1567398309707642 tworoom=1.156768798828125 cube=0.2520294487476349 gpu_peak_mb=9730.83154296875
+2026-10-21 05:11:10,991 INFO step 6600 loss=0.8596137762069702 pred=0.015863794833421707 sigreg=9.375 lr=1.605526904738737e-05 pusht=1.1566500663757324 tworoom=1.1566457748413086 cube=0.258709579706192 gpu_peak_mb=9730.83154296875
+2026-10-21 05:11:17,935 INFO step 6650 loss=0.8533665537834167 pred=0.013522820547223091 sigreg=9.3125 lr=1.617689987350394e-05 pusht=1.156507134437561 tworoom=1.1564993858337402 cube=0.23928070068359375 gpu_peak_mb=9730.83154296875
+2026-10-21 05:11:24,885 INFO step 6700 loss=0.8598531484603882 pred=0.016103170812129974 sigreg=9.375 lr=1.6298530699620512e-05 pusht=1.1566652059555054 tworoom=1.156657338142395 cube=0.26819005608558655 gpu_peak_mb=9730.83154296875
+2026-10-21 05:11:31,984 INFO step 6750 loss=0.8579195141792297 pred=0.014169534668326378 sigreg=9.375 lr=1.6420161525737083e-05 pusht=1.1565580368041992 tworoom=1.1565682888031006 cube=0.26453855633735657 gpu_peak_mb=9730.83154296875
+2026-10-21 05:11:38,886 INFO step 6800 loss=0.8587401509284973 pred=0.014990177005529404 sigreg=9.375 lr=1.6541792351853654e-05 pusht=1.1565706729888916 tworoom=1.1565778255462646 cube=0.2591657042503357 gpu_peak_mb=9730.83154296875
+2026-10-21 05:11:45,785 INFO step 6850 loss=0.8543052077293396 pred=0.01446143165230751 sigreg=9.3125 lr=1.6663423177970225e-05 pusht=1.156470775604248 tworoom=1.1564735174179077 cube=0.23825249075889587 gpu_peak_mb=9730.83154296875
+2026-10-21 05:11:52,725 INFO step 6900 loss=0.8554444313049316 pred=0.015600701794028282 sigreg=9.3125 lr=1.6785054004086796e-05 pusht=1.1566002368927002 tworoom=1.156612515449524 cube=0.24140183627605438 gpu_peak_mb=9730.83154296875
+2026-10-21 05:12:00,434 INFO step 6950 loss=0.8521073460578918 pred=0.012263594195246696 sigreg=9.3125 lr=1.690668483020337e-05 pusht=1.1563974618911743 tworoom=1.1563931703567505 cube=0.22595332562923431 gpu_peak_mb=9730.83154296875
+2026-10-21 05:12:07,428 INFO step 7000 loss=0.8552534580230713 pred=0.015409700572490692 sigreg=9.3125 lr=1.702831565631994e-05 pusht=1.156463384628296 tworoom=1.1564586162567139 cube=0.24404925107955933 gpu_peak_mb=9730.83154296875
+2026-10-21 05:12:08,224 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:12:15,142 INFO step 7050 loss=0.859007716178894 pred=0.015257734805345535 sigreg=9.375 lr=1.714994648243651e-05 pusht=1.1566437482833862 tworoom=1.156644582748413 cube=0.25592246651649475 gpu_peak_mb=9730.83154296875
+2026-10-21 05:12:22,096 INFO step 7100 loss=0.845779299736023 pred=0.01374807208776474 sigreg=9.25 lr=1.7271577308553082e-05 pusht=1.1565501689910889 tworoom=1.1565289497375488 cube=0.22914166748523712 gpu_peak_mb=9730.83154296875
+2026-10-21 05:12:29,196 INFO step 7150 loss=0.8475877642631531 pred=0.0155565170571208 sigreg=9.25 lr=1.7393208134669653e-05 pusht=1.1564581394195557 tworoom=1.156463623046875 cube=0.21812282502651215 gpu_peak_mb=9730.83154296875
+2026-10-21 05:12:36,285 INFO step 7200 loss=0.8453846573829651 pred=0.013353432528674603 sigreg=9.25 lr=1.7514838960786224e-05 pusht=1.1565356254577637 tworoom=1.1565325260162354 cube=0.2172265350818634 gpu_peak_mb=9730.83154296875
+2026-10-21 05:12:43,240 INFO step 7250 loss=0.8547382354736328 pred=0.014894509688019753 sigreg=9.3125 lr=1.7636469786902795e-05 pusht=1.1565004587173462 tworoom=1.156502604484558 cube=0.23851636052131653 gpu_peak_mb=9730.83154296875
+2026-10-21 05:12:50,177 INFO step 7300 loss=0.84478360414505 pred=0.012752345763146877 sigreg=9.25 lr=1.7758100613019362e-05 pusht=1.1565617322921753 tworoom=1.1565630435943604 cube=0.22220250964164734 gpu_peak_mb=9730.83154296875
+2026-10-21 05:12:57,170 INFO step 7350 loss=0.8452598452568054 pred=0.013228601776063442 sigreg=9.25 lr=1.7879731439135933e-05 pusht=1.156683325767517 tworoom=1.156681776046753 cube=0.21167223155498505 gpu_peak_mb=9730.83154296875
+2026-10-21 05:13:04,177 INFO step 7400 loss=0.8522054553031921 pred=0.012361700646579266 sigreg=9.3125 lr=1.8001362265252504e-05 pusht=1.1566518545150757 tworoom=1.156672477722168 cube=0.23059672117233276 gpu_peak_mb=9730.83154296875
+2026-10-21 05:13:11,292 INFO step 7450 loss=0.8458526134490967 pred=0.01382135134190321 sigreg=9.25 lr=1.8122993091369078e-05 pusht=1.1564992666244507 tworoom=1.1565200090408325 cube=0.22356195747852325 gpu_peak_mb=9730.83154296875
+2026-10-21 05:13:18,255 INFO step 7500 loss=0.8454974293708801 pred=0.01346618216484785 sigreg=9.25 lr=1.824462391748565e-05 pusht=1.1564632654190063 tworoom=1.156463623046875 cube=0.22747167944908142 gpu_peak_mb=9730.83154296875
+2026-10-21 05:13:19,170 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:13:26,118 INFO step 7550 loss=0.846689760684967 pred=0.014658521860837936 sigreg=9.25 lr=1.836625474360222e-05 pusht=1.15651535987854 tworoom=1.156528115272522 cube=0.22897887229919434 gpu_peak_mb=9730.83154296875
+2026-10-21 05:13:33,030 INFO step 7600 loss=0.8453989028930664 pred=0.013367651030421257 sigreg=9.25 lr=1.848788556971879e-05 pusht=1.156498908996582 tworoom=1.1564961671829224 cube=0.22124846279621124 gpu_peak_mb=9730.83154296875
+2026-10-21 05:13:40,159 INFO step 7650 loss=0.8458240628242493 pred=0.0137927932664752 sigreg=9.25 lr=1.860951639583536e-05 pusht=1.156609296798706 tworoom=1.1566461324691772 cube=0.22324024140834808 gpu_peak_mb=9730.83154296875
+2026-10-21 05:13:47,143 INFO step 7700 loss=0.8591535687446594 pred=0.015403587371110916 sigreg=9.375 lr=1.8731147221951932e-05 pusht=1.1565414667129517 tworoom=1.1565468311309814 cube=0.2536303400993347 gpu_peak_mb=9730.83154296875
+2026-10-21 05:13:54,053 INFO step 7750 loss=0.8586819171905518 pred=0.014931938610970974 sigreg=9.375 lr=1.8852778048068503e-05 pusht=1.1565401554107666 tworoom=1.1565353870391846 cube=0.24929837882518768 gpu_peak_mb=9730.83154296875
+2026-10-21 05:14:01,006 INFO step 7800 loss=0.840383768081665 pred=0.012258756905794144 sigreg=9.1875 lr=1.8974408874185074e-05 pusht=1.1565552949905396 tworoom=1.1565662622451782 cube=0.19728760421276093 gpu_peak_mb=9730.83154296875
+2026-10-21 05:14:07,953 INFO step 7850 loss=0.8462526798248291 pred=0.01422145590186119 sigreg=9.25 lr=1.9096039700301645e-05 pusht=1.1568429470062256 tworoom=1.156813621520996 cube=0.2133827656507492 gpu_peak_mb=9730.83154296875
+2026-10-21 05:14:14,942 INFO step 7900 loss=0.845527172088623 pred=0.013495929539203644 sigreg=9.25 lr=1.9217670526418216e-05 pusht=1.1566046476364136 tworoom=1.1566243171691895 cube=0.2126103937625885 gpu_peak_mb=9730.83154296875
+2026-10-21 05:14:21,944 INFO step 7950 loss=0.8459007143974304 pred=0.013869463466107845 sigreg=9.25 lr=1.9339301352534786e-05 pusht=1.1566219329833984 tworoom=1.156640887260437 cube=0.2224862277507782 gpu_peak_mb=9730.83154296875
+2026-10-21 05:14:29,007 INFO step 8000 loss=0.8457672595977783 pred=0.013735986314713955 sigreg=9.25 lr=1.9460932178651357e-05 pusht=1.1564708948135376 tworoom=1.156469702720642 cube=0.21264229714870453 gpu_peak_mb=9730.83154296875
+2026-10-21 05:14:29,779 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:14:36,623 INFO step 8050 loss=0.8402009010314941 pred=0.01207590289413929 sigreg=9.1875 lr=1.9582563004767928e-05 pusht=1.1565089225769043 tworoom=1.1565227508544922 cube=0.20561794936656952 gpu_peak_mb=9730.83154296875
+2026-10-21 05:14:43,566 INFO step 8100 loss=0.8457096815109253 pred=0.01367844920605421 sigreg=9.25 lr=1.9704193830884502e-05 pusht=1.1564749479293823 tworoom=1.1564792394638062 cube=0.22026856243610382 gpu_peak_mb=9730.83154296875
+2026-10-21 05:14:50,620 INFO step 8150 loss=0.839321494102478 pred=0.01119651086628437 sigreg=9.1875 lr=1.9825824657001073e-05 pusht=1.1564003229141235 tworoom=1.1564007997512817 cube=0.2012571543455124 gpu_peak_mb=9730.83154296875
+2026-10-21 05:14:57,834 INFO step 8200 loss=0.8474431037902832 pred=0.015411846339702606 sigreg=9.25 lr=1.9947455483117644e-05 pusht=1.1565786600112915 tworoom=1.1565744876861572 cube=0.2272230088710785 gpu_peak_mb=9730.83154296875
+2026-10-21 05:15:05,061 INFO step 8250 loss=0.8477672338485718 pred=0.01573597453534603 sigreg=9.25 lr=2.0069086309234215e-05 pusht=1.1565688848495483 tworoom=1.1565885543823242 cube=0.22233162820339203 gpu_peak_mb=9730.83154296875
+2026-10-21 05:15:12,681 INFO step 8300 loss=0.844039261341095 pred=0.012007998302578926 sigreg=9.25 lr=2.0190717135350786e-05 pusht=1.1565114259719849 tworoom=1.1565237045288086 cube=0.21517632901668549 gpu_peak_mb=9730.83154296875
+2026-10-21 05:15:20,293 INFO step 8350 loss=0.8431309461593628 pred=0.01500596385449171 sigreg=9.1875 lr=2.0312347961467356e-05 pusht=1.1565027236938477 tworoom=1.156509280204773 cube=0.21442776918411255 gpu_peak_mb=9730.83154296875
+2026-10-21 05:15:27,342 INFO step 8400 loss=0.8451229929924011 pred=0.013091727159917355 sigreg=9.25 lr=2.0433978787583927e-05 pusht=1.156485915184021 tworoom=1.1564874649047852 cube=0.21848928928375244 gpu_peak_mb=9730.83154296875
+2026-10-21 05:15:34,311 INFO step 8450 loss=0.840350866317749 pred=0.01222587376832962 sigreg=9.1875 lr=2.0555609613700498e-05 pusht=1.1564699411392212 tworoom=1.1564635038375854 cube=0.20128324627876282 gpu_peak_mb=9730.83154296875
+2026-10-21 05:15:41,280 INFO step 8500 loss=0.8462997078895569 pred=0.014268442988395691 sigreg=9.25 lr=2.067724043981707e-05 pusht=1.156543493270874 tworoom=1.1565475463867188 cube=0.2219017744064331 gpu_peak_mb=9730.83154296875
+2026-10-21 05:15:42,059 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:15:49,085 INFO step 8550 loss=0.8444308638572693 pred=0.012399635277688503 sigreg=9.25 lr=2.079887126593364e-05 pusht=1.1564314365386963 tworoom=1.1564356088638306 cube=0.2096833735704422 gpu_peak_mb=9730.83154296875
+2026-10-21 05:15:56,022 INFO step 8600 loss=0.8404104709625244 pred=0.012285465374588966 sigreg=9.1875 lr=2.0920502092050207e-05 pusht=1.1565014123916626 tworoom=1.1565001010894775 cube=0.20139390230178833 gpu_peak_mb=9730.83154296875
+2026-10-21 05:16:02,963 INFO step 8650 loss=0.8377984166145325 pred=0.009673429653048515 sigreg=9.1875 lr=2.104213291816678e-05 pusht=1.1565587520599365 tworoom=1.1565756797790527 cube=0.1983078122138977 gpu_peak_mb=9730.83154296875
+2026-10-21 05:16:10,035 INFO step 8700 loss=0.8298571705818176 pred=0.009544657543301582 sigreg=9.125 lr=2.1163763744283352e-05 pusht=1.1565057039260864 tworoom=1.1564931869506836 cube=0.1824318915605545 gpu_peak_mb=9730.83154296875
+2026-10-21 05:16:17,205 INFO step 8750 loss=0.8475436568260193 pred=0.015512383542954922 sigreg=9.25 lr=2.1285394570399923e-05 pusht=1.156639814376831 tworoom=1.156684160232544 cube=0.22149443626403809 gpu_peak_mb=9730.83154296875
+2026-10-21 05:16:24,367 INFO step 8800 loss=0.8450702428817749 pred=0.013039014302194118 sigreg=9.25 lr=2.1407025396516494e-05 pusht=1.156571388244629 tworoom=1.1565779447555542 cube=0.21815519034862518 gpu_peak_mb=9730.83154296875
+2026-10-21 05:16:31,386 INFO step 8850 loss=0.8393983244895935 pred=0.01127332728356123 sigreg=9.1875 lr=2.1528656222633065e-05 pusht=1.156544804573059 tworoom=1.1565536260604858 cube=0.19240126013755798 gpu_peak_mb=9730.83154296875
+2026-10-21 05:16:38,332 INFO step 8900 loss=0.8438016176223755 pred=0.015676598995923996 sigreg=9.1875 lr=2.1650287048749636e-05 pusht=1.1565427780151367 tworoom=1.1565381288528442 cube=0.20855823159217834 gpu_peak_mb=9730.83154296875
+2026-10-21 05:16:45,272 INFO step 8950 loss=0.8390398621559143 pred=0.010914868675172329 sigreg=9.1875 lr=2.1771917874866207e-05 pusht=1.1564788818359375 tworoom=1.156468391418457 cube=0.1983129382133484 gpu_peak_mb=9730.83154296875
+2026-10-21 05:16:52,409 INFO step 9000 loss=0.8421223759651184 pred=0.013997401110827923 sigreg=9.1875 lr=2.1893548700982777e-05 pusht=1.1565736532211304 tworoom=1.156556248664856 cube=0.1985888034105301 gpu_peak_mb=9730.83154296875
+2026-10-21 05:16:53,226 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:17:00,118 INFO step 9050 loss=0.8388201594352722 pred=0.010695163160562515 sigreg=9.1875 lr=2.2015179527099348e-05 pusht=1.1565510034561157 tworoom=1.1565368175506592 cube=0.19263049960136414 gpu_peak_mb=9730.83154296875
+2026-10-21 05:17:07,063 INFO step 9100 loss=0.8447986841201782 pred=0.012767436914145947 sigreg=9.25 lr=2.213681035321592e-05 pusht=1.156589150428772 tworoom=1.1565808057785034 cube=0.2095073163509369 gpu_peak_mb=9730.83154296875
+2026-10-21 05:17:14,014 INFO step 9150 loss=0.840808629989624 pred=0.012683629058301449 sigreg=9.1875 lr=2.225844117933249e-05 pusht=1.1564429998397827 tworoom=1.15645432472229 cube=0.2017161250114441 gpu_peak_mb=9730.83154296875
+2026-10-21 05:17:21,013 INFO step 9200 loss=0.8384000062942505 pred=0.010275027714669704 sigreg=9.1875 lr=2.238007200544906e-05 pusht=1.1564291715621948 tworoom=1.1564226150512695 cube=0.19160620868206024 gpu_peak_mb=9730.83154296875
+2026-10-21 05:17:28,331 INFO step 9250 loss=0.8390392065048218 pred=0.010914205573499203 sigreg=9.1875 lr=2.250170283156563e-05 pusht=1.1564117670059204 tworoom=1.156410574913025 cube=0.19843581318855286 gpu_peak_mb=9730.83154296875
+2026-10-21 05:17:35,393 INFO step 9300 loss=0.8412473201751709 pred=0.013122299686074257 sigreg=9.1875 lr=2.2623333657682206e-05 pusht=1.156586766242981 tworoom=1.1565927267074585 cube=0.20079681277275085 gpu_peak_mb=9730.83154296875
+2026-10-21 05:17:42,485 INFO step 9350 loss=0.8407213091850281 pred=0.01259628962725401 sigreg=9.1875 lr=2.2744964483798777e-05 pusht=1.156745195388794 tworoom=1.1567699909210205 cube=0.19204705953598022 gpu_peak_mb=9730.83154296875
+2026-10-21 05:17:49,425 INFO step 9400 loss=0.8391520380973816 pred=0.01102705579251051 sigreg=9.1875 lr=2.2866595309915347e-05 pusht=1.1563934087753296 tworoom=1.1563904285430908 cube=0.18807066977024078 gpu_peak_mb=9730.83154296875
+2026-10-21 05:17:56,387 INFO step 9450 loss=0.8295537233352661 pred=0.009241249412298203 sigreg=9.125 lr=2.2988226136031918e-05 pusht=1.1564043760299683 tworoom=1.1564030647277832 cube=0.17976009845733643 gpu_peak_mb=9730.83154296875
+2026-10-21 05:18:03,664 INFO step 9500 loss=0.8309440612792969 pred=0.01063155010342598 sigreg=9.125 lr=2.310985696214849e-05 pusht=1.1564902067184448 tworoom=1.1564950942993164 cube=0.17691712081432343 gpu_peak_mb=9730.83154296875
+2026-10-21 05:18:04,421 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:18:11,289 INFO step 9550 loss=0.8391246795654297 pred=0.01099969819188118 sigreg=9.1875 lr=2.323148778826506e-05 pusht=1.1564407348632812 tworoom=1.1564409732818604 cube=0.1937502771615982 gpu_peak_mb=9730.83154296875
+2026-10-21 05:18:18,205 INFO step 9600 loss=0.8296838998794556 pred=0.009371417574584484 sigreg=9.125 lr=2.335311861438163e-05 pusht=1.1563892364501953 tworoom=1.156392216682434 cube=0.16845780611038208 gpu_peak_mb=9730.83154296875
+2026-10-21 05:18:25,160 INFO step 9650 loss=0.8375392556190491 pred=0.009414269588887691 sigreg=9.1875 lr=2.34747494404982e-05 pusht=1.1565154790878296 tworoom=1.1565240621566772 cube=0.18297672271728516 gpu_peak_mb=9730.83154296875
+2026-10-21 05:18:32,625 INFO step 9700 loss=0.8286967873573303 pred=0.008384262211620808 sigreg=9.125 lr=2.3596380266614772e-05 pusht=1.1564126014709473 tworoom=1.1564157009124756 cube=0.17228542268276215 gpu_peak_mb=9730.83154296875
+2026-10-21 05:18:39,710 INFO step 9750 loss=0.8291300535202026 pred=0.00881754420697689 sigreg=9.125 lr=2.3718011092731343e-05 pusht=1.1565533876419067 tworoom=1.156556487083435 cube=0.17525674402713776 gpu_peak_mb=9730.83154296875
+2026-10-21 05:18:46,732 INFO step 9800 loss=0.8407233953475952 pred=0.012598378583788872 sigreg=9.1875 lr=2.3839641918847914e-05 pusht=1.156441330909729 tworoom=1.156440258026123 cube=0.2024526447057724 gpu_peak_mb=9730.83154296875
+2026-10-21 05:18:53,812 INFO step 9850 loss=0.8417774438858032 pred=0.013652428053319454 sigreg=9.1875 lr=2.3961272744964485e-05 pusht=1.1564676761627197 tworoom=1.156459927558899 cube=0.20849838852882385 gpu_peak_mb=9730.83154296875
+2026-10-21 05:19:00,854 INFO step 9900 loss=0.8393025994300842 pred=0.011177614331245422 sigreg=9.1875 lr=2.4082903571081056e-05 pusht=1.1564992666244507 tworoom=1.15652334690094 cube=0.19121332466602325 gpu_peak_mb=9730.83154296875
+2026-10-21 05:19:08,031 INFO step 9950 loss=0.8380445837974548 pred=0.009919579140841961 sigreg=9.1875 lr=2.4204534397197627e-05 pusht=1.1564717292785645 tworoom=1.1564754247665405 cube=0.19337408244609833 gpu_peak_mb=9730.83154296875
+2026-10-21 05:19:15,131 INFO step 10000 loss=0.8304562568664551 pred=0.010143743827939034 sigreg=9.125 lr=2.4326165223314197e-05 pusht=1.1564867496490479 tworoom=1.1564631462097168 cube=0.17060641944408417 gpu_peak_mb=9730.83154296875
+2026-10-21 05:19:15,929 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:19:22,815 INFO step 10050 loss=0.8380611538887024 pred=0.009936156682670116 sigreg=9.1875 lr=2.444779604943077e-05 pusht=1.1565662622451782 tworoom=1.1565743684768677 cube=0.18834762275218964 gpu_peak_mb=9730.83154296875
+2026-10-21 05:19:29,870 INFO step 10100 loss=0.8366124629974365 pred=0.008487486280500889 sigreg=9.1875 lr=2.456942687554734e-05 pusht=1.1565333604812622 tworoom=1.1565368175506592 cube=0.18114228546619415 gpu_peak_mb=9730.83154296875
+2026-10-21 05:19:36,858 INFO step 10150 loss=0.8295778036117554 pred=0.00926528312265873 sigreg=9.125 lr=2.4691057701663913e-05 pusht=1.1565988063812256 tworoom=1.1565847396850586 cube=0.1784794181585312 gpu_peak_mb=9730.83154296875
+2026-10-21 05:19:44,020 INFO step 10200 loss=0.8270100355148315 pred=0.010603809729218483 sigreg=9.0625 lr=2.481268852778048e-05 pusht=1.156633973121643 tworoom=1.156630039215088 cube=0.16385996341705322 gpu_peak_mb=9730.83154296875
+2026-10-21 05:19:50,981 INFO step 10250 loss=0.84135901927948 pred=0.00932779535651207 sigreg=9.25 lr=2.4934319353897055e-05 pusht=1.156459927558899 tworoom=1.156468391418457 cube=0.2023598551750183 gpu_peak_mb=9730.83154296875
+2026-10-21 05:19:58,035 INFO step 10300 loss=0.8305146098136902 pred=0.010202121920883656 sigreg=9.125 lr=2.5055950180013622e-05 pusht=1.15644371509552 tworoom=1.1564435958862305 cube=0.18451598286628723 gpu_peak_mb=9730.83154296875
+2026-10-21 05:20:05,057 INFO step 10350 loss=0.8307029008865356 pred=0.01039040181785822 sigreg=9.125 lr=2.5177581006130197e-05 pusht=1.1564441919326782 tworoom=1.1564511060714722 cube=0.1714009791612625 gpu_peak_mb=9730.83154296875
+2026-10-21 05:20:11,979 INFO step 10400 loss=0.8282554149627686 pred=0.00794290378689766 sigreg=9.125 lr=2.5299211832246764e-05 pusht=1.156444787979126 tworoom=1.1564455032348633 cube=0.1757822334766388 gpu_peak_mb=9730.83154296875
+2026-10-21 05:20:19,050 INFO step 10450 loss=0.8296077847480774 pred=0.009295295923948288 sigreg=9.125 lr=2.542084265836334e-05 pusht=1.1564254760742188 tworoom=1.1564239263534546 cube=0.16913804411888123 gpu_peak_mb=9730.83154296875
+2026-10-21 05:20:25,997 INFO step 10500 loss=0.8280327916145325 pred=0.007720293011516333 sigreg=9.125 lr=2.554247348447991e-05 pusht=1.1564925909042358 tworoom=1.1564902067184448 cube=0.16916243731975555 gpu_peak_mb=9730.83154296875
+2026-10-21 05:20:26,778 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:20:33,611 INFO step 10550 loss=0.8282045722007751 pred=0.007892075926065445 sigreg=9.125 lr=2.566410431059648e-05 pusht=1.1564476490020752 tworoom=1.1564483642578125 cube=0.16878794133663177 gpu_peak_mb=9730.83154296875
+2026-10-21 05:20:40,509 INFO step 10600 loss=0.8320980668067932 pred=0.011785539798438549 sigreg=9.125 lr=2.578573513671305e-05 pusht=1.156576156616211 tworoom=1.1565619707107544 cube=0.18901540338993073 gpu_peak_mb=9730.83154296875
+2026-10-21 05:20:47,608 INFO step 10650 loss=0.8378491401672363 pred=0.009724126197397709 sigreg=9.1875 lr=2.5907365962829618e-05 pusht=1.1567429304122925 tworoom=1.1567447185516357 cube=0.18345817923545837 gpu_peak_mb=9730.83154296875
+2026-10-21 05:20:54,538 INFO step 10700 loss=0.8292964696884155 pred=0.008983992040157318 sigreg=9.125 lr=2.6028996788946192e-05 pusht=1.1564885377883911 tworoom=1.1564910411834717 cube=0.17979271709918976 gpu_peak_mb=9730.83154296875
+2026-10-21 05:21:01,471 INFO step 10750 loss=0.8283937573432922 pred=0.008081275969743729 sigreg=9.125 lr=2.615062761506276e-05 pusht=1.1564395427703857 tworoom=1.1564409732818604 cube=0.16351178288459778 gpu_peak_mb=9730.83154296875
+2026-10-21 05:21:08,393 INFO step 10800 loss=0.828406572341919 pred=0.008094091899693012 sigreg=9.125 lr=2.6272258441179334e-05 pusht=1.1563796997070312 tworoom=1.1563806533813477 cube=0.1656235009431839 gpu_peak_mb=9730.83154296875
+2026-10-21 05:21:15,414 INFO step 10850 loss=0.8302593231201172 pred=0.009946804493665695 sigreg=9.125 lr=2.63938892672959e-05 pusht=1.156514048576355 tworoom=1.1565099954605103 cube=0.1806836575269699 gpu_peak_mb=9730.83154296875
+2026-10-21 05:21:22,509 INFO step 10900 loss=0.8294281363487244 pred=0.009115654975175858 sigreg=9.125 lr=2.6515520093412476e-05 pusht=1.156427264213562 tworoom=1.156435489654541 cube=0.17835135757923126 gpu_peak_mb=9730.83154296875
+2026-10-21 05:21:29,483 INFO step 10950 loss=0.827751874923706 pred=0.007439363747835159 sigreg=9.125 lr=2.6637150919529043e-05 pusht=1.1564269065856934 tworoom=1.1564291715621948 cube=0.1664932370185852 gpu_peak_mb=9730.83154296875
+2026-10-21 05:21:36,403 INFO step 11000 loss=0.8285053372383118 pred=0.008192851208150387 sigreg=9.125 lr=2.6758781745645617e-05 pusht=1.1563752889633179 tworoom=1.1563758850097656 cube=0.16397583484649658 gpu_peak_mb=9730.83154296875
+2026-10-21 05:21:37,162 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:21:44,462 INFO step 11050 loss=0.8278588652610779 pred=0.007546351291239262 sigreg=9.125 lr=2.688041257176219e-05 pusht=1.1563928127288818 tworoom=1.1563990116119385 cube=0.16297216713428497 gpu_peak_mb=9730.83154296875
+2026-10-21 05:21:51,395 INFO step 11100 loss=0.8312882781028748 pred=0.010975752025842667 sigreg=9.125 lr=2.700204339787876e-05 pusht=1.1565264463424683 tworoom=1.1565375328063965 cube=0.18373052775859833 gpu_peak_mb=9730.83154296875
+2026-10-21 05:21:58,550 INFO step 11150 loss=0.8300432562828064 pred=0.009730729274451733 sigreg=9.125 lr=2.712367422399533e-05 pusht=1.1564791202545166 tworoom=1.1564817428588867 cube=0.17521566152572632 gpu_peak_mb=9730.83154296875
+2026-10-21 05:22:05,575 INFO step 11200 loss=0.8257848620414734 pred=0.009378615766763687 sigreg=9.0625 lr=2.7245305050111904e-05 pusht=1.1565308570861816 tworoom=1.1565226316452026 cube=0.16430111229419708 gpu_peak_mb=9730.83154296875
+2026-10-21 05:22:12,596 INFO step 11250 loss=0.8250810503959656 pred=0.008674794808030128 sigreg=9.0625 lr=2.736693587622847e-05 pusht=1.1565375328063965 tworoom=1.1565195322036743 cube=0.16218598186969757 gpu_peak_mb=9730.83154296875
+2026-10-21 05:22:19,543 INFO step 11300 loss=0.8280559182167053 pred=0.007743414491415024 sigreg=9.125 lr=2.7488566702345046e-05 pusht=1.1565515995025635 tworoom=1.15654718875885 cube=0.17009237408638 gpu_peak_mb=9730.83154296875
+2026-10-21 05:22:26,505 INFO step 11350 loss=0.826324462890625 pred=0.009918184950947762 sigreg=9.0625 lr=2.7610197528461613e-05 pusht=1.1565395593643188 tworoom=1.156532883644104 cube=0.16297124326229095 gpu_peak_mb=9730.83154296875
+2026-10-21 05:22:33,506 INFO step 11400 loss=0.8246168494224548 pred=0.008210614323616028 sigreg=9.0625 lr=2.7731828354578188e-05 pusht=1.1565301418304443 tworoom=1.156524658203125 cube=0.15884272754192352 gpu_peak_mb=9730.83154296875
+2026-10-21 05:22:40,432 INFO step 11450 loss=0.8238696455955505 pred=0.0074633946642279625 sigreg=9.0625 lr=2.7853459180694755e-05 pusht=1.1564708948135376 tworoom=1.1564793586730957 cube=0.15084627270698547 gpu_peak_mb=9730.83154296875
+2026-10-21 05:22:47,348 INFO step 11500 loss=0.8305539488792419 pred=0.010241437703371048 sigreg=9.125 lr=2.797509000681133e-05 pusht=1.1565340757369995 tworoom=1.1565287113189697 cube=0.1707865297794342 gpu_peak_mb=9730.83154296875
+2026-10-21 05:22:48,133 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:22:54,937 INFO step 11550 loss=0.82875657081604 pred=0.00844406709074974 sigreg=9.125 lr=2.8096720832927897e-05 pusht=1.15644109249115 tworoom=1.1564451456069946 cube=0.17143036425113678 gpu_peak_mb=9730.83154296875
+2026-10-21 05:23:01,878 INFO step 11600 loss=0.8296550512313843 pred=0.009342573583126068 sigreg=9.125 lr=2.821835165904447e-05 pusht=1.1565343141555786 tworoom=1.15654718875885 cube=0.1690477877855301 gpu_peak_mb=9730.83154296875
+2026-10-21 05:23:08,814 INFO step 11650 loss=0.8238618969917297 pred=0.0074556609615683556 sigreg=9.0625 lr=2.8339982485161042e-05 pusht=1.1564754247665405 tworoom=1.1564728021621704 cube=0.15570782124996185 gpu_peak_mb=9730.83154296875
+2026-10-21 05:23:15,780 INFO step 11700 loss=0.8292261958122253 pred=0.008913712576031685 sigreg=9.125 lr=2.8461613311277613e-05 pusht=1.1565163135528564 tworoom=1.1565234661102295 cube=0.1785449981689453 gpu_peak_mb=9730.83154296875
+2026-10-21 05:23:22,676 INFO step 11750 loss=0.829681396484375 pred=0.009368892759084702 sigreg=9.125 lr=2.8583244137394183e-05 pusht=1.156430721282959 tworoom=1.1564295291900635 cube=0.1673949658870697 gpu_peak_mb=9730.83154296875
+2026-10-21 05:23:29,638 INFO step 11800 loss=0.8295683860778809 pred=0.00925586186349392 sigreg=9.125 lr=2.8704874963510758e-05 pusht=1.1565557718276978 tworoom=1.1565520763397217 cube=0.16583162546157837 gpu_peak_mb=9730.83154296875
+2026-10-21 05:23:36,677 INFO step 11850 loss=0.8266381621360779 pred=0.010231892578303814 sigreg=9.0625 lr=2.8826505789627325e-05 pusht=1.1564382314682007 tworoom=1.1564372777938843 cube=0.1660623699426651 gpu_peak_mb=9730.83154296875
+2026-10-21 05:23:43,663 INFO step 11900 loss=0.8243760466575623 pred=0.00796979945152998 sigreg=9.0625 lr=2.8948136615743893e-05 pusht=1.156506896018982 tworoom=1.15651535987854 cube=0.15522299706935883 gpu_peak_mb=9730.83154296875
+2026-10-21 05:23:50,538 INFO step 11950 loss=0.8300800919532776 pred=0.009767593815922737 sigreg=9.125 lr=2.9069767441860467e-05 pusht=1.1565372943878174 tworoom=1.1565309762954712 cube=0.17521892488002777 gpu_peak_mb=9730.83154296875
+2026-10-21 05:23:57,426 INFO step 12000 loss=0.8256531357765198 pred=0.009246863424777985 sigreg=9.0625 lr=2.9191398267977034e-05 pusht=1.1564196348190308 tworoom=1.1564109325408936 cube=0.1641288697719574 gpu_peak_mb=9730.83154296875
+2026-10-21 05:23:58,225 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:24:05,011 INFO step 12050 loss=0.827012836933136 pred=0.006700349971652031 sigreg=9.125 lr=2.931302909409361e-05 pusht=1.1563643217086792 tworoom=1.1563706398010254 cube=0.16342073678970337 gpu_peak_mb=9730.83154296875
+2026-10-21 05:24:11,920 INFO step 12100 loss=0.8234942555427551 pred=0.007087992504239082 sigreg=9.0625 lr=2.9434659920210176e-05 pusht=1.1565272808074951 tworoom=1.1565289497375488 cube=0.15156713128089905 gpu_peak_mb=9730.83154296875
+2026-10-21 05:24:18,850 INFO step 12150 loss=0.8294178247451782 pred=0.009105296805500984 sigreg=9.125 lr=2.955629074632675e-05 pusht=1.1564511060714722 tworoom=1.1564546823501587 cube=0.17827731370925903 gpu_peak_mb=9730.83154296875
+2026-10-21 05:24:25,760 INFO step 12200 loss=0.8236774206161499 pred=0.007271149195730686 sigreg=9.0625 lr=2.967792157244332e-05 pusht=1.1564267873764038 tworoom=1.1564288139343262 cube=0.15329383313655853 gpu_peak_mb=9730.83154296875
+2026-10-21 05:24:32,727 INFO step 12250 loss=0.8367717266082764 pred=0.008646701462566853 sigreg=9.1875 lr=2.9799552398559892e-05 pusht=1.1566212177276611 tworoom=1.156619906425476 cube=0.18828502297401428 gpu_peak_mb=9730.83154296875
+2026-10-21 05:24:39,744 INFO step 12300 loss=0.8281671404838562 pred=0.00785461999475956 sigreg=9.125 lr=2.9921183224676463e-05 pusht=1.1564419269561768 tworoom=1.1564406156539917 cube=0.16282974183559418 gpu_peak_mb=9730.83154296875
+2026-10-21 05:24:46,721 INFO step 12350 loss=0.8239426016807556 pred=0.007536342367529869 sigreg=9.0625 lr=3.0042814050793037e-05 pusht=1.1564604043960571 tworoom=1.1564548015594482 cube=0.1467054784297943 gpu_peak_mb=9730.83154296875
+2026-10-21 05:24:53,782 INFO step 12400 loss=0.8241221308708191 pred=0.007715904153883457 sigreg=9.0625 lr=3.0164444876909604e-05 pusht=1.1564193964004517 tworoom=1.15642249584198 cube=0.1517120599746704 gpu_peak_mb=9730.83154296875
+2026-10-21 05:25:01,356 INFO step 12450 loss=0.8385335206985474 pred=0.010408516973257065 sigreg=9.1875 lr=3.028607570302618e-05 pusht=1.1564998626708984 tworoom=1.1564946174621582 cube=0.18991078436374664 gpu_peak_mb=9730.83154296875
+2026-10-21 05:25:08,306 INFO step 12500 loss=0.8288321495056152 pred=0.008519640192389488 sigreg=9.125 lr=3.0407706529142746e-05 pusht=1.1564325094223022 tworoom=1.1564310789108276 cube=0.16972662508487701 gpu_peak_mb=9730.83154296875
+2026-10-21 05:25:09,082 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:25:15,912 INFO step 12550 loss=0.8274729251861572 pred=0.00716045405715704 sigreg=9.125 lr=3.052933735525932e-05 pusht=1.1564545631408691 tworoom=1.156449794769287 cube=0.1656082272529602 gpu_peak_mb=9730.83154296875
+2026-10-21 05:25:22,833 INFO step 12600 loss=0.8299166560173035 pred=0.009604155085980892 sigreg=9.125 lr=3.065096818137589e-05 pusht=1.156431794166565 tworoom=1.1564319133758545 cube=0.17493309080600739 gpu_peak_mb=9730.83154296875
+2026-10-21 05:25:29,748 INFO step 12650 loss=0.8309594392776489 pred=0.010646967217326164 sigreg=9.125 lr=3.077259900749246e-05 pusht=1.1564741134643555 tworoom=1.1564788818359375 cube=0.17699575424194336 gpu_peak_mb=9730.83154296875
+2026-10-21 05:25:36,676 INFO step 12700 loss=0.8237466812133789 pred=0.0073404270224273205 sigreg=9.0625 lr=3.089422983360903e-05 pusht=1.1564427614212036 tworoom=1.1564435958862305 cube=0.15151773393154144 gpu_peak_mb=9730.83154296875
+2026-10-21 05:25:43,625 INFO step 12750 loss=0.8237835764884949 pred=0.0073773544281721115 sigreg=9.0625 lr=3.1015860659725603e-05 pusht=1.1563762426376343 tworoom=1.156387209892273 cube=0.15565772354602814 gpu_peak_mb=9730.83154296875
+2026-10-21 05:25:50,644 INFO step 12800 loss=0.8277401924133301 pred=0.007427714765071869 sigreg=9.125 lr=3.1137491485842174e-05 pusht=1.1564915180206299 tworoom=1.1564849615097046 cube=0.1595020443201065 gpu_peak_mb=9730.83154296875
+2026-10-21 05:25:57,864 INFO step 12850 loss=0.8227286338806152 pred=0.006322374567389488 sigreg=9.0625 lr=3.1259122311958745e-05 pusht=1.156449317932129 tworoom=1.1564520597457886 cube=0.15040168166160583 gpu_peak_mb=9730.83154296875
+2026-10-21 05:26:04,847 INFO step 12900 loss=0.8233493566513062 pred=0.006943121086806059 sigreg=9.0625 lr=3.1380753138075316e-05 pusht=1.1563867330551147 tworoom=1.1563868522644043 cube=0.1494620442390442 gpu_peak_mb=9730.83154296875
+2026-10-21 05:26:11,803 INFO step 12950 loss=0.8245453834533691 pred=0.008139131590723991 sigreg=9.0625 lr=3.150238396419189e-05 pusht=1.156427264213562 tworoom=1.1564264297485352 cube=0.15296994149684906 gpu_peak_mb=9730.83154296875
+2026-10-21 05:26:18,815 INFO step 13000 loss=0.8274239301681519 pred=0.00711140688508749 sigreg=9.125 lr=3.162401479030846e-05 pusht=1.156388282775879 tworoom=1.1563915014266968 cube=0.1616794764995575 gpu_peak_mb=9730.83154296875
+2026-10-21 05:26:19,587 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:26:26,492 INFO step 13050 loss=0.8255066871643066 pred=0.009100421331822872 sigreg=9.0625 lr=3.174564561642503e-05 pusht=1.1564406156539917 tworoom=1.156444787979126 cube=0.16168153285980225 gpu_peak_mb=9730.83154296875
+2026-10-21 05:26:33,445 INFO step 13100 loss=0.8234643340110779 pred=0.007058090530335903 sigreg=9.0625 lr=3.18672764425416e-05 pusht=1.1564749479293823 tworoom=1.1564717292785645 cube=0.1506103277206421 gpu_peak_mb=9730.83154296875
+2026-10-21 05:26:40,513 INFO step 13150 loss=0.8227704763412476 pred=0.006364203058183193 sigreg=9.0625 lr=3.198890726865817e-05 pusht=1.1563860177993774 tworoom=1.1563843488693237 cube=0.14870506525039673 gpu_peak_mb=9730.83154296875
+2026-10-21 05:26:47,571 INFO step 13200 loss=0.828032910823822 pred=0.007720412686467171 sigreg=9.125 lr=3.211053809477474e-05 pusht=1.1563894748687744 tworoom=1.1563920974731445 cube=0.1771765649318695 gpu_peak_mb=9730.83154296875
+2026-10-21 05:26:54,615 INFO step 13250 loss=0.8227177858352661 pred=0.006311556324362755 sigreg=9.0625 lr=3.223216892089131e-05 pusht=1.1564052104949951 tworoom=1.1564055681228638 cube=0.14167068898677826 gpu_peak_mb=9730.83154296875
+2026-10-21 05:27:01,548 INFO step 13300 loss=0.8228166699409485 pred=0.0064103975892066956 sigreg=9.0625 lr=3.235379974700788e-05 pusht=1.1563917398452759 tworoom=1.1563975811004639 cube=0.1419888138771057 gpu_peak_mb=9730.83154296875
+2026-10-21 05:27:08,499 INFO step 13350 loss=0.8242254257202148 pred=0.007819179445505142 sigreg=9.0625 lr=3.2475430573124454e-05 pusht=1.156485915184021 tworoom=1.1564890146255493 cube=0.14651769399642944 gpu_peak_mb=9730.83154296875
+2026-10-21 05:27:15,499 INFO step 13400 loss=0.8235975503921509 pred=0.007191329263150692 sigreg=9.0625 lr=3.2597061399241024e-05 pusht=1.156435251235962 tworoom=1.1564351320266724 cube=0.14718016982078552 gpu_peak_mb=9730.83154296875
+2026-10-21 05:27:22,573 INFO step 13450 loss=0.8238242864608765 pred=0.007418060675263405 sigreg=9.0625 lr=3.2718692225357595e-05 pusht=1.1564222574234009 tworoom=1.1564242839813232 cube=0.15179045498371124 gpu_peak_mb=9730.83154296875
+2026-10-21 05:27:29,544 INFO step 13500 loss=0.8285704851150513 pred=0.008257977664470673 sigreg=9.125 lr=3.2840323051474166e-05 pusht=1.1564706563949585 tworoom=1.156468391418457 cube=0.1688661128282547 gpu_peak_mb=9730.83154296875
+2026-10-21 05:27:30,316 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:27:37,402 INFO step 13550 loss=0.8289908766746521 pred=0.008678347803652287 sigreg=9.125 lr=3.296195387759074e-05 pusht=1.1565085649490356 tworoom=1.1565157175064087 cube=0.16418257355690002 gpu_peak_mb=9730.83154296875
+2026-10-21 05:27:44,422 INFO step 13600 loss=0.8255904912948608 pred=0.009184218011796474 sigreg=9.0625 lr=3.308358470370731e-05 pusht=1.1564958095550537 tworoom=1.1564927101135254 cube=0.15792344510555267 gpu_peak_mb=9730.83154296875
+2026-10-21 05:27:51,617 INFO step 13650 loss=0.8280625939369202 pred=0.007750074844807386 sigreg=9.125 lr=3.320521552982388e-05 pusht=1.1563853025436401 tworoom=1.156389832496643 cube=0.1665297895669937 gpu_peak_mb=9730.83154296875
+2026-10-21 05:27:58,547 INFO step 13700 loss=0.8249382972717285 pred=0.008532044477760792 sigreg=9.0625 lr=3.332684635594045e-05 pusht=1.156537413597107 tworoom=1.1565347909927368 cube=0.1607661247253418 gpu_peak_mb=9730.83154296875
+2026-10-21 05:28:05,580 INFO step 13750 loss=0.8147665858268738 pred=0.006172835361212492 sigreg=9.0 lr=3.344847718205702e-05 pusht=1.1563931703567505 tworoom=1.1563990116119385 cube=0.13834352791309357 gpu_peak_mb=9730.83154296875
+2026-10-21 05:28:13,232 INFO step 13800 loss=0.8251097798347473 pred=0.008703512139618397 sigreg=9.0625 lr=3.357010800817359e-05 pusht=1.1564315557479858 tworoom=1.1564350128173828 cube=0.15465028584003448 gpu_peak_mb=9730.83154296875
+2026-10-21 05:28:20,223 INFO step 13850 loss=0.8237310647964478 pred=0.007324829697608948 sigreg=9.0625 lr=3.369173883429016e-05 pusht=1.156420111656189 tworoom=1.156423807144165 cube=0.14663054049015045 gpu_peak_mb=9730.83154296875
+2026-10-21 05:28:27,288 INFO step 13900 loss=0.8398350477218628 pred=0.011710061691701412 sigreg=9.1875 lr=3.381336966040674e-05 pusht=1.1566215753555298 tworoom=1.1566617488861084 cube=0.19840940833091736 gpu_peak_mb=9730.83154296875
+2026-10-21 05:28:34,214 INFO step 13950 loss=0.8143464922904968 pred=0.005752733908593655 sigreg=9.0 lr=3.3935000486523304e-05 pusht=1.1563962697982788 tworoom=1.1564027070999146 cube=0.13414674997329712 gpu_peak_mb=9730.83154296875
+2026-10-21 05:28:41,149 INFO step 14000 loss=0.8246802091598511 pred=0.00827394612133503 sigreg=9.0625 lr=3.405663131263988e-05 pusht=1.1564592123031616 tworoom=1.1564557552337646 cube=0.16014903783798218 gpu_peak_mb=9730.83154296875
+2026-10-21 05:28:41,922 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:28:49,013 INFO step 14050 loss=0.8242194056510925 pred=0.007813136093318462 sigreg=9.0625 lr=3.4178262138756445e-05 pusht=1.1565608978271484 tworoom=1.1565619707107544 cube=0.1497696340084076 gpu_peak_mb=9730.83154296875
+2026-10-21 05:28:55,990 INFO step 14100 loss=0.8166478872299194 pred=0.008054111152887344 sigreg=9.0 lr=3.429989296487302e-05 pusht=1.1564878225326538 tworoom=1.1564929485321045 cube=0.13842757046222687 gpu_peak_mb=9730.83154296875
+2026-10-21 05:29:02,936 INFO step 14150 loss=0.8251764178276062 pred=0.008770186454057693 sigreg=9.0625 lr=3.442152379098959e-05 pusht=1.1564905643463135 tworoom=1.1564887762069702 cube=0.1625499576330185 gpu_peak_mb=9730.83154296875
+2026-10-21 05:29:09,875 INFO step 14200 loss=0.8155871629714966 pred=0.006993403658270836 sigreg=9.0 lr=3.4543154617106164e-05 pusht=1.1564381122589111 tworoom=1.1564372777938843 cube=0.13681581616401672 gpu_peak_mb=9730.83154296875
+2026-10-21 05:29:16,939 INFO step 14250 loss=0.8247060775756836 pred=0.00829981453716755 sigreg=9.0625 lr=3.466478544322273e-05 pusht=1.1564987897872925 tworoom=1.1564955711364746 cube=0.1552644968032837 gpu_peak_mb=9730.83154296875
+2026-10-21 05:29:23,952 INFO step 14300 loss=0.8252518773078918 pred=0.008845614269375801 sigreg=9.0625 lr=3.4786416269339306e-05 pusht=1.1565536260604858 tworoom=1.1565587520599365 cube=0.15483075380325317 gpu_peak_mb=9730.83154296875
+2026-10-21 05:29:30,937 INFO step 14350 loss=0.8273746967315674 pred=0.007062170654535294 sigreg=9.125 lr=3.490804709545588e-05 pusht=1.1564464569091797 tworoom=1.1564438343048096 cube=0.16142131388187408 gpu_peak_mb=9730.83154296875
+2026-10-21 05:29:38,034 INFO step 14400 loss=0.8239569664001465 pred=0.0075507196597754955 sigreg=9.0625 lr=3.502967792157245e-05 pusht=1.1563966274261475 tworoom=1.156398892402649 cube=0.15614570677280426 gpu_peak_mb=9730.83154296875
+2026-10-21 05:29:45,185 INFO step 14450 loss=0.8153674602508545 pred=0.0067737209610641 sigreg=9.0 lr=3.515130874768902e-05 pusht=1.1564244031906128 tworoom=1.1564215421676636 cube=0.13667437434196472 gpu_peak_mb=9730.83154296875
+2026-10-21 05:29:52,296 INFO step 14500 loss=0.8237772583961487 pred=0.007371005602180958 sigreg=9.0625 lr=3.527293957380559e-05 pusht=1.1564334630966187 tworoom=1.1564339399337769 cube=0.15065182745456696 gpu_peak_mb=9730.83154296875
+2026-10-21 05:29:53,086 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:29:59,896 INFO step 14550 loss=0.814310610294342 pred=0.005716867279261351 sigreg=9.0 lr=3.539457039992216e-05 pusht=1.1564226150512695 tworoom=1.1564239263534546 cube=0.1291087567806244 gpu_peak_mb=9730.83154296875
+2026-10-21 05:30:06,867 INFO step 14600 loss=0.8223958015441895 pred=0.005989567842334509 sigreg=9.0625 lr=3.5516201226038724e-05 pusht=1.1564353704452515 tworoom=1.1564335823059082 cube=0.14357630908489227 gpu_peak_mb=9730.83154296875
+2026-10-21 05:30:13,777 INFO step 14650 loss=0.8236624002456665 pred=0.007256145589053631 sigreg=9.0625 lr=3.56378320521553e-05 pusht=1.1565409898757935 tworoom=1.1565415859222412 cube=0.1456976681947708 gpu_peak_mb=9730.83154296875
+2026-10-21 05:30:20,829 INFO step 14700 loss=0.823746919631958 pred=0.007340647280216217 sigreg=9.0625 lr=3.5759462878271866e-05 pusht=1.1564239263534546 tworoom=1.1564291715621948 cube=0.15155163407325745 gpu_peak_mb=9730.83154296875
+2026-10-21 05:30:27,763 INFO step 14750 loss=0.8156322240829468 pred=0.007038476876914501 sigreg=9.0 lr=3.5881093704388444e-05 pusht=1.1564048528671265 tworoom=1.1564061641693115 cube=0.14189817011356354 gpu_peak_mb=9730.83154296875
+2026-10-21 05:30:34,689 INFO step 14800 loss=0.823050320148468 pred=0.006644060835242271 sigreg=9.0625 lr=3.600272453050501e-05 pusht=1.1564029455184937 tworoom=1.15640127658844 cube=0.14853419363498688 gpu_peak_mb=9730.83154296875
+2026-10-21 05:30:41,722 INFO step 14850 loss=0.8142386674880981 pred=0.005644933320581913 sigreg=9.0 lr=3.6124355356621585e-05 pusht=1.1564325094223022 tworoom=1.1564373970031738 cube=0.13179926574230194 gpu_peak_mb=9730.83154296875
+2026-10-21 05:30:48,685 INFO step 14900 loss=0.8168959617614746 pred=0.008302193135023117 sigreg=9.0 lr=3.6245986182738156e-05 pusht=1.1563819646835327 tworoom=1.1563851833343506 cube=0.14329181611537933 gpu_peak_mb=9730.83154296875
+2026-10-21 05:30:55,842 INFO step 14950 loss=0.822249174118042 pred=0.005842944607138634 sigreg=9.0625 lr=3.636761700885473e-05 pusht=1.1564559936523438 tworoom=1.1564524173736572 cube=0.14163221418857574 gpu_peak_mb=9730.83154296875
+2026-10-21 05:31:02,777 INFO step 15000 loss=0.8229349851608276 pred=0.006528752855956554 sigreg=9.0625 lr=3.64892478349713e-05 pusht=1.156486988067627 tworoom=1.1564809083938599 cube=0.15095430612564087 gpu_peak_mb=9730.83154296875
+2026-10-21 05:31:03,547 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:31:10,412 INFO step 15050 loss=0.8275749087333679 pred=0.00726243294775486 sigreg=9.125 lr=3.661087866108787e-05 pusht=1.1563851833343506 tworoom=1.1563893556594849 cube=0.1611611694097519 gpu_peak_mb=9730.83154296875
+2026-10-21 05:31:17,506 INFO step 15100 loss=0.8242713809013367 pred=0.007865140214562416 sigreg=9.0625 lr=3.673250948720444e-05 pusht=1.1564571857452393 tworoom=1.1564579010009766 cube=0.15501627326011658 gpu_peak_mb=9730.83154296875
+2026-10-21 05:31:24,445 INFO step 15150 loss=0.8232758045196533 pred=0.0068695396184921265 sigreg=9.0625 lr=3.685414031332101e-05 pusht=1.1563944816589355 tworoom=1.1563963890075684 cube=0.15313026309013367 gpu_peak_mb=9730.83154296875
+2026-10-21 05:31:31,841 INFO step 15200 loss=0.8233782052993774 pred=0.006971932016313076 sigreg=9.0625 lr=3.697577113943758e-05 pusht=1.1564663648605347 tworoom=1.1564723253250122 cube=0.1484067440032959 gpu_peak_mb=9730.83154296875
+2026-10-21 05:31:38,744 INFO step 15250 loss=0.8141269087791443 pred=0.005533174611628056 sigreg=9.0 lr=3.709740196555415e-05 pusht=1.1564209461212158 tworoom=1.1564247608184814 cube=0.1314881592988968 gpu_peak_mb=9730.83154296875
+2026-10-21 05:31:45,657 INFO step 15300 loss=0.8229596614837646 pred=0.0065534356981515884 sigreg=9.0625 lr=3.721903279167072e-05 pusht=1.156470775604248 tworoom=1.1564704179763794 cube=0.15203160047531128 gpu_peak_mb=9730.83154296875
+2026-10-21 05:31:52,579 INFO step 15350 loss=0.8237967491149902 pred=0.0073905205354094505 sigreg=9.0625 lr=3.7340663617787294e-05 pusht=1.1564831733703613 tworoom=1.1564772129058838 cube=0.14622294902801514 gpu_peak_mb=9730.83154296875
+2026-10-21 05:31:59,517 INFO step 15400 loss=0.8235280513763428 pred=0.007121793460100889 sigreg=9.0625 lr=3.7462294443903864e-05 pusht=1.1565903425216675 tworoom=1.1565876007080078 cube=0.14422258734703064 gpu_peak_mb=9730.83154296875
+2026-10-21 05:32:06,483 INFO step 15450 loss=0.8161593675613403 pred=0.007565628737211227 sigreg=9.0 lr=3.7583925270020435e-05 pusht=1.156505823135376 tworoom=1.1565126180648804 cube=0.13545961678028107 gpu_peak_mb=9730.83154296875
+2026-10-21 05:32:13,428 INFO step 15500 loss=0.8242879509925842 pred=0.00788169912993908 sigreg=9.0625 lr=3.7705556096137006e-05 pusht=1.1564472913742065 tworoom=1.156445860862732 cube=0.15215814113616943 gpu_peak_mb=9730.83154296875
+2026-10-21 05:32:14,192 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:32:21,026 INFO step 15550 loss=0.8233851790428162 pred=0.006978936493396759 sigreg=9.0625 lr=3.782718692225358e-05 pusht=1.1564480066299438 tworoom=1.1564505100250244 cube=0.14846791326999664 gpu_peak_mb=9730.83154296875
+2026-10-21 05:32:27,984 INFO step 15600 loss=0.8278391361236572 pred=0.0075266133062541485 sigreg=9.125 lr=3.794881774837015e-05 pusht=1.1565107107162476 tworoom=1.1565145254135132 cube=0.17146871984004974 gpu_peak_mb=9730.83154296875
+2026-10-21 05:32:34,927 INFO step 15650 loss=0.8250389695167542 pred=0.008632738143205643 sigreg=9.0625 lr=3.807044857448672e-05 pusht=1.156398057937622 tworoom=1.1563962697982788 cube=0.15060389041900635 gpu_peak_mb=9730.83154296875
+2026-10-21 05:32:41,880 INFO step 15700 loss=0.8226174116134644 pred=0.006211191415786743 sigreg=9.0625 lr=3.819207940060329e-05 pusht=1.1563875675201416 tworoom=1.1563868522644043 cube=0.15019498765468597 gpu_peak_mb=9730.83154296875
+2026-10-21 05:32:48,815 INFO step 15750 loss=0.8239569067955017 pred=0.0075506847351789474 sigreg=9.0625 lr=3.831371022671987e-05 pusht=1.1565250158309937 tworoom=1.1565144062042236 cube=0.14662429690361023 gpu_peak_mb=9730.83154296875
+2026-10-21 05:32:55,710 INFO step 15800 loss=0.822687029838562 pred=0.006280799396336079 sigreg=9.0625 lr=3.843534105283643e-05 pusht=1.1564759016036987 tworoom=1.1564775705337524 cube=0.14094750583171844 gpu_peak_mb=9730.83154296875
+2026-10-21 05:33:02,623 INFO step 15850 loss=0.8158590197563171 pred=0.007265297695994377 sigreg=9.0 lr=3.855697187895301e-05 pusht=1.1564226150512695 tworoom=1.1564266681671143 cube=0.1415637880563736 gpu_peak_mb=9730.83154296875
+2026-10-21 05:33:09,614 INFO step 15900 loss=0.8156149387359619 pred=0.007021197583526373 sigreg=9.0 lr=3.867860270506957e-05 pusht=1.1564542055130005 tworoom=1.1564587354660034 cube=0.1407678872346878 gpu_peak_mb=9730.83154296875
+2026-10-21 05:33:16,546 INFO step 15950 loss=0.8150964379310608 pred=0.006502681877464056 sigreg=9.0 lr=3.8800233531186144e-05 pusht=1.1564443111419678 tworoom=1.1564395427703857 cube=0.13289368152618408 gpu_peak_mb=9730.83154296875
+2026-10-21 05:33:23,606 INFO step 16000 loss=0.8254027366638184 pred=0.00899648480117321 sigreg=9.0625 lr=3.8921864357302715e-05 pusht=1.156406283378601 tworoom=1.156406283378601 cube=0.15558311343193054 gpu_peak_mb=9730.83154296875
+2026-10-21 05:33:24,375 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:33:31,279 INFO step 16050 loss=0.8227949738502502 pred=0.006388709880411625 sigreg=9.0625 lr=3.9043495183419285e-05 pusht=1.1564366817474365 tworoom=1.1564360857009888 cube=0.15355899930000305 gpu_peak_mb=9730.83154296875
+2026-10-21 05:33:38,348 INFO step 16100 loss=0.8226948380470276 pred=0.006288611795753241 sigreg=9.0625 lr=3.9165126009535856e-05 pusht=1.1564275026321411 tworoom=1.1564276218414307 cube=0.14155760407447815 gpu_peak_mb=9730.83154296875
+2026-10-21 05:33:45,434 INFO step 16150 loss=0.8227428793907166 pred=0.0063366214744746685 sigreg=9.0625 lr=3.928675683565243e-05 pusht=1.1563799381256104 tworoom=1.1563800573349 cube=0.1505858302116394 gpu_peak_mb=9730.83154296875
+2026-10-21 05:33:52,415 INFO step 16200 loss=0.8240087032318115 pred=0.007602461613714695 sigreg=9.0625 lr=3.9408387661769005e-05 pusht=1.1563717126846313 tworoom=1.1563704013824463 cube=0.15147148072719574 gpu_peak_mb=9730.83154296875
+2026-10-21 05:33:59,419 INFO step 16250 loss=0.8150339722633362 pred=0.006440234836190939 sigreg=9.0 lr=3.953001848788557e-05 pusht=1.1564067602157593 tworoom=1.1564117670059204 cube=0.13618974387645721 gpu_peak_mb=9730.83154296875
+2026-10-21 05:34:06,372 INFO step 16300 loss=0.8145656585693359 pred=0.005971934180706739 sigreg=9.0 lr=3.9651649314002146e-05 pusht=1.1564316749572754 tworoom=1.1564326286315918 cube=0.12936779856681824 gpu_peak_mb=9730.83154296875
+2026-10-21 05:34:13,307 INFO step 16350 loss=0.8157013058662415 pred=0.007107540965080261 sigreg=9.0 lr=3.977328014011871e-05 pusht=1.1564908027648926 tworoom=1.1564860343933105 cube=0.13900980353355408 gpu_peak_mb=9730.83154296875
+2026-10-21 05:34:20,247 INFO step 16400 loss=0.8139104247093201 pred=0.005316687282174826 sigreg=9.0 lr=3.989491096623529e-05 pusht=1.1564600467681885 tworoom=1.156454086303711 cube=0.1341882199048996 gpu_peak_mb=9730.83154296875
+2026-10-21 05:34:27,194 INFO step 16450 loss=0.8245052695274353 pred=0.00809903722256422 sigreg=9.0625 lr=4.001654179235185e-05 pusht=1.1565841436386108 tworoom=1.1565862894058228 cube=0.1603454202413559 gpu_peak_mb=9730.83154296875
+2026-10-21 05:34:34,144 INFO step 16500 loss=0.8235926628112793 pred=0.007186386734247208 sigreg=9.0625 lr=4.013817261846843e-05 pusht=1.1563748121261597 tworoom=1.1563763618469238 cube=0.15119090676307678 gpu_peak_mb=9730.83154296875
+2026-10-21 05:34:34,922 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:34:41,732 INFO step 16550 loss=0.8150522112846375 pred=0.006458485033363104 sigreg=9.0 lr=4.0259803444584994e-05 pusht=1.1565033197402954 tworoom=1.156511902809143 cube=0.13751259446144104 gpu_peak_mb=9730.83154296875
+2026-10-21 05:34:49,494 INFO step 16600 loss=0.8138846158981323 pred=0.005290874280035496 sigreg=9.0 lr=4.038143427070157e-05 pusht=1.1564583778381348 tworoom=1.156456470489502 cube=0.13655158877372742 gpu_peak_mb=9730.83154296875
+2026-10-21 05:34:56,452 INFO step 16650 loss=0.822449803352356 pred=0.00604355288669467 sigreg=9.0625 lr=4.0503065096818135e-05 pusht=1.1563818454742432 tworoom=1.1563832759857178 cube=0.14384201169013977 gpu_peak_mb=9730.83154296875
+2026-10-21 05:35:03,553 INFO step 16700 loss=0.8235427141189575 pred=0.007136437576264143 sigreg=9.0625 lr=4.062469592293471e-05 pusht=1.1565258502960205 tworoom=1.156520962715149 cube=0.14879226684570312 gpu_peak_mb=9730.83154296875
+2026-10-21 05:35:10,564 INFO step 16750 loss=0.824752688407898 pred=0.008346467278897762 sigreg=9.0625 lr=4.0746326749051284e-05 pusht=1.156554102897644 tworoom=1.1565510034561157 cube=0.16017653048038483 gpu_peak_mb=9730.83154296875
+2026-10-21 05:35:17,530 INFO step 16800 loss=0.8232778906822205 pred=0.006871660239994526 sigreg=9.0625 lr=4.0867957575167855e-05 pusht=1.156455636024475 tworoom=1.1564574241638184 cube=0.1520378142595291 gpu_peak_mb=9730.83154296875
+2026-10-21 05:35:24,648 INFO step 16850 loss=0.8150637149810791 pred=0.006469964515417814 sigreg=9.0 lr=4.0989588401284425e-05 pusht=1.1565167903900146 tworoom=1.156511902809143 cube=0.13118591904640198 gpu_peak_mb=9730.83154296875
+2026-10-21 05:35:31,744 INFO step 16900 loss=0.8143276572227478 pred=0.005733888130635023 sigreg=9.0 lr=4.1111219227400996e-05 pusht=1.1565020084381104 tworoom=1.1564998626708984 cube=0.12656298279762268 gpu_peak_mb=9730.83154296875
+2026-10-21 05:35:38,691 INFO step 16950 loss=0.8154705762863159 pred=0.0068768104538321495 sigreg=9.0 lr=4.123285005351757e-05 pusht=1.15647292137146 tworoom=1.1564757823944092 cube=0.13346295058727264 gpu_peak_mb=9730.83154296875
+2026-10-21 05:35:45,656 INFO step 17000 loss=0.8236404657363892 pred=0.007234207354485989 sigreg=9.0625 lr=4.135448087963414e-05 pusht=1.156400203704834 tworoom=1.1564005613327026 cube=0.14835500717163086 gpu_peak_mb=9730.83154296875
+2026-10-21 05:35:46,415 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:35:53,396 INFO step 17050 loss=0.8236246705055237 pred=0.0072183990851044655 sigreg=9.0625 lr=4.147611170575071e-05 pusht=1.1564583778381348 tworoom=1.156463384628296 cube=0.1501397043466568 gpu_peak_mb=9730.83154296875
+2026-10-21 05:36:00,419 INFO step 17100 loss=0.8151789903640747 pred=0.006585262715816498 sigreg=9.0 lr=4.159774253186728e-05 pusht=1.1564890146255493 tworoom=1.1564905643463135 cube=0.1325574368238449 gpu_peak_mb=9730.83154296875
+2026-10-21 05:36:07,520 INFO step 17150 loss=0.8172407150268555 pred=0.008646953850984573 sigreg=9.0 lr=4.171937335798385e-05 pusht=1.1565414667129517 tworoom=1.1565415859222412 cube=0.13766251504421234 gpu_peak_mb=9730.83154296875
+2026-10-21 05:36:14,469 INFO step 17200 loss=0.8236091732978821 pred=0.0072029451839625835 sigreg=9.0625 lr=4.1841004184100415e-05 pusht=1.1564749479293823 tworoom=1.156473994255066 cube=0.143718421459198 gpu_peak_mb=9730.83154296875
+2026-10-21 05:36:21,415 INFO step 17250 loss=0.814643919467926 pred=0.00605018250644207 sigreg=9.0 lr=4.196263501021699e-05 pusht=1.1564114093780518 tworoom=1.1564109325408936 cube=0.13745708763599396 gpu_peak_mb=9730.83154296875
+2026-10-21 05:36:28,791 INFO step 17300 loss=0.8234487771987915 pred=0.007042497396469116 sigreg=9.0625 lr=4.208426583633356e-05 pusht=1.1564664840698242 tworoom=1.1564533710479736 cube=0.1452193260192871 gpu_peak_mb=9730.83154296875
+2026-10-21 05:36:35,824 INFO step 17350 loss=0.8235260844230652 pred=0.007119838148355484 sigreg=9.0625 lr=4.2205896662450134e-05 pusht=1.156432032585144 tworoom=1.156428337097168 cube=0.14599917829036713 gpu_peak_mb=9730.83154296875
+2026-10-21 05:36:42,752 INFO step 17400 loss=0.8257139325141907 pred=0.009307683445513248 sigreg=9.0625 lr=4.2327527488566705e-05 pusht=1.1564897298812866 tworoom=1.15648353099823 cube=0.1509849727153778 gpu_peak_mb=9730.83154296875
+2026-10-21 05:36:49,691 INFO step 17450 loss=0.8240638971328735 pred=0.007657669018954039 sigreg=9.0625 lr=4.2449158314683275e-05 pusht=1.156618595123291 tworoom=1.1566250324249268 cube=0.1452762335538864 gpu_peak_mb=9730.83154296875
+2026-10-21 05:36:56,653 INFO step 17500 loss=0.8232933282852173 pred=0.006887076422572136 sigreg=9.0625 lr=4.2570789140799846e-05 pusht=1.1564759016036987 tworoom=1.1564823389053345 cube=0.14715611934661865 gpu_peak_mb=9730.83154296875
+2026-10-21 05:36:57,447 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:37:04,479 INFO step 17550 loss=0.8145918250083923 pred=0.005998102482408285 sigreg=9.0 lr=4.269241996691642e-05 pusht=1.156420111656189 tworoom=1.156417965888977 cube=0.1294725239276886 gpu_peak_mb=9730.83154296875
+2026-10-21 05:37:11,451 INFO step 17600 loss=0.8139005303382874 pred=0.005306766368448734 sigreg=9.0 lr=4.281405079303299e-05 pusht=1.1564112901687622 tworoom=1.1564112901687622 cube=0.13034376502037048 gpu_peak_mb=9730.83154296875
+2026-10-21 05:37:18,584 INFO step 17650 loss=0.825107753276825 pred=0.00870148278772831 sigreg=9.0625 lr=4.293568161914956e-05 pusht=1.1565483808517456 tworoom=1.1565496921539307 cube=0.1524595320224762 gpu_peak_mb=9730.83154296875
+2026-10-21 05:37:25,572 INFO step 17700 loss=0.8139960765838623 pred=0.005402352195233107 sigreg=9.0 lr=4.305731244526613e-05 pusht=1.1564940214157104 tworoom=1.1564981937408447 cube=0.12167192995548248 gpu_peak_mb=9730.83154296875
+2026-10-21 05:37:32,752 INFO step 17750 loss=0.823274552822113 pred=0.006868290714919567 sigreg=9.0625 lr=4.31789432713827e-05 pusht=1.1564857959747314 tworoom=1.1564967632293701 cube=0.14268085360527039 gpu_peak_mb=9730.83154296875
+2026-10-21 05:37:40,100 INFO step 17800 loss=0.8144057393074036 pred=0.005811985116451979 sigreg=9.0 lr=4.330057409749927e-05 pusht=1.1564435958862305 tworoom=1.1564456224441528 cube=0.12202727794647217 gpu_peak_mb=9730.83154296875
+2026-10-21 05:37:47,144 INFO step 17850 loss=0.8152013421058655 pred=0.006607580929994583 sigreg=9.0 lr=4.342220492361584e-05 pusht=1.1564167737960815 tworoom=1.1564176082611084 cube=0.1317930817604065 gpu_peak_mb=9730.83154296875
+2026-10-21 05:37:54,215 INFO step 17900 loss=0.813198983669281 pred=0.004605207592248917 sigreg=9.0 lr=4.354383574973241e-05 pusht=1.156416654586792 tworoom=1.1564120054244995 cube=0.11944396793842316 gpu_peak_mb=9730.83154296875
+2026-10-21 05:38:01,270 INFO step 17950 loss=0.822298526763916 pred=0.005892298649996519 sigreg=9.0625 lr=4.3665466575848984e-05 pusht=1.156482219696045 tworoom=1.1564828157424927 cube=0.14025872945785522 gpu_peak_mb=9730.83154296875
+2026-10-21 05:38:08,728 INFO step 18000 loss=0.8157418966293335 pred=0.007148132659494877 sigreg=9.0 lr=4.3787097401965555e-05 pusht=1.1566472053527832 tworoom=1.156662940979004 cube=0.13684511184692383 gpu_peak_mb=9730.83154296875
+2026-10-21 05:38:09,651 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:38:16,807 INFO step 18050 loss=0.8140928745269775 pred=0.005499154329299927 sigreg=9.0 lr=4.390872822808213e-05 pusht=1.1563942432403564 tworoom=1.1563951969146729 cube=0.12460643798112869 gpu_peak_mb=9730.83154296875
+2026-10-21 05:38:23,872 INFO step 18100 loss=0.8148080110549927 pred=0.0062142363749444485 sigreg=9.0 lr=4.4030359054198696e-05 pusht=1.1564455032348633 tworoom=1.156449317932129 cube=0.1271345615386963 gpu_peak_mb=9730.83154296875
+2026-10-21 05:38:30,803 INFO step 18150 loss=0.815693199634552 pred=0.007099473848938942 sigreg=9.0 lr=4.4151989880315274e-05 pusht=1.1564693450927734 tworoom=1.156473159790039 cube=0.1360902637243271 gpu_peak_mb=9730.83154296875
+2026-10-21 05:38:37,788 INFO step 18200 loss=0.8226028680801392 pred=0.006196617614477873 sigreg=9.0625 lr=4.427362070643184e-05 pusht=1.156478762626648 tworoom=1.1564735174179077 cube=0.1426493376493454 gpu_peak_mb=9730.83154296875
+2026-10-21 05:38:45,070 INFO step 18250 loss=0.8161078095436096 pred=0.0075140660628676414 sigreg=9.0 lr=4.4395251532548416e-05 pusht=1.156446099281311 tworoom=1.156441569328308 cube=0.13690067827701569 gpu_peak_mb=9730.83154296875
+2026-10-21 05:38:52,537 INFO step 18300 loss=0.8238756656646729 pred=0.007469411473721266 sigreg=9.0625 lr=4.451688235866498e-05 pusht=1.1564619541168213 tworoom=1.1564610004425049 cube=0.1528446525335312 gpu_peak_mb=9730.83154296875
+2026-10-21 05:38:59,496 INFO step 18350 loss=0.8152708411216736 pred=0.006677104160189629 sigreg=9.0 lr=4.463851318478156e-05 pusht=1.1565067768096924 tworoom=1.1565064191818237 cube=0.13572905957698822 gpu_peak_mb=9730.83154296875
+2026-10-21 05:39:06,522 INFO step 18400 loss=0.8155313730239868 pred=0.006937604397535324 sigreg=9.0 lr=4.476014401089812e-05 pusht=1.1564329862594604 tworoom=1.156434416770935 cube=0.12640248239040375 gpu_peak_mb=9730.83154296875
+2026-10-21 05:39:13,548 INFO step 18450 loss=0.8232841491699219 pred=0.006877926643937826 sigreg=9.0625 lr=4.48817748370147e-05 pusht=1.1565319299697876 tworoom=1.1565386056900024 cube=0.14896950125694275 gpu_peak_mb=9730.83154296875
+2026-10-21 05:39:20,661 INFO step 18500 loss=0.8240265846252441 pred=0.007620347663760185 sigreg=9.0625 lr=4.500340566313126e-05 pusht=1.1564867496490479 tworoom=1.1564915180206299 cube=0.15421880781650543 gpu_peak_mb=9730.83154296875
+2026-10-21 05:39:21,748 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:39:28,737 INFO step 18550 loss=0.8094509243965149 pred=0.004763404838740826 sigreg=8.9375 lr=4.5125036489247834e-05 pusht=1.1563711166381836 tworoom=1.1563713550567627 cube=0.113657146692276 gpu_peak_mb=9730.83154296875
+2026-10-21 05:39:35,730 INFO step 18600 loss=0.8169428110122681 pred=0.008349074050784111 sigreg=9.0 lr=4.524666731536441e-05 pusht=1.1565622091293335 tworoom=1.1565778255462646 cube=0.1455010175704956 gpu_peak_mb=9730.83154296875
+2026-10-21 05:39:42,682 INFO step 18650 loss=0.8173431754112244 pred=0.008749444037675858 sigreg=9.0 lr=4.5368298141480976e-05 pusht=1.1565989255905151 tworoom=1.1565978527069092 cube=0.14176246523857117 gpu_peak_mb=9730.83154296875
+2026-10-21 05:39:49,802 INFO step 18700 loss=0.8152862191200256 pred=0.006692459341138601 sigreg=9.0 lr=4.548992896759755e-05 pusht=1.156470537185669 tworoom=1.1564712524414062 cube=0.13828790187835693 gpu_peak_mb=9730.83154296875
+2026-10-21 05:39:56,947 INFO step 18750 loss=0.822990894317627 pred=0.006584641523659229 sigreg=9.0625 lr=4.561155979371412e-05 pusht=1.156494140625 tworoom=1.156493902206421 cube=0.14231276512145996 gpu_peak_mb=9730.83154296875
+2026-10-21 05:40:03,897 INFO step 18800 loss=0.8110042810440063 pred=0.006316791754215956 sigreg=8.9375 lr=4.5733190619830695e-05 pusht=1.1564867496490479 tworoom=1.1564915180206299 cube=0.12198777496814728 gpu_peak_mb=9730.83154296875
+2026-10-21 05:40:10,861 INFO step 18850 loss=0.8151463866233826 pred=0.006552634295076132 sigreg=9.0 lr=4.585482144594726e-05 pusht=1.1566181182861328 tworoom=1.1566123962402344 cube=0.13855627179145813 gpu_peak_mb=9730.83154296875
+2026-10-21 05:40:17,831 INFO step 18900 loss=0.8151385188102722 pred=0.006544782780110836 sigreg=9.0 lr=4.5976452272063836e-05 pusht=1.1564655303955078 tworoom=1.156458854675293 cube=0.13444434106349945 gpu_peak_mb=9730.83154296875
+2026-10-21 05:40:24,770 INFO step 18950 loss=0.8164872527122498 pred=0.007893474772572517 sigreg=9.0 lr=4.60980830981804e-05 pusht=1.1564749479293823 tworoom=1.1564722061157227 cube=0.1384676992893219 gpu_peak_mb=9730.83154296875
+2026-10-21 05:40:31,945 INFO step 19000 loss=0.815620481967926 pred=0.00702672591432929 sigreg=9.0 lr=4.621971392429698e-05 pusht=1.1565016508102417 tworoom=1.1565001010894775 cube=0.13727764785289764 gpu_peak_mb=9730.83154296875
+2026-10-21 05:40:32,713 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:40:39,575 INFO step 19050 loss=0.8152605295181274 pred=0.006666762288659811 sigreg=9.0 lr=4.634134475041354e-05 pusht=1.1564123630523682 tworoom=1.1564158201217651 cube=0.13685961067676544 gpu_peak_mb=9730.83154296875
+2026-10-21 05:40:46,510 INFO step 19100 loss=0.8143638968467712 pred=0.0057701426558196545 sigreg=9.0 lr=4.646297557653012e-05 pusht=1.1564010381698608 tworoom=1.1563987731933594 cube=0.12443245947360992 gpu_peak_mb=9730.83154296875
+2026-10-21 05:40:53,457 INFO step 19150 loss=0.8225394487380981 pred=0.0061332229524850845 sigreg=9.0625 lr=4.658460640264669e-05 pusht=1.1563918590545654 tworoom=1.1563942432403564 cube=0.1411605179309845 gpu_peak_mb=9730.83154296875
+2026-10-21 05:41:00,424 INFO step 19200 loss=0.8155839443206787 pred=0.006990165449678898 sigreg=9.0 lr=4.670623722876326e-05 pusht=1.1564832925796509 tworoom=1.1564733982086182 cube=0.13037706911563873 gpu_peak_mb=9730.83154296875
+2026-10-21 05:41:07,583 INFO step 19250 loss=0.8135023713111877 pred=0.004908632021397352 sigreg=9.0 lr=4.682786805487983e-05 pusht=1.1564643383026123 tworoom=1.1564661264419556 cube=0.12952977418899536 gpu_peak_mb=9730.83154296875
+2026-10-21 05:41:14,520 INFO step 19300 loss=0.8144360184669495 pred=0.005842278711497784 sigreg=9.0 lr=4.69494988809964e-05 pusht=1.1564381122589111 tworoom=1.1564300060272217 cube=0.12555721402168274 gpu_peak_mb=9730.83154296875
+2026-10-21 05:41:21,450 INFO step 19350 loss=0.8158156871795654 pred=0.007221910636872053 sigreg=9.0 lr=4.7071129707112974e-05 pusht=1.1565169095993042 tworoom=1.1565182209014893 cube=0.14075958728790283 gpu_peak_mb=9730.83154296875
+2026-10-21 05:41:28,877 INFO step 19400 loss=0.8146296739578247 pred=0.006035930942744017 sigreg=9.0 lr=4.7192760533229545e-05 pusht=1.156354308128357 tworoom=1.1563535928726196 cube=0.12971629202365875 gpu_peak_mb=9730.83154296875
+2026-10-21 05:41:35,843 INFO step 19450 loss=0.8232747316360474 pred=0.006868481636047363 sigreg=9.0625 lr=4.7314391359346116e-05 pusht=1.156524896621704 tworoom=1.15653657913208 cube=0.14260251820087433 gpu_peak_mb=9730.83154296875
+2026-10-21 05:41:43,002 INFO step 19500 loss=0.8137656450271606 pred=0.00517189921811223 sigreg=9.0 lr=4.7436022185462686e-05 pusht=1.1564074754714966 tworoom=1.156406283378601 cube=0.12994812428951263 gpu_peak_mb=9730.83154296875
+2026-10-21 05:41:43,772 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:41:50,565 INFO step 19550 loss=0.8231313228607178 pred=0.0067250486463308334 sigreg=9.0625 lr=4.755765301157926e-05 pusht=1.1564009189605713 tworoom=1.1564003229141235 cube=0.14585043489933014 gpu_peak_mb=9730.83154296875
+2026-10-21 05:41:57,505 INFO step 19600 loss=0.8147854208946228 pred=0.006191677413880825 sigreg=9.0 lr=4.767928383769583e-05 pusht=1.1564851999282837 tworoom=1.156493067741394 cube=0.12698355317115784 gpu_peak_mb=9730.83154296875
+2026-10-21 05:42:04,433 INFO step 19650 loss=0.8142818212509155 pred=0.00568810012191534 sigreg=9.0 lr=4.78009146638124e-05 pusht=1.156481385231018 tworoom=1.1564770936965942 cube=0.12842223048210144 gpu_peak_mb=9730.83154296875
+2026-10-21 05:42:11,410 INFO step 19700 loss=0.8142502903938293 pred=0.005656513851135969 sigreg=9.0 lr=4.792254548992897e-05 pusht=1.1564644575119019 tworoom=1.1564635038375854 cube=0.12396350502967834 gpu_peak_mb=9730.83154296875
+2026-10-21 05:42:18,703 INFO step 19750 loss=0.8157243728637695 pred=0.007130620535463095 sigreg=9.0 lr=4.804417631604554e-05 pusht=1.1565217971801758 tworoom=1.1565210819244385 cube=0.13608333468437195 gpu_peak_mb=9730.83154296875
+2026-10-21 05:42:25,706 INFO step 19800 loss=0.8236733078956604 pred=0.007267029024660587 sigreg=9.0625 lr=4.816580714216211e-05 pusht=1.156526803970337 tworoom=1.1565279960632324 cube=0.14819936454296112 gpu_peak_mb=9730.83154296875
+2026-10-21 05:42:32,721 INFO step 19850 loss=0.8154979944229126 pred=0.006904231384396553 sigreg=9.0 lr=4.828743796827868e-05 pusht=1.1564728021621704 tworoom=1.1564756631851196 cube=0.1276860386133194 gpu_peak_mb=9730.83154296875
+2026-10-21 05:42:39,681 INFO step 19900 loss=0.8143242001533508 pred=0.0057304659858345985 sigreg=9.0 lr=4.840906879439525e-05 pusht=1.1564269065856934 tworoom=1.1564288139343262 cube=0.12914039194583893 gpu_peak_mb=9730.83154296875
+2026-10-21 05:42:46,626 INFO step 19950 loss=0.8155322670936584 pred=0.0069385371170938015 sigreg=9.0 lr=4.8530699620511824e-05 pusht=1.1564618349075317 tworoom=1.1564617156982422 cube=0.12927880883216858 gpu_peak_mb=9730.83154296875
+2026-10-21 05:42:53,758 INFO step 20000 loss=0.8143532872200012 pred=0.005759559106081724 sigreg=9.0 lr=4.8652330446628395e-05 pusht=1.1564689874649048 tworoom=1.1564737558364868 cube=0.13695311546325684 gpu_peak_mb=9730.83154296875
+2026-10-21 05:42:54,519 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:43:01,323 INFO step 20050 loss=0.8227233290672302 pred=0.0063171060755848885 sigreg=9.0625 lr=4.877396127274496e-05 pusht=1.1564466953277588 tworoom=1.1564525365829468 cube=0.14306379854679108 gpu_peak_mb=9730.83154296875
+2026-10-21 05:43:08,332 INFO step 20100 loss=0.8155175447463989 pred=0.006923820823431015 sigreg=9.0 lr=4.889559209886154e-05 pusht=1.1564152240753174 tworoom=1.1564207077026367 cube=0.12639251351356506 gpu_peak_mb=9730.83154296875
+2026-10-21 05:43:15,315 INFO step 20150 loss=0.8094099164009094 pred=0.004722392186522484 sigreg=8.9375 lr=4.901722292497811e-05 pusht=1.1564170122146606 tworoom=1.1564151048660278 cube=0.11490926891565323 gpu_peak_mb=9730.83154296875
+2026-10-21 05:43:22,273 INFO step 20200 loss=0.8147493600845337 pred=0.006155628245323896 sigreg=9.0 lr=4.913885375109468e-05 pusht=1.1564220190048218 tworoom=1.1564195156097412 cube=0.1333596408367157 gpu_peak_mb=9730.83154296875
+2026-10-21 05:43:29,609 INFO step 20250 loss=0.8098283410072327 pred=0.005140826106071472 sigreg=8.9375 lr=4.926048457721125e-05 pusht=1.1563835144042969 tworoom=1.1563854217529297 cube=0.11866919696331024 gpu_peak_mb=9730.83154296875
+2026-10-21 05:43:36,602 INFO step 20300 loss=0.8138747215270996 pred=0.005280943121761084 sigreg=9.0 lr=4.938211540332783e-05 pusht=1.1564503908157349 tworoom=1.1564544439315796 cube=0.12090674787759781 gpu_peak_mb=9730.83154296875
+2026-10-21 05:43:43,565 INFO step 20350 loss=0.8137527108192444 pred=0.005158939864486456 sigreg=9.0 lr=4.950374622944439e-05 pusht=1.1564637422561646 tworoom=1.156462550163269 cube=0.1254020482301712 gpu_peak_mb=9730.83154296875
+2026-10-21 05:43:50,472 INFO step 20400 loss=0.8102740049362183 pred=0.005586522631347179 sigreg=8.9375 lr=4.962537705556096e-05 pusht=1.156502366065979 tworoom=1.156506896018982 cube=0.11830111593008041 gpu_peak_mb=9730.83154296875
+2026-10-21 05:43:57,412 INFO step 20450 loss=0.8146585822105408 pred=0.006064831279218197 sigreg=9.0 lr=4.974700788167753e-05 pusht=1.1565492153167725 tworoom=1.1565488576889038 cube=0.12648317217826843 gpu_peak_mb=9730.83154296875
+2026-10-21 05:44:04,625 INFO step 20500 loss=0.8153520822525024 pred=0.006758342497050762 sigreg=9.0 lr=4.986863870779411e-05 pusht=1.1564891338348389 tworoom=1.1564894914627075 cube=0.13161276280879974 gpu_peak_mb=9730.83154296875
+2026-10-21 05:44:05,387 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt
+2026-10-21 05:44:12,091 INFO step 20550 loss=0.8163967728614807 pred=0.007803046610206366 sigreg=9.0 lr=4.999026953391068e-05 pusht=1.1565349102020264 tworoom=1.1565310955047607 cube=0.1327064335346222 gpu_peak_mb=9730.83154296875
+2026-10-21 05:48:14,301 INFO stop_after_epoch=1 reached at epoch 1 global_step=20554
+2026-10-21 05:48:15,886 INFO fit end {'global_step': 20554, 'current_epoch': 1, 'gpu_mem_mb': 210.1259765625, 'gpu_peak_mb': 9730.83154296875}
+2026-10-21 05:48:15,886 INFO benchmark {'world_size': 1, 'per_env_per_gpu': 32, 'effective_clips_per_env': 32, 'effective_clips_per_step': 96, 'frames_per_step': 384, 'median_step_s': 0.1297511514276266, 'median_data_s': 0.0045618098229169846, 'median_sigreg_comm_s': 0.0, 'steps_per_s': 7.7070607004037734, 'clips_per_s': 739.8778272387623, 'frames_per_s': 2959.511308955049, 'timed_steps': 20551, 'grad_norm': 0.9999999566894638, 'nccl_cuda_us': None, 'profile_cuda_us': None, 'nccl_fraction': None, 'gpu_util_mean': {'0': 57.55533834586466}, 'gpu_mem_mib_max': {'0': 10658.0}, 'global_step': 20554, 'gpu_peak_mb': 9730.83154296875}
+2026-10-21 05:48:16,108 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt

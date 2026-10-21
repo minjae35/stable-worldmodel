@@ -1,0 +1,71 @@
+{
+  "label": "step20654",
+  "weights": "/workspace/stable-worldmodel/results/stage2a/rtx5090_recover500/weights_step_20654.pt",
+  "pusht": {
+    "cls": {
+      "dim_std_median": 0.0011197378626093268,
+      "dim_std_mean": 0.001318379188887775,
+      "dim_std_min": 0.0007263480802066624,
+      "std": 0.9990788102149963,
+      "mean_norm": 13.843629837036133,
+      "mean_abs": 0.8120485544204712
+    },
+    "projector": {
+      "dim_std_median": 0.0008583912276662886,
+      "dim_std_mean": 0.0008836195338517427,
+      "dim_std_min": 0.0006209239363670349,
+      "std": 0.012304290197789669,
+      "mean_norm": 0.1701880544424057,
+      "mean_abs": 0.009597759693861008
+    },
+    "pred_loss": 0.006432106252759695,
+    "sigreg_loss": 12.875,
+    "encoder_grad_norm": 0.04904700815677643
+  },
+  "tworoom": {
+    "cls": {
+      "dim_std_median": 0.0017315945588052273,
+      "dim_std_mean": 0.0018266108818352222,
+      "dim_std_min": 0.0009538620943203568,
+      "std": 0.9990866780281067,
+      "mean_norm": 13.843725204467773,
+      "mean_abs": 0.8115215301513672
+    },
+    "projector": {
+      "dim_std_median": 0.0009733125334605575,
+      "dim_std_mean": 0.0010118638165295124,
+      "dim_std_min": 0.0007707811309956014,
+      "std": 0.012531168758869171,
+      "mean_norm": 0.17316578328609467,
+      "mean_abs": 0.009805509820580482
+    },
+    "pred_loss": 0.006416698452085257,
+    "sigreg_loss": 12.875,
+    "encoder_grad_norm": 0.04951852187514305
+  },
+  "cube": {
+    "cls": {
+      "dim_std_median": 0.8824297189712524,
+      "dim_std_mean": 0.9127644300460815,
+      "dim_std_min": 0.41859757900238037,
+      "std": 0.9999706745147705,
+      "mean_norm": 4.599209785461426,
+      "mean_abs": 0.27365848422050476
+    },
+    "projector": {
+      "dim_std_median": 0.9603075981140137,
+      "dim_std_mean": 0.9591947793960571,
+      "dim_std_min": 0.48741671442985535,
+      "std": 0.980036199092865,
+      "mean_norm": 1.8903971910476685,
+      "mean_abs": 0.1098363921046257
+    },
+    "pred_loss": 0.1427590399980545,
+    "sigreg_loss": 1.4375,
+    "encoder_grad_norm": 1.5477913618087769
+  },
+  "pusht_tworoom_cosine": 0.9951273202896118,
+  "full_encoder_grad_norm": 0.5158473253250122,
+  "cosine_full_vs_cube": 0.9980322122573853,
+  "finite": true
+}

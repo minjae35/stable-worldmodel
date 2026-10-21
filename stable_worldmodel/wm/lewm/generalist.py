@@ -98,6 +98,18 @@ class GeneralistLeWM(LeWM):
         return super().predict(emb, self._action_condition(act_emb))
 
 
+def variance_hinge(emb: torch.Tensor, gamma: float, eps: float) -> torch.Tensor:
+    """Hinge on per-timestep sample std for one environment.
+
+    ``emb`` is ``(B, T, D)``. Standard deviation is over the batch, in
+    fp32, so different images stay visible and time is not treated as
+    extra samples. A dimension contributes only while its std is below
+    ``gamma``.
+    """
+    std = torch.sqrt(emb.float().var(dim=0, unbiased=False) + eps)
+    return torch.relu(std.new_tensor(float(gamma)) - std).mean()
+
+
 def latent_stats(emb: torch.Tensor) -> dict[str, torch.Tensor]:
     """Batch statistics used to notice a collapsed latent."""
     flat = emb.detach().float()
@@ -118,6 +130,10 @@ def generalist_loss(
     history_size: int,
     num_preds: int,
     sigreg_weight: float,
+    detach_pred_target: bool = False,
+    variance_weight: float = 0.0,
+    variance_gamma: float = 1.0,
+    variance_eps: float = 1e-6,
 ) -> tuple[torch.Tensor, dict[str, torch.Tensor]]:
     """Next-latent MSE plus per-environment SIGReg, then a mean.
 
@@ -143,6 +159,7 @@ def generalist_loss(
 
     pred_losses = []
     sig_losses = []
+    var_losses = []
     logs: dict[str, torch.Tensor] = {}
     offset = 0
     for name, count in zip(model.env_names, counts):
@@ -154,22 +171,36 @@ def generalist_loss(
             emb[:, :history_size], act_emb[:, :history_size]
         )
         target = emb[:, num_preds:]
+        if detach_pred_target:
+            target = target.detach()
         pred_loss = (pred_emb - target).pow(2).mean()
         sig_loss = sigreg(emb.transpose(0, 1))
+        if variance_weight:
+            var_loss = variance_hinge(emb, variance_gamma, variance_eps)
+        else:
+            var_loss = pred_loss.detach().new_zeros(())
         pred_losses.append(pred_loss)
         sig_losses.append(sig_loss)
+        var_losses.append(var_loss)
         env_loss = pred_loss + sigreg_weight * sig_loss
+        if variance_weight:
+            env_loss = env_loss + variance_weight * var_loss
         logs[f'{name}/pred_loss'] = pred_loss.detach()
         logs[f'{name}/sigreg_loss'] = sig_loss.detach()
+        logs[f'{name}/variance_loss'] = var_loss.detach()
         logs[f'{name}/loss'] = env_loss.detach()
         for key, value in latent_stats(emb).items():
             logs[f'{name}/{key}'] = value
 
     pred_loss = torch.stack(pred_losses).mean()
     sig_loss = torch.stack(sig_losses).mean()
+    var_loss = torch.stack(var_losses).mean()
     loss = pred_loss + sigreg_weight * sig_loss
+    if variance_weight:
+        loss = loss + variance_weight * var_loss
     logs['pred_loss'] = pred_loss.detach()
     logs['sigreg_loss'] = sig_loss.detach()
+    logs['variance_loss'] = var_loss.detach()
     logs['loss'] = loss.detach()
     return loss, logs
 
@@ -179,4 +210,5 @@ __all__ = [
     'GeneralistLeWM',
     'generalist_loss',
     'latent_stats',
+    'variance_hinge',
 ]

@@ -35,6 +35,17 @@ trainer:
 # 0 skips the per-epoch weights_epoch_*.pt snapshot.
 weights_every_n_epochs: 1
 
+# null runs all max_epochs. A positive integer stops after that many
+# epochs, including validation, without shortening the cosine horizon.
+stop_after_epoch: null
+
+# Stop once global_step reaches this value. Unlike trainer.max_steps,
+# this does not shorten the cosine horizon. null disables it.
+stop_at_global_step: null
+
+# Save model weights at these global steps. null saves none.
+snapshot_at_global_steps: null
+
 loader:
   num_workers: ${num_workers}
   persistent_workers: True
@@ -147,11 +158,20 @@ model:
       _partial_: true
 
 loss:
+  # Stop-gradient on the prediction target. False keeps the original
+  # next-latent MSE. True is the collapse-prevention comparison.
+  detach_pred_target: false
   sigreg:
     weight: 0.09
     kwargs:
       knots: 17
       num_proj: 1024
+  # Per-environment VICReg-style hinge on projector sample std.
+  # weight 0 leaves the original objective unchanged.
+  variance:
+    weight: 0.0
+    gamma: 1.0
+    eps: 1.0e-6
 
 wandb:
   enabled: false

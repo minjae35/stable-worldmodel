@@ -1,0 +1,151 @@
+output_model_name: rtx5090_base2000
+subdir: ${hydra:job.id}
+checkpoint_every_n_steps: 100000
+log_every_n_steps: 50
+num_workers: 6
+train_split: 0.9
+seed: 3072
+img_size: 224
+patch_size: 14
+encoder_scale: tiny
+embed_dim: 192
+per_env_batch_size: 32
+trainer:
+  max_epochs: 100
+  max_steps: -1
+  devices: 1
+  accelerator: gpu
+  precision: bf16
+  gradient_clip_val: 1.0
+  log_every_n_steps: 1
+  num_sanity_val_steps: 0
+  limit_val_batches: 0
+weights_every_n_epochs: 0
+stop_after_epoch: null
+stop_at_global_step: 2000
+snapshot_at_global_steps:
+- 100
+- 300
+- 600
+- 1000
+- 1500
+- 2000
+loader:
+  num_workers: ${num_workers}
+  persistent_workers: true
+  prefetch_factor: 3
+  pin_memory: true
+optimizer:
+  type: AdamW
+  lr: 5.0e-05
+  weight_decay: 0.001
+wm:
+  history_size: 3
+  num_preds: 1
+data:
+  source: lance
+  synthetic_clips: 2560
+  synthetic_pool: 8
+  env_order:
+  - pusht
+  - tworoom
+  - cube
+  envs:
+    pusht:
+      num_steps: ${eval:'${wm.num_preds} + ${wm.history_size}'}
+      frameskip: 5
+      name: /workspace/datasets/lewm-pusht/train.lance
+      keys_to_load:
+      - pixels
+      - action
+      keys_to_cache:
+      - action
+    tworoom:
+      num_steps: ${eval:'${wm.num_preds} + ${wm.history_size}'}
+      frameskip: 5
+      name: /workspace/datasets/lewm-tworooms/train.lance
+      keys_to_load:
+      - pixels
+      - action
+      keys_to_cache:
+      - action
+    cube:
+      num_steps: ${eval:'${wm.num_preds} + ${wm.history_size}'}
+      frameskip: 5
+      name: /workspace/datasets/lewm-cube/train.lance
+      keys_to_load:
+      - pixels
+      - action
+      keys_to_cache:
+      - action
+model:
+  _target_: stable_worldmodel.wm.lewm.generalist.GeneralistLeWM
+  env_names: ${data.env_order}
+  active_env: pusht
+  encoder:
+    _target_: stable_pretraining.backbone.utils.vit_hf
+    size: ${encoder_scale}
+    patch_size: ${patch_size}
+    image_size: ${img_size}
+    pretrained: false
+    use_mask_token: false
+  predictor:
+    _target_: stable_worldmodel.wm.lewm.module.Predictor
+    num_frames: ${wm.history_size}
+    input_dim: ${embed_dim}
+    hidden_dim: ${embed_dim}
+    output_dim: ${embed_dim}
+    depth: 6
+    heads: 16
+    mlp_dim: 2048
+    dim_head: 64
+    dropout: 0.1
+    emb_dropout: 0.0
+  action_adapters:
+    pusht:
+      _target_: stable_worldmodel.wm.lewm.module.Embedder
+      input_dim: 10
+      emb_dim: ${embed_dim}
+    tworoom:
+      _target_: stable_worldmodel.wm.lewm.module.Embedder
+      input_dim: 10
+      emb_dim: ${embed_dim}
+    cube:
+      _target_: stable_worldmodel.wm.lewm.module.Embedder
+      input_dim: 25
+      emb_dim: ${embed_dim}
+  projector:
+    _target_: stable_worldmodel.wm.lewm.module.MLP
+    input_dim: ${embed_dim}
+    output_dim: ${embed_dim}
+    hidden_dim: 2048
+    norm_fn:
+      _target_: torch.nn.BatchNorm1d
+      _partial_: true
+  pred_proj:
+    _target_: stable_worldmodel.wm.lewm.module.MLP
+    input_dim: ${embed_dim}
+    output_dim: ${embed_dim}
+    hidden_dim: 2048
+    norm_fn:
+      _target_: torch.nn.BatchNorm1d
+      _partial_: true
+loss:
+  detach_pred_target: false
+  sigreg:
+    weight: 0.09
+    kwargs:
+      knots: 17
+      num_proj: 1024
+wandb:
+  enabled: false
+  config:
+    entity: stable-wm
+    project: stable-wm
+    name: ${output_model_name}
+    id: ${subdir}
+    resume: allow
+    log_model: false
+n_gpus: 1
+cpus_per_task: 8
+cache_dir: null

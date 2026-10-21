@@ -1,0 +1,779 @@
+{
+  "description": "Local Stage 2-A checkpoints and weight snapshots that are not in git. Original files were not deleted or overwritten. SHA256 identifies a backup.",
+  "backup": {
+    "do_not_upload_without_approval": true,
+    "github_hard_limit_bytes": 104857600,
+    "github_warning_bytes": 52428800,
+    "suggested_if_a_backup_is_approved": [
+      "Git LFS on a separate remote, for the checkpoint set",
+      "Hugging Face Hub or another object store, using this manifest as the index"
+    ]
+  },
+  "files": [
+    {
+      "experiment": "rtx5090_base2000",
+      "purpose": "original objective, controlled 2000-step comparison",
+      "kind": "checkpoint",
+      "step": 2000,
+      "step_source": "run_final_global_step",
+      "path": "results/stage2a/rtx5090_base2000/checkpoints/resume.ckpt",
+      "bytes": 220594868,
+      "sha256": "45b43a3939c63f266ab4f9661b35923361b681b4536d23214da999bb59e814a2",
+      "config": "results/stage2a/rtx5090_base2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "Exceeds GitHub's 100MB file limit. Kept local."
+    },
+    {
+      "experiment": "rtx5090_base2000",
+      "purpose": "original objective, controlled 2000-step comparison",
+      "kind": "checkpoint",
+      "step": 2000,
+      "step_source": "run_final_global_step",
+      "path": "results/stage2a/rtx5090_base2000/checkpoints/resume_stopped.ckpt",
+      "bytes": 220594740,
+      "sha256": "5ef71cfd962f5e49fbb2f7315562b3fd6ed3208bb2945732243c7e5e00487a3e",
+      "config": "results/stage2a/rtx5090_base2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "Exceeds GitHub's 100MB file limit. Kept local.",
+      "note": "Written by StopAtGlobalStep. Different bytes from resume.ckpt in the same directory."
+    },
+    {
+      "experiment": "rtx5090_base2000",
+      "purpose": "original objective, controlled 2000-step comparison",
+      "kind": "weights",
+      "step": 0,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_base2000/weights_step_0.pt",
+      "bytes": 73548053,
+      "sha256": "b41e8f3dc537ff6e99a236f14995777212947e295263e1f67ae6567e99b9d3bc",
+      "config": "results/stage2a/rtx5090_base2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_base2000",
+      "purpose": "original objective, controlled 2000-step comparison",
+      "kind": "weights",
+      "step": 100,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_base2000/weights_step_100.pt",
+      "bytes": 73548697,
+      "sha256": "cdff80a66cdb3ad41fcdadd9a0918af7eca045f6e50980483a5edf5d8c73e4d5",
+      "config": "results/stage2a/rtx5090_base2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_base2000",
+      "purpose": "original objective, controlled 2000-step comparison",
+      "kind": "weights",
+      "step": 1000,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_base2000/weights_step_1000.pt",
+      "bytes": 73549019,
+      "sha256": "acddd81967a48abfdedc6535e3783843864b5caae52867def93b0c19599c77eb",
+      "config": "results/stage2a/rtx5090_base2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_base2000",
+      "purpose": "original objective, controlled 2000-step comparison",
+      "kind": "weights",
+      "step": 1500,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_base2000/weights_step_1500.pt",
+      "bytes": 73549019,
+      "sha256": "fc1919503225cdaded694fd02f0c28db08810b625552605fa1c9d86144e4b86f",
+      "config": "results/stage2a/rtx5090_base2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_base2000",
+      "purpose": "original objective, controlled 2000-step comparison",
+      "kind": "weights",
+      "step": 2000,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_base2000/weights_step_2000.pt",
+      "bytes": 73549019,
+      "sha256": "b30dabe5f08bd6d6ac5c0dd1591f7d91d2d486132d990ae69b22d54dcf4d42c5",
+      "config": "results/stage2a/rtx5090_base2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_base2000",
+      "purpose": "original objective, controlled 2000-step comparison",
+      "kind": "weights",
+      "step": 300,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_base2000/weights_step_300.pt",
+      "bytes": 73548697,
+      "sha256": "09d972910811015822e8303227e8770dc98b9c198febda5c945e4030d68a4bee",
+      "config": "results/stage2a/rtx5090_base2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_base2000",
+      "purpose": "original objective, controlled 2000-step comparison",
+      "kind": "weights",
+      "step": 600,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_base2000/weights_step_600.pt",
+      "bytes": 73548697,
+      "sha256": "1e757ee09521112c1acb0ec24a92062ca7cb8948685c335417d25f30e56e9afe",
+      "config": "results/stage2a/rtx5090_base2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_recover500",
+      "purpose": "continue the collapsed epoch-1 run for 500 steps",
+      "kind": "checkpoint",
+      "step": 21054,
+      "step_source": "run_final_global_step",
+      "path": "results/stage2a/rtx5090_recover500/checkpoints/resume.ckpt",
+      "bytes": 220594868,
+      "sha256": "e1ec65701601b259be52bbf8756b740f39237eb137af7ed04b86ed3283a5756b",
+      "config": "results/stage2a/rtx5090_recover500/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 21054
+      },
+      "in_git": false,
+      "reason": "Exceeds GitHub's 100MB file limit. Kept local."
+    },
+    {
+      "experiment": "rtx5090_recover500",
+      "purpose": "continue the collapsed epoch-1 run for 500 steps",
+      "kind": "checkpoint",
+      "step": 21054,
+      "step_source": "run_final_global_step",
+      "path": "results/stage2a/rtx5090_recover500/checkpoints/resume_after_500.ckpt",
+      "bytes": 220594868,
+      "sha256": "c707af3a623272b9ab6bbd42ecb9c3a8d73bfee9ad4a1c33ca5d01cd32ec57e5",
+      "config": "results/stage2a/rtx5090_recover500/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 21054
+      },
+      "in_git": false,
+      "reason": "Exceeds GitHub's 100MB file limit. Kept local."
+    },
+    {
+      "experiment": "rtx5090_recover500",
+      "purpose": "continue the collapsed epoch-1 run for 500 steps",
+      "kind": "checkpoint",
+      "step": 20554,
+      "step_source": "source run rtx5090_stage2a epoch-1 checkpoint",
+      "path": "results/stage2a/rtx5090_recover500/checkpoints/start_from_epoch1.ckpt",
+      "bytes": 220594932,
+      "sha256": "8b7f9c79bfc1ce852eeb070f4100b600b70953086d049de5cf5a17a04f01eb7a",
+      "config": "results/stage2a/rtx5090_recover500/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 21054
+      },
+      "in_git": false,
+      "reason": "Exceeds GitHub's 100MB file limit. Kept local.",
+      "note": "Byte-identical to results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt."
+    },
+    {
+      "experiment": "rtx5090_recover500",
+      "purpose": "continue the collapsed epoch-1 run for 500 steps",
+      "kind": "eval_batch",
+      "step": null,
+      "step_source": "not a training step",
+      "path": "results/stage2a/rtx5090_recover500/fixed_eval_batch.pt",
+      "bytes": 231237185,
+      "sha256": "e39f513566e2e0dec7848e81a87d5faabcf64f045949d09e5b3236ce30c75144",
+      "config": "results/stage2a/rtx5090_recover500/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 21054
+      },
+      "in_git": false,
+      "reason": "220MB fixed evaluation batch, not a model. Feature-scale cache; exceeds GitHub's 100MB limit. Kept local."
+    },
+    {
+      "experiment": "rtx5090_recover500",
+      "purpose": "continue the collapsed epoch-1 run for 500 steps",
+      "kind": "weights",
+      "step": 20654,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_recover500/weights_step_20654.pt",
+      "bytes": 73549341,
+      "sha256": "69769eda816ebd089fde121a029f19037a99f2a2313b7f2aa16200acd7140974",
+      "config": "results/stage2a/rtx5090_recover500/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 21054
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_recover500",
+      "purpose": "continue the collapsed epoch-1 run for 500 steps",
+      "kind": "weights",
+      "step": 20804,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_recover500/weights_step_20804.pt",
+      "bytes": 73549341,
+      "sha256": "f6cbe00d1dd55f0e950a680a272dc11ad70fad96ddf724c1d96749d430553151",
+      "config": "results/stage2a/rtx5090_recover500/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 21054
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_recover500",
+      "purpose": "continue the collapsed epoch-1 run for 500 steps",
+      "kind": "weights",
+      "step": 21054,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_recover500/weights_step_21054.pt",
+      "bytes": 73549341,
+      "sha256": "615871229ff810df4ef92c76c5f2fd1ae7b3303c184181591b0733622fd907ef",
+      "config": "results/stage2a/rtx5090_recover500/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 21054
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_sg2000",
+      "purpose": "stop-gradient on the next-latent target",
+      "kind": "checkpoint",
+      "step": 2000,
+      "step_source": "run_final_global_step",
+      "path": "results/stage2a/rtx5090_sg2000/checkpoints/resume.ckpt",
+      "bytes": 220594868,
+      "sha256": "02d835419ae73c04054d3d1491836ad339dcf6b7df00ad6c9e26ccf8f3966e25",
+      "config": "results/stage2a/rtx5090_sg2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": true,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "Exceeds GitHub's 100MB file limit. Kept local."
+    },
+    {
+      "experiment": "rtx5090_sg2000",
+      "purpose": "stop-gradient on the next-latent target",
+      "kind": "checkpoint",
+      "step": 2000,
+      "step_source": "run_final_global_step",
+      "path": "results/stage2a/rtx5090_sg2000/checkpoints/resume_stopped.ckpt",
+      "bytes": 220594740,
+      "sha256": "f6f79041596e875442edac6b73b4782e3a9838a6d063a74ca074ed09aa8c759a",
+      "config": "results/stage2a/rtx5090_sg2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": true,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "Exceeds GitHub's 100MB file limit. Kept local.",
+      "note": "Written by StopAtGlobalStep. Different bytes from resume.ckpt in the same directory."
+    },
+    {
+      "experiment": "rtx5090_sg2000",
+      "purpose": "stop-gradient on the next-latent target",
+      "kind": "weights",
+      "step": 0,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_sg2000/weights_step_0.pt",
+      "bytes": 73548053,
+      "sha256": "b41e8f3dc537ff6e99a236f14995777212947e295263e1f67ae6567e99b9d3bc",
+      "config": "results/stage2a/rtx5090_sg2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": true,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_sg2000",
+      "purpose": "stop-gradient on the next-latent target",
+      "kind": "weights",
+      "step": 100,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_sg2000/weights_step_100.pt",
+      "bytes": 73548697,
+      "sha256": "9fde5294037e2fe893324ae2d1657982b9781279d5e4d5a5849540c7fa04991f",
+      "config": "results/stage2a/rtx5090_sg2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": true,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_sg2000",
+      "purpose": "stop-gradient on the next-latent target",
+      "kind": "weights",
+      "step": 1000,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_sg2000/weights_step_1000.pt",
+      "bytes": 73549019,
+      "sha256": "9387be58fa4da4cd5c4edc9a3f122b11b40d39f58ef992b9ef481bbda67a5d3e",
+      "config": "results/stage2a/rtx5090_sg2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": true,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_sg2000",
+      "purpose": "stop-gradient on the next-latent target",
+      "kind": "weights",
+      "step": 1500,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_sg2000/weights_step_1500.pt",
+      "bytes": 73549019,
+      "sha256": "4ef44eb3cd6e64f6b3519b1274d13c3477cef29c03808c22abee3680b3883ca6",
+      "config": "results/stage2a/rtx5090_sg2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": true,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_sg2000",
+      "purpose": "stop-gradient on the next-latent target",
+      "kind": "weights",
+      "step": 2000,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_sg2000/weights_step_2000.pt",
+      "bytes": 73549019,
+      "sha256": "dff143db7420303c2a2a947b81ef875f86abdf0c5f4f103ddcae6cb91b929488",
+      "config": "results/stage2a/rtx5090_sg2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": true,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_sg2000",
+      "purpose": "stop-gradient on the next-latent target",
+      "kind": "weights",
+      "step": 300,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_sg2000/weights_step_300.pt",
+      "bytes": 73548697,
+      "sha256": "4251db004282d10385edd4e74ff25c23827a241d95a5f8625159f51ee0bcb574",
+      "config": "results/stage2a/rtx5090_sg2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": true,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_sg2000",
+      "purpose": "stop-gradient on the next-latent target",
+      "kind": "weights",
+      "step": 600,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_sg2000/weights_step_600.pt",
+      "bytes": 73548697,
+      "sha256": "16f9cad03d976f25ed8d8af4e48369b9c5c44ba76fa05ed0fa2fdb1495ebda07",
+      "config": "results/stage2a/rtx5090_sg2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": true,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_stage2a",
+      "purpose": "original objective, one full epoch",
+      "kind": "checkpoint",
+      "step": 20554,
+      "step_source": "run_final_global_step",
+      "path": "results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt",
+      "bytes": 220594932,
+      "sha256": "8b7f9c79bfc1ce852eeb070f4100b600b70953086d049de5cf5a17a04f01eb7a",
+      "config": "results/stage2a/rtx5090_stage2a/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 0.0
+      },
+      "stop": {
+        "stop_after_epoch": 1
+      },
+      "in_git": false,
+      "reason": "Exceeds GitHub's 100MB file limit. Kept local."
+    },
+    {
+      "experiment": "rtx5090_var2000",
+      "purpose": "VICReg-style variance hinge, weight 1, gamma 1",
+      "kind": "checkpoint",
+      "step": 2000,
+      "step_source": "run_final_global_step",
+      "path": "results/stage2a/rtx5090_var2000/checkpoints/resume.ckpt",
+      "bytes": 220594868,
+      "sha256": "0c5df3f6c7dfd9800a42e6c5a1dbe94084020b4556e9cb6a91ff62944d4039fb",
+      "config": "results/stage2a/rtx5090_var2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 1.0,
+        "variance_gamma": 1.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "Exceeds GitHub's 100MB file limit. Kept local."
+    },
+    {
+      "experiment": "rtx5090_var2000",
+      "purpose": "VICReg-style variance hinge, weight 1, gamma 1",
+      "kind": "checkpoint",
+      "step": 2000,
+      "step_source": "run_final_global_step",
+      "path": "results/stage2a/rtx5090_var2000/checkpoints/resume_stopped.ckpt",
+      "bytes": 220594740,
+      "sha256": "7810e67ec8220a89240258cb9db3a99d24ba67b95b54b108c9320ba5076af4ed",
+      "config": "results/stage2a/rtx5090_var2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 1.0,
+        "variance_gamma": 1.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "Exceeds GitHub's 100MB file limit. Kept local.",
+      "note": "Written by StopAtGlobalStep. Different bytes from resume.ckpt in the same directory."
+    },
+    {
+      "experiment": "rtx5090_var2000",
+      "purpose": "VICReg-style variance hinge, weight 1, gamma 1",
+      "kind": "weights",
+      "step": 0,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_var2000/weights_step_0.pt",
+      "bytes": 73548053,
+      "sha256": "b41e8f3dc537ff6e99a236f14995777212947e295263e1f67ae6567e99b9d3bc",
+      "config": "results/stage2a/rtx5090_var2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 1.0,
+        "variance_gamma": 1.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_var2000",
+      "purpose": "VICReg-style variance hinge, weight 1, gamma 1",
+      "kind": "weights",
+      "step": 100,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_var2000/weights_step_100.pt",
+      "bytes": 73548697,
+      "sha256": "897ffd163800d048f2534d004db0b0aa9b698542cd880d66819148931b7ddb7a",
+      "config": "results/stage2a/rtx5090_var2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 1.0,
+        "variance_gamma": 1.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_var2000",
+      "purpose": "VICReg-style variance hinge, weight 1, gamma 1",
+      "kind": "weights",
+      "step": 1000,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_var2000/weights_step_1000.pt",
+      "bytes": 73549019,
+      "sha256": "9961c53f241d0210c369af00321ef16aba653e2e40fc95fa6f171fc8fce93f38",
+      "config": "results/stage2a/rtx5090_var2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 1.0,
+        "variance_gamma": 1.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_var2000",
+      "purpose": "VICReg-style variance hinge, weight 1, gamma 1",
+      "kind": "weights",
+      "step": 1500,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_var2000/weights_step_1500.pt",
+      "bytes": 73549019,
+      "sha256": "8875ca20bce3a82540bcff2fe03da1d0b61d2d15ce0519126279c4e5f43b3b52",
+      "config": "results/stage2a/rtx5090_var2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 1.0,
+        "variance_gamma": 1.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_var2000",
+      "purpose": "VICReg-style variance hinge, weight 1, gamma 1",
+      "kind": "weights",
+      "step": 2000,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_var2000/weights_step_2000.pt",
+      "bytes": 73549019,
+      "sha256": "cf8d691cc953bfbfb343ffc85f04070da38fbae8fe06928e5f0953cb1838832c",
+      "config": "results/stage2a/rtx5090_var2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 1.0,
+        "variance_gamma": 1.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_var2000",
+      "purpose": "VICReg-style variance hinge, weight 1, gamma 1",
+      "kind": "weights",
+      "step": 300,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_var2000/weights_step_300.pt",
+      "bytes": 73548697,
+      "sha256": "203dc96ce7224a17935150286bd0de030737c007d1da289fbb3750899d44c28d",
+      "config": "results/stage2a/rtx5090_var2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 1.0,
+        "variance_gamma": 1.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    },
+    {
+      "experiment": "rtx5090_var2000",
+      "purpose": "VICReg-style variance hinge, weight 1, gamma 1",
+      "kind": "weights",
+      "step": 600,
+      "step_source": "filename",
+      "path": "results/stage2a/rtx5090_var2000/weights_step_600.pt",
+      "bytes": 73548697,
+      "sha256": "df5403a1edd7ed9819499df7f096a85ea8dee94b4d00f15842b751ebb60fa870",
+      "config": "results/stage2a/rtx5090_var2000/config.yaml",
+      "seed": 3072,
+      "loss": {
+        "detach_pred_target": false,
+        "variance_weight": 1.0,
+        "variance_gamma": 1.0
+      },
+      "stop": {
+        "stop_at_global_step": 2000
+      },
+      "in_git": false,
+      "reason": "70MB weight snapshot. Under GitHub's 100MB hard limit but over the 50MB warning and this repo's 1MB pre-commit check. Kept local."
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "sha256": "b41e8f3dc537ff6e99a236f14995777212947e295263e1f67ae6567e99b9d3bc",
+      "paths": [
+        "results/stage2a/rtx5090_base2000/weights_step_0.pt",
+        "results/stage2a/rtx5090_sg2000/weights_step_0.pt",
+        "results/stage2a/rtx5090_var2000/weights_step_0.pt"
+      ]
+    },
+    {
+      "sha256": "8b7f9c79bfc1ce852eeb070f4100b600b70953086d049de5cf5a17a04f01eb7a",
+      "paths": [
+        "results/stage2a/rtx5090_recover500/checkpoints/start_from_epoch1.ckpt",
+        "results/stage2a/rtx5090_stage2a/checkpoints/resume.ckpt"
+      ]
+    }
+  ]
+}

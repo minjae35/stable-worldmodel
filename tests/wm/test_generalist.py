@@ -17,6 +17,7 @@ from stable_worldmodel.data.multienv import (
 from stable_worldmodel.wm.lewm.generalist import (
     GeneralistLeWM,
     generalist_loss,
+    variance_hinge,
 )
 from stable_worldmodel.wm.lewm.module import Embedder, Predictor
 from stable_worldmodel.wm.loss import SIGReg
@@ -331,6 +332,61 @@ def test_pusht_lance_action_block_matches_frameskip():
     window = raw[int(dataset.offsets[ep]) + start :][:20]
     packed = torch.from_numpy(window.reshape(4, 10))
     torch.testing.assert_close(sample['action'].float(), packed.float())
+
+
+def test_variance_hinge_penalizes_only_flat_dimensions():
+    # Batch std is 1 on dim 0 and 0 on dim 1, at both timesteps.
+    emb = torch.tensor(
+        [
+            [[0.0, 0.0], [0.0, 0.0]],
+            [[2.0, 0.0], [2.0, 0.0]],
+        ]
+    )
+    loss = variance_hinge(emb, gamma=1.0, eps=0.0)
+    assert torch.allclose(loss, torch.tensor(0.5))
+    assert variance_hinge(emb * 10, gamma=1.0, eps=0.0).item() == 0.5
+
+
+def test_variance_term_and_detached_target_stay_finite():
+    torch.manual_seed(0)
+    model = _model()
+    model.train()
+    sigreg = SIGReg(knots=5, num_proj=8)
+    batch = _batch()
+    plain, plain_logs = generalist_loss(
+        model,
+        sigreg,
+        batch,
+        history_size=3,
+        num_preds=1,
+        sigreg_weight=0.09,
+    )
+    hinged, hinged_logs = generalist_loss(
+        model,
+        sigreg,
+        batch,
+        history_size=3,
+        num_preds=1,
+        sigreg_weight=0.09,
+        variance_weight=1.0,
+        variance_gamma=1.0,
+    )
+    detached, detached_logs = generalist_loss(
+        model,
+        sigreg,
+        batch,
+        history_size=3,
+        num_preds=1,
+        sigreg_weight=0.09,
+        detach_pred_target=True,
+    )
+    assert torch.isfinite(plain) and torch.isfinite(hinged)
+    assert torch.isfinite(detached)
+    assert hinged_logs['variance_loss'] > 0
+    assert plain_logs['variance_loss'].item() == 0
+    assert hinged_logs['pusht/variance_loss'] > 0
+    detached.backward()
+    assert model.encoder.proj.weight.grad is not None
 
 
 def test_concat_dataset_tags_environment():

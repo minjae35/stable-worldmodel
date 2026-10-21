@@ -82,6 +82,87 @@ def get_img_preprocessor(source: str, target: str, img_size: int = 224):
     return spt.data.transforms.Compose(to_image, resize)
 
 
+class StopAfterEpoch(Callback):
+    """Finish one launch early without shortening the 100-epoch cosine.
+
+    ``trainer.max_epochs`` still defines the scheduler horizon. This only
+    sets ``should_stop`` after the requested epoch's validation. Sanity
+    validation does not count, and a later launch can pass a higher
+    value to continue from the same checkpoint.
+    """
+
+    def __init__(self, epoch: int):
+        super().__init__()
+        self.epoch = int(epoch)
+
+    def on_validation_epoch_end(self, trainer, pl_module):
+        del pl_module
+        if trainer.sanity_checking:
+            return
+        completed = int(trainer.current_epoch) + 1
+        if completed < self.epoch:
+            return
+        trainer.should_stop = True
+        if trainer.is_global_zero:
+            LOG.info(
+                'stop_after_epoch=%s reached at epoch %s global_step=%s',
+                self.epoch,
+                completed,
+                int(trainer.global_step),
+            )
+
+
+class StopAtGlobalStep(Callback):
+    """Stop at a global step without shortening the cosine horizon.
+
+    ``trainer.max_steps`` stays unset, so the scheduler length is still
+    ``max_epochs`` times the epoch. This only ends the current launch.
+    """
+
+    def __init__(self, step: int, snapshot_steps: list[int], snapshot_dir: Path):
+        super().__init__()
+        self.step = int(step)
+        self.snapshot_steps = {int(value) for value in snapshot_steps}
+        self.snapshot_dir = Path(snapshot_dir)
+
+    def on_train_start(self, trainer, pl_module):
+        if not trainer.is_global_zero:
+            return
+        if int(trainer.global_step) == 0:
+            path = self.snapshot_dir / 'weights_step_0.pt'
+            path.parent.mkdir(parents=True, exist_ok=True)
+            torch.save(pl_module.model.state_dict(), path)
+            LOG.info('snapshot %s', path)
+        sched = trainer.lr_scheduler_configs[0].scheduler
+        lr = trainer.optimizers[0].param_groups[0]['lr']
+        LOG.info(
+            'restored global_step=%s last_epoch=%s max_steps=%s '
+            'warmup=%s lr=%s',
+            int(trainer.global_step),
+            int(sched.last_epoch),
+            int(sched.max_steps),
+            int(sched.warmup_steps),
+            lr,
+        )
+
+    def on_train_batch_end(self, trainer, pl_module, outputs, batch, batch_idx):
+        del outputs, batch, batch_idx
+        step = int(trainer.global_step)
+        if trainer.is_global_zero and step in self.snapshot_steps:
+            path = self.snapshot_dir / f'weights_step_{step}.pt'
+            path.parent.mkdir(parents=True, exist_ok=True)
+            torch.save(pl_module.model.state_dict(), path)
+            LOG.info('snapshot %s', path)
+        if step < self.step:
+            return
+        trainer.should_stop = True
+        if trainer.is_global_zero:
+            dest = self.snapshot_dir / 'checkpoints' / 'resume_stopped.ckpt'
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            trainer.save_checkpoint(str(dest))
+            LOG.info('stop_at_global_step=%s reached at %s', self.step, step)
+
+
 class SaveCkptCallback(Callback):
     """Save a loadable checkpoint after each epoch."""
 
@@ -376,6 +457,8 @@ class JointTrainProgress(Callback):
         clip_frames: int = 4,
         schedule_max_steps: int | None = None,
         warmup_steps: int | None = None,
+        bar_epochs: int | None = None,
+        bar_total: int | None = None,
     ):
         super().__init__()
         self.exp_dir = Path(exp_dir)
@@ -386,6 +469,8 @@ class JointTrainProgress(Callback):
         self.clip_frames = int(clip_frames)
         self.schedule_max_steps = schedule_max_steps
         self.warmup_steps = warmup_steps
+        self.bar_epochs = None if not bar_epochs else int(bar_epochs)
+        self.bar_total = None if not bar_total else int(bar_total)
         self.enabled = False
         self.bar = None
         self.val_bar = None
@@ -433,6 +518,7 @@ class JointTrainProgress(Callback):
             'loss',
             'pred_loss',
             'sigreg_loss',
+            'variance_loss',
             'lr',
             'it_per_s',
             'elapsed_s',
@@ -448,6 +534,7 @@ class JointTrainProgress(Callback):
                     f'{name}_loss',
                     f'{name}_pred_loss',
                     f'{name}_sigreg_loss',
+                    f'{name}_variance_loss',
                     f'{name}_latent_std',
                     f'{name}_latent_dim_std_min',
                 ]
@@ -482,6 +569,7 @@ class JointTrainProgress(Callback):
             'loss': _metric(trainer, f'{stage}/loss'),
             'pred_loss': _metric(trainer, f'{stage}/pred_loss'),
             'sigreg_loss': _metric(trainer, f'{stage}/sigreg_loss'),
+            'variance_loss': _metric(trainer, f'{stage}/variance_loss'),
             'lr': lr,
             'it_per_s': rate,
             'elapsed_s': elapsed,
@@ -499,6 +587,9 @@ class JointTrainProgress(Callback):
             row[f'{name}_sigreg_loss'] = _metric(
                 trainer, f'{stage}/{name}/sigreg_loss'
             )
+            row[f'{name}_variance_loss'] = _metric(
+                trainer, f'{stage}/{name}/variance_loss'
+            )
             row[f'{name}_latent_std'] = _metric(
                 trainer, f'{stage}/{name}/latent_std'
             )
@@ -512,7 +603,7 @@ class JointTrainProgress(Callback):
         if not isinstance(metrics, dict):
             return
         for key, value in metrics.items():
-            if key in ('loss', 'pred_loss', 'sigreg_loss'):
+            if key in ('loss', 'pred_loss', 'sigreg_loss', 'variance_loss'):
                 row[key] = value
                 continue
             if '/' not in key:
@@ -632,12 +723,12 @@ class JointTrainProgress(Callback):
             daemon=True,
         )
         self._gpu_thread.start()
-        total = trainer.max_steps
+        total = self.bar_total or trainer.max_steps
         if total is None or int(total) < 1:
             batches = trainer.num_training_batches
             if isinstance(batches, (list, tuple)):
                 batches = batches[0]
-            epochs = trainer.max_epochs or 1
+            epochs = self.bar_epochs or trainer.max_epochs or 1
             total = int(batches) * int(epochs)
         self.bar = tqdm(
             total=int(total),
@@ -817,6 +908,10 @@ def generalist_forward(self, batch, stage, cfg):
         history_size=cfg.wm.history_size,
         num_preds=cfg.wm.num_preds,
         sigreg_weight=cfg.loss.sigreg.weight,
+        detach_pred_target=bool(cfg.loss.get('detach_pred_target', False)),
+        variance_weight=float(cfg.loss.variance.weight),
+        variance_gamma=float(cfg.loss.variance.gamma),
+        variance_eps=float(cfg.loss.variance.eps),
     )
     prefixed = {f'{stage}/{key}': value for key, value in logs.items()}
     self.log_dict(prefixed, on_step=True, sync_dist=True)
@@ -955,6 +1050,9 @@ def run(cfg):
             f'dropped {dropped} clips from the shortest split'
         )
 
+    torch.manual_seed(int(cfg.seed))
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(int(cfg.seed))
     world_model = hydra.utils.instantiate(cfg.model)
     shared = {
         'encoder',
@@ -1003,11 +1101,15 @@ def run(cfg):
         with open(exp_dir / 'config.yaml', 'w') as handle:
             OmegaConf.save(cfg, handle)
         LOG.info(
-            'schedule_steps=%s lr=%s effective_per_env=%s dropped=%s',
+            'schedule_steps=%s lr=%s effective_per_env=%s dropped=%s '
+            'detach_pred_target=%s variance_weight=%s variance_gamma=%s',
             total_steps,
             cfg.optimizer.lr,
             per_env * world,
             dropped,
+            bool(cfg.loss.get('detach_pred_target', False)),
+            float(cfg.loss.variance.weight),
+            float(cfg.loss.variance.gamma),
         )
         topology = {
             'data_source': str(cfg.data.get('source', 'lance')),
@@ -1040,35 +1142,60 @@ def run(cfg):
         # so that average matches the single-process global statistic.
         trainer_cfg['strategy'] = 'ddp'
         trainer_cfg['sync_batchnorm'] = True
+    stop_after = cfg.get('stop_after_epoch', None)
+    stop_at = cfg.get('stop_at_global_step', None)
+    raw_snapshots = cfg.get('snapshot_at_global_steps', None) or []
+    snapshot_steps = [int(step) for step in raw_snapshots]
+    callbacks = [
+        SaveCkptCallback(
+            run_name=cfg.output_model_name,
+            cfg=cfg.model,
+            epoch_interval=epoch_interval,
+        ),
+        ModelCheckpoint(
+            dirpath=str(exp_dir / 'checkpoints'),
+            filename='resume',
+            save_last=False,
+            every_n_train_steps=every,
+            save_on_train_epoch_end=epoch_interval > 0,
+            enable_version_counter=False,
+        ),
+        JointTrainProgress(
+            exp_dir,
+            env_names=list(cfg.data.env_order),
+            log_every=int(cfg.log_every_n_steps),
+            per_env=per_env,
+            world_size=world,
+            clip_frames=int(cfg.wm.num_preds) + int(cfg.wm.history_size),
+            schedule_max_steps=int(total_steps),
+            warmup_steps=max(1, int(0.01 * total_steps)),
+            bar_epochs=None if stop_after in (None, 0) else int(stop_after),
+            bar_total=None if stop_at in (None, 0) else int(stop_at),
+        ),
+    ]
+    if stop_at not in (None, 0):
+        callbacks.append(
+            StopAtGlobalStep(int(stop_at), snapshot_steps, exp_dir)
+        )
+        if _is_main():
+            LOG.info(
+                'stop_at_global_step=%s with schedule_steps=%s',
+                int(stop_at),
+                int(total_steps),
+            )
+    if stop_after not in (None, 0):
+        callbacks.append(StopAfterEpoch(int(stop_after)))
+        if _is_main():
+            LOG.info(
+                'stop_after_epoch=%s with schedule_steps=%s',
+                int(stop_after),
+                int(total_steps),
+            )
     trainer = pl.Trainer(
         **trainer_cfg,
         default_root_dir=str(exp_dir),
         enable_progress_bar=False,
-        callbacks=[
-            SaveCkptCallback(
-                run_name=cfg.output_model_name,
-                cfg=cfg.model,
-                epoch_interval=epoch_interval,
-            ),
-            ModelCheckpoint(
-                dirpath=str(exp_dir / 'checkpoints'),
-                filename='resume',
-                save_last=False,
-                every_n_train_steps=every,
-                save_on_train_epoch_end=epoch_interval > 0,
-                enable_version_counter=False,
-            ),
-            JointTrainProgress(
-                exp_dir,
-                env_names=list(cfg.data.env_order),
-                log_every=int(cfg.log_every_n_steps),
-                per_env=per_env,
-                world_size=world,
-                clip_frames=int(cfg.wm.num_preds) + int(cfg.wm.history_size),
-                schedule_max_steps=int(total_steps),
-                warmup_steps=max(1, int(0.01 * total_steps)),
-            ),
-        ],
+        callbacks=callbacks,
         logger=logger,
         enable_checkpointing=True,
     )

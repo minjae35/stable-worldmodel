@@ -1,0 +1,26 @@
+{
+  "world_size": 1,
+  "per_env_per_gpu": 32,
+  "effective_clips_per_env": 32,
+  "effective_clips_per_step": 96,
+  "frames_per_step": 384,
+  "median_step_s": 0.1297511514276266,
+  "median_data_s": 0.0045618098229169846,
+  "median_sigreg_comm_s": 0.0,
+  "steps_per_s": 7.7070607004037734,
+  "clips_per_s": 739.8778272387623,
+  "frames_per_s": 2959.511308955049,
+  "timed_steps": 20551,
+  "grad_norm": 0.9999999566894638,
+  "nccl_cuda_us": null,
+  "profile_cuda_us": null,
+  "nccl_fraction": null,
+  "gpu_util_mean": {
+    "0": 57.55533834586466
+  },
+  "gpu_mem_mib_max": {
+    "0": 10658.0
+  },
+  "global_step": 20554,
+  "gpu_peak_mb": 9730.83154296875
+}

@@ -1,0 +1,72 @@
+{
+  "label": "sg100",
+  "weights": "results/stage2a/rtx5090_sg2000/weights_step_100.pt",
+  "detach_pred_target": true,
+  "pusht": {
+    "cls": {
+      "dim_std_median": 0.004130442626774311,
+      "dim_std_mean": 0.004199375864118338,
+      "dim_std_min": 0.0025644118431955576,
+      "std": 0.9999997615814209
+    },
+    "projector": {
+      "dim_std_median": 0.0085763493552804,
+      "dim_std_mean": 0.008705984801054,
+      "dim_std_min": 0.005529530346393585,
+      "std": 0.2157437950372696
+    },
+    "pred_loss": 0.16560214757919312,
+    "sigreg_loss": 14.125,
+    "encoder_grad_norm": 9.654505729675293,
+    "finite": true
+  },
+  "tworoom": {
+    "cls": {
+      "dim_std_median": 0.000792726525105536,
+      "dim_std_mean": 0.0008514644578099251,
+      "dim_std_min": 0.00031906270305626094,
+      "std": 0.9999997615814209
+    },
+    "projector": {
+      "dim_std_median": 0.0016621063696220517,
+      "dim_std_mean": 0.0017411991721019149,
+      "dim_std_min": 0.0006152662681415677,
+      "std": 0.19621942937374115
+    },
+    "pred_loss": 0.15811263024806976,
+    "sigreg_loss": 13.9375,
+    "encoder_grad_norm": 11.248022079467773,
+    "finite": true
+  },
+  "cube": {
+    "cls": {
+      "dim_std_median": 0.023821720853447914,
+      "dim_std_mean": 0.027361270040273666,
+      "dim_std_min": 0.0107531463727355,
+      "std": 1.0
+    },
+    "projector": {
+      "dim_std_median": 0.06682540476322174,
+      "dim_std_mean": 0.07613478600978851,
+      "dim_std_min": 0.031617384403944016,
+      "std": 0.4498295485973358
+    },
+    "pred_loss": 0.3153649568557739,
+    "sigreg_loss": 17.625,
+    "encoder_grad_norm": 20.237680435180664,
+    "finite": true
+  },
+  "pusht_tworoom_cosine": 0.6565368175506592,
+  "joint_encoder_grad_norm": 5.969266414642334,
+  "joint_predictor_grad_norm": 0.06449951976537704,
+  "joint_projector_grad_norm": 2.7326953411102295,
+  "encoder_nonzero_params": [
+    5501376,
+    5501376
+  ],
+  "predictor_nonzero_params": [
+    10791360,
+    10791360
+  ],
+  "cosine_full_vs_cube": 0.7106753587722778
+}

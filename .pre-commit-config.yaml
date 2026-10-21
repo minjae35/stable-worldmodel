@@ -18,6 +18,8 @@ repos:
       - id: check-toml
       - id: check-added-large-files
         args: ["--maxkb=1000"]
+        # Per-step Stage 2-A metrics. Under GitHub's 100 MB limit.
+        exclude: ^results/stage2a/rtx5090_(stage2a|var2000)/metrics\.csv$
       - id: check-merge-conflict
       - id: check-case-conflict
       - id: detect-private-key

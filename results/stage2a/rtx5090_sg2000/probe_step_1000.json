@@ -1,0 +1,72 @@
+{
+  "label": "sg1000",
+  "weights": "results/stage2a/rtx5090_sg2000/weights_step_1000.pt",
+  "detach_pred_target": true,
+  "pusht": {
+    "cls": {
+      "dim_std_median": 0.0032814962323755026,
+      "dim_std_mean": 0.0033645005896687508,
+      "dim_std_min": 0.0021825633011758327,
+      "std": 1.0000276565551758
+    },
+    "projector": {
+      "dim_std_median": 0.004307485651224852,
+      "dim_std_mean": 0.004378032870590687,
+      "dim_std_min": 0.0025802655145525932,
+      "std": 0.025761045515537262
+    },
+    "pred_loss": 0.0024373019114136696,
+    "sigreg_loss": 12.875,
+    "encoder_grad_norm": 2.6490964889526367,
+    "finite": true
+  },
+  "tworoom": {
+    "cls": {
+      "dim_std_median": 0.0006006119656376541,
+      "dim_std_mean": 0.0006367173045873642,
+      "dim_std_min": 0.0003100873436778784,
+      "std": 1.0000286102294922
+    },
+    "projector": {
+      "dim_std_median": 0.0007851523696444929,
+      "dim_std_mean": 0.000837817438878119,
+      "dim_std_min": 0.000386289058951661,
+      "std": 0.026334425434470177
+    },
+    "pred_loss": 0.0023137452080845833,
+    "sigreg_loss": 12.875,
+    "encoder_grad_norm": 2.93524169921875,
+    "finite": true
+  },
+  "cube": {
+    "cls": {
+      "dim_std_median": 0.21788565814495087,
+      "dim_std_mean": 0.265397310256958,
+      "dim_std_min": 0.05381065234541893,
+      "std": 1.0000308752059937
+    },
+    "projector": {
+      "dim_std_median": 0.49907469749450684,
+      "dim_std_mean": 0.5739235281944275,
+      "dim_std_min": 0.10726182907819748,
+      "std": 0.6870757341384888
+    },
+    "pred_loss": 0.2878947854042053,
+    "sigreg_loss": 5.96875,
+    "encoder_grad_norm": 19.281967163085938,
+    "finite": true
+  },
+  "pusht_tworoom_cosine": 0.23816797137260437,
+  "joint_encoder_grad_norm": 7.275524139404297,
+  "joint_predictor_grad_norm": 0.031647972762584686,
+  "joint_projector_grad_norm": 0.6655791401863098,
+  "encoder_nonzero_params": [
+    5501376,
+    5501376
+  ],
+  "predictor_nonzero_params": [
+    10791360,
+    10791360
+  ],
+  "cosine_full_vs_cube": 0.9863653779029846
+}
