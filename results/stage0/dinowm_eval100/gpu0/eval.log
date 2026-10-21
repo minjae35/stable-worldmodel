@@ -1,0 +1,393 @@
+/venv/stable-worldmodel/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+07:23:24 | INFO  | __init__.py | PyTorch version 2.14.1+cu126 available.
+07:23:24 | INFO  | __init__.py | JAX version 0.11.2 available.
+07:23:27 | INFO  | atomic_chec~| [atomic_save] installed crash-safe checkpoint plugin (write to sibling .tmp + fsync + atomic rename)
+2026-10-19 07:23:27,198 INFO loading DINO-WM on cuda (visible gpu 0)
+Using cache found in /root/.cache/torch/hub/facebookresearch_dinov2_main
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+07:23:28 | INFO  | __init__.py | using MLP layer as FFN
+2026-10-19 07:23:30,419 INFO proprio kernel max 0.003346 norm 0.005798
+07:23:30 | WARN  | __init__.py | Skipping forkserver preload of torchcodec (No module named 'torchcodec')
+07:23:38 | WARN  | __init__.py | LanceDataset: keys_to_cache=['action', 'proprio', 'state'] is not required — Lance has efficient random access via batched __getitems__.
+2026-10-19 07:25:24,576 INFO CEM solve time: 29.0239 seconds (n_envs=1)
+2026-10-19 07:25:58,727 INFO CEM solve time: 34.1090 seconds (n_envs=1)
+2026-10-19 07:26:36,013 INFO CEM solve time: 37.2470 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+07:27:01 | INFO  | __init__.py | PyTorch version 2.14.1+cu126 available.
+07:27:01 | INFO  | __init__.py | JAX version 0.11.2 available.
+07:27:03 | INFO  | atomic_chec~| [atomic_save] installed crash-safe checkpoint plugin (write to sibling .tmp + fsync + atomic rename)
+2026-10-19 07:27:03,983 INFO loading DINO-WM on cuda (visible gpu 0)
+Using cache found in /root/.cache/torch/hub/facebookresearch_dinov2_main
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+07:27:04 | INFO  | __init__.py | using MLP layer as FFN
+2026-10-19 07:27:08,360 INFO proprio kernel max 0.003346 norm 0.005798
+07:27:08 | WARN  | __init__.py | Skipping forkserver preload of torchcodec (No module named 'torchcodec')
+2026-10-19 07:27:22,398 ERROR worker failed
+Traceback (most recent call last):
+  File "/workspace/stable-worldmodel/scripts/plan/run_stage0_dinowm.py", line 431, in main
+    _worker(args.gpu, args.start, args.end)
+  File "/workspace/stable-worldmodel/scripts/plan/run_stage0_dinowm.py", line 313, in _worker
+    dataset = swm.data.load_dataset(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/stable-worldmodel/stable_worldmodel/data/utils.py", line 97, in load_dataset
+    return fmt.open_reader(name, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/stable-worldmodel/stable_worldmodel/data/formats/lance.py", line 1394, in open_reader
+    return LanceDataset(path=path, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/stable-worldmodel/stable_worldmodel/data/formats/lance.py", line 411, in __init__
+    lengths, offsets = self._compute_episode_structure(table)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/stable-worldmodel/stable_worldmodel/data/formats/lance.py", line 611, in _compute_episode_structure
+    for batch in reader
+                 ^^^^^^
+  File "pyarrow/ipc.pxi", line 757, in pyarrow.lib.RecordBatchReader.__next__
+  File "pyarrow/ipc.pxi", line 791, in pyarrow.lib.RecordBatchReader.read_next_batch
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: External error: LanceError(IO): Generic RateLimited error: RateLimited (temporary) at read, context: { service_operation: Resolve, uri: https://huggingface.co/datasets/fracapuano/lewm-pusht/resolve/main/train.lance/data/100001101001001001110101cfd7724bcfa6048c76231d2a05.lance, response: Parts { status: 429, version: HTTP/2.0, headers: {"content-type": "text/plain; charset=utf-8", "content-length": "192", "date": "Mon, 19 Oct 2026 07:27:22 GMT", "etag": "W/\"c0-cg0anNn08ouLZPOK1CaxD3KQ7Gg\"", "x-powered-by": "huggingface-moon", "x-request-id": "Root=1-6ad5c65a-2a5b1b50111e84c80f9c5086", "ratelimit": "\"resolvers\";r=0;t=38", "ratelimit-policy": "\"fixed window\";\"resolvers\";q=3000;w=300", "cross-origin-opener-policy": "same-origin", "referrer-policy": "strict-origin-when-cross-origin", "access-control-max-age": "86400", "access-control-allow-origin": "https://huggingface.co", "vary": "Origin", "access-control-expose-headers": "X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash", "x-error-message": "We had to rate limit your IP (216.227.169.247). To continue using our service, create a HF account or login to your existing account, and make sure you pass a HF_TOKEN if you're using the API.", "retry-after": "38", "x-cache": "Error from cloudfront", "via": "1.1 b7f2e03ea82ba959032d68c9a16e911e.cloudfront.net (CloudFront)", "x-amz-cf-pop": "LAX53-P4", "alt-svc": "h3=\":443\"; ma=86400", "x-amz-cf-id": "uZn19Qtj6q7qjjZ0eY6brSUNWhJqL2kiAcSZlO-AG9c3rNphT75myQ==", "strict-transport-security": "max-age=31536000"} }, service: hf, path: train.lance/data/100001101001001001110101cfd7724bcfa6048c76231d2a05.lance, range: 431220608-431223471 } => We had to rate limit your IP (216.227.169.247). To continue using our service, create a HF account or login to your existing account, and make sure you pass a HF_TOKEN if you're using the API., /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/ops/function.rs:250:5
+
+07:27:22 | ERROR | richuru.py  | Exception:
+Traceback (most recent call last):
+
+> File "/workspace/stable-worldmodel/scripts/plan/run_stage0_dinowm.py", line 442, in <module>
+    main()
+    └ <function main at 0x74ebfb7a40e0>
+
+  File "/workspace/stable-worldmodel/scripts/plan/run_stage0_dinowm.py", line 431, in main
+    _worker(args.gpu, args.start, args.end)
+    │       │    │    │    │      │    └ 25
+    │       │    │    │    │      └ Namespace(worker=True, gpu=0, start=0, end=25)
+    │       │    │    │    └ 0
+    │       │    │    └ Namespace(worker=True, gpu=0, start=0, end=25)
+    │       │    └ 0
+    │       └ Namespace(worker=True, gpu=0, start=0, end=25)
+    └ <function _worker at 0x74ebfb7a4040>
+
+  File "/workspace/stable-worldmodel/scripts/plan/run_stage0_dinowm.py", line 313, in _worker
+    dataset = swm.data.load_dataset(
+              │   │    └ <function load_dataset at 0x74ea48d587c0>
+              │   └ <module 'stable_worldmodel.data' from '/workspace/stable-worldmodel/stable_worldmodel/data/__init__.py'>
+              └ <module 'stable_worldmodel' from '/workspace/stable-worldmodel/stable_worldmodel/__init__.py'>
+
+  File "/workspace/stable-worldmodel/stable_worldmodel/data/utils.py", line 97, in load_dataset
+    return fmt.open_reader(name, **kwargs)
+           │   │           │       └ {'keys_to_cache': ['action', 'proprio', 'state']}
+           │   │           └ 'hf://datasets/fracapuano/lewm-pusht/train.lance'
+           │   └ <classmethod(<function Lance.open_reader at 0x74ea2e324a40>)>
+           └ <class 'stable_worldmodel.data.formats.lance.Lance'>
+
+  File "/workspace/stable-worldmodel/stable_worldmodel/data/formats/lance.py", line 1394, in open_reader
+    return LanceDataset(path=path, **kwargs)
+           │                 │       └ {'keys_to_cache': ['action', 'proprio', 'state'], 'connect_kwargs': {'storage_options': {'region': 'us-east-1', 'virtual_host...
+           │                 └ 'hf://datasets/fracapuano/lewm-pusht/train.lance'
+           └ <class 'stable_worldmodel.data.formats.lance.LanceDataset'>
+
+  File "/workspace/stable-worldmodel/stable_worldmodel/data/formats/lance.py", line 411, in __init__
+    lengths, offsets = self._compute_episode_structure(table)
+                       │    │                          └ LanceTable(name='train', _conn=LanceDBConnection(uri='hf://datasets/fracapuano/lewm-pusht'))
+                       │    └ <function LanceDataset._compute_episode_structure at 0x74ea2e30b560>
+                       └ <stable_worldmodel.data.formats.lance.LanceDataset object at 0x74e951fbd010>
+
+  File "/workspace/stable-worldmodel/stable_worldmodel/data/formats/lance.py", line 611, in _compute_episode_structure
+    for batch in reader
+                 └ <pyarrow.lib.RecordBatchReader object at 0x74e951f9b1b0>
+
+  File "pyarrow/ipc.pxi", line 757, in pyarrow.lib.RecordBatchReader.__next__
+  File "pyarrow/ipc.pxi", line 791, in pyarrow.lib.RecordBatchReader.read_next_batch
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+
+pyarrow.lib.ArrowInvalid: External error: LanceError(IO): Generic RateLimited error: RateLimited (temporary) at read, context: { service_operation: Resolve, uri: https://huggingface.co/datasets/fracapuano/lewm-pusht/resolve/main/train.lance/data/100001101001001001110101cfd7724bcfa6048c76231d2a05.lance, response: Parts { status: 429, version: HTTP/2.0, headers: {"content-type": "text/plain; charset=utf-8", "content-length": "192", "date": "Mon, 19 Oct 2026 07:27:22 GMT", "etag": "W/\"c0-cg0anNn08ouLZPOK1CaxD3KQ7Gg\"", "x-powered-by": "huggingface-moon", "x-request-id": "Root=1-6ad5c65a-2a5b1b50111e84c80f9c5086", "ratelimit": "\"resolvers\";r=0;t=38", "ratelimit-policy": "\"fixed window\";\"resolvers\";q=3000;w=300", "cross-origin-opener-policy": "same-origin", "referrer-policy": "strict-origin-when-cross-origin", "access-control-max-age": "86400", "access-control-allow-origin": "https://huggingface.co", "vary": "Origin", "access-control-expose-headers": "X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash", "x-error-message": "We had to rate limit your IP (216.227.169.247). To continue using our service, create a HF account or login to your existing account, and make sure you pass a HF_TOKEN if you're using the API.", "retry-after": "38", "x-cache": "Error from cloudfront", "via": "1.1 b7f2e03ea82ba959032d68c9a16e911e.cloudfront.net (CloudFront)", "x-amz-cf-pop": "LAX53-P4", "alt-svc": "h3=\":443\"; ma=86400", "x-amz-cf-id": "uZn19Qtj6q7qjjZ0eY6brSUNWhJqL2kiAcSZlO-AG9c3rNphT75myQ==", "strict-transport-security": "max-age=31536000"} }, service: hf, path: train.lance/data/100001101001001001110101cfd7724bcfa6048c76231d2a05.lance, range: 431220608-431223471 } => We had to rate limit your IP (216.227.169.247). To continue using our service, create a HF account or login to your existing account, and make sure you pass a HF_TOKEN if you're using the API., /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/ops/function.rs:250:5
+2026-10-19 07:53:42,345 INFO loading DINO-WM on cuda (visible gpu 0)
+Using cache found in /root/.cache/torch/hub/facebookresearch_dinov2_main
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+07:53:44 | INFO  | __init__.py | using MLP layer as FFN
+2026-10-19 07:53:46,825 INFO proprio kernel max 0.003346 norm 0.005798
+07:55:18 | WARN  | __init__.py | Skipping forkserver preload of torchcodec (No module named 'torchcodec')
+07:55:29 | WARN  | __init__.py | LanceDataset: keys_to_cache=['action', 'proprio', 'state'] is not required — Lance has efficient random access via batched __getitems__.
+2026-10-19 07:55:40,916 INFO loading DINO-WM on cuda (visible gpu 0)
+Using cache found in /root/.cache/torch/hub/facebookresearch_dinov2_main
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+07:55:43 | INFO  | __init__.py | using MLP layer as FFN
+2026-10-19 07:55:47,912 INFO proprio kernel max 0.003346 norm 0.005798
+2026-10-19 07:56:45,333 INFO CEM solve time: 29.3787 seconds (n_envs=1)
+2026-10-19 07:57:19,524 INFO CEM solve time: 34.1470 seconds (n_envs=1)
+2026-10-19 07:57:53,890 INFO loading DINO-WM on cuda (visible gpu 0)
+Using cache found in /root/.cache/torch/hub/facebookresearch_dinov2_main
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+07:57:55 | INFO  | __init__.py | using MLP layer as FFN
+2026-10-19 07:57:58,336 INFO proprio kernel max 0.003346 norm 0.005798
+07:58:08 | WARN  | __init__.py | Skipping forkserver preload of torchcodec (No module named 'torchcodec')
+07:58:08 | WARN  | __init__.py | LanceDataset: keys_to_cache=['action', 'proprio', 'state'] is not required — Lance has efficient random access via batched __getitems__.
+2026-10-19 07:58:43,363 INFO CEM solve time: 29.2838 seconds (n_envs=1)
+2026-10-19 07:59:17,798 INFO CEM solve time: 34.3747 seconds (n_envs=1)
+2026-10-19 07:59:55,252 INFO CEM solve time: 37.4094 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/site-packages/lance/__init__.py:358: UserWarning: lance is not fork-safe. If you are using multiprocessing, use spawn or forkserver instead.
+  warnings.warn(
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 07:59:55,546 INFO pair 0 object_ever=1 object_final=1 full=1 wall=101.51s replans=3
+2026-10-19 08:00:24,855 INFO CEM solve time: 29.2404 seconds (n_envs=1)
+2026-10-19 08:00:59,502 INFO CEM solve time: 34.5928 seconds (n_envs=1)
+2026-10-19 08:01:37,044 INFO CEM solve time: 37.4963 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:01:37,332 INFO pair 1 object_ever=1 object_final=1 full=1 wall=101.78s replans=3
+2026-10-19 08:02:06,680 INFO CEM solve time: 29.2729 seconds (n_envs=1)
+2026-10-19 08:02:41,337 INFO CEM solve time: 34.6040 seconds (n_envs=1)
+2026-10-19 08:03:18,897 INFO CEM solve time: 37.5023 seconds (n_envs=1)
+2026-10-19 08:03:56,471 INFO CEM solve time: 37.5319 seconds (n_envs=1)
+2026-10-19 08:04:34,011 INFO CEM solve time: 37.4976 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:04:34,290 INFO pair 2 object_ever=1 object_final=1 full=1 wall=176.95s replans=5
+2026-10-19 08:05:03,634 INFO CEM solve time: 29.2820 seconds (n_envs=1)
+2026-10-19 08:05:38,298 INFO CEM solve time: 34.6249 seconds (n_envs=1)
+2026-10-19 08:06:15,853 INFO CEM solve time: 37.5170 seconds (n_envs=1)
+2026-10-19 08:06:53,418 INFO CEM solve time: 37.5231 seconds (n_envs=1)
+2026-10-19 08:07:30,986 INFO CEM solve time: 37.5299 seconds (n_envs=1)
+2026-10-19 08:08:08,554 INFO CEM solve time: 37.5253 seconds (n_envs=1)
+2026-10-19 08:08:46,125 INFO CEM solve time: 37.5265 seconds (n_envs=1)
+2026-10-19 08:09:23,705 INFO CEM solve time: 37.5404 seconds (n_envs=1)
+2026-10-19 08:10:01,304 INFO CEM solve time: 37.5541 seconds (n_envs=1)
+2026-10-19 08:10:38,901 INFO CEM solve time: 37.5541 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:10:39,342 INFO pair 3 object_ever=0 object_final=0 full=0 wall=365.05s replans=10
+2026-10-19 08:11:08,703 INFO CEM solve time: 29.3163 seconds (n_envs=1)
+2026-10-19 08:11:43,419 INFO CEM solve time: 34.6767 seconds (n_envs=1)
+2026-10-19 08:12:21,039 INFO CEM solve time: 37.5796 seconds (n_envs=1)
+2026-10-19 08:12:58,657 INFO CEM solve time: 37.5815 seconds (n_envs=1)
+2026-10-19 08:13:36,301 INFO CEM solve time: 37.6058 seconds (n_envs=1)
+2026-10-19 08:14:13,933 INFO CEM solve time: 37.5930 seconds (n_envs=1)
+2026-10-19 08:14:51,573 INFO CEM solve time: 37.5960 seconds (n_envs=1)
+2026-10-19 08:15:29,205 INFO CEM solve time: 37.5886 seconds (n_envs=1)
+2026-10-19 08:16:06,836 INFO CEM solve time: 37.5872 seconds (n_envs=1)
+2026-10-19 08:16:44,467 INFO CEM solve time: 37.5855 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:16:44,918 INFO pair 4 object_ever=1 object_final=1 full=0 wall=365.57s replans=10
+2026-10-19 08:17:14,306 INFO CEM solve time: 29.3281 seconds (n_envs=1)
+2026-10-19 08:17:49,035 INFO CEM solve time: 34.6845 seconds (n_envs=1)
+2026-10-19 08:18:26,651 INFO CEM solve time: 37.5731 seconds (n_envs=1)
+2026-10-19 08:19:04,253 INFO CEM solve time: 37.5574 seconds (n_envs=1)
+2026-10-19 08:19:41,845 INFO CEM solve time: 37.5521 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:19:42,169 INFO pair 5 object_ever=1 object_final=1 full=1 wall=177.25s replans=5
+2026-10-19 08:20:11,549 INFO CEM solve time: 29.3230 seconds (n_envs=1)
+2026-10-19 08:20:46,233 INFO CEM solve time: 34.6431 seconds (n_envs=1)
+2026-10-19 08:21:23,813 INFO CEM solve time: 37.5400 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:21:24,152 INFO pair 6 object_ever=1 object_final=1 full=1 wall=101.97s replans=3
+2026-10-19 08:21:53,524 INFO CEM solve time: 29.3133 seconds (n_envs=1)
+2026-10-19 08:22:28,227 INFO CEM solve time: 34.6596 seconds (n_envs=1)
+2026-10-19 08:23:05,826 INFO CEM solve time: 37.5549 seconds (n_envs=1)
+2026-10-19 08:23:43,422 INFO CEM solve time: 37.5540 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:23:43,735 INFO pair 7 object_ever=1 object_final=1 full=1 wall=139.58s replans=4
+2026-10-19 08:24:13,114 INFO CEM solve time: 29.3177 seconds (n_envs=1)
+2026-10-19 08:24:47,814 INFO CEM solve time: 34.6580 seconds (n_envs=1)
+2026-10-19 08:25:25,425 INFO CEM solve time: 37.5694 seconds (n_envs=1)
+2026-10-19 08:26:03,036 INFO CEM solve time: 37.5692 seconds (n_envs=1)
+2026-10-19 08:26:40,654 INFO CEM solve time: 37.5764 seconds (n_envs=1)
+2026-10-19 08:27:18,276 INFO CEM solve time: 37.5814 seconds (n_envs=1)
+2026-10-19 08:27:55,900 INFO CEM solve time: 37.5824 seconds (n_envs=1)
+2026-10-19 08:28:33,542 INFO CEM solve time: 37.5999 seconds (n_envs=1)
+2026-10-19 08:29:11,205 INFO CEM solve time: 37.6212 seconds (n_envs=1)
+2026-10-19 08:29:48,876 INFO CEM solve time: 37.6292 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:29:49,317 INFO pair 8 object_ever=1 object_final=1 full=0 wall=365.57s replans=10
+2026-10-19 08:30:18,741 INFO CEM solve time: 29.3684 seconds (n_envs=1)
+2026-10-19 08:30:53,520 INFO CEM solve time: 34.7390 seconds (n_envs=1)
+2026-10-19 08:31:31,177 INFO CEM solve time: 37.6182 seconds (n_envs=1)
+2026-10-19 08:32:08,812 INFO CEM solve time: 37.5929 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:32:09,165 INFO pair 9 object_ever=1 object_final=1 full=1 wall=139.84s replans=4
+2026-10-19 08:32:38,579 INFO CEM solve time: 29.3513 seconds (n_envs=1)
+2026-10-19 08:33:13,339 INFO CEM solve time: 34.7220 seconds (n_envs=1)
+2026-10-19 08:33:51,018 INFO CEM solve time: 37.6443 seconds (n_envs=1)
+2026-10-19 08:34:28,699 INFO CEM solve time: 37.6447 seconds (n_envs=1)
+2026-10-19 08:35:06,367 INFO CEM solve time: 37.6272 seconds (n_envs=1)
+2026-10-19 08:35:44,019 INFO CEM solve time: 37.6119 seconds (n_envs=1)
+2026-10-19 08:36:21,703 INFO CEM solve time: 37.6404 seconds (n_envs=1)
+2026-10-19 08:36:59,374 INFO CEM solve time: 37.6296 seconds (n_envs=1)
+2026-10-19 08:37:37,049 INFO CEM solve time: 37.6304 seconds (n_envs=1)
+2026-10-19 08:38:14,720 INFO CEM solve time: 37.6325 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:38:15,193 INFO pair 10 object_ever=1 object_final=1 full=0 wall=366.00s replans=10
+2026-10-19 08:38:44,620 INFO CEM solve time: 29.3672 seconds (n_envs=1)
+2026-10-19 08:39:19,386 INFO CEM solve time: 34.7287 seconds (n_envs=1)
+2026-10-19 08:39:57,070 INFO CEM solve time: 37.6407 seconds (n_envs=1)
+2026-10-19 08:40:34,754 INFO CEM solve time: 37.6398 seconds (n_envs=1)
+2026-10-19 08:41:12,410 INFO CEM solve time: 37.6137 seconds (n_envs=1)
+2026-10-19 08:41:50,074 INFO CEM solve time: 37.6241 seconds (n_envs=1)
+2026-10-19 08:42:27,753 INFO CEM solve time: 37.6405 seconds (n_envs=1)
+2026-10-19 08:43:05,433 INFO CEM solve time: 37.6367 seconds (n_envs=1)
+2026-10-19 08:43:43,114 INFO CEM solve time: 37.6387 seconds (n_envs=1)
+2026-10-19 08:44:20,787 INFO CEM solve time: 37.6300 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:44:21,291 INFO pair 11 object_ever=1 object_final=1 full=0 wall=366.03s replans=10
+2026-10-19 08:44:50,724 INFO CEM solve time: 29.3705 seconds (n_envs=1)
+2026-10-19 08:45:25,510 INFO CEM solve time: 34.7442 seconds (n_envs=1)
+2026-10-19 08:46:03,195 INFO CEM solve time: 37.6392 seconds (n_envs=1)
+2026-10-19 08:46:40,871 INFO CEM solve time: 37.6300 seconds (n_envs=1)
+2026-10-19 08:47:18,568 INFO CEM solve time: 37.6496 seconds (n_envs=1)
+2026-10-19 08:47:56,254 INFO CEM solve time: 37.6397 seconds (n_envs=1)
+2026-10-19 08:48:33,930 INFO CEM solve time: 37.6285 seconds (n_envs=1)
+2026-10-19 08:49:11,595 INFO CEM solve time: 37.6221 seconds (n_envs=1)
+2026-10-19 08:49:49,262 INFO CEM solve time: 37.6237 seconds (n_envs=1)
+2026-10-19 08:50:26,935 INFO CEM solve time: 37.6298 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:50:27,338 INFO pair 12 object_ever=1 object_final=1 full=0 wall=366.04s replans=10
+2026-10-19 08:50:56,763 INFO CEM solve time: 29.3636 seconds (n_envs=1)
+2026-10-19 08:51:31,493 INFO CEM solve time: 34.6903 seconds (n_envs=1)
+2026-10-19 08:52:09,118 INFO CEM solve time: 37.5809 seconds (n_envs=1)
+2026-10-19 08:52:46,767 INFO CEM solve time: 37.5989 seconds (n_envs=1)
+2026-10-19 08:53:24,427 INFO CEM solve time: 37.6139 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:53:24,767 INFO pair 13 object_ever=1 object_final=1 full=1 wall=177.42s replans=5
+2026-10-19 08:53:54,204 INFO CEM solve time: 29.3770 seconds (n_envs=1)
+2026-10-19 08:54:28,998 INFO CEM solve time: 34.7493 seconds (n_envs=1)
+2026-10-19 08:55:06,719 INFO CEM solve time: 37.6530 seconds (n_envs=1)
+2026-10-19 08:55:44,418 INFO CEM solve time: 37.6552 seconds (n_envs=1)
+2026-10-19 08:56:22,137 INFO CEM solve time: 37.6762 seconds (n_envs=1)
+2026-10-19 08:56:59,846 INFO CEM solve time: 37.6696 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:57:00,105 INFO pair 14 object_ever=1 object_final=1 full=1 wall=215.33s replans=6
+2026-10-19 08:57:29,547 INFO CEM solve time: 29.3835 seconds (n_envs=1)
+2026-10-19 08:58:04,455 INFO CEM solve time: 34.7388 seconds (n_envs=1)
+2026-10-19 08:58:42,140 INFO CEM solve time: 37.6287 seconds (n_envs=1)
+2026-10-19 08:59:19,780 INFO CEM solve time: 37.5987 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 08:59:20,096 INFO pair 15 object_ever=1 object_final=1 full=1 wall=139.98s replans=4
+2026-10-19 08:59:49,513 INFO CEM solve time: 29.3572 seconds (n_envs=1)
+2026-10-19 09:00:24,283 INFO CEM solve time: 34.7299 seconds (n_envs=1)
+2026-10-19 09:01:01,965 INFO CEM solve time: 37.6409 seconds (n_envs=1)
+2026-10-19 09:01:39,668 INFO CEM solve time: 37.6546 seconds (n_envs=1)
+2026-10-19 09:02:17,423 INFO CEM solve time: 37.6312 seconds (n_envs=1)
+2026-10-19 09:02:55,105 INFO CEM solve time: 37.6298 seconds (n_envs=1)
+2026-10-19 09:03:32,795 INFO CEM solve time: 37.6368 seconds (n_envs=1)
+2026-10-19 09:04:10,470 INFO CEM solve time: 37.6356 seconds (n_envs=1)
+2026-10-19 09:04:48,163 INFO CEM solve time: 37.6528 seconds (n_envs=1)
+2026-10-19 09:05:25,867 INFO CEM solve time: 37.6579 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 09:05:26,502 INFO pair 16 object_ever=0 object_final=0 full=0 wall=366.28s replans=10
+2026-10-19 09:05:56,007 INFO CEM solve time: 29.3896 seconds (n_envs=1)
+2026-10-19 09:06:30,828 INFO CEM solve time: 34.7687 seconds (n_envs=1)
+2026-10-19 09:07:08,520 INFO CEM solve time: 37.6477 seconds (n_envs=1)
+2026-10-19 09:07:46,203 INFO CEM solve time: 37.6416 seconds (n_envs=1)
+2026-10-19 09:08:23,914 INFO CEM solve time: 37.6640 seconds (n_envs=1)
+2026-10-19 09:09:01,622 INFO CEM solve time: 37.6571 seconds (n_envs=1)
+2026-10-19 09:09:39,325 INFO CEM solve time: 37.6584 seconds (n_envs=1)
+2026-10-19 09:10:17,023 INFO CEM solve time: 37.6544 seconds (n_envs=1)
+2026-10-19 09:10:54,730 INFO CEM solve time: 37.6620 seconds (n_envs=1)
+2026-10-19 09:11:32,445 INFO CEM solve time: 37.6715 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 09:11:32,916 INFO pair 17 object_ever=0 object_final=0 full=0 wall=366.41s replans=10
+2026-10-19 09:12:02,375 INFO CEM solve time: 29.3982 seconds (n_envs=1)
+2026-10-19 09:12:37,177 INFO CEM solve time: 34.7553 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 09:12:37,500 INFO pair 18 object_ever=1 object_final=1 full=1 wall=64.58s replans=2
+2026-10-19 09:13:06,947 INFO CEM solve time: 29.3822 seconds (n_envs=1)
+2026-10-19 09:13:41,716 INFO CEM solve time: 34.7269 seconds (n_envs=1)
+2026-10-19 09:14:19,381 INFO CEM solve time: 37.6230 seconds (n_envs=1)
+2026-10-19 09:14:57,047 INFO CEM solve time: 37.6237 seconds (n_envs=1)
+2026-10-19 09:15:34,723 INFO CEM solve time: 37.6258 seconds (n_envs=1)
+2026-10-19 09:16:12,396 INFO CEM solve time: 37.6333 seconds (n_envs=1)
+2026-10-19 09:16:50,087 INFO CEM solve time: 37.6504 seconds (n_envs=1)
+2026-10-19 09:17:27,769 INFO CEM solve time: 37.6440 seconds (n_envs=1)
+2026-10-19 09:18:05,439 INFO CEM solve time: 37.6273 seconds (n_envs=1)
+2026-10-19 09:18:43,135 INFO CEM solve time: 37.6394 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 09:18:43,605 INFO pair 19 object_ever=0 object_final=0 full=0 wall=366.10s replans=10
+2026-10-19 09:19:13,051 INFO CEM solve time: 29.3842 seconds (n_envs=1)
+2026-10-19 09:19:47,832 INFO CEM solve time: 34.7378 seconds (n_envs=1)
+2026-10-19 09:20:25,509 INFO CEM solve time: 37.6321 seconds (n_envs=1)
+2026-10-19 09:21:03,189 INFO CEM solve time: 37.6388 seconds (n_envs=1)
+2026-10-19 09:21:40,932 INFO CEM solve time: 37.6684 seconds (n_envs=1)
+2026-10-19 09:22:18,640 INFO CEM solve time: 37.6689 seconds (n_envs=1)
+2026-10-19 09:22:56,334 INFO CEM solve time: 37.6566 seconds (n_envs=1)
+2026-10-19 09:23:34,054 INFO CEM solve time: 37.6708 seconds (n_envs=1)
+2026-10-19 09:24:11,736 INFO CEM solve time: 37.6423 seconds (n_envs=1)
+2026-10-19 09:24:49,416 INFO CEM solve time: 37.6422 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 09:24:49,857 INFO pair 20 object_ever=0 object_final=0 full=0 wall=366.24s replans=10
+2026-10-19 09:25:19,308 INFO CEM solve time: 29.3894 seconds (n_envs=1)
+2026-10-19 09:25:54,119 INFO CEM solve time: 34.7562 seconds (n_envs=1)
+2026-10-19 09:26:31,807 INFO CEM solve time: 37.6460 seconds (n_envs=1)
+2026-10-19 09:27:09,486 INFO CEM solve time: 37.6324 seconds (n_envs=1)
+2026-10-19 09:27:47,164 INFO CEM solve time: 37.6356 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 09:27:47,572 INFO pair 21 object_ever=1 object_final=1 full=1 wall=177.63s replans=5
+2026-10-19 09:28:17,009 INFO CEM solve time: 29.3689 seconds (n_envs=1)
+2026-10-19 09:28:51,787 INFO CEM solve time: 34.7386 seconds (n_envs=1)
+2026-10-19 09:29:29,479 INFO CEM solve time: 37.6485 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 09:29:29,781 INFO pair 22 object_ever=1 object_final=1 full=1 wall=102.20s replans=3
+2026-10-19 09:29:59,223 INFO CEM solve time: 29.3788 seconds (n_envs=1)
+2026-10-19 09:30:33,997 INFO CEM solve time: 34.7368 seconds (n_envs=1)
+2026-10-19 09:31:11,666 INFO CEM solve time: 37.6279 seconds (n_envs=1)
+2026-10-19 09:31:49,332 INFO CEM solve time: 37.6306 seconds (n_envs=1)
+2026-10-19 09:32:26,976 INFO CEM solve time: 37.6091 seconds (n_envs=1)
+2026-10-19 09:33:04,635 INFO CEM solve time: 37.6208 seconds (n_envs=1)
+2026-10-19 09:33:42,277 INFO CEM solve time: 37.6054 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 09:33:42,585 INFO pair 23 object_ever=1 object_final=1 full=1 wall=252.80s replans=7
+2026-10-19 09:34:12,003 INFO CEM solve time: 29.3581 seconds (n_envs=1)
+2026-10-19 09:34:46,749 INFO CEM solve time: 34.7081 seconds (n_envs=1)
+2026-10-19 09:35:24,397 INFO CEM solve time: 37.6075 seconds (n_envs=1)
+2026-10-19 09:36:02,013 INFO CEM solve time: 37.5805 seconds (n_envs=1)
+2026-10-19 09:36:39,634 INFO CEM solve time: 37.5866 seconds (n_envs=1)
+2026-10-19 09:37:17,256 INFO CEM solve time: 37.5819 seconds (n_envs=1)
+2026-10-19 09:37:54,893 INFO CEM solve time: 37.5984 seconds (n_envs=1)
+2026-10-19 09:38:32,535 INFO CEM solve time: 37.5970 seconds (n_envs=1)
+2026-10-19 09:39:10,177 INFO CEM solve time: 37.6050 seconds (n_envs=1)
+2026-10-19 09:39:47,827 INFO CEM solve time: 37.6076 seconds (n_envs=1)
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+2026-10-19 09:39:48,222 INFO pair 24 object_ever=1 object_final=1 full=0 wall=365.63s replans=10

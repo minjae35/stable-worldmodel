@@ -1,0 +1,33 @@
+{
+  "seed": 42,
+  "policy": "quentinll/lewm-pusht",
+  "plan_config": {
+    "horizon": 5,
+    "receding_horizon": 1,
+    "action_block": 5,
+    "history_len": 3,
+    "warm_start": true
+  },
+  "solver": {
+    "num_samples": 300,
+    "n_steps": 30,
+    "topk": 30,
+    "var_scale": 1.0,
+    "batch_size": 1,
+    "device": "cuda"
+  },
+  "goal_offset_steps": 25,
+  "eval_budget": 50,
+  "dataset": "hf://datasets/fracapuano/lewm-pusht/train.lance",
+  "heldout_fraction": 0.1,
+  "official_test_split": false,
+  "limitation": "quentinll/lewm-pusht publishes only the training table (pusht_expert_train / hf://datasets/fracapuano/lewm-pusht/train.lance). There is no official test split. Training fits action normalization on the full table and splits clips, not episodes, so the released checkpoint may still have been trained on these held-out episode ids.",
+  "full_state_criterion": "L2(agent_xy, block_xy) < 20 and block angle < pi/9",
+  "object_only_criterion": "L2(block_xy) < 20 and block angle < pi/9",
+  "protocol": "sequential episodes, CEM seed = 42 + pair_index",
+  "sampling": "First 10 pairs are the original seed-42 holdout sample, copied from results/stage0/metrics.json. The other 90 are drawn with a fresh np.random.default_rng(42) from the same last-10% episode ids, excluding those 10 episodes, one random start each. This is not a prefix of sampling 100 pairs from the original generator.",
+  "cem_seed": "Diagnosis uses one shared CEM generator seeded with 42, matching the original 10-pair batch. Each of the 100 episodes uses manual_seed(42 + pair_index) so results do not depend on order and a resume does not replay finished episodes.",
+  "n_holdout": 1868,
+  "holdout_episode_id_min": 16817,
+  "holdout_episode_id_max": 18684
+}

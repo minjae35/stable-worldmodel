@@ -1,0 +1,8 @@
+2026-10-20 20:46:01,411 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/lewm_generalist_resume_smoke
+2026-10-20 20:46:06,526 INFO step 1 loss=0.36479252576828003 pred=0.29399174451828003 sigreg=0.78515625 lr=5e-05 pusht=0.32543087005615234 tworoom=0.3854905664920807 cube=0.38247954845428467 gpu_peak_mb=764.67431640625
+2026-10-20 20:46:07,534 INFO step 2 loss=0.3641495406627655 pred=0.2933487594127655 sigreg=0.78515625 lr=0.0 pusht=0.365826278924942 tworoom=0.40870630741119385 cube=0.31742769479751587 gpu_peak_mb=904.76318359375
+2026-10-20 20:46:09,777 INFO fit end {'global_step': 2, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 904.76318359375}
+2026-10-20 20:46:09,919 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/lewm_generalist_resume_smoke/checkpoints/resume.ckpt
+2026-10-20 20:46:21,092 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/lewm_generalist_resume_smoke
+2026-10-20 20:46:25,148 INFO fit end {'global_step': 2, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 210.126953125}
+2026-10-20 20:46:25,158 WARNING no optimizer checkpoint to promote

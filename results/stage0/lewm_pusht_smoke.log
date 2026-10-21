@@ -1,0 +1,35 @@
+/venv/stable-worldmodel/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+[2026-10-19 05:08:31,639][datasets][INFO] - PyTorch version 2.14.1+cu126 available.
+[2026-10-19 05:08:31,640][datasets][INFO] - JAX version 0.11.2 available.
+05:08:33 | INFO  | atomic_chec~| [atomic_save] installed crash-safe checkpoint plugin (write to sibling .tmp + fsync + atomic rename)
+[2026-10-19 05:08:35,007][root][WARNING] - Skipping forkserver preload of torchcodec (No module named 'torchcodec')
+[2026-10-19 05:08:42,495][root][WARNING] - LanceDataset: keys_to_cache=['action', 'state'] is not required — Lance has efficient random access via batched __getitems__.
+[2026-10-19 05:09:13,046][stable_worldmodel.wm.utils][INFO] - Loading quentinll/lewm-pusht from local cache...
+[2026-10-19 05:09:13,046][stable_worldmodel.wm.utils][INFO] - Loading checkpoint from folder /root/.stable_worldmodel/checkpoints/models--quentinll--lewm-pusht...
+05:09:13 | INFO  | utils.py    | Created ViT-tiny from scratch with config: {'hidden_size': 192, 'num_hidden_layers': 12, 'num_attention_heads': 3, 'intermediate_size': 768, 'image_size': 224, 'patch_size': 14}
+1869611 valid starting points found for evaluation.
+[209214]
+[eval] saving videos to /root/.stable_worldmodel/checkpoints/quentinll (one env_{i}.mp4 per env)
+/venv/stable-worldmodel/lib/python3.12/site-packages/gymnasium/spaces/box.py:486: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  gym.logger.warn("Casting input x to numpy array.")
+CEM solve time: 0.5243 seconds
+/venv/stable-worldmodel/lib/python3.12/site-packages/gymnasium/utils/passive_env_checker.py:243: UserWarning: [33mWARN: The infos returned by `reset` and the following `step` share an object, therefore, modifying one will modify the other. Environments should return new info data on every call as users commonly keep the data returned to them.[0m
+  logger.warn(
+/venv/stable-worldmodel/lib/python3.12/site-packages/gymnasium/utils/passive_env_checker.py:243: UserWarning: [33mWARN: The infos returned by `step` and the following `step` share an object, therefore, modifying one will modify the other. Environments should return new info data on every call as users commonly keep the data returned to them.[0m
+  logger.warn(
+CEM solve time: 0.0397 seconds
+CEM solve time: 0.0383 seconds
+CEM solve time: 0.0366 seconds
+CEM solve time: 0.0374 seconds
+CEM solve time: 0.0364 seconds
+CEM solve time: 0.0365 seconds
+CEM solve time: 0.0363 seconds
+CEM solve time: 0.0359 seconds
+CEM solve time: 0.0361 seconds
+/venv/stable-worldmodel/lib/python3.12/site-packages/lance/__init__.py:358: UserWarning: lance is not fork-safe. If you are using multiprocessing, use spawn or forkserver instead.
+  warnings.warn(
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+{'success_rate': 0.0, 'episode_successes': array([False]), 'seeds': None}
+[eval] videos saved to /root/.stable_worldmodel/checkpoints/quentinll

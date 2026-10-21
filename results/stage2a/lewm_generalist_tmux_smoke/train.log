@@ -1,0 +1,10 @@
+2026-10-20 20:40:14,968 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/lewm_generalist_tmux_smoke
+2026-10-20 20:40:20,124 INFO step 1 loss=None pred=None sigreg=None lr=5e-05 pusht=None tworoom=None cube=None gpu_peak_mb=764.67431640625
+2026-10-20 20:40:21,196 INFO step 2 loss=None pred=None sigreg=None lr=0.0 pusht=None tworoom=None cube=None gpu_peak_mb=904.76318359375
+2026-10-20 20:40:23,076 INFO fit end {'global_step': 2, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 904.76318359375}
+2026-10-20 20:40:33,680 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/lewm_generalist_tmux_smoke
+2026-10-20 20:40:38,476 INFO step 1 loss=None pred=None sigreg=None lr=5e-05 pusht=None tworoom=None cube=None gpu_peak_mb=764.67431640625
+2026-10-20 20:40:39,551 INFO step 2 loss=None pred=None sigreg=None lr=3.7500000000000003e-05 pusht=None tworoom=None cube=None gpu_peak_mb=904.76318359375
+2026-10-20 20:40:40,653 INFO step 3 loss=None pred=None sigreg=None lr=1.2500000000000006e-05 pusht=None tworoom=None cube=None gpu_peak_mb=904.76318359375
+2026-10-20 20:40:41,508 INFO step 4 loss=None pred=None sigreg=None lr=0.0 pusht=None tworoom=None cube=None gpu_peak_mb=904.76318359375
+2026-10-20 20:40:43,538 INFO fit end {'global_step': 4, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 904.76318359375}

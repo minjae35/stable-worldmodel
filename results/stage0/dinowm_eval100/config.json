@@ -1,0 +1,31 @@
+{
+  "checkpoint": "/workspace/model-checkpoints/point-cloud-pusht/dino-wm",
+  "architecture": "gaoyuezhou/dino_wm VWorldModel",
+  "encoder": "dinov2_vits14 frozen, images resized 224 -> 196",
+  "rgb_only": false,
+  "proprio": "Checkpoint proprio input dim is 1 and its conv kernel is ~0. The 10-d proprio slot stays in the 404-d latent as a learned bias. PushT 4D proprio is not fed, and the slot is not removed.",
+  "action_normalization": {
+    "mean": [
+      -0.007812564379916172,
+      0.006860687229453032
+    ],
+    "std": [
+      0.20846744284501714,
+      0.20674862637362224
+    ],
+    "source": "swm_h5_norm_stats.json"
+  },
+  "cost": "last-frame visual MSE + proprio MSE (alpha=1)",
+  "plan_config": {
+    "horizon": 5,
+    "receding_horizon": 1,
+    "action_block": 5,
+    "history_len": 3,
+    "warm_start": true
+  },
+  "cem_seed": "42 + pair_index",
+  "pairs": "results/stage0/eval100/pairs.json",
+  "gpu": 0,
+  "pair_start": 0,
+  "pair_end": 25
+}

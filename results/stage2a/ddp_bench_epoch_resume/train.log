@@ -1,0 +1,14 @@
+2026-10-20 21:39:22,981 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/ddp_bench_epoch_resume
+2026-10-20 21:39:22,981 INFO rank 0 world 1
+2026-10-20 21:39:23,098 INFO val per-GPU batch reduced from 8 to 4 to fit the split
+2026-10-20 21:39:25,519 INFO schedule_steps=4 lr=5e-05 effective_per_env=8 dropped=4
+2026-10-20 21:39:33,334 INFO fit end {'global_step': 4, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 2664.34130859375}
+2026-10-20 21:39:33,334 INFO benchmark {'world_size': 1, 'per_env_per_gpu': 8, 'effective_clips_per_env': 8, 'effective_clips_per_step': 24, 'frames_per_step': 96, 'median_step_s': 0.17536689102416858, 'median_data_s': 0.8499421990127303, 'median_sigreg_comm_s': 0.0, 'steps_per_s': 5.7023306632161415, 'clips_per_s': 136.8559359171874, 'frames_per_s': 547.4237436687496, 'timed_steps': 1, 'grad_norm': 0.9999993480990124, 'nccl_cuda_us': None, 'profile_cuda_us': None, 'nccl_fraction': None, 'gpu_util_mean': {'0': 2.4285714285714284, '1': 0.0, '2': 0.0, '3': 0.0}, 'gpu_mem_mib_max': {'0': 3102.0, '1': 4.0, '2': 4.0, '3': 4.0}, 'global_step': 4, 'gpu_peak_mb': 2664.34130859375}
+2026-10-20 21:39:33,488 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/ddp_bench_epoch_resume/checkpoints/resume.ckpt
+2026-10-20 21:39:44,913 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/ddp_bench_epoch_resume
+2026-10-20 21:39:44,914 INFO rank 0 world 1
+2026-10-20 21:39:45,023 INFO val per-GPU batch reduced from 8 to 4 to fit the split
+2026-10-20 21:39:47,526 INFO schedule_steps=8 lr=5e-05 effective_per_env=8 dropped=4
+2026-10-20 21:39:55,260 INFO fit end {'global_step': 8, 'current_epoch': 2, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 2664.34130859375}
+2026-10-20 21:39:55,260 INFO benchmark {'world_size': 1, 'per_env_per_gpu': 8, 'effective_clips_per_env': 8, 'effective_clips_per_step': 24, 'frames_per_step': 96, 'median_step_s': 0.17429598199669272, 'median_data_s': 0.8507686360389926, 'median_sigreg_comm_s': 0.0, 'steps_per_s': 5.737366911986388, 'clips_per_s': 137.69680588767332, 'frames_per_s': 550.7872235506933, 'timed_steps': 1, 'grad_norm': 0.8111540272629633, 'nccl_cuda_us': None, 'profile_cuda_us': None, 'nccl_fraction': None, 'gpu_util_mean': {'0': 6.846153846153846, '1': 0.0, '2': 0.0, '3': 0.0}, 'gpu_mem_mib_max': {'0': 3122.0, '1': 4.0, '2': 4.0, '3': 4.0}, 'global_step': 8, 'gpu_peak_mb': 2664.34130859375}
+2026-10-20 21:39:55,738 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/ddp_bench_epoch_resume/checkpoints/resume.ckpt

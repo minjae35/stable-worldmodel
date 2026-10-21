@@ -1,0 +1,13 @@
+{
+  "data_source": "synthetic",
+  "world_size": 1,
+  "per_env_per_gpu": 8,
+  "effective_per_env": 8,
+  "local_steps_per_epoch": 57,
+  "schedule_max_steps": 2,
+  "lr": 5e-05,
+  "lr_scaled_with_world_size": false,
+  "sync_batchnorm": false,
+  "shortest_env_clips": 460,
+  "dropped_clips_shortest_env": 4
+}

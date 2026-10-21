@@ -1,0 +1,11 @@
+2026-10-20 21:34:43,081 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/ddp_bench_resume_1gpu
+2026-10-20 21:34:43,081 INFO rank 0 world 1
+2026-10-20 21:34:45,542 INFO schedule_steps=2 lr=5e-05 effective_per_env=8 dropped=4
+2026-10-20 21:34:51,703 INFO fit end {'global_step': 2, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 2664.34130859375}
+2026-10-20 21:34:51,703 INFO benchmark {'world_size': 1, 'per_env_per_gpu': 8, 'effective_clips_per_env': 8, 'effective_clips_per_step': 24, 'frames_per_step': 96, 'median_step_s': 1.51541759603424, 'median_data_s': 0.8722868310287595, 'median_sigreg_comm_s': 0.0, 'steps_per_s': 0.6598841155183509, 'clips_per_s': 15.837218772440421, 'frames_per_s': 63.348875089761684, 'timed_steps': 0, 'grad_norm': 0.9999992925620673, 'nccl_cuda_us': None, 'profile_cuda_us': None, 'nccl_fraction': None, 'gpu_util_mean': {'0': 4.3, '1': 0.0, '2': 0.0, '3': 0.0}, 'gpu_mem_mib_max': {'0': 3102.0, '1': 4.0, '2': 4.0, '3': 4.0}, 'global_step': 2, 'gpu_peak_mb': 2664.34130859375}
+2026-10-20 21:34:51,886 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/ddp_bench_resume_1gpu/checkpoints/resume.ckpt
+2026-10-20 21:35:03,146 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/ddp_bench_resume_1gpu
+2026-10-20 21:35:03,147 INFO rank 0 world 1
+2026-10-20 21:35:05,821 INFO schedule_steps=4 lr=5e-05 effective_per_env=8 dropped=4
+2026-10-20 21:35:08,575 INFO fit end {'global_step': 2, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 210.126953125}
+2026-10-20 21:35:08,576 INFO benchmark {'world_size': 1, 'per_env_per_gpu': 8, 'effective_clips_per_env': 8, 'effective_clips_per_step': 24, 'frames_per_step': 96, 'median_step_s': None, 'median_data_s': None, 'median_sigreg_comm_s': None, 'steps_per_s': None, 'clips_per_s': None, 'frames_per_s': None, 'timed_steps': 0, 'grad_norm': None, 'nccl_cuda_us': None, 'profile_cuda_us': None, 'nccl_fraction': None, 'gpu_util_mean': {}, 'gpu_mem_mib_max': {}, 'global_step': 2, 'gpu_peak_mb': 210.126953125}

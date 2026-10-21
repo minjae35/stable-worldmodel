@@ -1,0 +1,14 @@
+{
+  "world_size": 2,
+  "per_env_per_gpu": 2,
+  "effective_clips_per_env": 4,
+  "effective_clips_per_step": 12,
+  "median_step_s": 0.2775390159804374,
+  "median_data_s": 1.0562003530212678,
+  "median_sigreg_comm_s": 0.0011581439971923829,
+  "steps_per_s": 3.6030970149093773,
+  "clips_per_s": 43.23716417891253,
+  "timed_steps": 1,
+  "global_step": 4,
+  "gpu_peak_mb": 974.443359375
+}

@@ -1,0 +1,23 @@
+2026-10-20 23:36:44,729 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/ddp_bench_match_4x8
+2026-10-20 23:36:44,730 INFO rank 0 world 4
+2026-10-20 23:36:47,245 INFO schedule_steps=16 lr=5e-05 effective_per_env=32 dropped=0
+2026-10-20 23:38:04,341 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:04,640 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:04,909 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:05,183 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:05,453 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:05,730 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:06,012 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:06,285 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:06,600 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:06,878 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:07,163 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:07,435 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:07,792 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:10,814 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:11,322 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:11,653 WARNING no optimizer checkpoint to promote
+2026-10-20 23:38:11,675 INFO rewound epoch progress in the checkpoint so this interrupted epoch can resume
+2026-10-20 23:38:13,013 INFO fit end {'global_step': 16, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 2734.06884765625}
+2026-10-20 23:38:13,013 INFO benchmark {'world_size': 4, 'per_env_per_gpu': 8, 'effective_clips_per_env': 32, 'effective_clips_per_step': 96, 'frames_per_step': 384, 'median_step_s': 0.25145346100907773, 'median_data_s': 0.017853780009318143, 'median_sigreg_comm_s': 0.0034252800345420838, 'steps_per_s': 3.976879045478316, 'clips_per_s': 381.7803883659183, 'frames_per_s': 1527.1215534636733, 'timed_steps': 11, 'grad_norm': 0.9999994295379951, 'nccl_cuda_us': 54855, 'profile_cuda_us': 195771, 'nccl_fraction': 0.28019982530609744, 'gpu_util_mean': {'0': 21.1, '1': 60.0, '2': 64.2, '3': 61.9}, 'gpu_mem_mib_max': {'0': 3394.0, '1': 3380.0, '2': 3380.0, '3': 3380.0}, 'global_step': 16, 'gpu_peak_mb': 2734.06884765625}
+2026-10-20 23:38:13,192 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/ddp_bench_match_4x8/checkpoints/resume.ckpt

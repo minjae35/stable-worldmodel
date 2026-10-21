@@ -1,0 +1,16 @@
+2026-10-20 21:20:12,958 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/lewm_generalist_ddp_resume
+2026-10-20 21:20:12,958 INFO rank 0 world 2
+2026-10-20 21:20:15,639 INFO schedule_steps=2 lr=5e-05 effective_per_env=4
+2026-10-20 21:21:29,748 INFO step 1 loss=0.3843464255332947 pred=0.2627643942832947 sigreg=1.3515625 lr=5e-05 pusht=0.3530840277671814 tworoom=0.3957328498363495 cube=0.40519896149635315 gpu_peak_mb=834.35400390625
+2026-10-20 21:21:30,947 INFO step 2 loss=0.40141424536705017 pred=0.27983221411705017 sigreg=1.3515625 lr=0.0 pusht=0.40237411856651306 tworoom=0.4232049286365509 cube=0.37768709659576416 gpu_peak_mb=974.443359375
+2026-10-20 21:21:33,085 INFO fit end {'global_step': 2, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 974.443359375}
+2026-10-20 21:21:33,085 INFO benchmark {'world_size': 2, 'per_env_per_gpu': 2, 'effective_clips_per_env': 4, 'effective_clips_per_step': 12, 'median_step_s': 0.24022107396740466, 'median_data_s': 0.9576030230382457, 'median_sigreg_comm_s': 0.0009676799774169922, 'steps_per_s': 4.1628321091249845, 'clips_per_s': 49.953985309499814, 'timed_steps': 1, 'global_step': 2, 'gpu_peak_mb': 974.443359375}
+2026-10-20 21:21:33,245 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/lewm_generalist_ddp_resume/checkpoints/resume.ckpt
+2026-10-20 21:21:45,108 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/lewm_generalist_ddp_resume
+2026-10-20 21:21:45,108 INFO rank 0 world 2
+2026-10-20 21:21:47,797 INFO schedule_steps=4 lr=5e-05 effective_per_env=4
+2026-10-20 21:23:01,501 INFO step 3 loss=0.311728835105896 pred=0.186728835105896 sigreg=1.390625 lr=5e-05 pusht=0.2893616855144501 tworoom=0.32346999645233154 cube=0.322354793548584 gpu_peak_mb=974.41552734375
+2026-10-20 21:23:02,836 INFO step 4 loss=0.3248962163925171 pred=0.1998962014913559 sigreg=1.390625 lr=0.0 pusht=0.3271201252937317 tworoom=0.3349189758300781 cube=0.3126494586467743 gpu_peak_mb=974.443359375
+2026-10-20 21:23:05,167 INFO fit end {'global_step': 4, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 974.443359375}
+2026-10-20 21:23:05,167 INFO benchmark {'world_size': 2, 'per_env_per_gpu': 2, 'effective_clips_per_env': 4, 'effective_clips_per_step': 12, 'median_step_s': 0.2775390159804374, 'median_data_s': 1.0562003530212678, 'median_sigreg_comm_s': 0.0011581439971923829, 'steps_per_s': 3.6030970149093773, 'clips_per_s': 43.23716417891253, 'timed_steps': 1, 'global_step': 4, 'gpu_peak_mb': 974.443359375}
+2026-10-20 21:23:05,549 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/lewm_generalist_ddp_resume/checkpoints/resume.ckpt

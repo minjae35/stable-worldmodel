@@ -1,0 +1,59 @@
+/venv/stable-worldmodel/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+[2026-10-19 05:37:23,834][datasets][INFO] - PyTorch version 2.14.1+cu126 available.
+[2026-10-19 05:37:23,835][datasets][INFO] - JAX version 0.11.2 available.
+05:37:26 | INFO  | atomic_chec~| [atomic_save] installed crash-safe checkpoint plugin (write to sibling .tmp + fsync + atomic rename)
+[2026-10-19 05:37:27,742][root][WARNING] - Skipping forkserver preload of torchcodec (No module named 'torchcodec')
+[2026-10-19 05:37:35,014][root][WARNING] - LanceDataset: keys_to_cache=['action', 'proprio', 'state'] is not required — Lance has efficient random access via batched __getitems__.
+[2026-10-19 05:38:16,595][stable_worldmodel.wm.utils][INFO] - Loading quentinll/lewm-pusht from local cache...
+[2026-10-19 05:38:16,596][stable_worldmodel.wm.utils][INFO] - Loading checkpoint from folder /root/.stable_worldmodel/checkpoints/models--quentinll--lewm-pusht...
+05:38:16 | INFO  | utils.py    | Created ViT-tiny from scratch with config: {'hidden_size': 192, 'num_hidden_layers': 12, 'num_attention_heads': 3, 'intermediate_size': 768, 'image_size': 224, 'patch_size': 14}
+[eval] 1868 held-out episodes (ids 16817–18684)
+[eval] pairs [(16977, 18), (18256, 38), (16982, 15), (18035, 11), (17634, 112), (17623, 94), (18118, 45), (16992, 16), (17193, 83), (18417, 38)]
+[eval] checking goal_state and goal image alignment
+/venv/stable-worldmodel/lib/python3.12/site-packages/gymnasium/spaces/box.py:486: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  gym.logger.warn("Casting input x to numpy array.")
+[eval] goal image MAE mean 0.469 max 0.612
+[eval] saving videos to /workspace/stable-worldmodel/results/stage0/videos (one env_{i}.mp4 per env)
+CEM solve time: 9.0614 seconds
+/venv/stable-worldmodel/lib/python3.12/site-packages/gymnasium/utils/passive_env_checker.py:243: UserWarning: [33mWARN: The infos returned by `reset` and the following `step` share an object, therefore, modifying one will modify the other. Environments should return new info data on every call as users commonly keep the data returned to them.[0m
+  logger.warn(
+/venv/stable-worldmodel/lib/python3.12/site-packages/gymnasium/utils/passive_env_checker.py:243: UserWarning: [33mWARN: The infos returned by `step` and the following `step` share an object, therefore, modifying one will modify the other. Environments should return new info data on every call as users commonly keep the data returned to them.[0m
+  logger.warn(
+CEM solve time: 8.5304 seconds
+CEM solve time: 8.4940 seconds
+CEM solve time: 8.7528 seconds
+CEM solve time: 8.7293 seconds
+CEM solve time: 7.4123 seconds
+CEM solve time: 7.3087 seconds
+CEM solve time: 7.4095 seconds
+CEM solve time: 7.3352 seconds
+CEM solve time: 7.2788 seconds
+/venv/stable-worldmodel/lib/python3.12/site-packages/lance/__init__.py:358: UserWarning: lance is not fork-safe. If you are using multiprocessing, use spawn or forkserver instead.
+  warnings.warn(
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+/venv/stable-worldmodel/lib/python3.12/subprocess.py:1885: RuntimeWarning: lancedb fork support is experimental: the internal async runtime has been reset in the forked child, but a small chance of deadlock remains if other state was mid-operation at fork time. The 'forkserver' or 'spawn' multiprocessing start method is likely a safer alternative.
+  self.pid = _fork_exec(
+{'success_rate': 10.0, 'episode_successes': array([False, False, False, False, False, False, False, False, False,
+        True]), 'seeds': None}
+[eval] success 1/10 (10.0%)
+[eval] mean planning time per env replan 0.845s (10 solve calls)
+[eval] videos saved to /workspace/stable-worldmodel/results/stage0/videos
+[eval] metrics saved to /workspace/stable-worldmodel/results/stage0/metrics.json

@@ -1,0 +1,10 @@
+2026-10-20 20:47:41,929 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/lewm_generalist_resume2_smoke
+2026-10-20 20:47:46,865 INFO step 1 loss=0.3423568904399872 pred=0.2715561091899872 sigreg=0.7890625 lr=5e-05 pusht=0.31414908170700073 tworoom=0.33986684679985046 cube=0.3735429644584656 gpu_peak_mb=764.67431640625
+2026-10-20 20:47:48,250 INFO step 2 loss=0.33513587713241577 pred=0.26433509588241577 sigreg=0.78515625 lr=0.0 pusht=0.35832348465919495 tworoom=0.34835314750671387 cube=0.2982427477836609 gpu_peak_mb=904.76318359375
+2026-10-20 20:47:50,964 INFO fit end {'global_step': 2, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 904.76318359375}
+2026-10-20 20:47:51,114 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/lewm_generalist_resume2_smoke/checkpoints/resume.ckpt
+2026-10-20 20:48:02,238 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/lewm_generalist_resume2_smoke
+2026-10-20 20:48:07,283 INFO step 3 loss=0.2644534707069397 pred=0.1931643933057785 sigreg=0.79296875 lr=5e-05 pusht=0.2506255805492401 tworoom=0.26576974987983704 cube=0.27745333313941956 gpu_peak_mb=904.68896484375
+2026-10-20 20:48:08,640 INFO step 4 loss=0.2523874342441559 pred=0.18158665299415588 sigreg=0.78515625 lr=0.0 pusht=0.26481735706329346 tworoom=0.25604110956192017 cube=0.23630383610725403 gpu_peak_mb=904.71630859375
+2026-10-20 20:48:11,553 INFO fit end {'global_step': 4, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 904.71630859375}
+2026-10-20 20:48:11,895 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/lewm_generalist_resume2_smoke/checkpoints/resume.ckpt

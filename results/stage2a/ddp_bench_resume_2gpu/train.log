@@ -1,0 +1,11 @@
+2026-10-20 21:35:19,536 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/ddp_bench_resume_2gpu
+2026-10-20 21:35:19,536 INFO rank 0 world 2
+2026-10-20 21:35:21,967 INFO schedule_steps=2 lr=5e-05 effective_per_env=16 dropped=12
+2026-10-20 21:36:40,201 INFO fit end {'global_step': 2, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 2734.06884765625}
+2026-10-20 21:36:40,202 INFO benchmark {'world_size': 2, 'per_env_per_gpu': 8, 'effective_clips_per_env': 16, 'effective_clips_per_step': 48, 'frames_per_step': 192, 'median_step_s': 1.551504323957488, 'median_data_s': 1.1541624650126323, 'median_sigreg_comm_s': 0.020911103367805484, 'steps_per_s': 0.6445357480211577, 'clips_per_s': 30.93771590501557, 'frames_per_s': 123.75086362006228, 'timed_steps': 0, 'grad_norm': 0.9999993488230778, 'nccl_cuda_us': None, 'profile_cuda_us': None, 'nccl_fraction': None, 'gpu_util_mean': {'0': 6.909090909090909, '1': 69.0909090909091, '2': 0.0, '3': 0.0}, 'gpu_mem_mib_max': {'0': 3380.0, '1': 3380.0, '2': 4.0, '3': 4.0}, 'global_step': 2, 'gpu_peak_mb': 2734.06884765625}
+2026-10-20 21:36:40,381 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/ddp_bench_resume_2gpu/checkpoints/resume.ckpt
+2026-10-20 21:36:52,741 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/ddp_bench_resume_2gpu
+2026-10-20 21:36:52,741 INFO rank 0 world 2
+2026-10-20 21:36:55,348 INFO schedule_steps=4 lr=5e-05 effective_per_env=16 dropped=12
+2026-10-20 21:38:09,673 INFO fit end {'global_step': 2, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 280.1181640625}
+2026-10-20 21:38:09,673 INFO benchmark {'world_size': 2, 'per_env_per_gpu': 8, 'effective_clips_per_env': 16, 'effective_clips_per_step': 48, 'frames_per_step': 192, 'median_step_s': None, 'median_data_s': None, 'median_sigreg_comm_s': None, 'steps_per_s': None, 'clips_per_s': None, 'frames_per_s': None, 'timed_steps': 0, 'grad_norm': None, 'nccl_cuda_us': None, 'profile_cuda_us': None, 'nccl_fraction': None, 'gpu_util_mean': {}, 'gpu_mem_mib_max': {}, 'global_step': 2, 'gpu_peak_mb': 280.1181640625}

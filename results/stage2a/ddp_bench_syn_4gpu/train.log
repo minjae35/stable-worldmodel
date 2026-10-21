@@ -1,0 +1,6 @@
+2026-10-20 21:32:57,731 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/ddp_bench_syn_4gpu
+2026-10-20 21:32:57,731 INFO rank 0 world 4
+2026-10-20 21:33:00,372 INFO schedule_steps=16 lr=5e-05 effective_per_env=128 dropped=0
+2026-10-20 21:34:30,679 INFO fit end {'global_step': 16, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 9799.52587890625}
+2026-10-20 21:34:30,680 INFO benchmark {'world_size': 4, 'per_env_per_gpu': 32, 'effective_clips_per_env': 128, 'effective_clips_per_step': 384, 'frames_per_step': 1536, 'median_step_s': 0.4124817699776031, 'median_data_s': 0.023158478026743978, 'median_sigreg_comm_s': 0.002957312047481537, 'steps_per_s': 2.424349565931842, 'clips_per_s': 930.9502333178274, 'frames_per_s': 3723.8009332713095, 'timed_steps': 11, 'grad_norm': 0.9999998269348058, 'nccl_cuda_us': 0, 'profile_cuda_us': 0, 'nccl_fraction': None, 'gpu_util_mean': {'0': 38.5, '1': 57.107142857142854, '2': 57.0, '3': 59.214285714285715}, 'gpu_mem_mib_max': {'0': 10484.0, '1': 10472.0, '2': 10472.0, '3': 10472.0}, 'global_step': 16, 'gpu_peak_mb': 9799.52587890625}
+2026-10-20 21:34:30,892 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/ddp_bench_syn_4gpu/checkpoints/resume.ckpt

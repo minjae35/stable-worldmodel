@@ -1,0 +1,16 @@
+=== stage2a tmux smoke start 2026-10-20T20:39:18+00:00 ===
+=== run 1: 2 steps ===
+EXIT1:1
+=== run 2: resume through step 4 ===
+EXIT2:1
+=== run 3: memory probe, 2 steps, 8 clips/env ===
+EXIT3:1
+=== stage2a tmux smoke done 2026-10-20T20:39:47+00:00 ===
+=== stage2a tmux smoke start 2026-10-20T20:40:06+00:00 ===
+=== run 1: 2 steps ===
+EXIT1:0
+=== run 2: resume through step 4 ===
+EXIT2:0
+=== run 3: memory probe, 2 steps, 8 clips/env ===
+EXIT3:0
+=== stage2a tmux smoke done 2026-10-20T20:41:05+00:00 ===

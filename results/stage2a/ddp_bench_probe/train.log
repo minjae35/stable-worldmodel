@@ -1,0 +1,6 @@
+2026-10-20 21:29:47,567 INFO experiment dir /workspace/stable-worldmodel/results/stage2a/ddp_bench_probe
+2026-10-20 21:29:47,567 INFO rank 0 world 1
+2026-10-20 21:29:50,359 INFO schedule_steps=2 lr=5e-05 effective_per_env=8 dropped=4
+2026-10-20 21:29:54,590 INFO fit end {'global_step': 2, 'current_epoch': 1, 'gpu_mem_mb': 0.0, 'gpu_peak_mb': 2664.34130859375}
+2026-10-20 21:29:54,590 INFO benchmark {'world_size': 1, 'per_env_per_gpu': 8, 'effective_clips_per_env': 8, 'effective_clips_per_step': 24, 'frames_per_step': 96, 'median_step_s': 1.372008585021831, 'median_data_s': 0.20908024301752448, 'median_sigreg_comm_s': 0.0, 'steps_per_s': 0.7288584130718746, 'clips_per_s': 17.49260191372499, 'frames_per_s': 69.97040765489996, 'timed_steps': 0, 'grad_norm': 0.9999993187805623, 'nccl_cuda_us': None, 'profile_cuda_us': None, 'nccl_fraction': None, 'gpu_util_mean': {'0': 10.5, '1': 0.0, '2': 0.0, '3': 0.0}, 'gpu_mem_mib_max': {'0': 3102.0, '1': 4.0, '2': 4.0, '3': 4.0}, 'global_step': 2, 'gpu_peak_mb': 2664.34130859375}
+2026-10-20 21:29:54,788 INFO resume checkpoint /workspace/stable-worldmodel/results/stage2a/ddp_bench_probe/checkpoints/resume.ckpt

@@ -1,0 +1,33 @@
+{
+  "checkpoint": "/workspace/model-checkpoints/point-cloud-pusht/dino-wm",
+  "architecture": "gaoyuezhou/dino_wm VWorldModel",
+  "dataset": "/workspace/datasets/lewm-pusht",
+  "encoder": "dinov2_vits14 frozen, images resized 224 -> 196",
+  "pixels": "default_transform: [0, 1] then Normalize(0.5)",
+  "rgb_only": true,
+  "proprio": "noprop arm. proprio_key is null. Train and plan feed a constant zero of dim 1. The 10-d slot stays in the latent. PushT state is not an input, and the proprio term is not in the cost.",
+  "action_normalization": {
+    "mean": [
+      -0.007812564379916172,
+      0.006860687229453032
+    ],
+    "std": [
+      0.20846744284501714,
+      0.20674862637362224
+    ],
+    "source": "swm_h5_norm_stats.json"
+  },
+  "cost": "last-frame visual patch MSE",
+  "plan_config": {
+    "horizon": 5,
+    "receding_horizon": 1,
+    "action_block": 5,
+    "history_len": 3,
+    "warm_start": true
+  },
+  "cem_seed": "42 + pair_index",
+  "pairs": "results/stage0/eval100/pairs.json",
+  "gpu": 3,
+  "pair_start": 75,
+  "pair_end": 100
+}

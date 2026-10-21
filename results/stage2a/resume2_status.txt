@@ -1,0 +1,6 @@
+=== resume smoke start 2026-10-20T20:47:33+00:00 ===
+=== run 1: 2 steps ===
+EXIT1:0
+=== run 2: resume through step 4 ===
+EXIT2:0
+=== resume smoke done 2026-10-20T20:48:14+00:00 ===

@@ -1,0 +1,612 @@
+{
+  "seed": 42,
+  "n_episodes": 18685,
+  "n_holdout": 1868,
+  "holdout_episode_id_min": 16817,
+  "holdout_episode_id_max": 18684,
+  "sampling": "First 10 pairs are the original seed-42 holdout sample, copied from results/stage0/metrics.json. The other 90 are drawn with a fresh np.random.default_rng(42) from the same last-10% episode ids, excluding those 10 episodes, one random start each. This is not a prefix of sampling 100 pairs from the original generator.",
+  "cem_seed": "Diagnosis uses one shared CEM generator seeded with 42, matching the original 10-pair batch. Each of the 100 episodes uses manual_seed(42 + pair_index) so results do not depend on order and a resume does not replay finished episodes.",
+  "limitation": "quentinll/lewm-pusht publishes only the training table (pusht_expert_train / hf://datasets/fracapuano/lewm-pusht/train.lance). There is no official test split. Training fits action normalization on the full table and splits clips, not episodes, so the released checkpoint may still have been trained on these held-out episode ids.",
+  "pairs": [
+    {
+      "pair_index": 0,
+      "episode_idx": 16977,
+      "start_step": 18,
+      "source": "original10"
+    },
+    {
+      "pair_index": 1,
+      "episode_idx": 18256,
+      "start_step": 38,
+      "source": "original10"
+    },
+    {
+      "pair_index": 2,
+      "episode_idx": 16982,
+      "start_step": 15,
+      "source": "original10"
+    },
+    {
+      "pair_index": 3,
+      "episode_idx": 18035,
+      "start_step": 11,
+      "source": "original10"
+    },
+    {
+      "pair_index": 4,
+      "episode_idx": 17634,
+      "start_step": 112,
+      "source": "original10"
+    },
+    {
+      "pair_index": 5,
+      "episode_idx": 17623,
+      "start_step": 94,
+      "source": "original10"
+    },
+    {
+      "pair_index": 6,
+      "episode_idx": 18118,
+      "start_step": 45,
+      "source": "original10"
+    },
+    {
+      "pair_index": 7,
+      "episode_idx": 16992,
+      "start_step": 16,
+      "source": "original10"
+    },
+    {
+      "pair_index": 8,
+      "episode_idx": 17193,
+      "start_step": 83,
+      "source": "original10"
+    },
+    {
+      "pair_index": 9,
+      "episode_idx": 18417,
+      "start_step": 38,
+      "source": "original10"
+    },
+    {
+      "pair_index": 10,
+      "episode_idx": 18487,
+      "start_step": 40,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 11,
+      "episode_idx": 16986,
+      "start_step": 39,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 12,
+      "episode_idx": 18240,
+      "start_step": 11,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 13,
+      "episode_idx": 18676,
+      "start_step": 43,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 14,
+      "episode_idx": 18197,
+      "start_step": 53,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 15,
+      "episode_idx": 17484,
+      "start_step": 39,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 16,
+      "episode_idx": 18349,
+      "start_step": 22,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 17,
+      "episode_idx": 18587,
+      "start_step": 14,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 18,
+      "episode_idx": 17059,
+      "start_step": 16,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 19,
+      "episode_idx": 18061,
+      "start_step": 15,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 20,
+      "episode_idx": 17430,
+      "start_step": 23,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 21,
+      "episode_idx": 16940,
+      "start_step": 59,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 22,
+      "episode_idx": 18599,
+      "start_step": 55,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 23,
+      "episode_idx": 16896,
+      "start_step": 52,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 24,
+      "episode_idx": 18326,
+      "start_step": 18,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 25,
+      "episode_idx": 18368,
+      "start_step": 47,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 26,
+      "episode_idx": 17700,
+      "start_step": 9,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 27,
+      "episode_idx": 17730,
+      "start_step": 39,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 28,
+      "episode_idx": 17146,
+      "start_step": 15,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 29,
+      "episode_idx": 17686,
+      "start_step": 38,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 30,
+      "episode_idx": 17989,
+      "start_step": 61,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 31,
+      "episode_idx": 17675,
+      "start_step": 41,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 32,
+      "episode_idx": 18135,
+      "start_step": 63,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 33,
+      "episode_idx": 17598,
+      "start_step": 59,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 34,
+      "episode_idx": 17739,
+      "start_step": 79,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 35,
+      "episode_idx": 18565,
+      "start_step": 36,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 36,
+      "episode_idx": 18289,
+      "start_step": 13,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 37,
+      "episode_idx": 18427,
+      "start_step": 54,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 38,
+      "episode_idx": 17321,
+      "start_step": 173,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 39,
+      "episode_idx": 17978,
+      "start_step": 16,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 40,
+      "episode_idx": 17418,
+      "start_step": 59,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 41,
+      "episode_idx": 17463,
+      "start_step": 20,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 42,
+      "episode_idx": 18062,
+      "start_step": 45,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 43,
+      "episode_idx": 18092,
+      "start_step": 55,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 44,
+      "episode_idx": 17174,
+      "start_step": 45,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 45,
+      "episode_idx": 16932,
+      "start_step": 64,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 46,
+      "episode_idx": 18187,
+      "start_step": 20,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 47,
+      "episode_idx": 17759,
+      "start_step": 9,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 48,
+      "episode_idx": 18123,
+      "start_step": 6,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 49,
+      "episode_idx": 18183,
+      "start_step": 34,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 50,
+      "episode_idx": 17048,
+      "start_step": 37,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 51,
+      "episode_idx": 18103,
+      "start_step": 8,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 52,
+      "episode_idx": 18194,
+      "start_step": 35,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 53,
+      "episode_idx": 17630,
+      "start_step": 85,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 54,
+      "episode_idx": 18181,
+      "start_step": 15,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 55,
+      "episode_idx": 17574,
+      "start_step": 87,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 56,
+      "episode_idx": 17117,
+      "start_step": 40,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 57,
+      "episode_idx": 16957,
+      "start_step": 70,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 58,
+      "episode_idx": 18303,
+      "start_step": 28,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 59,
+      "episode_idx": 17803,
+      "start_step": 91,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 60,
+      "episode_idx": 16984,
+      "start_step": 7,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 61,
+      "episode_idx": 17618,
+      "start_step": 56,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 62,
+      "episode_idx": 17118,
+      "start_step": 114,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 63,
+      "episode_idx": 17588,
+      "start_step": 2,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 64,
+      "episode_idx": 17230,
+      "start_step": 76,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 65,
+      "episode_idx": 18448,
+      "start_step": 34,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 66,
+      "episode_idx": 17400,
+      "start_step": 55,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 67,
+      "episode_idx": 17501,
+      "start_step": 52,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 68,
+      "episode_idx": 18372,
+      "start_step": 21,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 69,
+      "episode_idx": 17543,
+      "start_step": 24,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 70,
+      "episode_idx": 16969,
+      "start_step": 26,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 71,
+      "episode_idx": 17865,
+      "start_step": 23,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 72,
+      "episode_idx": 17178,
+      "start_step": 58,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 73,
+      "episode_idx": 17982,
+      "start_step": 6,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 74,
+      "episode_idx": 18375,
+      "start_step": 32,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 75,
+      "episode_idx": 18250,
+      "start_step": 48,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 76,
+      "episode_idx": 17632,
+      "start_step": 10,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 77,
+      "episode_idx": 18320,
+      "start_step": 37,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 78,
+      "episode_idx": 17673,
+      "start_step": 50,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 79,
+      "episode_idx": 17627,
+      "start_step": 95,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 80,
+      "episode_idx": 18207,
+      "start_step": 3,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 81,
+      "episode_idx": 17000,
+      "start_step": 7,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 82,
+      "episode_idx": 18055,
+      "start_step": 31,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 83,
+      "episode_idx": 17101,
+      "start_step": 25,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 84,
+      "episode_idx": 18072,
+      "start_step": 21,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 85,
+      "episode_idx": 18514,
+      "start_step": 52,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 86,
+      "episode_idx": 16974,
+      "start_step": 6,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 87,
+      "episode_idx": 17492,
+      "start_step": 53,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 88,
+      "episode_idx": 18227,
+      "start_step": 7,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 89,
+      "episode_idx": 18488,
+      "start_step": 14,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 90,
+      "episode_idx": 18563,
+      "start_step": 47,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 91,
+      "episode_idx": 17483,
+      "start_step": 62,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 92,
+      "episode_idx": 17820,
+      "start_step": 28,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 93,
+      "episode_idx": 17718,
+      "start_step": 34,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 94,
+      "episode_idx": 18226,
+      "start_step": 71,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 95,
+      "episode_idx": 17239,
+      "start_step": 99,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 96,
+      "episode_idx": 17822,
+      "start_step": 97,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 97,
+      "episode_idx": 18089,
+      "start_step": 31,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 98,
+      "episode_idx": 17168,
+      "start_step": 46,
+      "source": "holdout_seed42_excluding_original10"
+    },
+    {
+      "pair_index": 99,
+      "episode_idx": 17965,
+      "start_step": 67,
+      "source": "holdout_seed42_excluding_original10"
+    }
+  ]
+}

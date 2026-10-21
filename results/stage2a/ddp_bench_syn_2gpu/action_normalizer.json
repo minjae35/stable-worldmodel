@@ -1,0 +1,18 @@
+{
+  "method": "none",
+  "fit_on": "not fit; synthetic benchmark clips",
+  "envs": {
+    "pusht": {
+      "blocked_action_dim": 10,
+      "note": "synthetic cached clips, actions are not normalized"
+    },
+    "tworoom": {
+      "blocked_action_dim": 10,
+      "note": "synthetic cached clips, actions are not normalized"
+    },
+    "cube": {
+      "blocked_action_dim": 25,
+      "note": "synthetic cached clips, actions are not normalized"
+    }
+  }
+}

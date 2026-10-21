@@ -1,0 +1,26 @@
+=== ddp bench start 2026-10-20T21:13:04+00:00 ===
+=== sigreg 2-gpu check ===
+SIGREG_EXIT:0
+=== bench 1 gpu 2026-10-20T21:13:16+00:00 ===
+BENCH1_EXIT:1
+=== bench 2 gpu 2026-10-20T21:13:27+00:00 ===
+BENCH2_EXIT:1
+=== bench 4 gpu 2026-10-20T21:13:38+00:00 ===
+BENCH4_EXIT:1
+=== resume 2-gpu ===
+RESUME1_EXIT:1
+RESUME2_EXIT:1
+=== ddp bench done 2026-10-20T21:14:08+00:00 ===
+=== ddp bench retry 2026-10-20T21:16:11+00:00 ===
+=== sigreg 2-gpu check ===
+SIGREG_EXIT:0
+=== bench 1 gpu 2026-10-20T21:16:23+00:00 ===
+BENCH1_EXIT:0
+=== bench 2 gpu 2026-10-20T21:16:43+00:00 ===
+BENCH2_EXIT:0
+=== bench 4 gpu 2026-10-20T21:18:20+00:00 ===
+BENCH4_EXIT:0
+=== resume 2-gpu ===
+RESUME1_EXIT:0
+RESUME2_EXIT:0
+=== ddp bench done 2026-10-20T21:23:08+00:00 ===
