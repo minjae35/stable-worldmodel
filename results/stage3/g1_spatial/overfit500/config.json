@@ -1,0 +1,122 @@
+{
+  "seed": 3072,
+  "steps": 500,
+  "n_train": 96,
+  "n_test": 32,
+  "batch_per_env": 16,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "grad_clip": 1.0,
+  "frameskip": 5,
+  "history": 1,
+  "grid": 16,
+  "token_dim": 384,
+  "hidden": 256,
+  "depth": 6,
+  "heads": 8,
+  "mlp_ratio": 4,
+  "dropout": 0.0,
+  "image_size": 224,
+  "action_raw_dim": {
+    "pusht": 2,
+    "tworoom": 2,
+    "cube": 5
+  },
+  "action_blocked_dim": {
+    "pusht": 10,
+    "tworoom": 10,
+    "cube": 25
+  },
+  "action_norm": "z-score fit on the 96 train clips of each env only",
+  "objective": "one-step uniform spatial MSE. Not a planning cost.",
+  "design": "Factorized spatial attention plus causal temporal attention, instead of one flat sequence. Depth 6 and hidden 256 are unchanged. History is 1 for this one-step test; history 2 is covered by the causal-mask unit tests. Actions use a nonzero MLP, not AdaLN-zero. Clips are spread across each dataset and, within an episode, taken at the candidate step with the largest control-relevant state move.",
+  "weights_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+  "parameters": 6794368,
+  "shapes": {
+    "pusht": {
+      "context": [
+        2,
+        1,
+        256,
+        384
+      ],
+      "action": [
+        2,
+        1,
+        10
+      ],
+      "env_id": [
+        2
+      ],
+      "prediction": [
+        2,
+        1,
+        256,
+        384
+      ],
+      "target": [
+        2,
+        1,
+        256,
+        384
+      ]
+    },
+    "tworoom": {
+      "context": [
+        2,
+        1,
+        256,
+        384
+      ],
+      "action": [
+        2,
+        1,
+        10
+      ],
+      "env_id": [
+        2
+      ],
+      "prediction": [
+        2,
+        1,
+        256,
+        384
+      ],
+      "target": [
+        2,
+        1,
+        256,
+        384
+      ]
+    },
+    "cube": {
+      "context": [
+        2,
+        1,
+        256,
+        384
+      ],
+      "action": [
+        2,
+        1,
+        25
+      ],
+      "env_id": [
+        2
+      ],
+      "prediction": [
+        2,
+        1,
+        256,
+        384
+      ],
+      "target": [
+        2,
+        1,
+        256,
+        384
+      ]
+    }
+  },
+  "encode_peak_gb": 0.2619614601135254
+}

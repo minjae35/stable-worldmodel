@@ -1,0 +1,1190 @@
+[
+  {
+    "step": 0,
+    "pusht": {
+      "train": {
+        "mse_correct": 7.126412391662598,
+        "mse_persistence": 0.39172491431236267,
+        "mse_shuffle": 7.126313209533691,
+        "mse_no_action": 7.124928951263428,
+        "moving_correct": {
+          "moving_mse": 6.813502788543701,
+          "static_mse": 7.439321994781494,
+          "moving_persistence": 0.7255723476409912,
+          "static_persistence": 0.05787750706076622,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 6.813385009765625,
+          "static_mse": 7.439239978790283,
+          "moving_persistence": 0.7255723476409912,
+          "static_persistence": 0.05787750706076622,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 6.8108439445495605,
+          "static_mse": 7.439013957977295,
+          "moving_persistence": 0.7255723476409912,
+          "static_persistence": 0.05787750706076622,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 189.56463606287613,
+            "persistence": 101.4161806870104,
+            "ceiling": 6.570309632250328e-05,
+            "shuffle": 190.0647662794461,
+            "no_action": 189.1931772140159,
+            "same_frame_readout": 6.749421116633214e-05,
+            "true_motion": 101.41622161865234
+          },
+          "block_xy": {
+            "correct": 100.77487351668661,
+            "persistence": 4.11893107688917,
+            "ceiling": 3.469591621524828e-05,
+            "shuffle": 101.7852704582515,
+            "no_action": 101.60342927358674,
+            "same_frame_readout": 3.2151438561556006e-05,
+            "true_motion": 4.11890172958374
+          },
+          "block_angle": {
+            "correct": 121.73255241251991,
+            "persistence": 1.2358904310021288,
+            "ceiling": 9.497249304432714e-05,
+            "shuffle": 120.66760988726725,
+            "no_action": 121.50277957884113,
+            "same_frame_readout": 9.858210964081001e-05,
+            "true_motion": 1.2357994318008423
+          }
+        },
+        "mean_state_motion": 103.02323150634766
+      },
+      "test": {
+        "mse_correct": 7.062524318695068,
+        "mse_persistence": 0.38516727089881897,
+        "mse_shuffle": 7.06254243850708,
+        "mse_no_action": 7.060863018035889,
+        "moving_correct": {
+          "moving_mse": 6.744941711425781,
+          "static_mse": 7.380105018615723,
+          "moving_persistence": 0.7051823735237122,
+          "static_persistence": 0.06515223532915115,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 6.745296955108643,
+          "static_mse": 7.379787445068359,
+          "moving_persistence": 0.7051823735237122,
+          "static_persistence": 0.06515223532915115,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 6.742656230926514,
+          "static_mse": 7.3790693283081055,
+          "moving_persistence": 0.7051823735237122,
+          "static_persistence": 0.06515223532915115,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 165.24384777277317,
+            "persistence": 102.12484735134811,
+            "ceiling": 30.986020440107254,
+            "shuffle": 164.90614263893605,
+            "no_action": 164.58663625235152,
+            "same_frame_readout": 31.56263692847289,
+            "true_motion": 105.15357208251953
+          },
+          "block_xy": {
+            "correct": 83.02329257016905,
+            "persistence": 25.59639134527012,
+            "ceiling": 24.091357668428408,
+            "shuffle": 83.47993909232817,
+            "no_action": 84.38685366067682,
+            "same_frame_readout": 24.44651331301728,
+            "true_motion": 1.9614449739456177
+          },
+          "block_angle": {
+            "correct": 111.59627255702566,
+            "persistence": 60.230034724943536,
+            "ceiling": 55.820401386613185,
+            "shuffle": 110.78654519144534,
+            "no_action": 110.6889167105104,
+            "same_frame_readout": 59.80198397895981,
+            "true_motion": 1.2240139245986938
+          }
+        },
+        "mean_state_motion": 105.739013671875
+      }
+    },
+    "tworoom": {
+      "train": {
+        "mse_correct": 7.077675819396973,
+        "mse_persistence": 0.7115737199783325,
+        "mse_shuffle": 7.0780415534973145,
+        "mse_no_action": 7.077980995178223,
+        "moving_correct": {
+          "moving_mse": 6.729409694671631,
+          "static_mse": 7.4259419441223145,
+          "moving_persistence": 1.2596818208694458,
+          "static_persistence": 0.16346542537212372,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 6.730104923248291,
+          "static_mse": 7.42597770690918,
+          "moving_persistence": 1.2596818208694458,
+          "static_persistence": 0.16346542537212372,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 6.729385852813721,
+          "static_mse": 7.426576137542725,
+          "moving_persistence": 1.2596818208694458,
+          "static_persistence": 0.16346542537212372,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 57.81920654901088,
+            "persistence": 25.86206754295615,
+            "ceiling": 1.5631368876382588e-05,
+            "shuffle": 57.84687137335336,
+            "no_action": 57.891900814753534,
+            "same_frame_readout": 1.4479749690318454e-05,
+            "true_motion": 25.86206817626953
+          }
+        },
+        "mean_state_motion": 25.86206817626953
+      },
+      "test": {
+        "mse_correct": 7.019927978515625,
+        "mse_persistence": 0.7829245924949646,
+        "mse_shuffle": 7.019800186157227,
+        "mse_no_action": 7.021627902984619,
+        "moving_correct": {
+          "moving_mse": 6.675722599029541,
+          "static_mse": 7.364135265350342,
+          "moving_persistence": 1.3735942840576172,
+          "static_persistence": 0.192254900932312,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 6.675601482391357,
+          "static_mse": 7.36400032043457,
+          "moving_persistence": 1.3735942840576172,
+          "static_persistence": 0.192254900932312,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 6.676839828491211,
+          "static_mse": 7.366417407989502,
+          "moving_persistence": 1.3735942840576172,
+          "static_persistence": 0.192254900932312,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 57.32558202042687,
+            "persistence": 26.714614814400367,
+            "ceiling": 1.4627583739259427,
+            "shuffle": 57.299728083730955,
+            "no_action": 57.36424469815132,
+            "same_frame_readout": 1.4469523058167983,
+            "true_motion": 26.696334838867188
+          }
+        },
+        "mean_state_motion": 26.696334838867188
+      }
+    },
+    "cube": {
+      "train": {
+        "mse_correct": 6.67664098739624,
+        "mse_persistence": 1.8819605112075806,
+        "mse_shuffle": 6.676984786987305,
+        "mse_no_action": 6.675487041473389,
+        "moving_correct": {
+          "moving_mse": 6.271481990814209,
+          "static_mse": 7.081799030303955,
+          "moving_persistence": 3.3249969482421875,
+          "static_persistence": 0.43892404437065125,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 6.27216911315918,
+          "static_mse": 7.081800937652588,
+          "moving_persistence": 3.3249969482421875,
+          "static_persistence": 0.43892404437065125,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 6.270503997802734,
+          "static_mse": 7.080471038818359,
+          "moving_persistence": 3.3249969482421875,
+          "static_persistence": 0.43892404437065125,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "block_xyz": {
+            "correct": 0.26141700292329956,
+            "persistence": 0.12770686494124414,
+            "ceiling": 2.2807209631921943e-08,
+            "shuffle": 0.26162838998594323,
+            "no_action": 0.26026474907993186,
+            "same_frame_readout": 2.3571214029171658e-08,
+            "true_motion": 0.1277068704366684
+          },
+          "effector_xyz": {
+            "correct": 0.27264999928459227,
+            "persistence": 0.128243964523518,
+            "ceiling": 2.2832774549527915e-08,
+            "shuffle": 0.2726448899809571,
+            "no_action": 0.2712094079688672,
+            "same_frame_readout": 2.2719962992209774e-08,
+            "true_motion": 0.12824396789073944
+          }
+        },
+        "mean_state_motion": 0.1277068704366684
+      },
+      "test": {
+        "mse_correct": 6.685753345489502,
+        "mse_persistence": 1.8465486764907837,
+        "mse_shuffle": 6.6874518394470215,
+        "mse_no_action": 6.681207180023193,
+        "moving_correct": {
+          "moving_mse": 6.2726640701293945,
+          "static_mse": 7.098841667175293,
+          "moving_persistence": 3.2683091163635254,
+          "static_persistence": 0.424788236618042,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 6.274806022644043,
+          "static_mse": 7.100096225738525,
+          "moving_persistence": 3.2683091163635254,
+          "static_persistence": 0.424788236618042,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 6.267307758331299,
+          "static_mse": 7.095104217529297,
+          "moving_persistence": 3.2683091163635254,
+          "static_persistence": 0.424788236618042,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "block_xyz": {
+            "correct": 0.26855330787517184,
+            "persistence": 0.1269855143099647,
+            "ceiling": 0.02517853854448697,
+            "shuffle": 0.26855682925523594,
+            "no_action": 0.26733868073961514,
+            "same_frame_readout": 0.01987598972278961,
+            "true_motion": 0.12779098749160767
+          },
+          "effector_xyz": {
+            "correct": 0.27845017348873036,
+            "persistence": 0.12635962621140298,
+            "ceiling": 0.024429900605669366,
+            "shuffle": 0.278591153372023,
+            "no_action": 0.2770944838239879,
+            "same_frame_readout": 0.019923950261627906,
+            "true_motion": 0.12785273790359497
+          }
+        },
+        "mean_state_motion": 0.12779098749160767
+      }
+    }
+  },
+  {
+    "step": 100,
+    "pusht": {
+      "train": {
+        "mse_correct": 0.5443012714385986,
+        "mse_persistence": 0.39172491431236267,
+        "mse_shuffle": 0.5500741004943848,
+        "mse_no_action": 0.5480650663375854,
+        "moving_correct": {
+          "moving_mse": 0.7466090321540833,
+          "static_mse": 0.3419935405254364,
+          "moving_persistence": 0.7255723476409912,
+          "static_persistence": 0.05787750706076622,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 0.7552008032798767,
+          "static_mse": 0.34494754672050476,
+          "moving_persistence": 0.7255723476409912,
+          "static_persistence": 0.05787750706076622,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 0.7532844543457031,
+          "static_mse": 0.34284570813179016,
+          "moving_persistence": 0.7255723476409912,
+          "static_persistence": 0.05787750706076622,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 100.45199504847885,
+            "persistence": 101.4161806870104,
+            "ceiling": 6.570309632250328e-05,
+            "shuffle": 106.69222472330132,
+            "no_action": 106.41161459533912,
+            "same_frame_readout": 6.749421116633214e-05,
+            "true_motion": 101.41622161865234
+          },
+          "block_xy": {
+            "correct": 38.82620757215249,
+            "persistence": 4.11893107688917,
+            "ceiling": 3.469591621524828e-05,
+            "shuffle": 39.900552444044784,
+            "no_action": 39.613673318561446,
+            "same_frame_readout": 3.2151438561556006e-05,
+            "true_motion": 4.11890172958374
+          },
+          "block_angle": {
+            "correct": 72.71171661060332,
+            "persistence": 1.2358904310021288,
+            "ceiling": 9.497249304432714e-05,
+            "shuffle": 72.26396863249202,
+            "no_action": 72.95388031431257,
+            "same_frame_readout": 9.858210964081001e-05,
+            "true_motion": 1.2357994318008423
+          }
+        },
+        "mean_state_motion": 103.02323150634766
+      },
+      "test": {
+        "mse_correct": 0.5459079146385193,
+        "mse_persistence": 0.38516727089881897,
+        "mse_shuffle": 0.5510256290435791,
+        "mse_no_action": 0.5483312010765076,
+        "moving_correct": {
+          "moving_mse": 0.7433724999427795,
+          "static_mse": 0.34844329953193665,
+          "moving_persistence": 0.7051823735237122,
+          "static_persistence": 0.06515223532915115,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 0.7518025636672974,
+          "static_mse": 0.3502488136291504,
+          "moving_persistence": 0.7051823735237122,
+          "static_persistence": 0.06515223532915115,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 0.7488608360290527,
+          "static_mse": 0.3478016257286072,
+          "moving_persistence": 0.7051823735237122,
+          "static_persistence": 0.06515223532915115,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 102.22935776265949,
+            "persistence": 102.12484735134811,
+            "ceiling": 30.986020440107254,
+            "shuffle": 106.48836205021286,
+            "no_action": 107.34810950569363,
+            "same_frame_readout": 31.56263692847289,
+            "true_motion": 105.15357208251953
+          },
+          "block_xy": {
+            "correct": 39.06174874819277,
+            "persistence": 25.59639134527012,
+            "ceiling": 24.091357668428408,
+            "shuffle": 39.325361343662564,
+            "no_action": 39.622227410169714,
+            "same_frame_readout": 24.44651331301728,
+            "true_motion": 1.9614449739456177
+          },
+          "block_angle": {
+            "correct": 69.8243062555675,
+            "persistence": 60.230034724943536,
+            "ceiling": 55.820401386613185,
+            "shuffle": 69.01566272395505,
+            "no_action": 69.68558568031725,
+            "same_frame_readout": 59.80198397895981,
+            "true_motion": 1.2240139245986938
+          }
+        },
+        "mean_state_motion": 105.739013671875
+      }
+    },
+    "tworoom": {
+      "train": {
+        "mse_correct": 0.6027205586433411,
+        "mse_persistence": 0.7115737199783325,
+        "mse_shuffle": 0.6359261274337769,
+        "mse_no_action": 0.6212387084960938,
+        "moving_correct": {
+          "moving_mse": 0.8881338238716125,
+          "static_mse": 0.31730738282203674,
+          "moving_persistence": 1.2596818208694458,
+          "static_persistence": 0.16346542537212372,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 0.9410472512245178,
+          "static_mse": 0.3308050036430359,
+          "moving_persistence": 1.2596818208694458,
+          "static_persistence": 0.16346542537212372,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 0.9221085906028748,
+          "static_mse": 0.32036876678466797,
+          "moving_persistence": 1.2596818208694458,
+          "static_persistence": 0.16346542537212372,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 18.48826282863609,
+            "persistence": 25.86206754295615,
+            "ceiling": 1.5631368876382588e-05,
+            "shuffle": 21.65218110301869,
+            "no_action": 20.867838096359524,
+            "same_frame_readout": 1.4479749690318454e-05,
+            "true_motion": 25.86206817626953
+          }
+        },
+        "mean_state_motion": 25.86206817626953
+      },
+      "test": {
+        "mse_correct": 0.6577907800674438,
+        "mse_persistence": 0.7829245924949646,
+        "mse_shuffle": 0.6736510396003723,
+        "mse_no_action": 0.6656222939491272,
+        "moving_correct": {
+          "moving_mse": 0.9893418550491333,
+          "static_mse": 0.32623961567878723,
+          "moving_persistence": 1.3735942840576172,
+          "static_persistence": 0.192254900932312,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 1.0209606885910034,
+          "static_mse": 0.3263414800167084,
+          "moving_persistence": 1.3735942840576172,
+          "static_persistence": 0.192254900932312,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 1.0091160535812378,
+          "static_mse": 0.3221283555030823,
+          "moving_persistence": 1.3735942840576172,
+          "static_persistence": 0.192254900932312,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 21.43708352986601,
+            "persistence": 26.714614814400367,
+            "ceiling": 1.4627583739259427,
+            "shuffle": 25.25537287420873,
+            "no_action": 24.714227566116374,
+            "same_frame_readout": 1.4469523058167983,
+            "true_motion": 26.696334838867188
+          }
+        },
+        "mean_state_motion": 26.696334838867188
+      }
+    },
+    "cube": {
+      "train": {
+        "mse_correct": 1.2686456441879272,
+        "mse_persistence": 1.8819605112075806,
+        "mse_shuffle": 1.445834755897522,
+        "mse_no_action": 1.377543330192566,
+        "moving_correct": {
+          "moving_mse": 1.9489885568618774,
+          "static_mse": 0.5883029103279114,
+          "moving_persistence": 3.3249969482421875,
+          "static_persistence": 0.43892404437065125,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 2.220795154571533,
+          "static_mse": 0.6708741784095764,
+          "moving_persistence": 3.3249969482421875,
+          "static_persistence": 0.43892404437065125,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 2.1599881649017334,
+          "static_mse": 0.5950983166694641,
+          "moving_persistence": 3.3249969482421875,
+          "static_persistence": 0.43892404437065125,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "block_xyz": {
+            "correct": 0.06547642953156785,
+            "persistence": 0.12770686494124414,
+            "ceiling": 2.2807209631921943e-08,
+            "shuffle": 0.11238882392029681,
+            "no_action": 0.10042428937611958,
+            "same_frame_readout": 2.3571214029171658e-08,
+            "true_motion": 0.1277068704366684
+          },
+          "effector_xyz": {
+            "correct": 0.06553205960588226,
+            "persistence": 0.128243964523518,
+            "ceiling": 2.2832774549527915e-08,
+            "shuffle": 0.11324773444154551,
+            "no_action": 0.10109346413512432,
+            "same_frame_readout": 2.2719962992209774e-08,
+            "true_motion": 0.12824396789073944
+          }
+        },
+        "mean_state_motion": 0.1277068704366684
+      },
+      "test": {
+        "mse_correct": 1.3673955202102661,
+        "mse_persistence": 1.8465486764907837,
+        "mse_shuffle": 1.4990352392196655,
+        "mse_no_action": 1.437437653541565,
+        "moving_correct": {
+          "moving_mse": 2.0887210369110107,
+          "static_mse": 0.6460702419281006,
+          "moving_persistence": 3.2683091163635254,
+          "static_persistence": 0.424788236618042,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 2.2981808185577393,
+          "static_mse": 0.6998897194862366,
+          "moving_persistence": 3.2683091163635254,
+          "static_persistence": 0.424788236618042,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 2.243515968322754,
+          "static_mse": 0.6313592195510864,
+          "moving_persistence": 3.2683091163635254,
+          "static_persistence": 0.424788236618042,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "block_xyz": {
+            "correct": 0.08392058074036497,
+            "persistence": 0.1269855143099647,
+            "ceiling": 0.02517853854448697,
+            "shuffle": 0.12663349652984976,
+            "no_action": 0.11598593530944881,
+            "same_frame_readout": 0.01987598972278961,
+            "true_motion": 0.12779098749160767
+          },
+          "effector_xyz": {
+            "correct": 0.08287129808362416,
+            "persistence": 0.12635962621140298,
+            "ceiling": 0.024429900605669366,
+            "shuffle": 0.1265828534137233,
+            "no_action": 0.11554493094881416,
+            "same_frame_readout": 0.019923950261627906,
+            "true_motion": 0.12785273790359497
+          }
+        },
+        "mean_state_motion": 0.12779098749160767
+      }
+    }
+  },
+  {
+    "step": 250,
+    "pusht": {
+      "train": {
+        "mse_correct": 0.31991204619407654,
+        "mse_persistence": 0.39172491431236267,
+        "mse_shuffle": 0.3832792043685913,
+        "mse_no_action": 0.3664610683917999,
+        "moving_correct": {
+          "moving_mse": 0.46046972274780273,
+          "static_mse": 0.17935432493686676,
+          "moving_persistence": 0.7255723476409912,
+          "static_persistence": 0.05787750706076622,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 0.5741801857948303,
+          "static_mse": 0.19237826764583588,
+          "moving_persistence": 0.7255723476409912,
+          "static_persistence": 0.05787750706076622,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 0.5500752329826355,
+          "static_mse": 0.18284690380096436,
+          "moving_persistence": 0.7255723476409912,
+          "static_persistence": 0.05787750706076622,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 47.126330735806334,
+            "persistence": 101.4161806870104,
+            "ceiling": 6.570309632250328e-05,
+            "shuffle": 93.27485544328378,
+            "no_action": 85.63072195393387,
+            "same_frame_readout": 6.749421116633214e-05,
+            "true_motion": 101.41622161865234
+          },
+          "block_xy": {
+            "correct": 29.069955391307293,
+            "persistence": 4.11893107688917,
+            "ceiling": 3.469591621524828e-05,
+            "shuffle": 33.870802741703244,
+            "no_action": 32.565445713559996,
+            "same_frame_readout": 3.2151438561556006e-05,
+            "true_motion": 4.11890172958374
+          },
+          "block_angle": {
+            "correct": 69.95507775493435,
+            "persistence": 1.2358904310021288,
+            "ceiling": 9.497249304432714e-05,
+            "shuffle": 70.22628775957988,
+            "no_action": 72.17997050716407,
+            "same_frame_readout": 9.858210964081001e-05,
+            "true_motion": 1.2357994318008423
+          }
+        },
+        "mean_state_motion": 103.02323150634766
+      },
+      "test": {
+        "mse_correct": 0.38429495692253113,
+        "mse_persistence": 0.38516727089881897,
+        "mse_shuffle": 0.4308438003063202,
+        "mse_no_action": 0.41238436102867126,
+        "moving_correct": {
+          "moving_mse": 0.5626262426376343,
+          "static_mse": 0.20596353709697723,
+          "moving_persistence": 0.7051823735237122,
+          "static_persistence": 0.06515223532915115,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 0.6494984030723572,
+          "static_mse": 0.212189182639122,
+          "moving_persistence": 0.7051823735237122,
+          "static_persistence": 0.06515223532915115,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 0.6229966282844543,
+          "static_mse": 0.20177216827869415,
+          "moving_persistence": 0.7051823735237122,
+          "static_persistence": 0.06515223532915115,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 65.26576492101944,
+            "persistence": 102.12484735134811,
+            "ceiling": 30.986020440107254,
+            "shuffle": 101.86463901313431,
+            "no_action": 95.18958285742288,
+            "same_frame_readout": 31.56263692847289,
+            "true_motion": 105.15357208251953
+          },
+          "block_xy": {
+            "correct": 35.82528322096054,
+            "persistence": 25.59639134527012,
+            "ceiling": 24.091357668428408,
+            "shuffle": 38.0624866373948,
+            "no_action": 36.574506483238025,
+            "same_frame_readout": 24.44651331301728,
+            "true_motion": 1.9614449739456177
+          },
+          "block_angle": {
+            "correct": 73.36012197802827,
+            "persistence": 60.230034724943536,
+            "ceiling": 55.820401386613185,
+            "shuffle": 73.79559343016565,
+            "no_action": 74.50767755910121,
+            "same_frame_readout": 59.80198397895981,
+            "true_motion": 1.2240139245986938
+          }
+        },
+        "mean_state_motion": 105.739013671875
+      }
+    },
+    "tworoom": {
+      "train": {
+        "mse_correct": 0.2822633981704712,
+        "mse_persistence": 0.7115737199783325,
+        "mse_shuffle": 0.6319334506988525,
+        "mse_no_action": 0.5223053693771362,
+        "moving_correct": {
+          "moving_mse": 0.41214892268180847,
+          "static_mse": 0.1523779034614563,
+          "moving_persistence": 1.2596818208694458,
+          "static_persistence": 0.16346542537212372,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 1.0491410493850708,
+          "static_mse": 0.21472592651844025,
+          "moving_persistence": 1.2596818208694458,
+          "static_persistence": 0.16346542537212372,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 0.8646801114082336,
+          "static_mse": 0.17993062734603882,
+          "moving_persistence": 1.2596818208694458,
+          "static_persistence": 0.16346542537212372,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 6.949315577694733,
+            "persistence": 25.86206754295615,
+            "ceiling": 1.5631368876382588e-05,
+            "shuffle": 26.386340249292175,
+            "no_action": 19.712567026090166,
+            "same_frame_readout": 1.4479749690318454e-05,
+            "true_motion": 25.86206817626953
+          }
+        },
+        "mean_state_motion": 25.86206817626953
+      },
+      "test": {
+        "mse_correct": 0.3749377429485321,
+        "mse_persistence": 0.7829245924949646,
+        "mse_shuffle": 0.6814530491828918,
+        "mse_no_action": 0.5987991690635681,
+        "moving_correct": {
+          "moving_mse": 0.5711240768432617,
+          "static_mse": 0.17875133454799652,
+          "moving_persistence": 1.3735942840576172,
+          "static_persistence": 0.192254900932312,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 1.1454598903656006,
+          "static_mse": 0.21744602918624878,
+          "moving_persistence": 1.3735942840576172,
+          "static_persistence": 0.192254900932312,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 0.9990453720092773,
+          "static_mse": 0.19855301082134247,
+          "moving_persistence": 1.3735942840576172,
+          "static_persistence": 0.192254900932312,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 8.260124898590837,
+            "persistence": 26.714614814400367,
+            "ceiling": 1.4627583739259427,
+            "shuffle": 27.669918596091023,
+            "no_action": 21.392114045352642,
+            "same_frame_readout": 1.4469523058167983,
+            "true_motion": 26.696334838867188
+          }
+        },
+        "mean_state_motion": 26.696334838867188
+      }
+    },
+    "cube": {
+      "train": {
+        "mse_correct": 0.8011176586151123,
+        "mse_persistence": 1.8819605112075806,
+        "mse_shuffle": 1.3926478624343872,
+        "mse_no_action": 1.1949398517608643,
+        "moving_correct": {
+          "moving_mse": 1.2670470476150513,
+          "static_mse": 0.33518823981285095,
+          "moving_persistence": 3.3249969482421875,
+          "static_persistence": 0.43892404437065125,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 2.2042198181152344,
+          "static_mse": 0.5810754895210266,
+          "moving_persistence": 3.3249969482421875,
+          "static_persistence": 0.43892404437065125,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 1.9650774002075195,
+          "static_mse": 0.42480215430259705,
+          "moving_persistence": 3.3249969482421875,
+          "static_persistence": 0.43892404437065125,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "block_xyz": {
+            "correct": 0.03517380877404022,
+            "persistence": 0.12770686494124414,
+            "ceiling": 2.2807209631921943e-08,
+            "shuffle": 0.11576780176050623,
+            "no_action": 0.09246837587970845,
+            "same_frame_readout": 2.3571214029171658e-08,
+            "true_motion": 0.1277068704366684
+          },
+          "effector_xyz": {
+            "correct": 0.03461366381620617,
+            "persistence": 0.128243964523518,
+            "ceiling": 2.2832774549527915e-08,
+            "shuffle": 0.11688395972386208,
+            "no_action": 0.0933840706629792,
+            "same_frame_readout": 2.2719962992209774e-08,
+            "true_motion": 0.12824396789073944
+          }
+        },
+        "mean_state_motion": 0.1277068704366684
+      },
+      "test": {
+        "mse_correct": 1.1442009210586548,
+        "mse_persistence": 1.8465486764907837,
+        "mse_shuffle": 1.5398454666137695,
+        "mse_no_action": 1.3966989517211914,
+        "moving_correct": {
+          "moving_mse": 1.794799566268921,
+          "static_mse": 0.49360203742980957,
+          "moving_persistence": 3.2683091163635254,
+          "static_persistence": 0.424788236618042,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 2.4332942962646484,
+          "static_mse": 0.6463968753814697,
+          "moving_persistence": 3.2683091163635254,
+          "static_persistence": 0.424788236618042,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 2.2785112857818604,
+          "static_mse": 0.5148867964744568,
+          "moving_persistence": 3.2683091163635254,
+          "static_persistence": 0.424788236618042,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "block_xyz": {
+            "correct": 0.06249579781355896,
+            "persistence": 0.1269855143099647,
+            "ceiling": 0.02517853854448697,
+            "shuffle": 0.13222257654043412,
+            "no_action": 0.11099688337694438,
+            "same_frame_readout": 0.01987598972278961,
+            "true_motion": 0.12779098749160767
+          },
+          "effector_xyz": {
+            "correct": 0.062085908412913594,
+            "persistence": 0.12635962621140298,
+            "ceiling": 0.024429900605669366,
+            "shuffle": 0.13296436414974355,
+            "no_action": 0.11119789500008184,
+            "same_frame_readout": 0.019923950261627906,
+            "true_motion": 0.12785273790359497
+          }
+        },
+        "mean_state_motion": 0.12779098749160767
+      }
+    }
+  },
+  {
+    "step": 500,
+    "pusht": {
+      "train": {
+        "mse_correct": 0.1822647601366043,
+        "mse_persistence": 0.39172491431236267,
+        "mse_shuffle": 0.30956965684890747,
+        "mse_no_action": 0.25991153717041016,
+        "moving_correct": {
+          "moving_mse": 0.2501354515552521,
+          "static_mse": 0.11439403146505356,
+          "moving_persistence": 0.7255723476409912,
+          "static_persistence": 0.05787750706076622,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 0.482809454202652,
+          "static_mse": 0.13632988929748535,
+          "moving_persistence": 0.7255723476409912,
+          "static_persistence": 0.05787750706076622,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 0.39400747418403625,
+          "static_mse": 0.12581561505794525,
+          "moving_persistence": 0.7255723476409912,
+          "static_persistence": 0.05787750706076622,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 25.921082569828172,
+            "persistence": 101.4161806870104,
+            "ceiling": 6.570309632250328e-05,
+            "shuffle": 82.65908477465068,
+            "no_action": 65.55042531415192,
+            "same_frame_readout": 6.749421116633214e-05,
+            "true_motion": 101.41622161865234
+          },
+          "block_xy": {
+            "correct": 21.85066312734932,
+            "persistence": 4.11893107688917,
+            "ceiling": 3.469591621524828e-05,
+            "shuffle": 26.414678402981362,
+            "no_action": 24.305585819868508,
+            "same_frame_readout": 3.2151438561556006e-05,
+            "true_motion": 4.11890172958374
+          },
+          "block_angle": {
+            "correct": 60.3108276471764,
+            "persistence": 1.2358904310021288,
+            "ceiling": 9.497249304432714e-05,
+            "shuffle": 61.0394289352372,
+            "no_action": 62.94147227915053,
+            "same_frame_readout": 9.858210964081001e-05,
+            "true_motion": 1.2357994318008423
+          }
+        },
+        "mean_state_motion": 103.02323150634766
+      },
+      "test": {
+        "mse_correct": 0.3200739324092865,
+        "mse_persistence": 0.38516727089881897,
+        "mse_shuffle": 0.4143192768096924,
+        "mse_no_action": 0.38008853793144226,
+        "moving_correct": {
+          "moving_mse": 0.478577196598053,
+          "static_mse": 0.16157059371471405,
+          "moving_persistence": 0.7051823735237122,
+          "static_persistence": 0.06515223532915115,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 0.6532902717590332,
+          "static_mse": 0.17534826695919037,
+          "moving_persistence": 0.7051823735237122,
+          "static_persistence": 0.06515223532915115,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 0.5995638370513916,
+          "static_mse": 0.1606133133172989,
+          "moving_persistence": 0.7051823735237122,
+          "static_persistence": 0.06515223532915115,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 48.442341025316765,
+            "persistence": 102.12484735134811,
+            "ceiling": 30.986020440107254,
+            "shuffle": 95.16885897077569,
+            "no_action": 85.3759063158245,
+            "same_frame_readout": 31.56263692847289,
+            "true_motion": 105.15357208251953
+          },
+          "block_xy": {
+            "correct": 32.38751852827032,
+            "persistence": 25.59639134527012,
+            "ceiling": 24.091357668428408,
+            "shuffle": 33.468717532355654,
+            "no_action": 32.05852284952655,
+            "same_frame_readout": 24.44651331301728,
+            "true_motion": 1.9614449739456177
+          },
+          "block_angle": {
+            "correct": 77.28156503328287,
+            "persistence": 60.230034724943536,
+            "ceiling": 55.820401386613185,
+            "shuffle": 75.14708615378557,
+            "no_action": 74.65211780633767,
+            "same_frame_readout": 59.80198397895981,
+            "true_motion": 1.2240139245986938
+          }
+        },
+        "mean_state_motion": 105.739013671875
+      }
+    },
+    "tworoom": {
+      "train": {
+        "mse_correct": 0.15564259886741638,
+        "mse_persistence": 0.7115737199783325,
+        "mse_shuffle": 0.6323481202125549,
+        "mse_no_action": 0.5039629936218262,
+        "moving_correct": {
+          "moving_mse": 0.22046859562397003,
+          "static_mse": 0.09081659466028214,
+          "moving_persistence": 1.2596818208694458,
+          "static_persistence": 0.16346542537212372,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 1.078381896018982,
+          "static_mse": 0.18631434440612793,
+          "moving_persistence": 1.2596818208694458,
+          "static_persistence": 0.16346542537212372,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 0.8631327152252197,
+          "static_mse": 0.14479319751262665,
+          "moving_persistence": 1.2596818208694458,
+          "static_persistence": 0.16346542537212372,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 4.2466237522586345,
+            "persistence": 25.86206754295615,
+            "ceiling": 1.5631368876382588e-05,
+            "shuffle": 25.701553735371977,
+            "no_action": 21.162404222672425,
+            "same_frame_readout": 1.4479749690318454e-05,
+            "true_motion": 25.86206817626953
+          }
+        },
+        "mean_state_motion": 25.86206817626953
+      },
+      "test": {
+        "mse_correct": 0.3070606291294098,
+        "mse_persistence": 0.7829245924949646,
+        "mse_shuffle": 0.7328864932060242,
+        "mse_no_action": 0.6382802128791809,
+        "moving_correct": {
+          "moving_mse": 0.47729945182800293,
+          "static_mse": 0.13682183623313904,
+          "moving_persistence": 1.3735942840576172,
+          "static_persistence": 0.192254900932312,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 1.2539165019989014,
+          "static_mse": 0.21185645461082458,
+          "moving_persistence": 1.3735942840576172,
+          "static_persistence": 0.192254900932312,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 1.0996997356414795,
+          "static_mse": 0.1768607199192047,
+          "moving_persistence": 1.3735942840576172,
+          "static_persistence": 0.192254900932312,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "agent_xy": {
+            "correct": 7.099163716767471,
+            "persistence": 26.714614814400367,
+            "ceiling": 1.4627583739259427,
+            "shuffle": 29.346057354335315,
+            "no_action": 24.432025886403807,
+            "same_frame_readout": 1.4469523058167983,
+            "true_motion": 26.696334838867188
+          }
+        },
+        "mean_state_motion": 26.696334838867188
+      }
+    },
+    "cube": {
+      "train": {
+        "mse_correct": 0.48793527483940125,
+        "mse_persistence": 1.8819605112075806,
+        "mse_shuffle": 1.343729853630066,
+        "mse_no_action": 1.1142562627792358,
+        "moving_correct": {
+          "moving_mse": 0.775855302810669,
+          "static_mse": 0.2000153809785843,
+          "moving_persistence": 3.3249969482421875,
+          "static_persistence": 0.43892404437065125,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 2.196397542953491,
+          "static_mse": 0.4910624921321869,
+          "moving_persistence": 3.3249969482421875,
+          "static_persistence": 0.43892404437065125,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 1.907821774482727,
+          "static_mse": 0.32069042325019836,
+          "moving_persistence": 3.3249969482421875,
+          "static_persistence": 0.43892404437065125,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "block_xyz": {
+            "correct": 0.026253438610512197,
+            "persistence": 0.12770686494124414,
+            "ceiling": 2.2807209631921943e-08,
+            "shuffle": 0.11470402565185371,
+            "no_action": 0.08968984081226646,
+            "same_frame_readout": 2.3571214029171658e-08,
+            "true_motion": 0.1277068704366684
+          },
+          "effector_xyz": {
+            "correct": 0.02656179483696956,
+            "persistence": 0.128243964523518,
+            "ceiling": 2.2832774549527915e-08,
+            "shuffle": 0.11571464878720489,
+            "no_action": 0.09040040957705471,
+            "same_frame_readout": 2.2719962992209774e-08,
+            "true_motion": 0.12824396789073944
+          }
+        },
+        "mean_state_motion": 0.1277068704366684
+      },
+      "test": {
+        "mse_correct": 1.071559190750122,
+        "mse_persistence": 1.8465486764907837,
+        "mse_shuffle": 1.5734038352966309,
+        "mse_no_action": 1.4145630598068237,
+        "moving_correct": {
+          "moving_mse": 1.7499698400497437,
+          "static_mse": 0.39314866065979004,
+          "moving_persistence": 3.2683091163635254,
+          "static_persistence": 0.424788236618042,
+          "moving_fraction": 0.5
+        },
+        "moving_shuffle": {
+          "moving_mse": 2.571061372756958,
+          "static_mse": 0.5757464170455933,
+          "moving_persistence": 3.2683091163635254,
+          "static_persistence": 0.424788236618042,
+          "moving_fraction": 0.5
+        },
+        "moving_no_action": {
+          "moving_mse": 2.403637647628784,
+          "static_mse": 0.4254887104034424,
+          "moving_persistence": 3.2683091163635254,
+          "static_persistence": 0.424788236618042,
+          "moving_fraction": 0.5
+        },
+        "state": {
+          "block_xyz": {
+            "correct": 0.05528562251321237,
+            "persistence": 0.1269855143099647,
+            "ceiling": 0.02517853854448697,
+            "shuffle": 0.12668640104963014,
+            "no_action": 0.10553974029524678,
+            "same_frame_readout": 0.01987598972278961,
+            "true_motion": 0.12779098749160767
+          },
+          "effector_xyz": {
+            "correct": 0.05484831138196452,
+            "persistence": 0.12635962621140298,
+            "ceiling": 0.024429900605669366,
+            "shuffle": 0.12730949257699803,
+            "no_action": 0.10585594382170734,
+            "same_frame_readout": 0.019923950261627906,
+            "true_motion": 0.12785273790359497
+          }
+        },
+        "mean_state_motion": 0.12779098749160767
+      }
+    }
+  }
+]

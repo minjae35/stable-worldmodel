@@ -1,0 +1,19 @@
+G1 start. output=/workspace/stable-worldmodel/results/stage3/g1_spatial/overfit500
+indexing pusht
+loaded pusht: train 96 test 32 motion 103.0232/105.7390 in 0.3s
+indexing tworoom
+loaded tworoom: train 96 test 32 motion 25.8621/26.6963 in 0.1s
+indexing cube
+loaded cube: train 96 test 32 motion 0.1277/0.1278 in 0.2s
+loading frozen DINOv2-S/14
+cached tokens. encode peak 0.26 GB
+dynamics parameters 6794368
+pusht readout alpha 0.001
+tworoom readout alpha 0.001
+cube readout alpha 0.001
+eval at step 0 written
+full encode+backward 0.225s, peak 2.45 GB (no optimizer step)
+eval and checkpoint at step 100
+eval and checkpoint at step 250
+eval and checkpoint at step 500
+G1_DONE exit=0 steps=500 median_step=0.092s
