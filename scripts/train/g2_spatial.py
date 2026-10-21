@@ -312,6 +312,7 @@ def make_parser():
     parser.add_argument('--eval-probe-train-items', type=int, default=0)
     parser.add_argument('--loss-calibration-file', type=Path)
     parser.add_argument('--resume', type=Path)
+    parser.add_argument('--defer-evaluation', action='store_true')
     return parser
 
 
@@ -571,11 +572,14 @@ def main(argv=None):
                 )
         bar.close()
 
-    # Labels first become reachable here, after all optimizer steps.
-    evaluation = evaluate_after_training(
-        model, encoder, manifest, normalizers, device, args
-    )
-    (output / 'evaluation.json').write_text(json.dumps(evaluation, indent=2) + '\n')
+    evaluation_path = None
+    if not args.defer_evaluation:
+        # Labels first become reachable here, after all optimizer steps.
+        evaluation = evaluate_after_training(
+            model, encoder, manifest, normalizers, device, args
+        )
+        evaluation_path = output / 'evaluation.json'
+        evaluation_path.write_text(json.dumps(evaluation, indent=2) + '\n')
     summary = {
         'arm': args.arm,
         'sampling': spec.sampling,
@@ -585,10 +589,15 @@ def main(argv=None):
         'final_model_sha256': tensor_state_sha256(model.state_dict()),
         'schedule_sha256': metadata['schedule_sha256'],
         'loss_calibration': calibration,
-        'evaluation': str(output / 'evaluation.json'),
+        'evaluation': None if evaluation_path is None else str(evaluation_path),
+        'evaluation_deferred': bool(args.defer_evaluation),
     }
     (output / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n')
-    status.write_text('DONE\n')
+    status.write_text(
+        'TRAINING_DONE_EVALUATION_DEFERRED\n'
+        if args.defer_evaluation
+        else 'DONE\n'
+    )
     print(f'G2_DONE arm={args.arm} steps={args.steps}', flush=True)
 
 
@@ -602,6 +611,20 @@ if __name__ == '__main__':
         except Exception:
             pass
         raise SystemExit(2)
+    except KeyboardInterrupt:
+        traceback.print_exc()
+        try:
+            output = Path(sys.argv[sys.argv.index('--output-dir') + 1])
+            final_checkpoint = output / 'checkpoint_step500.pt'
+            status = (
+                'TRAINING_DONE_EVALUATION_INTERRUPTED\n'
+                if final_checkpoint.is_file()
+                else 'INTERRUPTED\n'
+            )
+            (output / 'STATUS').write_text(status)
+        except Exception:
+            pass
+        raise SystemExit(130)
     except Exception:
         traceback.print_exc()
         try:

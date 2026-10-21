@@ -21,6 +21,18 @@ loss_gradient_calibration:
   method: static_initial_gradient_norm_match
   reuse: one_launcher_level_artifact_for_all_arms
 evaluation:
+  execution: deferred_after_training
+  shared_feature_cache: true
+  feature_cache_key_fields:
+    - dataset_identity
+    - episode_split_and_cohort
+    - dino_weights
+    - preprocessing
+    - software_versions
+  shared_ridge_probes: true
+  ridge_solver: sklearn_cholesky
+  alpha_selection_split: validation_only
+  arm_specific_dynamics_forward: true
   common_full_test_set: manifest_s0_test
   compare: [correct_action, persistence, action_shuffle]
   common_metrics: [mse, l1, moving_quartile_mse, moving_quartile_l1]

@@ -25,6 +25,7 @@ from stable_worldmodel.wm.spatial.g2 import (
 )
 from stable_worldmodel.wm.spatial.g2_eval import (
     challenge_mask,
+    fit_probe,
     probe_metric_report,
     token_error_metrics,
 )
@@ -271,6 +272,23 @@ def test_object_motion_challenge_thresholds_are_evaluation_only():
     assert mask.tolist() == [False, False, True]
 
 
+def test_cholesky_probe_matches_lsqr_on_same_train_validation_split():
+    rng = np.random.default_rng(4)
+    train = rng.normal(size=(48, 12)).astype(np.float32)
+    val = rng.normal(size=(16, 12)).astype(np.float32)
+    weight = rng.normal(size=(12, 2)).astype(np.float32)
+    train_target = train @ weight
+    val_target = val @ weight
+    lsqr, lsqr_fit = fit_probe(
+        train, train_target, val, val_target, 'vector', solver='lsqr'
+    )
+    cholesky, cholesky_fit = fit_probe(
+        train, train_target, val, val_target, 'vector', solver='cholesky'
+    )
+    assert cholesky_fit['chosen_alpha'] == lsqr_fit['chosen_alpha']
+    assert np.max(np.abs(cholesky.predict(val) - lsqr.predict(val))) < 1e-3
+
+
 def _load_launcher():
     path = Path(__file__).parents[2] / 'scripts/train/launch_g2_2x2.py'
     spec = importlib.util.spec_from_file_location('g2_launcher_test', path)
@@ -294,6 +312,10 @@ def test_launcher_builds_four_sequential_commands_and_refuses_existing_root(tmp_
         command[command.index('--loss-calibration-file') + 1] for command in commands
     }
     assert calibration_files == {str(output / 'gradient_calibration.json')}
+    deferred = launcher.build_commands(
+        '/venv/stable-wm/bin/python', output, False, defer_evaluation=True
+    )
+    assert all('--defer-evaluation' in command for command in deferred)
     launcher.preflight(output, commands)
     output.mkdir()
     with pytest.raises(FileExistsError):

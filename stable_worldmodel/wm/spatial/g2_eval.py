@@ -170,12 +170,24 @@ class RidgeProbe:
         return _angle_from_features(value) if self.kind == 'angle' else value
 
 
+class ArrayLinearModel:
+    """Minimal serializable linear predictor used by the CUDA ridge solver."""
+
+    def __init__(self, weight: np.ndarray, intercept: np.ndarray):
+        self.weight = np.asarray(weight)
+        self.intercept = np.asarray(intercept)
+
+    def predict(self, features: np.ndarray) -> np.ndarray:
+        return np.asarray(features) @ self.weight + self.intercept
+
+
 def fit_probe(
     train_features: np.ndarray,
     train_target: np.ndarray,
     val_features: np.ndarray,
     val_target: np.ndarray,
     kind: str,
+    solver: str = 'lsqr',
 ) -> tuple[RidgeProbe, dict]:
     """Fit ridge on true DINO features and select alpha only on validation."""
     from sklearn.linear_model import Ridge
@@ -188,7 +200,7 @@ def fit_probe(
     best = None
     rows = []
     for alpha in (0.01, 0.1, 1.0, 10.0, 100.0, 1000.0):
-        model = Ridge(alpha=alpha, solver='lsqr', tol=1e-5, max_iter=2000)
+        model = Ridge(alpha=alpha, solver=solver, tol=1e-5, max_iter=2000)
         model.fit(x_train, y_train)
         raw = model.predict(x_val)
         prediction = _angle_from_features(raw) if kind == 'angle' else raw
@@ -197,7 +209,65 @@ def fit_probe(
         if best is None or mae < best[0]:
             best = (mae, alpha, model)
     probe = RidgeProbe(best[2], x_mean, x_std, kind, best[1])
-    return probe, {'alpha_search': rows, 'chosen_alpha': best[1], 'val_mae': best[0]}
+    return probe, {
+        'solver': f'sklearn_{solver}',
+        'alpha_search': rows,
+        'chosen_alpha': best[1],
+        'val_mae': best[0],
+    }
+
+
+def fit_probe_cuda_dual(
+    train_features: np.ndarray,
+    train_target: np.ndarray,
+    val_features: np.ndarray,
+    val_target: np.ndarray,
+    kind: str,
+    device: str = 'cuda:0',
+) -> tuple[RidgeProbe, dict]:
+    """Exact float64 dual ridge with alpha selected only on validation."""
+    x_mean = train_features.mean(axis=0, keepdims=True)
+    x_std = np.maximum(train_features.std(axis=0, keepdims=True), 1e-6)
+    x_train_np = (train_features - x_mean) / x_std
+    x_val_np = (val_features - x_mean) / x_std
+    y_train_np = _angle_features(train_target) if kind == 'angle' else train_target
+    if y_train_np.ndim == 1:
+        y_train_np = y_train_np[:, None]
+
+    x_train = torch.as_tensor(x_train_np, dtype=torch.float64, device=device)
+    x_val = torch.as_tensor(x_val_np, dtype=torch.float64, device=device)
+    y_train = torch.as_tensor(y_train_np, dtype=torch.float64, device=device)
+    x_offset = x_train.mean(dim=0, keepdim=True)
+    y_offset = y_train.mean(dim=0, keepdim=True)
+    x_centered = x_train - x_offset
+    y_centered = y_train - y_offset
+    kernel = x_centered @ x_centered.T
+    identity = torch.eye(kernel.shape[0], dtype=kernel.dtype, device=device)
+    best = None
+    rows = []
+    for alpha in (0.01, 0.1, 1.0, 10.0, 100.0, 1000.0):
+        dual = torch.linalg.solve(kernel + alpha * identity, y_centered)
+        weight = x_centered.T @ dual
+        intercept = y_offset - x_offset @ weight
+        raw = (x_val @ weight + intercept).float().cpu().numpy()
+        prediction = _angle_from_features(raw) if kind == 'angle' else raw
+        mae = float(state_distance(prediction, val_target, kind).mean())
+        rows.append({'alpha': alpha, 'val_mae': mae})
+        if best is None or mae < best[0]:
+            best = (
+                mae,
+                alpha,
+                weight.float().cpu().numpy(),
+                intercept.float().cpu().numpy().reshape(-1),
+            )
+    model = ArrayLinearModel(best[2], best[3])
+    probe = RidgeProbe(model, x_mean, x_std, kind, best[1])
+    return probe, {
+        'solver': 'torch_cuda_dual_float64',
+        'alpha_search': rows,
+        'chosen_alpha': best[1],
+        'val_mae': best[0],
+    }
 
 
 def probe_metric_report(

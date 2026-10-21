@@ -28,7 +28,12 @@ RUN_NAMES = {
 }
 
 
-def build_commands(python: str, output_root: Path, smoke: bool) -> list[list[str]]:
+def build_commands(
+    python: str,
+    output_root: Path,
+    smoke: bool,
+    defer_evaluation: bool = False,
+) -> list[list[str]]:
     commands = []
     calibration = output_root / 'gradient_calibration.json'
     for arm, name in RUN_NAMES.items():
@@ -63,6 +68,8 @@ def build_commands(python: str, output_root: Path, smoke: bool) -> list[list[str
                     '8',
                 ]
             )
+        if defer_evaluation:
+            command.append('--defer-evaluation')
         commands.append(command)
     return commands
 
@@ -144,10 +151,13 @@ def main(argv=None) -> int:
         default=ROOT / 'results/stage3/g2_2x2',
     )
     parser.add_argument('--smoke', action='store_true')
+    parser.add_argument('--defer-evaluation', action='store_true')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args(argv)
     output_root = args.output_root.resolve()
-    commands = build_commands(sys.executable, output_root, args.smoke)
+    commands = build_commands(
+        sys.executable, output_root, args.smoke, args.defer_evaluation
+    )
     preflight(output_root, commands)
     if args.dry_run:
         print(json.dumps({'commands': commands}, indent=2))
