@@ -1,0 +1,52 @@
+# Stage-3 G2 warm-start controlled comparison.
+seed: 3072
+steps: 500
+batch_per_env: 16
+optimizer:
+  name: AdamW
+  lr: 0.001
+  weight_decay: 0.0001
+grad_clip: 1.0
+checkpoint_every: 100
+frameskip: 5
+history: 1
+environments: [pusht, tworoom, cube]
+balanced_sampling: true
+initial_checkpoint: results/stage3/g1_spatial/overfit500/checkpoint_step500.pt
+manifest: results/stage3/g2_c1_followup/manifest.json
+normalizer_source: g1_checkpoint
+loss_gradient_calibration:
+  reference: mse
+  batch: shared_s0_label_free_batch
+  method: static_initial_gradient_norm_match
+  reuse: one_launcher_level_artifact_for_all_arms
+evaluation:
+  common_full_test_set: manifest_s0_test
+  compare: [correct_action, persistence, action_shuffle]
+  common_metrics: [mse, l1, moving_quartile_mse, moving_quartile_l1]
+  state_probe_gate: max_absolute_and_delta_probe_mae_lt_mean_true_motion
+  state_subsets_are_disjoint: true
+  natural_subset: complement_of_target_specific_challenge
+  object_motion_challenge:
+    pusht_block_xy: 15.0
+    pusht_block_rotation_deg: 10.0
+    tworoom_agent_xy: 15.0
+    cube_block_xyz: 0.02
+    cube_effector_xyz: 0.02
+arms:
+  A: {sampling: s0_uniform, loss: mse}
+  B: {sampling: s1_temporal_coverage, loss: mse}
+  C: {sampling: s0_uniform, loss: l1}
+  D: {sampling: s1_temporal_coverage, loss: l1}
+future_fresh_initialization:
+  required: true
+  suite_name: g2_fresh_2x2
+  initialization: deterministic_spatial_dynamics_init_seed_3072
+  checkpoint: null
+  action_normalizer:
+    fit_on: all_action_rows_from_train_episodes_only
+    shared_across_arms: true
+    uses_state_labels: false
+  controls: same_manifest_splits_schedule_batch_optimizer_and_500_update_budget
+  arms: same_A_B_C_D_factorization
+  note: warm-start arms inherit G1 state-selected sampling bias
