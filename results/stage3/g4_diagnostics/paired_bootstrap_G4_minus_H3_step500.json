@@ -1,0 +1,86 @@
+{
+  "effect": "G4_sinusoidal_minus_G3_H3; negative favors temporal encoding",
+  "step": 500,
+  "baseline_sha256": "237825f76c7615af32889de614ac8d86b4d3f236f2492d6760c28b021bb86d42",
+  "experimental_sha256": "ed027958313bc8c9b793728dd10052643fb8914bd95a197515ab6596d08cace2",
+  "environments": {
+    "pusht": {
+      "mse": {
+        "effect": "G4_sinusoidal_minus_G3_H3; negative favors temporal encoding",
+        "n_paired_episodes": 64,
+        "observed_mean_delta": -0.0009805872105062008,
+        "relative_delta_percent": -0.3377441322647784,
+        "ci95": [
+          -0.0019064991793129593,
+          -6.877568666823214e-05
+        ],
+        "bootstrap_probability_H3_better": 0.9822,
+        "draws": 10000
+      },
+      "mae": {
+        "effect": "G4_sinusoidal_minus_G3_H3; negative favors temporal encoding",
+        "n_paired_episodes": 64,
+        "observed_mean_delta": -0.000713104847818613,
+        "relative_delta_percent": -0.18735718394836648,
+        "ci95": [
+          -0.001391960447654128,
+          -3.324660938233153e-05
+        ],
+        "bootstrap_probability_H3_better": 0.9804,
+        "draws": 10000
+      }
+    },
+    "tworoom": {
+      "mse": {
+        "effect": "G4_sinusoidal_minus_G3_H3; negative favors temporal encoding",
+        "n_paired_episodes": 64,
+        "observed_mean_delta": -0.006676020799204707,
+        "relative_delta_percent": -2.879422120055185,
+        "ci95": [
+          -0.008882751094643027,
+          -0.004508479160722345
+        ],
+        "bootstrap_probability_H3_better": 1.0,
+        "draws": 10000
+      },
+      "mae": {
+        "effect": "G4_sinusoidal_minus_G3_H3; negative favors temporal encoding",
+        "n_paired_episodes": 64,
+        "observed_mean_delta": -0.003956225235015154,
+        "relative_delta_percent": -1.1486085205314083,
+        "ci95": [
+          -0.005259054922498762,
+          -0.002620538591872901
+        ],
+        "bootstrap_probability_H3_better": 1.0,
+        "draws": 10000
+      }
+    },
+    "cube": {
+      "mse": {
+        "effect": "G4_sinusoidal_minus_G3_H3; negative favors temporal encoding",
+        "n_paired_episodes": 64,
+        "observed_mean_delta": 0.0006190198473632336,
+        "relative_delta_percent": 0.09075442238008459,
+        "ci95": [
+          -0.001652714982628822,
+          0.0030012344592250874
+        ],
+        "bootstrap_probability_H3_better": 0.3005,
+        "draws": 10000
+      },
+      "mae": {
+        "effect": "G4_sinusoidal_minus_G3_H3; negative favors temporal encoding",
+        "n_paired_episodes": 64,
+        "observed_mean_delta": 0.0003659334033727646,
+        "relative_delta_percent": 0.06251097113537556,
+        "ci95": [
+          -0.000390359410084784,
+          0.0011186855146661401
+        ],
+        "bootstrap_probability_H3_better": 0.1693,
+        "draws": 10000
+      }
+    }
+  }
+}

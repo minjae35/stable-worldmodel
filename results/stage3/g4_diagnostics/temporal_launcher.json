@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/venv/stable-wm/bin/python",
+    "/workspace/stable-worldmodel/scripts/train/g3_history_spatial.py",
+    "--arm",
+    "H3",
+    "--output-dir",
+    "/workspace/stable-worldmodel/results/stage3/g4_diagnostics/H3_sinusoidal",
+    "--common-manifest",
+    "/workspace/stable-worldmodel/results/stage3/g3_history/common_windows.json",
+    "--normalizer-file",
+    "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/action_normalizers.json",
+    "--steps",
+    "2000",
+    "--checkpoint-every",
+    "500",
+    "--temporal-encoding",
+    "sinusoidal",
+    "--temporal-encoding-scale",
+    "1.0",
+    "--experiment-name",
+    "g4_h3_fixed_sinusoidal_temporal_encoding"
+  ],
+  "status": "DONE",
+  "returncode": 0,
+  "seconds": 395.8700258140452,
+  "log": "/workspace/stable-worldmodel/results/stage3/g4_diagnostics/H3_sinusoidal_training.log"
+}

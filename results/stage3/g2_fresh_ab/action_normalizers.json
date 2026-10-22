@@ -1,0 +1,181 @@
+{
+  "key": "238886bc2badfd87ad449c57271ed8720c65eeaf76fd885f373352a63cb581c8",
+  "identity": {
+    "schema": 1,
+    "method": "finite_raw_action_zscore_tiled_over_frameskip",
+    "fit_split": "manifest_train_episodes_all_valid_action_rows",
+    "nonfinite_policy": "exclude terminal placeholder rows before fitting",
+    "label_free_columns": [
+      "episode_idx",
+      "action"
+    ],
+    "manifest_sha256": "b9b3fac06ba1828e1e43bf12c85c4c996c823efd24a894ef4751c0473af4aa9f",
+    "frameskip": 5,
+    "datasets": {
+      "pusht": {
+        "path": "/workspace/datasets/lewm-pusht/train.lance",
+        "version": 40,
+        "rows": 2336736,
+        "schema": "episode_idx: int32\nstep_idx: int32\naction: fixed_size_list<item: float>[2]\n  child 0, item: float\npixels: binary\nproprio: fixed_size_list<item: float>[4]\n  child 0, item: float\nstate: fixed_size_list<item: float>[7]\n  child 0, item: float"
+      },
+      "tworoom": {
+        "path": "/workspace/datasets/lewm-tworooms/train.lance",
+        "version": 2,
+        "rows": 920809,
+        "schema": "episode_idx: int32\nstep_idx: int32\naction: fixed_size_list<item: float>[2]\n  child 0, item: float\ndistance_to_target: fixed_size_list<item: float>[1]\n  child 0, item: float\nep_idx: fixed_size_list<item: float>[1]\n  child 0, item: float\nid: fixed_size_list<item: float>[1]\n  child 0, item: float\nobservation: fixed_size_list<item: float>[10]\n  child 0, item: float\npixels: binary\npos_agent: fixed_size_list<item: float>[2]\n  child 0, item: float\npos_target: fixed_size_list<item: float>[2]\n  child 0, item: float\nproprio: fixed_size_list<item: float>[2]\n  child 0, item: float\nrender_time: fixed_size_list<item: float>[1]\n  child 0, item: float\nreward: fixed_size_list<item: float>[1]\n  child 0, item: float\nterminated: fixed_size_list<item: float>[1]\n  child 0, item: float\ntruncated: fixed_size_list<item: float>[1]\n  child 0, item: float"
+      },
+      "cube": {
+        "path": "/workspace/datasets/lewm-cube/train.lance",
+        "version": 23,
+        "rows": 2010000,
+        "schema": "episode_idx: int32\nstep_idx: int32\naction: fixed_size_list<item: float>[5]\n  child 0, item: float\ncontrol: fixed_size_list<item: float>[7]\n  child 0, item: float\nep_idx: fixed_size_list<item: float>[1]\n  child 0, item: float\nid: fixed_size_list<item: float>[1]\n  child 0, item: float\nobservation: fixed_size_list<item: float>[28]\n  child 0, item: float\npixels: binary\nprev_qpos: fixed_size_list<item: float>[21]\n  child 0, item: float\nprev_qvel: fixed_size_list<item: float>[20]\n  child 0, item: float\nprivileged_block_0_pos: fixed_size_list<item: float>[3]\n  child 0, item: float\nprivileged_block_0_quat: fixed_size_list<item: float>[4]\n  child 0, item: float\nprivileged_block_0_yaw: fixed_size_list<item: float>[1]\n  child 0, item: float\nprivileged_target_block: fixed_size_list<item: float>[1]\n  child 0, item: float\nprivileged_target_block_pos: fixed_size_list<item: float>[3]\n  child 0, item: float\nprivileged_target_block_yaw: fixed_size_list<item: float>[1]\n  child 0, item: float\nproprio_effector_pos: fixed_size_list<item: float>[3]\n  child 0, item: float\nproprio_effector_yaw: fixed_size_list<item: float>[1]\n  child 0, item: float\nproprio_gripper_contact: fixed_size_list<item: float>[1]\n  child 0, item: float\nproprio_gripper_opening: fixed_size_list<item: float>[1]\n  child 0, item: float\nproprio_gripper_vel: fixed_size_list<item: float>[1]\n  child 0, item: float\nproprio_joint_pos: fixed_size_list<item: float>[6]\n  child 0, item: float\nproprio_joint_vel: fixed_size_list<item: float>[6]\n  child 0, item: float\nqpos: fixed_size_list<item: float>[21]\n  child 0, item: float\nqvel: fixed_size_list<item: float>[20]\n  child 0, item: float\nrender_time: fixed_size_list<item: float>[1]\n  child 0, item: float\nreward: fixed_size_list<item: float>[1]\n  child 0, item: float\nsuccess: fixed_size_list<item: float>[1]\n  child 0, item: float\ntarget: fixed_size_list<item: float>[28]\n  child 0, item: float\nterminated: fixed_size_list<item: float>[1]\n  child 0, item: float\ntime: fixed_size_list<item: float>[1]\n  child 0, item: float\ntruncated: fixed_size_list<item: float>[1]\n  child 0, item: float"
+      }
+    }
+  },
+  "normalizers": {
+    "pusht": {
+      "raw_mean": [
+        -0.010897931642830372,
+        0.008059041574597359
+      ],
+      "raw_std": [
+        0.20483644306659698,
+        0.2035505771636963
+      ],
+      "mean": [
+        -0.010897931642830372,
+        0.008059041574597359,
+        -0.010897931642830372,
+        0.008059041574597359,
+        -0.010897931642830372,
+        0.008059041574597359,
+        -0.010897931642830372,
+        0.008059041574597359,
+        -0.010897931642830372,
+        0.008059041574597359
+      ],
+      "std": [
+        0.20483644306659698,
+        0.2035505771636963,
+        0.20483644306659698,
+        0.2035505771636963,
+        0.20483644306659698,
+        0.2035505771636963,
+        0.20483644306659698,
+        0.2035505771636963,
+        0.20483644306659698,
+        0.2035505771636963
+      ],
+      "n_rows": 32529,
+      "n_nonfinite_rows_excluded": 0
+    },
+    "tworoom": {
+      "raw_mean": [
+        0.014759723097085953,
+        -0.015158251859247684
+      ],
+      "raw_std": [
+        0.8669540882110596,
+        0.868618369102478
+      ],
+      "mean": [
+        0.014759723097085953,
+        -0.015158251859247684,
+        0.014759723097085953,
+        -0.015158251859247684,
+        0.014759723097085953,
+        -0.015158251859247684,
+        0.014759723097085953,
+        -0.015158251859247684,
+        0.014759723097085953,
+        -0.015158251859247684
+      ],
+      "std": [
+        0.8669540882110596,
+        0.868618369102478,
+        0.8669540882110596,
+        0.868618369102478,
+        0.8669540882110596,
+        0.868618369102478,
+        0.8669540882110596,
+        0.868618369102478,
+        0.8669540882110596,
+        0.868618369102478
+      ],
+      "n_rows": 22939,
+      "n_nonfinite_rows_excluded": 256
+    },
+    "cube": {
+      "raw_mean": [
+        0.009811480529606342,
+        -0.0035425748210400343,
+        0.0022317087277770042,
+        -0.007676373701542616,
+        0.16038118302822113
+      ],
+      "raw_std": [
+        0.29590779542922974,
+        0.3960281312465668,
+        0.6376603245735168,
+        0.3908297121524811,
+        0.25118616223335266
+      ],
+      "mean": [
+        0.009811480529606342,
+        -0.0035425748210400343,
+        0.0022317087277770042,
+        -0.007676373701542616,
+        0.16038118302822113,
+        0.009811480529606342,
+        -0.0035425748210400343,
+        0.0022317087277770042,
+        -0.007676373701542616,
+        0.16038118302822113,
+        0.009811480529606342,
+        -0.0035425748210400343,
+        0.0022317087277770042,
+        -0.007676373701542616,
+        0.16038118302822113,
+        0.009811480529606342,
+        -0.0035425748210400343,
+        0.0022317087277770042,
+        -0.007676373701542616,
+        0.16038118302822113,
+        0.009811480529606342,
+        -0.0035425748210400343,
+        0.0022317087277770042,
+        -0.007676373701542616,
+        0.16038118302822113
+      ],
+      "std": [
+        0.29590779542922974,
+        0.3960281312465668,
+        0.6376603245735168,
+        0.3908297121524811,
+        0.25118616223335266,
+        0.29590779542922974,
+        0.3960281312465668,
+        0.6376603245735168,
+        0.3908297121524811,
+        0.25118616223335266,
+        0.29590779542922974,
+        0.3960281312465668,
+        0.6376603245735168,
+        0.3908297121524811,
+        0.25118616223335266,
+        0.29590779542922974,
+        0.3960281312465668,
+        0.6376603245735168,
+        0.3908297121524811,
+        0.25118616223335266,
+        0.29590779542922974,
+        0.3960281312465668,
+        0.6376603245735168,
+        0.3908297121524811,
+        0.25118616223335266
+      ],
+      "n_rows": 51200,
+      "n_nonfinite_rows_excluded": 256
+    }
+  }
+}

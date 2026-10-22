@@ -1,0 +1,159 @@
+{
+  "scope": {
+    "seed": 3072,
+    "single_seed": true,
+    "steps": [
+      500,
+      1000,
+      1500,
+      2000
+    ],
+    "effect": "H3 minus H1; negative favors H3",
+    "final_holdout_used": false
+  },
+  "stepwise_feature_summary": {
+    "500": {
+      "pusht": {
+        "h1_mse": 0.29899945855140686,
+        "h3_mse": 0.29256823658943176,
+        "mse_relative_delta_percent": -2.1509142501906506,
+        "h1_mae": 0.384748250246048,
+        "h3_mae": 0.38242754340171814,
+        "mae_relative_delta_percent": -0.6031754121937483
+      },
+      "tworoom": {
+        "h1_mse": 0.22194616496562958,
+        "h3_mse": 0.23409536480903625,
+        "mse_relative_delta_percent": 5.473939973366106,
+        "h1_mae": 0.3376375436782837,
+        "h3_mae": 0.3462642431259155,
+        "mae_relative_delta_percent": 2.5550178317408165
+      },
+      "cube": {
+        "h1_mse": 0.6953833103179932,
+        "h3_mse": 0.6822620034217834,
+        "mse_relative_delta_percent": -1.8869171436124128,
+        "h1_mae": 0.5905399918556213,
+        "h3_mae": 0.5855068564414978,
+        "mae_relative_delta_percent": -0.8522937453072722
+      },
+      "macro": {
+        "h1_mse": 0.4054429779450099,
+        "h3_mse": 0.4029752016067505,
+        "mse_relative_delta_percent": -0.6086617533166653,
+        "h1_mae": 0.4376419285933177,
+        "h3_mae": 0.4380662143230438,
+        "mae_relative_delta_percent": 0.09694814459160471
+      }
+    },
+    "1000": {
+      "pusht": {
+        "h1_mse": 0.24401423335075378,
+        "h3_mse": 0.24592925608158112,
+        "mse_relative_delta_percent": 0.7847996014538288,
+        "h1_mae": 0.3463315963745117,
+        "h3_mae": 0.346902996301651,
+        "mae_relative_delta_percent": 0.16498636945656814
+      },
+      "tworoom": {
+        "h1_mse": 0.17367742955684662,
+        "h3_mse": 0.1596294492483139,
+        "mse_relative_delta_percent": -8.088546879336816,
+        "h1_mae": 0.293610155582428,
+        "h3_mae": 0.2834402620792389,
+        "mae_relative_delta_percent": -3.4637403747207904
+      },
+      "cube": {
+        "h1_mse": 0.5849792957305908,
+        "h3_mse": 0.5944356918334961,
+        "mse_relative_delta_percent": 1.616535178581836,
+        "h1_mae": 0.5390776991844177,
+        "h3_mae": 0.5395275354385376,
+        "mae_relative_delta_percent": 0.08344553202635539
+      },
+      "macro": {
+        "h1_mse": 0.3342236528793971,
+        "h3_mse": 0.33333146572113037,
+        "mse_relative_delta_percent": -0.2669431533586472,
+        "h1_mae": 0.3930064837137858,
+        "h3_mae": 0.3899569312731425,
+        "mae_relative_delta_percent": -0.7759547404475401
+      }
+    },
+    "1500": {
+      "pusht": {
+        "h1_mse": 0.22861936688423157,
+        "h3_mse": 0.23216381669044495,
+        "mse_relative_delta_percent": 1.5503716305925297,
+        "h1_mae": 0.3339087665081024,
+        "h3_mae": 0.33415699005126953,
+        "mae_relative_delta_percent": 0.07433873203238917
+      },
+      "tworoom": {
+        "h1_mse": 0.134202241897583,
+        "h3_mse": 0.1378486007452011,
+        "mse_relative_delta_percent": 2.71706254385887,
+        "h1_mae": 0.2601635158061981,
+        "h3_mae": 0.2613086700439453,
+        "mae_relative_delta_percent": 0.4401671134396279
+      },
+      "cube": {
+        "h1_mse": 0.5358379483222961,
+        "h3_mse": 0.5577116012573242,
+        "mse_relative_delta_percent": 4.082139572890328,
+        "h1_mae": 0.5148382186889648,
+        "h3_mae": 0.5183505415916443,
+        "mae_relative_delta_percent": 0.6822187582778083
+      },
+      "macro": {
+        "h1_mse": 0.29955318570137024,
+        "h3_mse": 0.3092413395643234,
+        "mse_relative_delta_percent": 3.23420157935208,
+        "h1_mae": 0.3696368336677551,
+        "h3_mae": 0.37127206722895306,
+        "mae_relative_delta_percent": 0.44238923512361616
+      }
+    },
+    "2000": {
+      "pusht": {
+        "h1_mse": 0.21795307099819183,
+        "h3_mse": 0.2216259390115738,
+        "mse_relative_delta_percent": 1.685164607482144,
+        "h1_mae": 0.3240163028240204,
+        "h3_mae": 0.32306602597236633,
+        "mae_relative_delta_percent": -0.2932805674812501
+      },
+      "tworoom": {
+        "h1_mse": 0.12220444530248642,
+        "h3_mse": 0.12566669285297394,
+        "mse_relative_delta_percent": 2.8331600719741363,
+        "h1_mae": 0.2447642982006073,
+        "h3_mae": 0.24730812013149261,
+        "mae_relative_delta_percent": 1.0392945170461152
+      },
+      "cube": {
+        "h1_mse": 0.5160931348800659,
+        "h3_mse": 0.543555498123169,
+        "mse_relative_delta_percent": 5.321202974243198,
+        "h1_mae": 0.5002315044403076,
+        "h3_mae": 0.5079092383384705,
+        "mae_relative_delta_percent": 1.534836136870908
+      },
+      "macro": {
+        "h1_mse": 0.2854168837269147,
+        "h3_mse": 0.2969493766625722,
+        "mse_relative_delta_percent": 4.04057839363551,
+        "h1_mae": 0.35633736848831177,
+        "h3_mae": 0.3594277948141098,
+        "mae_relative_delta_percent": 0.8672753966019715
+      }
+    }
+  },
+  "rotation_claim_policy": {
+    "rotation_primary_probe": "ridge_sincos",
+    "minimum_probe_motion_margin_for_claim": 1.5,
+    "reason": "The legacy gate only barely passes; G3 rotation superiority requires mean motion / max(true-DINO absolute, delta probe error) >= 1.5.",
+    "otherwise": "diagnostic_only"
+  },
+  "warning": "Single-seed controlled experiment; initialization variance is unknown."
+}

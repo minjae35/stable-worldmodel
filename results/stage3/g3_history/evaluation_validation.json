@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "evaluations": 8,
+  "paired_bootstraps": 4,
+  "cache_key": "ed54e5f4a5d7335208d4b994d34b6c21b265c6c95410a0c92d43b6a42c2ae65d",
+  "all_finite": true,
+  "same_development_cohort": true,
+  "final_holdout_used": false,
+  "rotation_claim_policy_frozen_before_training": true
+}

@@ -1,0 +1,872 @@
+{
+  "checkpoint": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3074/A_fresh_uniform_mse/checkpoint_step1000.pt",
+  "checkpoint_sha256": "59347ed1e97b4fdc1a9bc30330f20e918a613921755fafe8e822db3261f3fe65",
+  "step": 1000,
+  "feature_cache_key": "4ea37543b36812a7f302e2b2e16468f491ffdc26b4dce338dd55425bd9cded5e",
+  "probe_key": "fadce4f689600fa12b91559ba9de28ba9166fdc6db0628012a95b16f014058ff",
+  "probe_fit_reused_across_arms": true,
+  "cohort_manifest": "/workspace/stable-worldmodel/results/stage3/g2_c1_followup/manifest.json",
+  "cohort_manifest_sha256": "b9b3fac06ba1828e1e43bf12c85c4c996c823efd24a894ef4751c0473af4aa9f",
+  "natural_sampling": "shared frozen cohort for every arm",
+  "environments": {
+    "pusht": {
+      "n_test": 256,
+      "token_metrics": {
+        "correct_action": {
+          "mse": 0.24615545570850372,
+          "l1": 0.34617429971694946,
+          "moving_quartile_mse": 0.5752956867218018,
+          "moving_quartile_l1": 0.5403075814247131,
+          "motion_weighted_mse": 0.858803391456604,
+          "motion_weighted_l1": 0.6431003212928772
+        },
+        "persistence": {
+          "mse": 0.294601708650589,
+          "l1": 0.31677502393722534,
+          "moving_quartile_mse": 0.9055326581001282,
+          "moving_quartile_l1": 0.6154864430427551,
+          "motion_weighted_mse": 1.8742685317993164,
+          "motion_weighted_l1": 0.898471474647522
+        },
+        "action_shuffle": {
+          "mse": 0.32392507791519165,
+          "l1": 0.3802785277366638,
+          "moving_quartile_mse": 0.8323599100112915,
+          "moving_quartile_l1": 0.6287107467651367,
+          "motion_weighted_mse": 1.4128975868225098,
+          "motion_weighted_l1": 0.7981177568435669
+        },
+        "motion_energy_mean": 0.294601708650589
+      },
+      "state_metrics": {
+        "agent_xy": {
+          "probe_fit": {
+            "solver": "sklearn_cholesky",
+            "alpha_search": [
+              {
+                "alpha": 0.01,
+                "val_mae": 20.40976333618164
+              },
+              {
+                "alpha": 0.1,
+                "val_mae": 20.3048038482666
+              },
+              {
+                "alpha": 1.0,
+                "val_mae": 19.718887329101562
+              },
+              {
+                "alpha": 10.0,
+                "val_mae": 18.132396697998047
+              },
+              {
+                "alpha": 100.0,
+                "val_mae": 18.184539794921875
+              },
+              {
+                "alpha": 1000.0,
+                "val_mae": 22.094940185546875
+              }
+            ],
+            "chosen_alpha": 10.0,
+            "val_mae": 18.132396697998047,
+            "seconds": 4.776486436021514
+          },
+          "natural_non_challenge": {
+            "n": 24,
+            "probe_true_dino_mae": 15.919921875,
+            "probe_true_dino_delta_mae": 15.322733879089355,
+            "mean_true_motion": 11.396026611328125,
+            "eligible_for_model_claim": false,
+            "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+            "correct_action_mae": 38.36591720581055,
+            "persistence_mae": 21.399330139160156,
+            "action_shuffle_mae": 47.37644577026367,
+            "delta_motion": {
+              "correct_action_mae": 38.88772964477539,
+              "persistence_mae": 11.396026611328125,
+              "action_shuffle_mae": 47.1918830871582
+            },
+            "interpretation": "diagnostic_only: probe error is not below the motion being measured"
+          },
+          "object_motion_challenge": {
+            "n": 232,
+            "probe_true_dino_mae": 17.451072692871094,
+            "probe_true_dino_delta_mae": 16.656997680664062,
+            "mean_true_motion": 50.39009475708008,
+            "eligible_for_model_claim": true,
+            "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+            "correct_action_mae": 41.869659423828125,
+            "persistence_mae": 51.84294509887695,
+            "action_shuffle_mae": 62.71764373779297,
+            "delta_motion": {
+              "correct_action_mae": 38.89787673950195,
+              "persistence_mae": 50.39009475708008,
+              "action_shuffle_mae": 62.819087982177734
+            }
+          },
+          "token_subsets": {
+            "natural_non_challenge": {
+              "n": 24,
+              "correct_action": {
+                "mse": 0.17636561393737793,
+                "l1": 0.3020813465118408,
+                "moving_quartile_mse": 0.39787161350250244,
+                "moving_quartile_l1": 0.46374964714050293,
+                "motion_weighted_mse": 0.5123202800750732,
+                "motion_weighted_l1": 0.4932922422885895
+              },
+              "persistence": {
+                "mse": 0.1488294005393982,
+                "l1": 0.2548670768737793,
+                "moving_quartile_mse": 0.3918168246746063,
+                "moving_quartile_l1": 0.4336784780025482,
+                "motion_weighted_mse": 0.6361990571022034,
+                "motion_weighted_l1": 0.5130589604377747
+              },
+              "action_shuffle": {
+                "mse": 0.21680881083011627,
+                "l1": 0.32555899024009705,
+                "moving_quartile_mse": 0.5128023028373718,
+                "moving_quartile_l1": 0.5124375224113464,
+                "motion_weighted_mse": 0.6494660377502441,
+                "motion_weighted_l1": 0.5430901646614075
+              },
+              "motion_energy_mean": 0.1488294005393982
+            },
+            "object_motion_challenge": {
+              "n": 232,
+              "correct_action": {
+                "mse": 0.2533750534057617,
+                "l1": 0.35073569416999817,
+                "moving_quartile_mse": 0.5936498045921326,
+                "moving_quartile_l1": 0.5482274293899536,
+                "motion_weighted_mse": 0.8946464657783508,
+                "motion_weighted_l1": 0.6585977077484131
+              },
+              "persistence": {
+                "mse": 0.30968159437179565,
+                "l1": 0.3231792747974396,
+                "moving_quartile_mse": 0.9586756229400635,
+                "moving_quartile_l1": 0.6342940330505371,
+                "motion_weighted_mse": 2.0023446083068848,
+                "motion_weighted_l1": 0.9383417367935181
+              },
+              "action_shuffle": {
+                "mse": 0.33500608801841736,
+                "l1": 0.38593918085098267,
+                "moving_quartile_mse": 0.8654175996780396,
+                "moving_quartile_l1": 0.6407390236854553,
+                "motion_weighted_mse": 1.4918731451034546,
+                "motion_weighted_l1": 0.8244999051094055
+              },
+              "motion_energy_mean": 0.30968159437179565
+            }
+          }
+        },
+        "block_xy": {
+          "probe_fit": {
+            "solver": "sklearn_cholesky",
+            "alpha_search": [
+              {
+                "alpha": 0.01,
+                "val_mae": 13.006278991699219
+              },
+              {
+                "alpha": 0.1,
+                "val_mae": 12.983095169067383
+              },
+              {
+                "alpha": 1.0,
+                "val_mae": 12.800069808959961
+              },
+              {
+                "alpha": 10.0,
+                "val_mae": 12.452919006347656
+              },
+              {
+                "alpha": 100.0,
+                "val_mae": 12.861812591552734
+              },
+              {
+                "alpha": 1000.0,
+                "val_mae": 15.346790313720703
+              }
+            ],
+            "chosen_alpha": 10.0,
+            "val_mae": 12.452919006347656,
+            "seconds": 2.7937602680176497
+          },
+          "natural_non_challenge": {
+            "n": 207,
+            "probe_true_dino_mae": 12.805625915527344,
+            "probe_true_dino_delta_mae": 8.290000915527344,
+            "mean_true_motion": 1.9441003799438477,
+            "eligible_for_model_claim": false,
+            "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+            "correct_action_mae": 26.772178649902344,
+            "persistence_mae": 12.948064804077148,
+            "action_shuffle_mae": 27.89307403564453,
+            "delta_motion": {
+              "correct_action_mae": 22.119918823242188,
+              "persistence_mae": 1.9441003799438477,
+              "action_shuffle_mae": 24.021944046020508
+            },
+            "interpretation": "diagnostic_only: probe error is not below the motion being measured"
+          },
+          "object_motion_challenge": {
+            "n": 49,
+            "probe_true_dino_mae": 11.939459800720215,
+            "probe_true_dino_delta_mae": 13.947779655456543,
+            "mean_true_motion": 29.888866424560547,
+            "eligible_for_model_claim": true,
+            "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+            "correct_action_mae": 29.316852569580078,
+            "persistence_mae": 28.833528518676758,
+            "action_shuffle_mae": 31.17283821105957,
+            "delta_motion": {
+              "correct_action_mae": 28.845067977905273,
+              "persistence_mae": 29.888866424560547,
+              "action_shuffle_mae": 32.094581604003906
+            }
+          },
+          "token_subsets": {
+            "natural_non_challenge": {
+              "n": 207,
+              "correct_action": {
+                "mse": 0.22573192417621613,
+                "l1": 0.33387792110443115,
+                "moving_quartile_mse": 0.5108873248100281,
+                "moving_quartile_l1": 0.5089124441146851,
+                "motion_weighted_mse": 0.8335789442062378,
+                "motion_weighted_l1": 0.6321293711662292
+              },
+              "persistence": {
+                "mse": 0.2588297426700592,
+                "l1": 0.28982001543045044,
+                "moving_quartile_mse": 0.8104332089424133,
+                "moving_quartile_l1": 0.5671787858009338,
+                "motion_weighted_mse": 1.9190304279327393,
+                "motion_weighted_l1": 0.90085768699646
+              },
+              "action_shuffle": {
+                "mse": 0.30238205194473267,
+                "l1": 0.3661262094974518,
+                "moving_quartile_mse": 0.7758538722991943,
+                "moving_quartile_l1": 0.5993252992630005,
+                "motion_weighted_mse": 1.4554286003112793,
+                "motion_weighted_l1": 0.8034041523933411
+              },
+              "motion_energy_mean": 0.2588297426700592
+            },
+            "object_motion_challenge": {
+              "n": 49,
+              "correct_action": {
+                "mse": 0.3324344754219055,
+                "l1": 0.3981204032897949,
+                "moving_quartile_mse": 0.8473877906799316,
+                "moving_quartile_l1": 0.6729364395141602,
+                "motion_weighted_mse": 0.9653638601303101,
+                "motion_weighted_l1": 0.6894471049308777
+              },
+              "persistence": {
+                "mse": 0.4457198977470398,
+                "l1": 0.4306461215019226,
+                "moving_quartile_mse": 1.307279348373413,
+                "moving_quartile_l1": 0.8195614218711853,
+                "motion_weighted_mse": 1.6851729154586792,
+                "motion_weighted_l1": 0.8883907794952393
+              },
+              "action_shuffle": {
+                "mse": 0.414933443069458,
+                "l1": 0.4400648772716522,
+                "moving_quartile_mse": 1.0710690021514893,
+                "moving_quartile_l1": 0.7528491020202637,
+                "motion_weighted_mse": 1.2332253456115723,
+                "motion_weighted_l1": 0.7757858037948608
+              },
+              "motion_energy_mean": 0.4457198977470398
+            }
+          }
+        },
+        "block_angle": {
+          "probe_fit": {
+            "solver": "sklearn_cholesky",
+            "alpha_search": [
+              {
+                "alpha": 0.01,
+                "val_mae": 11.741355895996094
+              },
+              {
+                "alpha": 0.1,
+                "val_mae": 11.696830749511719
+              },
+              {
+                "alpha": 1.0,
+                "val_mae": 11.309085845947266
+              },
+              {
+                "alpha": 10.0,
+                "val_mae": 10.403359413146973
+              },
+              {
+                "alpha": 100.0,
+                "val_mae": 10.237056732177734
+              },
+              {
+                "alpha": 1000.0,
+                "val_mae": 12.820732116699219
+              }
+            ],
+            "chosen_alpha": 100.0,
+            "val_mae": 10.237056732177734,
+            "seconds": 3.1044080939609557
+          },
+          "natural_non_challenge": {
+            "n": 211,
+            "probe_true_dino_mae": 10.332040786743164,
+            "probe_true_dino_delta_mae": 7.807190418243408,
+            "mean_true_motion": 1.05547034740448,
+            "eligible_for_model_claim": false,
+            "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+            "correct_action_mae": 23.639190673828125,
+            "persistence_mae": 10.211432456970215,
+            "action_shuffle_mae": 24.15123748779297,
+            "delta_motion": {
+              "correct_action_mae": 21.509794235229492,
+              "persistence_mae": 1.05547034740448,
+              "action_shuffle_mae": 21.665611267089844
+            },
+            "interpretation": "diagnostic_only: probe error is not below the motion being measured"
+          },
+          "object_motion_challenge": {
+            "n": 45,
+            "probe_true_dino_mae": 16.792522430419922,
+            "probe_true_dino_delta_mae": 15.411303520202637,
+            "mean_true_motion": 17.85199737548828,
+            "eligible_for_model_claim": true,
+            "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+            "correct_action_mae": 48.29587173461914,
+            "persistence_mae": 25.234188079833984,
+            "action_shuffle_mae": 42.56090545654297,
+            "delta_motion": {
+              "correct_action_mae": 39.669063568115234,
+              "persistence_mae": 17.85199737548828,
+              "action_shuffle_mae": 32.97108459472656
+            }
+          },
+          "token_subsets": {
+            "natural_non_challenge": {
+              "n": 211,
+              "correct_action": {
+                "mse": 0.219498410820961,
+                "l1": 0.3299379050731659,
+                "moving_quartile_mse": 0.4979158639907837,
+                "moving_quartile_l1": 0.5037998557090759,
+                "motion_weighted_mse": 0.8210467100143433,
+                "motion_weighted_l1": 0.6269441843032837
+              },
+              "persistence": {
+                "mse": 0.24872224032878876,
+                "l1": 0.28478550910949707,
+                "moving_quartile_mse": 0.7862759828567505,
+                "moving_quartile_l1": 0.5602045655250549,
+                "motion_weighted_mse": 1.8845793008804321,
+                "motion_weighted_l1": 0.8911530375480652
+              },
+              "action_shuffle": {
+                "mse": 0.29554304480552673,
+                "l1": 0.3630514144897461,
+                "moving_quartile_mse": 0.7572067975997925,
+                "moving_quartile_l1": 0.5935927033424377,
+                "motion_weighted_mse": 1.4291331768035889,
+                "motion_weighted_l1": 0.7956720590591431
+              },
+              "motion_energy_mean": 0.24872224032878876
+            },
+            "object_motion_challenge": {
+              "n": 45,
+              "correct_action": {
+                "mse": 0.37114736437797546,
+                "l1": 0.42230504751205444,
+                "moving_quartile_mse": 0.9381207227706909,
+                "moving_quartile_l1": 0.7114884257316589,
+                "motion_weighted_mse": 1.0358401536941528,
+                "motion_weighted_l1": 0.7188549637794495
+              },
+              "persistence": {
+                "mse": 0.5097252726554871,
+                "l1": 0.4667702913284302,
+                "moving_quartile_mse": 1.4647135734558105,
+                "moving_quartile_l1": 0.8746967911720276,
+                "motion_weighted_mse": 1.8259214162826538,
+                "motion_weighted_l1": 0.9327871799468994
+              },
+              "action_shuffle": {
+                "mse": 0.45700547099113464,
+                "l1": 0.46105456352233887,
+                "moving_quartile_mse": 1.1847440004348755,
+                "moving_quartile_l1": 0.7933751344680786,
+                "motion_weighted_mse": 1.3367700576782227,
+                "motion_weighted_l1": 0.8095853328704834
+              },
+              "motion_energy_mean": 0.5097252726554871
+            }
+          }
+        }
+      }
+    },
+    "tworoom": {
+      "n_test": 256,
+      "token_metrics": {
+        "correct_action": {
+          "mse": 0.15404406189918518,
+          "l1": 0.27981385588645935,
+          "moving_quartile_mse": 0.3515792191028595,
+          "moving_quartile_l1": 0.4341375529766083,
+          "motion_weighted_mse": 0.44685497879981995,
+          "motion_weighted_l1": 0.46361443400382996
+        },
+        "persistence": {
+          "mse": 0.3633992671966553,
+          "l1": 0.3515385687351227,
+          "moving_quartile_mse": 1.118668556213379,
+          "moving_quartile_l1": 0.7125040888786316,
+          "motion_weighted_mse": 1.7717535495758057,
+          "motion_weighted_l1": 0.883000373840332
+        },
+        "action_shuffle": {
+          "mse": 0.4344404935836792,
+          "l1": 0.4099058508872986,
+          "moving_quartile_mse": 1.23455011844635,
+          "moving_quartile_l1": 0.7573589086532593,
+          "motion_weighted_mse": 1.5439796447753906,
+          "motion_weighted_l1": 0.8232356905937195
+        },
+        "motion_energy_mean": 0.3633992671966553
+      },
+      "state_metrics": {
+        "agent_xy": {
+          "probe_fit": {
+            "solver": "sklearn_cholesky",
+            "alpha_search": [
+              {
+                "alpha": 0.01,
+                "val_mae": 0.5540865659713745
+              },
+              {
+                "alpha": 0.1,
+                "val_mae": 0.5241296291351318
+              },
+              {
+                "alpha": 1.0,
+                "val_mae": 0.48718029260635376
+              },
+              {
+                "alpha": 10.0,
+                "val_mae": 0.5250161290168762
+              },
+              {
+                "alpha": 100.0,
+                "val_mae": 0.6817284822463989
+              },
+              {
+                "alpha": 1000.0,
+                "val_mae": 1.0806721448898315
+              }
+            ],
+            "chosen_alpha": 1.0,
+            "val_mae": 0.48718029260635376,
+            "seconds": 3.1864499469520524
+          },
+          "natural_non_challenge": {
+            "n": 154,
+            "probe_true_dino_mae": 0.5906487703323364,
+            "probe_true_dino_delta_mae": 0.8782945871353149,
+            "mean_true_motion": 9.160246849060059,
+            "eligible_for_model_claim": true,
+            "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+            "correct_action_mae": 5.917209148406982,
+            "persistence_mae": 9.25163459777832,
+            "action_shuffle_mae": 14.71924114227295,
+            "delta_motion": {
+              "correct_action_mae": 5.922062873840332,
+              "persistence_mae": 9.160246849060059,
+              "action_shuffle_mae": 14.749844551086426
+            }
+          },
+          "object_motion_challenge": {
+            "n": 102,
+            "probe_true_dino_mae": 0.617613673210144,
+            "probe_true_dino_delta_mae": 0.8992518782615662,
+            "mean_true_motion": 20.286605834960938,
+            "eligible_for_model_claim": true,
+            "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+            "correct_action_mae": 5.795964241027832,
+            "persistence_mae": 20.233301162719727,
+            "action_shuffle_mae": 21.23416519165039,
+            "delta_motion": {
+              "correct_action_mae": 5.770835876464844,
+              "persistence_mae": 20.286605834960938,
+              "action_shuffle_mae": 21.262487411499023
+            }
+          },
+          "token_subsets": {
+            "natural_non_challenge": {
+              "n": 154,
+              "correct_action": {
+                "mse": 0.1429002583026886,
+                "l1": 0.27156519889831543,
+                "moving_quartile_mse": 0.3198021650314331,
+                "moving_quartile_l1": 0.41561344265937805,
+                "motion_weighted_mse": 0.4293857514858246,
+                "motion_weighted_l1": 0.4525550603866577
+              },
+              "persistence": {
+                "mse": 0.24178670346736908,
+                "l1": 0.29306289553642273,
+                "moving_quartile_mse": 0.7287878394126892,
+                "moving_quartile_l1": 0.5751264691352844,
+                "motion_weighted_mse": 1.3505516052246094,
+                "motion_weighted_l1": 0.7528582811355591
+              },
+              "action_shuffle": {
+                "mse": 0.36664679646492004,
+                "l1": 0.3835541009902954,
+                "moving_quartile_mse": 0.9991070628166199,
+                "moving_quartile_l1": 0.6830260753631592,
+                "motion_weighted_mse": 1.2327351570129395,
+                "motion_weighted_l1": 0.7335944771766663
+              },
+              "motion_energy_mean": 0.24178670346736908
+            },
+            "object_motion_challenge": {
+              "n": 102,
+              "correct_action": {
+                "mse": 0.17086900770664215,
+                "l1": 0.29226768016815186,
+                "moving_quartile_mse": 0.39955633878707886,
+                "moving_quartile_l1": 0.46210533380508423,
+                "motion_weighted_mse": 0.4732300639152527,
+                "motion_weighted_l1": 0.48031190037727356
+              },
+              "persistence": {
+                "mse": 0.5470103621482849,
+                "l1": 0.4398253262042999,
+                "moving_quartile_mse": 1.7073116302490234,
+                "moving_quartile_l1": 0.9199172258377075,
+                "motion_weighted_mse": 2.4076859951019287,
+                "motion_weighted_l1": 1.0794893503189087
+              },
+              "action_shuffle": {
+                "mse": 0.5367956161499023,
+                "l1": 0.4496917724609375,
+                "moving_quartile_mse": 1.5900229215621948,
+                "moving_quartile_l1": 0.8695868849754333,
+                "motion_weighted_mse": 2.013897657394409,
+                "motion_weighted_l1": 0.9585764408111572
+              },
+              "motion_energy_mean": 0.5470103621482849
+            }
+          }
+        }
+      }
+    },
+    "cube": {
+      "n_test": 256,
+      "token_metrics": {
+        "correct_action": {
+          "mse": 0.5955920219421387,
+          "l1": 0.5440149307250977,
+          "moving_quartile_mse": 1.3692634105682373,
+          "moving_quartile_l1": 0.8864245414733887,
+          "motion_weighted_mse": 1.2786314487457275,
+          "motion_weighted_l1": 0.8321112394332886
+        },
+        "persistence": {
+          "mse": 1.081788182258606,
+          "l1": 0.662065863609314,
+          "moving_quartile_mse": 3.13106632232666,
+          "moving_quartile_l1": 1.2992836236953735,
+          "motion_weighted_mse": 3.078373908996582,
+          "motion_weighted_l1": 1.2410377264022827
+        },
+        "action_shuffle": {
+          "mse": 0.9526159763336182,
+          "l1": 0.6547452211380005,
+          "moving_quartile_mse": 2.385955333709717,
+          "moving_quartile_l1": 1.1392836570739746,
+          "motion_weighted_mse": 2.2161455154418945,
+          "motion_weighted_l1": 1.063637614250183
+        },
+        "motion_energy_mean": 1.081788182258606
+      },
+      "state_metrics": {
+        "block_xyz": {
+          "probe_fit": {
+            "solver": "sklearn_cholesky",
+            "alpha_search": [
+              {
+                "alpha": 0.01,
+                "val_mae": 0.030761953443288803
+              },
+              {
+                "alpha": 0.1,
+                "val_mae": 0.030733712017536163
+              },
+              {
+                "alpha": 1.0,
+                "val_mae": 0.030473804101347923
+              },
+              {
+                "alpha": 10.0,
+                "val_mae": 0.028878189623355865
+              },
+              {
+                "alpha": 100.0,
+                "val_mae": 0.02621046081185341
+              },
+              {
+                "alpha": 1000.0,
+                "val_mae": 0.026625938713550568
+              }
+            ],
+            "chosen_alpha": 100.0,
+            "val_mae": 0.02621046081185341,
+            "seconds": 3.1324515339219943
+          },
+          "natural_non_challenge": {
+            "n": 155,
+            "probe_true_dino_mae": 0.02813112735748291,
+            "probe_true_dino_delta_mae": 0.032024629414081573,
+            "mean_true_motion": 0.0011270713293924928,
+            "eligible_for_model_claim": false,
+            "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+            "correct_action_mae": 0.040975213050842285,
+            "persistence_mae": 0.03114447370171547,
+            "action_shuffle_mae": 0.057273298501968384,
+            "delta_motion": {
+              "correct_action_mae": 0.03912230581045151,
+              "persistence_mae": 0.0011270713293924928,
+              "action_shuffle_mae": 0.051881950348615646
+            },
+            "interpretation": "diagnostic_only: probe error is not below the motion being measured"
+          },
+          "object_motion_challenge": {
+            "n": 101,
+            "probe_true_dino_mae": 0.025593282654881477,
+            "probe_true_dino_delta_mae": 0.029837556183338165,
+            "mean_true_motion": 0.08115720003843307,
+            "eligible_for_model_claim": true,
+            "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+            "correct_action_mae": 0.05652887001633644,
+            "persistence_mae": 0.08103616535663605,
+            "action_shuffle_mae": 0.09857930988073349,
+            "delta_motion": {
+              "correct_action_mae": 0.05497405678033829,
+              "persistence_mae": 0.08115720003843307,
+              "action_shuffle_mae": 0.09817942976951599
+            }
+          },
+          "token_subsets": {
+            "natural_non_challenge": {
+              "n": 155,
+              "correct_action": {
+                "mse": 0.5815189480781555,
+                "l1": 0.5388704538345337,
+                "moving_quartile_mse": 1.3240711688995361,
+                "moving_quartile_l1": 0.872523844242096,
+                "motion_weighted_mse": 1.232843279838562,
+                "motion_weighted_l1": 0.8177950978279114
+              },
+              "persistence": {
+                "mse": 1.0109370946884155,
+                "l1": 0.6343547105789185,
+                "moving_quartile_mse": 2.911811351776123,
+                "moving_quartile_l1": 1.239647388458252,
+                "motion_weighted_mse": 2.868212938308716,
+                "motion_weighted_l1": 1.1851871013641357
+              },
+              "action_shuffle": {
+                "mse": 0.9191610217094421,
+                "l1": 0.6436102986335754,
+                "moving_quartile_mse": 2.2691125869750977,
+                "moving_quartile_l1": 1.1087011098861694,
+                "motion_weighted_mse": 2.0955770015716553,
+                "motion_weighted_l1": 1.0320982933044434
+              },
+              "motion_energy_mean": 1.0109370946884155
+            },
+            "object_motion_challenge": {
+              "n": 101,
+              "correct_action": {
+                "mse": 0.6171894073486328,
+                "l1": 0.5519099831581116,
+                "moving_quartile_mse": 1.4386179447174072,
+                "moving_quartile_l1": 0.9077572822570801,
+                "motion_weighted_mse": 1.3489000797271729,
+                "motion_weighted_l1": 0.8540816307067871
+              },
+              "persistence": {
+                "mse": 1.19051992893219,
+                "l1": 0.7045929431915283,
+                "moving_quartile_mse": 3.4675471782684326,
+                "moving_quartile_l1": 1.3908048868179321,
+                "motion_weighted_mse": 3.400897979736328,
+                "motion_weighted_l1": 1.3267490863800049
+              },
+              "action_shuffle": {
+                "mse": 1.003957748413086,
+                "l1": 0.6718336343765259,
+                "moving_quartile_mse": 2.565268039703369,
+                "moving_quartile_l1": 1.1862175464630127,
+                "motion_weighted_mse": 2.4011764526367188,
+                "motion_weighted_l1": 1.1120394468307495
+              },
+              "motion_energy_mean": 1.19051992893219
+            }
+          }
+        },
+        "effector_xyz": {
+          "probe_fit": {
+            "solver": "sklearn_cholesky",
+            "alpha_search": [
+              {
+                "alpha": 0.01,
+                "val_mae": 0.014121834188699722
+              },
+              {
+                "alpha": 0.1,
+                "val_mae": 0.014108576811850071
+              },
+              {
+                "alpha": 1.0,
+                "val_mae": 0.013980628922581673
+              },
+              {
+                "alpha": 10.0,
+                "val_mae": 0.013171114027500153
+              },
+              {
+                "alpha": 100.0,
+                "val_mae": 0.011866051703691483
+              },
+              {
+                "alpha": 1000.0,
+                "val_mae": 0.012826476246118546
+              }
+            ],
+            "chosen_alpha": 100.0,
+            "val_mae": 0.011866051703691483,
+            "seconds": 3.695302218082361
+          },
+          "natural_non_challenge": {
+            "n": 34,
+            "probe_true_dino_mae": 0.010664603672921658,
+            "probe_true_dino_delta_mae": 0.009650065563619137,
+            "mean_true_motion": 0.01115140225738287,
+            "eligible_for_model_claim": true,
+            "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+            "correct_action_mae": 0.03211614489555359,
+            "persistence_mae": 0.017296934500336647,
+            "action_shuffle_mae": 0.05393379554152489,
+            "delta_motion": {
+              "correct_action_mae": 0.03330881893634796,
+              "persistence_mae": 0.01115140225738287,
+              "action_shuffle_mae": 0.053719788789749146
+            }
+          },
+          "object_motion_challenge": {
+            "n": 222,
+            "probe_true_dino_mae": 0.013266016729176044,
+            "probe_true_dino_delta_mae": 0.015538273379206657,
+            "mean_true_motion": 0.07658454775810242,
+            "eligible_for_model_claim": true,
+            "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+            "correct_action_mae": 0.03437370806932449,
+            "persistence_mae": 0.0761069729924202,
+            "action_shuffle_mae": 0.08703380078077316,
+            "delta_motion": {
+              "correct_action_mae": 0.033083055168390274,
+              "persistence_mae": 0.07658454775810242,
+              "action_shuffle_mae": 0.08720365166664124
+            }
+          },
+          "token_subsets": {
+            "natural_non_challenge": {
+              "n": 34,
+              "correct_action": {
+                "mse": 0.40488511323928833,
+                "l1": 0.4582679271697998,
+                "moving_quartile_mse": 0.9113973379135132,
+                "moving_quartile_l1": 0.730315625667572,
+                "motion_weighted_mse": 0.9355505704879761,
+                "motion_weighted_l1": 0.7088488340377808
+              },
+              "persistence": {
+                "mse": 0.29015687108039856,
+                "l1": 0.348482608795166,
+                "moving_quartile_mse": 0.8378649950027466,
+                "moving_quartile_l1": 0.666057825088501,
+                "motion_weighted_mse": 1.0580555200576782,
+                "motion_weighted_l1": 0.6925830245018005
+              },
+              "action_shuffle": {
+                "mse": 0.6342045068740845,
+                "l1": 0.5407299399375916,
+                "moving_quartile_mse": 1.4547902345657349,
+                "moving_quartile_l1": 0.8935847878456116,
+                "motion_weighted_mse": 1.368320345878601,
+                "motion_weighted_l1": 0.8387425541877747
+              },
+              "motion_energy_mean": 0.29015687108039856
+            },
+            "object_motion_challenge": {
+              "n": 222,
+              "correct_action": {
+                "mse": 0.6247994303703308,
+                "l1": 0.5571473240852356,
+                "moving_quartile_mse": 1.4393870830535889,
+                "moving_quartile_l1": 0.9103330969810486,
+                "motion_weighted_mse": 1.3311753273010254,
+                "motion_weighted_l1": 0.8509892821311951
+              },
+              "persistence": {
+                "mse": 1.2030290365219116,
+                "l1": 0.7100921273231506,
+                "moving_quartile_mse": 3.4822776317596436,
+                "moving_quartile_l1": 1.3962641954421997,
+                "motion_weighted_mse": 3.3877921104431152,
+                "motion_weighted_l1": 1.3250353336334229
+              },
+              "action_shuffle": {
+                "mse": 1.0013816356658936,
+                "l1": 0.6722071170806885,
+                "moving_quartile_mse": 2.5285661220550537,
+                "moving_quartile_l1": 1.1769131422042847,
+                "motion_weighted_mse": 2.3459925651550293,
+                "motion_weighted_l1": 1.0980809926986694
+              },
+              "motion_energy_mean": 1.2030290365219116
+            }
+          }
+        }
+      }
+    }
+  },
+  "timing": {
+    "pusht/dynamics_forward_s": 0.31774324702564627,
+    "pusht/pool_and_token_metrics_s": 0.4547089400002733,
+    "tworoom/dynamics_forward_s": 0.3557435249676928,
+    "tworoom/pool_and_token_metrics_s": 0.4522580789634958,
+    "cube/dynamics_forward_s": 0.3337801689049229,
+    "cube/pool_and_token_metrics_s": 0.4690346559509635,
+    "total_arm_seconds": 2.3832686158129945
+  },
+  "action_normalizer": {
+    "path": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/action_normalizers.json",
+    "sha256": "dd7194f4747ab0b5ce5be5599d7351ebae48877dd7c6e27892953669470bb0a4",
+    "key": "238886bc2badfd87ad449c57271ed8720c65eeaf76fd885f373352a63cb581c8",
+    "source": "direct label-free Lance actions from cached cohort rows"
+  }
+}

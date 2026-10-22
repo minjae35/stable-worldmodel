@@ -1,0 +1,18 @@
+{
+  "source_checkpoint_sha256": "74cac8a6f6b469d672d203bc68c75f99fc444c661a4a05eb998c5b8d2a737163",
+  "source_model_sha256": "93de4989d4429defa879ebac6d9005d8216a747396f2ad9786089f922c2cd296",
+  "restored_model_sha256": "93de4989d4429defa879ebac6d9005d8216a747396f2ad9786089f922c2cd296",
+  "source_optimizer_steps": [
+    500
+  ],
+  "restored_optimizer_steps": [
+    500
+  ],
+  "lr": 0.001,
+  "scheduler": null,
+  "schedule_prefix_sha256": "e05078b5c97571966df67cab98e8a0e7bc53dc510d30c97e6376c815c552c4c7",
+  "full_schedule_sha256": "02740524eeb47fa4d29eab45c6b131152608856a3665b6caaa5f4feed69d30ab",
+  "source_rng_snapshot_present": false,
+  "stochastic_training_layers": false,
+  "sampler_state": "derived from seed and current step; no mutable cursor"
+}

@@ -1,0 +1,33 @@
+{
+  "experiment": "g3_history_h1_vs_h3",
+  "arm": "H1",
+  "history": 1,
+  "seed": 3072,
+  "steps": 2000,
+  "batch_per_env": 16,
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "grad_clip": 1.0,
+  "sampling": "uniform_s0_common_history_valid_anchors",
+  "loss": "mse",
+  "frameskip": 5,
+  "balanced_environment_batches": [
+    "pusht",
+    "tworoom",
+    "cube"
+  ],
+  "initialization": "fresh_seeded_spatial_dynamics",
+  "initial_model_sha256": "5d5da87db6e2cf7d1f06004456ab89c9f695c5d14a682ec37c9de0acd554dfa2",
+  "model_parameter_count": 6794368,
+  "architecture_changed": false,
+  "target_definition": "anchor_t_plus_5",
+  "common_manifest": "/workspace/stable-worldmodel/results/stage3/g3_history/common_windows.json",
+  "common_manifest_sha256": "37e9194981f29f4b818d6facd36892b171a236d185126522211070e0859c1432",
+  "normalizer_file": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/action_normalizers.json",
+  "normalizer_key": "238886bc2badfd87ad449c57271ed8720c65eeaf76fd885f373352a63cb581c8",
+  "normalizer_sha256": "dd7194f4747ab0b5ce5be5599d7351ebae48877dd7c6e27892953669470bb0a4",
+  "dino_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+  "max_train_items": 0,
+  "output_dir": "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse"
+}

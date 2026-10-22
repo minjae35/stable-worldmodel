@@ -1,0 +1,26 @@
+{
+  "locked_at_utc": "2026-10-22T00:22:43Z",
+  "sealed_results_inspected": false,
+  "cohort_role": "development_evaluation_previously_used_for_model_selection",
+  "hyperparameter_or_budget_change_selected": false,
+  "decision": "inconclusive_small_mixed_effect_do_not_select_a_winner",
+  "macro_feature_mse": {
+    "A_uniform": 0.4096717933813731,
+    "B_temporal": 0.4073472221692403,
+    "B_minus_A_percent": -0.5674228125266146
+  },
+  "macro_feature_mae": {
+    "A_uniform": 0.4380999207496643,
+    "B_temporal": 0.4387468993663788,
+    "B_minus_A_percent": 0.14767832315682364
+  },
+  "paired_episode_bootstrap_interpretation": {
+    "pusht_mse": "B lower, but 95% CI crosses zero",
+    "tworoom_mse": "B lower and 95% CI excludes zero",
+    "cube_mse": "no directional effect",
+    "cube_mae": "B worse and 95% CI excludes zero"
+  },
+  "push_t_interaction": "No reliable improvement claim: block XY challenge changes only slightly, block rotation worsens, and both remain worse than persistence.",
+  "convergence": "Both arms were still improving over their final 50 updates, so 500 updates are not a terminal comparison.",
+  "sealed_policy": "The sealed cohort will be evaluated once for confirmation only and will not be used to choose hyperparameters, budget, or a winning arm."
+}

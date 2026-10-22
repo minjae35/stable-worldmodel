@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import random
 import sys
 import time
 import traceback
@@ -43,6 +44,10 @@ from stable_worldmodel.wm.spatial.g2_fresh import (  # noqa: E402
     prepare_action_normalizers,
     torch_normalizers,
     validate_sampling_episode_alignment,
+)
+from stable_worldmodel.wm.spatial.g2_extension import (  # noqa: E402
+    capture_rng_state,
+    restore_rng_state,
 )
 from stable_worldmodel.wm.spatial.model import FrozenDINOv2, SpatialDynamics  # noqa: E402
 
@@ -102,6 +107,7 @@ def main(argv=None):
     normalizers = torch_normalizers(normalizer_artifact)
 
     np.random.seed(args.seed)
+    random.seed(args.seed)
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed_all(args.seed)
     torch.backends.cuda.matmul.allow_tf32 = False
@@ -209,6 +215,9 @@ def main(argv=None):
     if args.resume is not None:
         from stable_worldmodel.wm.spatial.g2 import load_resume_checkpoint
         resumed = load_resume_checkpoint(args.resume, model, optimizer, config)
+        if 'rng_state' not in resumed.get('extra', {}):
+            raise ValueError('resume checkpoint lacks required RNG state')
+        restore_rng_state(resumed['extra']['rng_state'])
         start_step = int(resumed['step'])
         if start_step >= args.steps:
             raise ValueError('resume checkpoint is already at or beyond requested steps')
@@ -291,7 +300,8 @@ def main(argv=None):
             if done % args.checkpoint_every == 0 or done == args.steps:
                 save_checkpoint_no_overwrite(
                     output / f'checkpoint_step{done}.pt', model=model,
-                    optimizer=optimizer, step=done, run_config=config, extra=metadata,
+                    optimizer=optimizer, step=done, run_config=config,
+                    extra={**metadata, 'rng_state': capture_rng_state()},
                 )
         bar.close()
 

@@ -1,0 +1,25 @@
+{
+  "seed": 3072,
+  "frameskip": 5,
+  "pusht_bins": {
+    "agent_move": 15.0,
+    "agent_still": 5.0,
+    "block_move": 5.0,
+    "block_still": 2.0,
+    "angle_move_deg": 10.0,
+    "angle_still_deg": 5.0,
+    "near_bins": [
+      40.0,
+      60.0,
+      80.0
+    ],
+    "agent_radius": 15.0,
+    "block_scale": 30.0
+  },
+  "green_marker_xy_from_g0": [
+    226.93271166,
+    283.85171816
+  ],
+  "g1_episodes": "/workspace/stable-worldmodel/results/stage3/g1_spatial/overfit500/episodes.json",
+  "weights": "/workspace/stable-worldmodel/results/stage3/g0_dinov2/weights"
+}

@@ -126,6 +126,16 @@ def cache_items(manifest: dict, env: str, split: str, limit: int) -> list[dict]:
     return items if limit <= 0 else items[:limit]
 
 
+def evaluation_items(manifest: dict, env: str, split: str, limit: int) -> list[dict]:
+    """Resolve either the development manifest or a frozen sealed cohort."""
+    if 'environments' in manifest:
+        if split != 'test':
+            raise ValueError('sealed cohort manifests only provide a test split')
+        items = list(manifest['environments'][env]['clips'])
+        return items if limit <= 0 else items[:limit]
+    return cache_items(manifest, env, split, limit)
+
+
 def prepare_feature_cache(
     cache_dir: Path, limits: dict[str, int], encode_batch: int, seed: int
 ):
@@ -309,6 +319,7 @@ def evaluate_checkpoint(
     seed: int,
     eval_batch: int,
     action_normalizer_path: Path | None = None,
+    cohort_manifest_path: Path = MANIFEST,
 ):
     if output.exists():
         raise FileExistsError(f'refusing to overwrite {output}')
@@ -328,7 +339,9 @@ def evaluate_checkpoint(
         'feature_cache_key': feature_metadata['cache_key'],
         'probe_key': probe_metadata['probe_key'],
         'probe_fit_reused_across_arms': True,
-        'natural_sampling': 'manifest s0 test for every arm',
+        'cohort_manifest': str(cohort_manifest_path.resolve()),
+        'cohort_manifest_sha256': sha256_file(cohort_manifest_path),
+        'natural_sampling': 'shared frozen cohort for every arm',
         'environments': {},
         'timing': {},
     }
@@ -342,14 +355,14 @@ def evaluate_checkpoint(
             'key': normalizer_artifact['key'],
             'source': 'direct label-free Lance actions from cached cohort rows',
         }
-        manifest = json.loads(MANIFEST.read_text())
+        manifest = json.loads(cohort_manifest_path.read_text())
         import lance
     device = torch.device('cuda:0')
     for env_index, env in enumerate(ENV_NAMES):
         test = load_shard(cache_dir, env, 'test')
         if action_normalizers is not None:
             limit = int(feature_metadata['identity']['limits']['test'])
-            items = cache_items(manifest, env, 'test', limit)
+            items = evaluation_items(manifest, env, 'test', limit)
             raw_actions = load_label_free_actions(
                 lance.dataset(str(DATASETS[env])), items, env,
                 int(manifest['frameskip']),
@@ -446,6 +459,11 @@ def main():
     parser.add_argument('--val-items', type=int, default=0)
     parser.add_argument('--test-items', type=int, default=0)
     parser.add_argument('--action-normalizers', type=Path)
+    parser.add_argument('--cohort-manifest', type=Path, default=MANIFEST)
+    parser.add_argument(
+        '--reuse-existing-cache', action='store_true',
+        help='Use an already READY cache without preparing features or probes.',
+    )
     args = parser.parse_args()
     cache_dir = args.cache_dir.resolve()
     limits = {
@@ -454,10 +472,16 @@ def main():
         'test': args.test_items,
     }
     configure_determinism(args.seed)
-    feature_metadata = prepare_feature_cache(
-        cache_dir, limits, args.encode_batch, args.seed
-    )
-    probe_metadata = prepare_probe_cache(cache_dir, feature_metadata)
+    if args.reuse_existing_cache:
+        if (cache_dir / 'STATUS').read_text().strip() != 'READY':
+            raise RuntimeError(f'evaluation cache is not READY: {cache_dir}')
+        feature_metadata = json.loads((cache_dir / 'metadata.json').read_text())
+        probe_metadata = json.loads((cache_dir / 'probes.json').read_text())
+    else:
+        feature_metadata = prepare_feature_cache(
+            cache_dir, limits, args.encode_batch, args.seed
+        )
+        probe_metadata = prepare_probe_cache(cache_dir, feature_metadata)
     print(json.dumps({
         'feature_cache_key': feature_metadata['cache_key'],
         'probe_key': probe_metadata['probe_key'],
@@ -472,6 +496,7 @@ def main():
         args.checkpoint.resolve(), cache_dir, args.output.resolve(), args.seed,
         args.eval_batch,
         None if args.action_normalizers is None else args.action_normalizers.resolve(),
+        args.cohort_manifest.resolve(),
     )
     print(json.dumps({'output': str(args.output), 'timing': report['timing']}, indent=2))
 

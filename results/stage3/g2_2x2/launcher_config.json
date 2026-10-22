@@ -1,0 +1,57 @@
+{
+  "session_name": "stablewm_stage3_g2",
+  "sequential": true,
+  "stop_on_first_failure": true,
+  "commands": [
+    [
+      "/venv/stable-wm/bin/python",
+      "/workspace/stable-worldmodel/scripts/train/g2_spatial.py",
+      "--arm",
+      "A",
+      "--output-dir",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/A_uniform_mse",
+      "--loss-calibration-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/gradient_calibration.json"
+    ],
+    [
+      "/venv/stable-wm/bin/python",
+      "/workspace/stable-worldmodel/scripts/train/g2_spatial.py",
+      "--arm",
+      "B",
+      "--output-dir",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/B_temporal_mse",
+      "--loss-calibration-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/gradient_calibration.json"
+    ],
+    [
+      "/venv/stable-wm/bin/python",
+      "/workspace/stable-worldmodel/scripts/train/g2_spatial.py",
+      "--arm",
+      "C",
+      "--output-dir",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/C_uniform_l1",
+      "--loss-calibration-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/gradient_calibration.json"
+    ],
+    [
+      "/venv/stable-wm/bin/python",
+      "/workspace/stable-worldmodel/scripts/train/g2_spatial.py",
+      "--arm",
+      "D",
+      "--output-dir",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/D_temporal_l1",
+      "--loss-calibration-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/gradient_calibration.json"
+    ]
+  ],
+  "runs": [
+    {
+      "arm": "A",
+      "name": "A_uniform_mse",
+      "returncode": 1,
+      "seconds": 785.3905446529388,
+      "log": "/workspace/stable-worldmodel/results/stage3/g2_2x2/A_uniform_mse.log",
+      "run_log": "/workspace/stable-worldmodel/results/stage3/g2_2x2/A_uniform_mse/train.log"
+    }
+  ]
+}

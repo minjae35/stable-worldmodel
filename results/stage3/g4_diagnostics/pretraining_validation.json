@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "representation_diagnostic": "PASS; DINO rotation information is retained, so temporal control remains valid",
+  "tests": "138 passed, 4 existing warnings",
+  "gpu_smoke": "PASS",
+  "checkpoint_resume": "PASS_WITH_NUMERICAL_TOLERANCE",
+  "initial_model_sha256": "5d5da87db6e2cf7d1f06004456ab89c9f695c5d14a682ec37c9de0acd554dfa2",
+  "same_initial_model_as_g3_h3": true,
+  "model_parameter_count": 6794368,
+  "trainable_parameters_added": 0,
+  "same_parameter_count_as_g3_h3": true,
+  "same_full_schedule_hashes_as_g3_h3": true,
+  "frozen_dinov2": true,
+  "training_inputs": ["episode_idx", "pixels", "action"],
+  "future_leakage": false,
+  "temporal_positions": [0, 1, 2],
+  "temporal_encoding_scale_preregistered": 1.0,
+  "approved_to_start_single_g4_arm": true
+}

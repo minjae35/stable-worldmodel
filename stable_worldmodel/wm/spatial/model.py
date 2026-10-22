@@ -30,6 +30,29 @@ ENV_NAMES = ('pusht', 'tworoom', 'cube')
 DEFAULT_ACTION_DIMS = {'pusht': 10, 'tworoom': 10, 'cube': 25}
 
 
+def fixed_sinusoidal_temporal_encoding(
+    positions: torch.Tensor,
+    dim: int,
+    *,
+    dtype: torch.dtype,
+) -> torch.Tensor:
+    """Parameter-free Transformer encoding for explicit temporal indices."""
+    if positions.ndim != 1:
+        raise ValueError('temporal positions must be a one-dimensional tensor')
+    if dim < 2 or dim % 2:
+        raise ValueError('sinusoidal temporal encoding requires a positive even dim')
+    work = positions.to(dtype=torch.float32)
+    frequencies = torch.exp(
+        torch.arange(0, dim, 2, device=positions.device, dtype=torch.float32)
+        * (-torch.log(torch.tensor(10000.0, device=positions.device)) / dim)
+    )
+    angles = work[:, None] * frequencies[None]
+    encoding = torch.empty(len(positions), dim, device=positions.device, dtype=torch.float32)
+    encoding[:, 0::2] = torch.sin(angles)
+    encoding[:, 1::2] = torch.cos(angles)
+    return encoding.to(dtype=dtype)
+
+
 def causal_time_mask(length: int, device, dtype) -> torch.Tensor:
     """Additive mask of shape ``(length, length)``.
 
@@ -123,6 +146,8 @@ class SpatialDynamics(nn.Module):
         action_dims: dict | None = None,
         env_names: tuple[str, ...] = ENV_NAMES,
         dropout: float = 0.0,
+        temporal_encoding: str = 'none',
+        temporal_encoding_scale: float = 1.0,
     ):
         super().__init__()
         if hidden % heads != 0:
@@ -138,6 +163,12 @@ class SpatialDynamics(nn.Module):
         self.env_names = tuple(env_names)
         self.env_to_id = {name: i for i, name in enumerate(self.env_names)}
         self.action_dims = dict(DEFAULT_ACTION_DIMS if action_dims is None else action_dims)
+        if temporal_encoding not in ('none', 'sinusoidal'):
+            raise ValueError(f'unsupported temporal encoding {temporal_encoding!r}')
+        if not torch.isfinite(torch.tensor(float(temporal_encoding_scale))):
+            raise ValueError('temporal encoding scale must be finite')
+        self.temporal_encoding = temporal_encoding
+        self.temporal_encoding_scale = float(temporal_encoding_scale)
         missing = [name for name in self.env_names if name not in self.action_dims]
         if missing:
             raise ValueError(f'missing action dims for {missing}')
@@ -198,6 +229,7 @@ class SpatialDynamics(nn.Module):
         actions: torch.Tensor,
         env_id: torch.Tensor,
         use_action: bool = True,
+        time_indices: torch.Tensor | None = None,
     ) -> torch.Tensor:
         """Predict the token grid of the frame after each context frame.
 
@@ -225,6 +257,17 @@ class SpatialDynamics(nn.Module):
         if use_action:
             x = x + self._embed_actions(actions, env_id)[:, :, None, :]
         x = x + self.env_embed(env_id)[:, None, None, :]
+        if self.temporal_encoding == 'sinusoidal':
+            if time_indices is None:
+                time_indices = torch.arange(h, device=x.device)
+            else:
+                time_indices = time_indices.to(device=x.device)
+            if time_indices.shape != (h,):
+                raise ValueError(f'time_indices must be ({h},), got {tuple(time_indices.shape)}')
+            temporal = fixed_sinusoidal_temporal_encoding(
+                time_indices, self.hidden, dtype=x.dtype
+            )
+            x = x + self.temporal_encoding_scale * temporal[None, :, None, :]
         mask = causal_time_mask(h, x.device, x.dtype)
         for block in self.blocks:
             x = block(x, mask)

@@ -1,0 +1,64 @@
+{
+  "protocol": {
+    "state_and_rgb_used_for_evaluation_only": true,
+    "episode_disjoint_train_val_test": true,
+    "test_used_for_selection": false,
+    "circular_error": true
+  },
+  "source_manifest_sha256": "b9b3fac06ba1828e1e43bf12c85c4c996c823efd24a894ef4751c0473af4aa9f",
+  "common_manifest_sha256": "37e9194981f29f4b818d6facd36892b171a236d185126522211070e0859c1432",
+  "rgb_orientation": {
+    "fit_split": "train only",
+    "fitted_sign": 1,
+    "fitted_offset_rad": -1.5738149832860453,
+    "train": {
+      "n_frames": 2048,
+      "absolute_angle_mae_deg": 6.359398471996181,
+      "absolute_angle_p95_deg": 10.487511303246945
+    },
+    "val": {
+      "n_frames": 512,
+      "absolute_angle_mae_deg": 7.478815457456082,
+      "absolute_angle_p95_deg": 15.320787114729809
+    },
+    "test": {
+      "n_frames": 512,
+      "absolute_angle_mae_deg": 4.722135474768841,
+      "absolute_angle_p95_deg": 10.004472746911482
+    },
+    "g3_common_test": {
+      "n_windows": 224,
+      "n_rotation_challenge": 44,
+      "absolute_frame_mae_deg": 3.14765692230458,
+      "delta_mae_deg_all": 2.3458174855809557,
+      "delta_mae_deg_challenge": 1.5321680728736715,
+      "direction_accuracy_challenge": 1.0,
+      "magnitude_mae_deg_challenge": 1.5321680757349583
+    }
+  },
+  "probe_comparison": {
+    "ridge_sincos_val_mae_deg": 10.237056732177734,
+    "nonlinear_mlp_sincos": {
+      "architecture": "pool4_6144 -> GELU hidden64 -> sin/cos2",
+      "selection_split": "validation only",
+      "seed": 3100,
+      "epochs": 121,
+      "optimizer": {
+        "name": "AdamW",
+        "lr": 0.003,
+        "weight_decay": 0.001
+      },
+      "epoch": 120,
+      "val_mae_deg": 21.526819229125977,
+      "test_mae_deg": 19.143964767456055
+    },
+    "selected_before_g3_training": "ridge_sincos",
+    "selection_rule": "lower validation circular MAE"
+  },
+  "claim_policy": {
+    "rotation_primary_probe": "ridge_sincos",
+    "minimum_probe_motion_margin_for_claim": 1.5,
+    "reason": "The legacy gate only barely passes; G3 rotation superiority requires mean motion / max(true-DINO absolute, delta probe error) >= 1.5.",
+    "otherwise": "diagnostic_only"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "sequential": true,
+  "stop_on_first_failure": true,
+  "commands": [
+    [
+      "/venv/stable-wm/bin/python",
+      "/workspace/stable-worldmodel/scripts/train/g2_fresh_extend.py",
+      "--arm",
+      "A",
+      "--source-dir",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/A_fresh_uniform_mse",
+      "--source-checkpoint",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/A_fresh_uniform_mse/checkpoint_step500.pt",
+      "--output-dir",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab_extension_2000/A_fresh_uniform_mse_extension",
+      "--normalizer-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/action_normalizers.json",
+      "--loss-calibration-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/gradient_calibration.json",
+      "--total-steps",
+      "2000",
+      "--checkpoint-steps",
+      "1000",
+      "1500",
+      "2000"
+    ],
+    [
+      "/venv/stable-wm/bin/python",
+      "/workspace/stable-worldmodel/scripts/train/g2_fresh_extend.py",
+      "--arm",
+      "B",
+      "--source-dir",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/B_fresh_temporal_mse",
+      "--source-checkpoint",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/B_fresh_temporal_mse/checkpoint_step500.pt",
+      "--output-dir",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab_extension_2000/B_fresh_temporal_mse_extension",
+      "--normalizer-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/action_normalizers.json",
+      "--loss-calibration-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/gradient_calibration.json",
+      "--total-steps",
+      "2000",
+      "--checkpoint-steps",
+      "1000",
+      "1500",
+      "2000"
+    ]
+  ],
+  "runs": [
+    {
+      "arm": "A",
+      "returncode": 0,
+      "seconds": 177.41713643202092,
+      "log": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab_extension_2000/A_fresh_uniform_mse_extension.log"
+    },
+    {
+      "arm": "B",
+      "returncode": 0,
+      "seconds": 176.56159608101007,
+      "log": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab_extension_2000/B_fresh_temporal_mse_extension.log"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "arm": "H1",
+      "history": 1,
+      "metrics_rows": 2000,
+      "initial_hash": "5d5da87db6e2cf7d1f06004456ab89c9f695c5d14a682ec37c9de0acd554dfa2",
+      "parameter_count": 6794368,
+      "schedule_hashes": {
+        "pusht": "5d49efc81f3378d41a00d435fa6f28fd9011dcac2322722355a7fcb60c190b4a",
+        "tworoom": "222a3facf40477141fe6cc7ba5b1a806b51903ba2e294198c3bd4377193847b8",
+        "cube": "88bb8aa98671833558fd32c180a10944e6a8dd7ceb7364976a4b0217da80273e"
+      },
+      "checkpoints": [
+        {
+          "step": 500,
+          "bytes": 81710326,
+          "optimizer_step": 500,
+          "rng_state": true
+        },
+        {
+          "step": 1000,
+          "bytes": 81710847,
+          "optimizer_step": 1000,
+          "rng_state": true
+        },
+        {
+          "step": 1500,
+          "bytes": 81710847,
+          "optimizer_step": 1500,
+          "rng_state": true
+        },
+        {
+          "step": 2000,
+          "bytes": 81710847,
+          "optimizer_step": 2000,
+          "rng_state": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "arm": "H3",
+      "history": 3,
+      "metrics_rows": 2000,
+      "initial_hash": "5d5da87db6e2cf7d1f06004456ab89c9f695c5d14a682ec37c9de0acd554dfa2",
+      "parameter_count": 6794368,
+      "schedule_hashes": {
+        "pusht": "5d49efc81f3378d41a00d435fa6f28fd9011dcac2322722355a7fcb60c190b4a",
+        "tworoom": "222a3facf40477141fe6cc7ba5b1a806b51903ba2e294198c3bd4377193847b8",
+        "cube": "88bb8aa98671833558fd32c180a10944e6a8dd7ceb7364976a4b0217da80273e"
+      },
+      "checkpoints": [
+        {
+          "step": 500,
+          "bytes": 81710326,
+          "optimizer_step": 500,
+          "rng_state": true
+        },
+        {
+          "step": 1000,
+          "bytes": 81710847,
+          "optimizer_step": 1000,
+          "rng_state": true
+        },
+        {
+          "step": 1500,
+          "bytes": 81710847,
+          "optimizer_step": 1500,
+          "rng_state": true
+        },
+        {
+          "step": 2000,
+          "bytes": 81710847,
+          "optimizer_step": 2000,
+          "rng_state": true
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "fairness": {
+    "only_config_differences": [
+      "arm",
+      "history",
+      "output_dir"
+    ],
+    "same_initial_model": true,
+    "same_parameter_count": true,
+    "same_schedules": true,
+    "same_common_manifest": true,
+    "same_optimizer_hyperparameters": true,
+    "status": "PASS"
+  }
+}

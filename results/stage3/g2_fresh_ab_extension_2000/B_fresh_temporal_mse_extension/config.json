@@ -1,0 +1,106 @@
+{
+  "seed": 3072,
+  "steps": 2000,
+  "batch_per_env": 16,
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "grad_clip": 1.0,
+  "balanced_environments": [
+    "pusht",
+    "tworoom",
+    "cube"
+  ],
+  "model": "Frozen DINOv2-S/14 + shared SpatialDynamics",
+  "initialization": "fresh_spatial_dynamics_seeded_before_construction",
+  "initial_checkpoint": null,
+  "initial_model_sha256": "5d5da87db6e2cf7d1f06004456ab89c9f695c5d14a682ec37c9de0acd554dfa2",
+  "normalizer_source": "all raw action rows from manifest train episodes",
+  "normalizer_file": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/action_normalizers.json",
+  "normalizer_key": "238886bc2badfd87ad449c57271ed8720c65eeaf76fd885f373352a63cb581c8",
+  "normalizer_sha256": "dd7194f4747ab0b5ce5be5599d7351ebae48877dd7c6e27892953669470bb0a4",
+  "manifest": "/workspace/stable-worldmodel/results/stage3/g2_c1_followup/manifest.json",
+  "manifest_sha256": "b9b3fac06ba1828e1e43bf12c85c4c996c823efd24a894ef4751c0473af4aa9f",
+  "dino_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+  "frameskip": 5,
+  "max_train_items": 0,
+  "loss_calibration_file": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/gradient_calibration.json",
+  "evaluation_deferred": true,
+  "name": "B",
+  "sampling": "s1",
+  "loss": "mse",
+  "output_dir": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab_extension_2000/B_fresh_temporal_mse_extension",
+  "manifest_summary": {
+    "pusht": {
+      "episodes": {
+        "train": 256,
+        "val": 64,
+        "test": 64
+      },
+      "clips": {
+        "s0": {
+          "train": 1024,
+          "val": 256,
+          "test": 256
+        },
+        "s1": {
+          "train": 1024,
+          "val": 256,
+          "test": 256
+        }
+      }
+    },
+    "tworoom": {
+      "episodes": {
+        "train": 256,
+        "val": 64,
+        "test": 64
+      },
+      "clips": {
+        "s0": {
+          "train": 1024,
+          "val": 256,
+          "test": 256
+        },
+        "s1": {
+          "train": 1024,
+          "val": 256,
+          "test": 256
+        }
+      }
+    },
+    "cube": {
+      "episodes": {
+        "train": 256,
+        "val": 64,
+        "test": 64
+      },
+      "clips": {
+        "s0": {
+          "train": 1024,
+          "val": 256,
+          "test": 256
+        },
+        "s1": {
+          "train": 1024,
+          "val": 256,
+          "test": 256
+        }
+      }
+    }
+  },
+  "extension": {
+    "source_dir": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/B_fresh_temporal_mse",
+    "source_checkpoint": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/B_fresh_temporal_mse/checkpoint_step500.pt",
+    "source_checkpoint_sha256": "74cac8a6f6b469d672d203bc68c75f99fc444c661a4a05eb998c5b8d2a737163",
+    "source_config_sha256": "8967d8afb4027de74d3ce190998ae9d5d8e3aff493b013b9b8f3eac36cfe3258",
+    "source_step": 500,
+    "checkpoint_steps": [
+      1000,
+      1500,
+      2000
+    ],
+    "lr_schedule": "none_constant_lr",
+    "rng_reconstruction": "source omitted snapshots; exact because dropout=0, no augmentation, and sampler is a deterministic isolated schedule"
+  }
+}

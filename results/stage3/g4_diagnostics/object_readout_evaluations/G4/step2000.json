@@ -1,0 +1,98 @@
+{
+  "checkpoint": "/workspace/stable-worldmodel/results/stage3/g4_diagnostics/H3_sinusoidal/checkpoint_step2000.pt",
+  "checkpoint_sha256": "5d250f564bac62de76294a6ee7a2d47219a24c56b7f00d3e3f9560e69286b06b",
+  "step": 2000,
+  "history": 3,
+  "temporal_encoding": "sinusoidal",
+  "cache_key": "c7242c2a7501aa4fdab6fa52773771d16a634b0face2c01e0ebcb32a18feba4e",
+  "readout": "validation-selected L12 object-local crop4; oracle RGB centroid",
+  "evaluation_only": true,
+  "final_holdout_used": false,
+  "targets": {
+    "block_xy": {
+      "natural_non_challenge": {
+        "n": 177,
+        "probe_true_dino_mae": 383.5843811035156,
+        "probe_true_dino_delta_mae": 34.90460205078125,
+        "mean_true_motion": 2.168154239654541,
+        "eligible_for_model_claim": false,
+        "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+        "correct_action_mae": 377.02569580078125,
+        "persistence_mae": 386.86627197265625,
+        "action_shuffle_mae": 381.0333251953125,
+        "delta_motion": {
+          "correct_action_mae": 62.85940933227539,
+          "persistence_mae": 2.168154239654541,
+          "action_shuffle_mae": 64.4703598022461
+        },
+        "interpretation": "diagnostic_only: probe error is not below the motion being measured"
+      },
+      "object_motion_challenge": {
+        "n": 47,
+        "probe_true_dino_mae": 419.33502197265625,
+        "probe_true_dino_delta_mae": 128.45779418945312,
+        "mean_true_motion": 30.235004425048828,
+        "eligible_for_model_claim": false,
+        "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+        "correct_action_mae": 392.5706481933594,
+        "persistence_mae": 467.0945739746094,
+        "action_shuffle_mae": 397.9405212402344,
+        "delta_motion": {
+          "correct_action_mae": 147.0375518798828,
+          "persistence_mae": 30.235004425048828,
+          "action_shuffle_mae": 148.67762756347656
+        },
+        "interpretation": "diagnostic_only: probe error is not below the motion being measured"
+      }
+    },
+    "block_angle": {
+      "natural_non_challenge": {
+        "n": 180,
+        "probe_true_dino_mae": 11.331192016601562,
+        "probe_true_dino_delta_mae": 3.54626727104187,
+        "mean_true_motion": 1.184871792793274,
+        "eligible_for_model_claim": false,
+        "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+        "correct_action_mae": 17.85179901123047,
+        "persistence_mae": 11.34947395324707,
+        "action_shuffle_mae": 17.36290168762207,
+        "delta_motion": {
+          "correct_action_mae": 8.10586929321289,
+          "persistence_mae": 1.184871792793274,
+          "action_shuffle_mae": 7.4204792976379395
+        },
+        "interpretation": "diagnostic_only",
+        "probe_motion_margin": 0.10456726803828705,
+        "claim_gate": "legacy gate and motion/probe-error >= 1.5",
+        "rotation_diagnostics": {
+          "direction_accuracy_ge1deg": 0.6851851851851852,
+          "delta_rotation_mae_deg": 8.10586929321289,
+          "magnitude_mae_deg": 7.515016078948975
+        }
+      },
+      "object_motion_challenge": {
+        "n": 44,
+        "probe_true_dino_mae": 11.394927024841309,
+        "probe_true_dino_delta_mae": 7.721373081207275,
+        "mean_true_motion": 17.701217651367188,
+        "eligible_for_model_claim": true,
+        "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+        "correct_action_mae": 30.735485076904297,
+        "persistence_mae": 19.553611755371094,
+        "action_shuffle_mae": 30.231367111206055,
+        "delta_motion": {
+          "correct_action_mae": 24.191062927246094,
+          "persistence_mae": 17.701217651367188,
+          "action_shuffle_mae": 24.606334686279297
+        },
+        "probe_motion_margin": 1.5534296632859483,
+        "claim_gate": "legacy gate and motion/probe-error >= 1.5",
+        "rotation_diagnostics": {
+          "direction_accuracy_ge1deg": 0.6590909090909091,
+          "delta_rotation_mae_deg": 24.191062927246094,
+          "magnitude_mae_deg": 17.92329216003418
+        }
+      }
+    }
+  }
+}

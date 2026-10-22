@@ -1,0 +1,6 @@
+VALID
+
+Layer 12 uses Dinov2Model.last_hidden_state after the final LayerNorm, exactly
+matching the representation predicted by SpatialDynamics. Intermediate layers
+use their native transformer-block outputs. Validation-only model selection and
+episode-disjoint train/validation/test remain unchanged.

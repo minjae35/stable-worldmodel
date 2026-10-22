@@ -1,5 +1,6 @@
 import io
 import importlib.util
+import json
 from pathlib import Path
 import sys
 from types import SimpleNamespace
@@ -35,6 +36,12 @@ from stable_worldmodel.wm.spatial.g2_fresh import (
     renormalize_actions,
     train_episode_row_plan,
     validate_sampling_episode_alignment,
+)
+from stable_worldmodel.wm.spatial.g2_extension import (
+    capture_rng_state,
+    optimizer_steps,
+    restore_rng_state,
+    validate_schedule_prefix,
 )
 
 
@@ -128,6 +135,66 @@ def test_schedule_is_reproducible_and_seed_sensitive():
     assert np.array_equal(first, second)
     assert schedule_sha256(first) == schedule_sha256(second)
     assert not np.array_equal(first, other)
+
+
+def test_extended_schedule_preserves_completed_prefix():
+    short = make_index_schedule(32, 8, 10, 3173)
+    full = make_index_schedule(32, 8, 40, 3173)
+    assert np.array_equal(short, full[:10])
+    assert validate_schedule_prefix(full, 10, schedule_sha256(short)) == schedule_sha256(short)
+    with pytest.raises(ValueError, match='does not preserve'):
+        validate_schedule_prefix(full, 10, schedule_sha256(full[1:11]))
+
+
+def test_rng_snapshot_restores_torch_numpy_and_python():
+    import random
+
+    torch.manual_seed(9)
+    np.random.seed(9)
+    random.seed(9)
+    state = capture_rng_state()
+    expected = (torch.rand(3), np.random.rand(3), [random.random() for _ in range(3)])
+    restore_rng_state(state)
+    observed = (torch.rand(3), np.random.rand(3), [random.random() for _ in range(3)])
+    assert torch.equal(expected[0], observed[0])
+    assert np.array_equal(expected[1], observed[1])
+    assert expected[2] == observed[2]
+
+
+def test_uninterrupted_and_resumed_adamw_are_exactly_equal():
+    def build():
+        torch.manual_seed(11)
+        model = torch.nn.Linear(3, 2)
+        return model, torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-4)
+
+    x = torch.arange(12, dtype=torch.float32).reshape(4, 3)
+    y = torch.arange(8, dtype=torch.float32).reshape(4, 2)
+
+    def update(model, optimizer, index):
+        optimizer.zero_grad(set_to_none=True)
+        model(x[index:index + 1]).sub(y[index:index + 1]).square().mean().backward()
+        optimizer.step()
+
+    continuous, continuous_optimizer = build()
+    split, split_optimizer = build()
+    for index in range(2):
+        update(continuous, continuous_optimizer, index)
+        update(split, split_optimizer, index)
+    payload = {
+        'model': split.state_dict(),
+        'optimizer': split_optimizer.state_dict(),
+        'rng': capture_rng_state(),
+    }
+    resumed, resumed_optimizer = build()
+    resumed.load_state_dict(payload['model'])
+    resumed_optimizer.load_state_dict(payload['optimizer'])
+    restore_rng_state(payload['rng'])
+    for index in range(2, 4):
+        update(continuous, continuous_optimizer, index)
+        update(resumed, resumed_optimizer, index)
+    assert tensor_state_sha256(continuous.state_dict()) == tensor_state_sha256(resumed.state_dict())
+    assert optimizer_steps(continuous_optimizer.state_dict()) == {4}
+    assert optimizer_steps(resumed_optimizer.state_dict()) == {4}
 
 
 def test_fresh_sampling_keeps_episode_order_but_allows_window_difference():
@@ -338,6 +405,107 @@ def _load_fresh_launcher():
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def _load_shared_evaluator():
+    path = Path(__file__).parents[2] / 'scripts/train/g2_evaluate_shared.py'
+    spec = importlib.util.spec_from_file_location('g2_shared_evaluator_test', path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _load_multiseed_launcher():
+    path = Path(__file__).parents[2] / 'scripts/train/launch_g2_fresh_multiseed.py'
+    spec = importlib.util.spec_from_file_location('g2_multiseed_launcher_test', path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _load_multiseed_eval_launcher():
+    path = Path(__file__).parents[2] / 'scripts/train/launch_g2_fresh_multiseed_eval.py'
+    spec = importlib.util.spec_from_file_location('g2_multiseed_eval_launcher_test', path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _load_multiseed_analyzer():
+    path = Path(__file__).parents[2] / 'scripts/train/analyze_g2_fresh_multiseed.py'
+    spec = importlib.util.spec_from_file_location('g2_multiseed_analyzer_test', path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def test_multiseed_launcher_uses_independent_seed_artifacts(tmp_path, monkeypatch):
+    launcher = _load_multiseed_launcher()
+    normalizers = tmp_path / 'normalizers.json'
+    normalizers.write_text('{}')
+    monkeypatch.setattr(launcher, 'NORMALIZERS', normalizers)
+    output = tmp_path / 'multi'
+    commands = launcher.build_commands('python', output, (3073, 3074), 2000, 500)
+    assert len(commands) == 4
+    launcher.preflight(output, commands)
+    for seed in (3073, 3074):
+        selected = [c for c in commands if c[c.index('--seed') + 1] == str(seed)]
+        assert [c[c.index('--arm') + 1] for c in selected] == ['A', 'B']
+        assert {c[c.index('--loss-calibration-file') + 1] for c in selected} == {
+            str(output / f'seed_{seed}' / 'gradient_calibration.json')
+        }
+        assert all(c[c.index('--checkpoint-every') + 1] == '500' for c in selected)
+    first = commands[0]
+    first[first.index('--loss-calibration-file') + 1] = str(
+        output / 'seed_3074' / 'gradient_calibration.json'
+    )
+    with pytest.raises(ValueError, match='calibration artifact'):
+        launcher.preflight(output, commands)
+
+
+def test_multiseed_eval_paths_and_existing_result_validation(tmp_path):
+    launcher = _load_multiseed_eval_launcher()
+    checkpoint = launcher.checkpoint_path(tmp_path, 3073, 'A', 500)
+    assert checkpoint == (
+        tmp_path / 'seed_3073/A_fresh_uniform_mse/checkpoint_step500.pt'
+    )
+    checkpoint.parent.mkdir(parents=True)
+    checkpoint.write_bytes(b'checkpoint')
+    evaluation = launcher.evaluation_path(tmp_path, 3073, 'A', 500)
+    evaluation.write_text(json.dumps({
+        'step': 500,
+        'checkpoint_sha256': launcher.sha256_file(checkpoint),
+    }))
+    launcher.verify_existing_evaluation(evaluation, checkpoint, 500)
+    report = json.loads(evaluation.read_text())
+    report['step'] = 501
+    evaluation.write_text(json.dumps(report))
+    with pytest.raises(ValueError, match='wrong step'):
+        launcher.verify_existing_evaluation(evaluation, checkpoint, 500)
+
+
+def test_multiseed_analysis_separates_seed_variation():
+    analyzer = _load_multiseed_analyzer()
+    summary = analyzer.across_seed([-0.3, -0.1, 0.2, -0.2], [1, 1, 1, 1])
+    assert summary['n_seeds'] == 4
+    assert summary['n_B_better'] == 3
+    assert summary['n_B_worse'] == 1
+    assert summary['sample_variance'] > 0
+    assert summary['exploratory_t95_ci_df3'][0] < summary['mean_delta']
+    assert summary['exploratory_t95_ci_df3'][1] > summary['mean_delta']
+
+
+def test_evaluation_items_supports_development_and_sealed_manifests():
+    evaluator = _load_shared_evaluator()
+    development = _manifest()
+    assert evaluator.evaluation_items(development, 'pusht', 'test', 1) == [
+        development['pusht']['s0']['test'][0]
+    ]
+    sealed_clips = [{'episode': 7, 'row': 70, 'start': 0}]
+    sealed = {'environments': {'pusht': {'clips': sealed_clips}}}
+    assert evaluator.evaluation_items(sealed, 'pusht', 'test', 0) == sealed_clips
+    with pytest.raises(ValueError, match='only provide a test split'):
+        evaluator.evaluation_items(sealed, 'pusht', 'val', 0)
 
 
 def test_fresh_launcher_builds_only_ab_with_shared_artifacts(tmp_path):

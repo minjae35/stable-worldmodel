@@ -1,0 +1,49 @@
+{
+  "purpose": "evaluation-only shared dynamics gradient conflict diagnostic",
+  "batch_size_per_environment": 16,
+  "items": "first 16 common train anchors per environment",
+  "excluded_from_gradient_vector": [
+    "environment action adapters",
+    "environment embedding"
+  ],
+  "arms": {
+    "H1": {
+      "history": 1,
+      "loss_by_environment": {
+        "pusht": 0.13590796291828156,
+        "tworoom": 0.09236638247966766,
+        "cube": 0.36838802695274353
+      },
+      "shared_gradient_norm_by_environment": {
+        "pusht": 0.2387169897556305,
+        "tworoom": 0.22706414759159088,
+        "cube": 0.2880622446537018
+      },
+      "shared_gradient_cosine": {
+        "pusht_vs_tworoom": 0.05175421014428139,
+        "pusht_vs_cube": 0.04873039945960045,
+        "tworoom_vs_cube": 0.009973530657589436
+      },
+      "n_negative_pairs": 0
+    },
+    "H3": {
+      "history": 3,
+      "loss_by_environment": {
+        "pusht": 0.12735812366008759,
+        "tworoom": 0.08459951728582382,
+        "cube": 0.3358609676361084
+      },
+      "shared_gradient_norm_by_environment": {
+        "pusht": 0.2162381112575531,
+        "tworoom": 0.23530642688274384,
+        "cube": 0.26113542914390564
+      },
+      "shared_gradient_cosine": {
+        "pusht_vs_tworoom": 0.18846380710601807,
+        "pusht_vs_cube": 0.05074363946914673,
+        "tworoom_vs_cube": 0.034254394471645355
+      },
+      "n_negative_pairs": 0
+    }
+  }
+}

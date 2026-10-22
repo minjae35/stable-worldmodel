@@ -1,0 +1,47 @@
+{
+  "cache_key": "ed54e5f4a5d7335208d4b994d34b6c21b265c6c95410a0c92d43b6a42c2ae65d",
+  "identity": {
+    "schema": 1,
+    "purpose": "G3 shared H1/H3 development evaluation cache",
+    "common_manifest_sha256": "37e9194981f29f4b818d6facd36892b171a236d185126522211070e0859c1432",
+    "source_manifest_sha256": "b9b3fac06ba1828e1e43bf12c85c4c996c823efd24a894ef4751c0473af4aa9f",
+    "base_feature_cache_key": "4ea37543b36812a7f302e2b2e16468f491ffdc26b4dce338dd55425bd9cded5e",
+    "reused_probe_key": "fadce4f689600fa12b91559ba9de28ba9166fdc6db0628012a95b16f014058ff",
+    "dino_weights_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+    "normalizer_sha256": "dd7194f4747ab0b5ce5be5599d7351ebae48877dd7c6e27892953669470bb0a4",
+    "history": 3,
+    "frameskip": 5,
+    "preprocessing": {
+      "image_size": [
+        224,
+        224
+      ],
+      "rgb": true,
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "token_shape": [
+        256,
+        384
+      ],
+      "pooling": "adaptive_avg_pool2d_4x4"
+    },
+    "cohort": {
+      "pusht": "05bf668bafa1459f300bda5df129aa84af63c1cf422a48959b7c3e4443557970",
+      "tworoom": "5be86ab3546054a1b0fea4b509156d78795258e9d83c8c4dfc1e79645c4ca271",
+      "cube": "e576b1866b13dced5e01ae56732c1e1d7fc12a33f6448e818556b98885adb183"
+    }
+  },
+  "counts": {
+    "pusht": 224,
+    "tworoom": 217,
+    "cube": 243
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "note": "Nearest-color centroid on real RGB. This checks the pixel mapping. It cannot be computed from DINO tokens.",
+  "n_images": 40,
+  "block": {
+    "n": 40,
+    "median_px": 18.03023889844275,
+    "p90_px": 18.8026231539309,
+    "fraction_within_10px": 0.0,
+    "fraction_within_14px": 0.0
+  },
+  "agent": {
+    "n": 40,
+    "median_px": 0.7179872597674954,
+    "p90_px": 0.9707049601067712,
+    "fraction_within_10px": 1.0,
+    "fraction_within_14px": 1.0
+  }
+}

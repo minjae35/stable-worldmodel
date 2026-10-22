@@ -1,0 +1,335 @@
+{
+  "seeds": [
+    3073,
+    3074,
+    3075
+  ],
+  "steps": [
+    500,
+    1000,
+    1500,
+    2000
+  ],
+  "development_cohort_only": true,
+  "cache": "/workspace/stable-worldmodel/results/stage3/g2_2x2/shared_eval_cache",
+  "cache_status": "READY",
+  "manifest": "/workspace/stable-worldmodel/results/stage3/g2_c1_followup/manifest.json",
+  "normalizers": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/action_normalizers.json",
+  "evaluation_seed": 3072,
+  "bootstrap_seed": 43072,
+  "bootstrap_draws": 10000,
+  "jobs": [
+    {
+      "kind": "evaluation",
+      "seed": 3073,
+      "step": 500,
+      "arm": "A",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3073/A_fresh_uniform_mse/evaluation_development_step500.json",
+      "disposition": "created",
+      "seconds": 7.928916112985462
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3073,
+      "step": 500,
+      "arm": "B",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3073/B_fresh_temporal_mse/evaluation_development_step500.json",
+      "disposition": "created",
+      "seconds": 6.88442782999482
+    },
+    {
+      "kind": "paired_bootstrap",
+      "seed": 3073,
+      "step": 500,
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3073/development_paired_bootstrap_step500.json",
+      "disposition": "created",
+      "seconds": 4.077826212043874
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3073,
+      "step": 1000,
+      "arm": "A",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3073/A_fresh_uniform_mse/evaluation_development_step1000.json",
+      "disposition": "created",
+      "seconds": 6.991431951988488
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3073,
+      "step": 1000,
+      "arm": "B",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3073/B_fresh_temporal_mse/evaluation_development_step1000.json",
+      "disposition": "created",
+      "seconds": 6.767393212998286
+    },
+    {
+      "kind": "paired_bootstrap",
+      "seed": 3073,
+      "step": 1000,
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3073/development_paired_bootstrap_step1000.json",
+      "disposition": "created",
+      "seconds": 3.8823270560242236
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3073,
+      "step": 1500,
+      "arm": "A",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3073/A_fresh_uniform_mse/evaluation_development_step1500.json",
+      "disposition": "created",
+      "seconds": 6.76657095097471
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3073,
+      "step": 1500,
+      "arm": "B",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3073/B_fresh_temporal_mse/evaluation_development_step1500.json",
+      "disposition": "created",
+      "seconds": 6.949850136996247
+    },
+    {
+      "kind": "paired_bootstrap",
+      "seed": 3073,
+      "step": 1500,
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3073/development_paired_bootstrap_step1500.json",
+      "disposition": "created",
+      "seconds": 3.933360954048112
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3073,
+      "step": 2000,
+      "arm": "A",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3073/A_fresh_uniform_mse/evaluation_development_step2000.json",
+      "disposition": "created",
+      "seconds": 6.990689694066532
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3073,
+      "step": 2000,
+      "arm": "B",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3073/B_fresh_temporal_mse/evaluation_development_step2000.json",
+      "disposition": "created",
+      "seconds": 7.03871050500311
+    },
+    {
+      "kind": "paired_bootstrap",
+      "seed": 3073,
+      "step": 2000,
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3073/development_paired_bootstrap_step2000.json",
+      "disposition": "created",
+      "seconds": 4.046669466071762
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3074,
+      "step": 500,
+      "arm": "A",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3074/A_fresh_uniform_mse/evaluation_development_step500.json",
+      "disposition": "created",
+      "seconds": 6.934387965942733
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3074,
+      "step": 500,
+      "arm": "B",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3074/B_fresh_temporal_mse/evaluation_development_step500.json",
+      "disposition": "created",
+      "seconds": 6.979606917011552
+    },
+    {
+      "kind": "paired_bootstrap",
+      "seed": 3074,
+      "step": 500,
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3074/development_paired_bootstrap_step500.json",
+      "disposition": "created",
+      "seconds": 3.8250638770405203
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3074,
+      "step": 1000,
+      "arm": "A",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3074/A_fresh_uniform_mse/evaluation_development_step1000.json",
+      "disposition": "created",
+      "seconds": 6.921430489979684
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3074,
+      "step": 1000,
+      "arm": "B",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3074/B_fresh_temporal_mse/evaluation_development_step1000.json",
+      "disposition": "created",
+      "seconds": 6.855523384991102
+    },
+    {
+      "kind": "paired_bootstrap",
+      "seed": 3074,
+      "step": 1000,
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3074/development_paired_bootstrap_step1000.json",
+      "disposition": "created",
+      "seconds": 3.863542965031229
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3074,
+      "step": 1500,
+      "arm": "A",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3074/A_fresh_uniform_mse/evaluation_development_step1500.json",
+      "disposition": "created",
+      "seconds": 7.013416864094324
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3074,
+      "step": 1500,
+      "arm": "B",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3074/B_fresh_temporal_mse/evaluation_development_step1500.json",
+      "disposition": "created",
+      "seconds": 6.822140522999689
+    },
+    {
+      "kind": "paired_bootstrap",
+      "seed": 3074,
+      "step": 1500,
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3074/development_paired_bootstrap_step1500.json",
+      "disposition": "created",
+      "seconds": 3.8895236880052835
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3074,
+      "step": 2000,
+      "arm": "A",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3074/A_fresh_uniform_mse/evaluation_development_step2000.json",
+      "disposition": "created",
+      "seconds": 6.66152454004623
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3074,
+      "step": 2000,
+      "arm": "B",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3074/B_fresh_temporal_mse/evaluation_development_step2000.json",
+      "disposition": "created",
+      "seconds": 6.70424022199586
+    },
+    {
+      "kind": "paired_bootstrap",
+      "seed": 3074,
+      "step": 2000,
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3074/development_paired_bootstrap_step2000.json",
+      "disposition": "created",
+      "seconds": 3.8594609880819917
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3075,
+      "step": 500,
+      "arm": "A",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3075/A_fresh_uniform_mse/evaluation_development_step500.json",
+      "disposition": "created",
+      "seconds": 6.742715928005055
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3075,
+      "step": 500,
+      "arm": "B",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3075/B_fresh_temporal_mse/evaluation_development_step500.json",
+      "disposition": "created",
+      "seconds": 6.915395808056928
+    },
+    {
+      "kind": "paired_bootstrap",
+      "seed": 3075,
+      "step": 500,
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3075/development_paired_bootstrap_step500.json",
+      "disposition": "created",
+      "seconds": 3.926443958072923
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3075,
+      "step": 1000,
+      "arm": "A",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3075/A_fresh_uniform_mse/evaluation_development_step1000.json",
+      "disposition": "created",
+      "seconds": 6.8519036039942876
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3075,
+      "step": 1000,
+      "arm": "B",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3075/B_fresh_temporal_mse/evaluation_development_step1000.json",
+      "disposition": "created",
+      "seconds": 6.620121624902822
+    },
+    {
+      "kind": "paired_bootstrap",
+      "seed": 3075,
+      "step": 1000,
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3075/development_paired_bootstrap_step1000.json",
+      "disposition": "created",
+      "seconds": 3.9492579080397263
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3075,
+      "step": 1500,
+      "arm": "A",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3075/A_fresh_uniform_mse/evaluation_development_step1500.json",
+      "disposition": "created",
+      "seconds": 7.150662443949841
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3075,
+      "step": 1500,
+      "arm": "B",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3075/B_fresh_temporal_mse/evaluation_development_step1500.json",
+      "disposition": "created",
+      "seconds": 7.045484279980883
+    },
+    {
+      "kind": "paired_bootstrap",
+      "seed": 3075,
+      "step": 1500,
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3075/development_paired_bootstrap_step1500.json",
+      "disposition": "created",
+      "seconds": 3.8216092629591003
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3075,
+      "step": 2000,
+      "arm": "A",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3075/A_fresh_uniform_mse/evaluation_development_step2000.json",
+      "disposition": "created",
+      "seconds": 6.851603250950575
+    },
+    {
+      "kind": "evaluation",
+      "seed": 3075,
+      "step": 2000,
+      "arm": "B",
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3075/B_fresh_temporal_mse/evaluation_development_step2000.json",
+      "disposition": "created",
+      "seconds": 6.7226904650451615
+    },
+    {
+      "kind": "paired_bootstrap",
+      "seed": 3075,
+      "step": 2000,
+      "output": "/workspace/stable-worldmodel/results/stage3/g2_fresh_multiseed/seed_3075/development_paired_bootstrap_step2000.json",
+      "disposition": "created",
+      "seconds": 3.925320732058026
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS_WITH_NUMERICAL_TOLERANCE",
+  "uninterrupted_steps": 2,
+  "resumed_from_step": 1,
+  "resumed_to_step": 2,
+  "optimizer_step_restored": true,
+  "rng_state_present_and_restored": true,
+  "step_1_objective_both": 6.962405681610107,
+  "step_2_objective_both": 5.074948787689209,
+  "bitwise_model_hash_equal": false,
+  "maximum_parameter_absolute_difference": 1.914799213409424e-06,
+  "interpretation": "Resume restores all required state; separate-process CUDA attention is not bitwise deterministic, but objectives match exactly and parameter drift is below 2e-6."
+}

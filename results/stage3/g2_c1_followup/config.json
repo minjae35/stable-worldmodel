@@ -1,0 +1,44 @@
+{
+  "experiment": "g2_label_free_2x2",
+  "status": "prepared_not_trained",
+  "seed": 3072,
+  "frameskip": 5,
+  "span": 10,
+  "history": 1,
+  "clips_per_episode": 4,
+  "episodes_per_env": {
+    "train": 256,
+    "val": 64,
+    "test": 64
+  },
+  "factors": {
+    "sampling": {
+      "s0": "uniform random clip starts",
+      "s1": "one clip in each quartile of valid starts"
+    },
+    "loss": {
+      "mse": "uniform mean squared error over predicted DINO tokens",
+      "l1": "uniform mean absolute error over predicted DINO tokens"
+    }
+  },
+  "same_rule_all_envs": true,
+  "shared_episode_split_across_factors": true,
+  "forbidden_in_sampling_and_loss": [
+    "object_state",
+    "mask",
+    "reward",
+    "contact",
+    "event_label"
+  ],
+  "state_use": "evaluation and this diagnostic only",
+  "evaluation": {
+    "do_not_judge_small_pusht_block_motion_by_state_readout": true,
+    "state_readout_floor": "about 11 PushT units and 9 degrees on held-out episodes",
+    "state_readout_usable_when": "block translation above about 15, or agent translation above about 15",
+    "object_dynamics_metric": "error of predicted DINO tokens versus the true future tokens inside a 3x3 window around block_xy * 224/512, compared with copying the current tokens",
+    "rgb_centroid": "pixel-only diagnostic; median 18px from the block state point, so it is not the state coordinate and cannot be applied to DINO tokens"
+  },
+  "challenge_evaluation": "/workspace/stable-worldmodel/results/stage3/g2_c1_audit/candidate_pool.json",
+  "manifest": "/workspace/stable-worldmodel/results/stage3/g2_c1_followup/manifest.json",
+  "model": "existing frozen DINOv2 spatial dynamics, no architecture change in this step"
+}

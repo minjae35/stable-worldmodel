@@ -1,0 +1,51 @@
+{
+  "session_name": "stablewm_stage3_g2_fresh_ab",
+  "sequential": true,
+  "stop_on_first_failure": true,
+  "commands": [
+    [
+      "/venv/stable-wm/bin/python",
+      "/workspace/stable-worldmodel/scripts/train/g2_fresh_spatial.py",
+      "--arm",
+      "A",
+      "--output-dir",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/A_fresh_uniform_mse",
+      "--normalizer-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/action_normalizers.json",
+      "--loss-calibration-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/gradient_calibration.json",
+      "--defer-evaluation"
+    ],
+    [
+      "/venv/stable-wm/bin/python",
+      "/workspace/stable-worldmodel/scripts/train/g2_fresh_spatial.py",
+      "--arm",
+      "B",
+      "--output-dir",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/B_fresh_temporal_mse",
+      "--normalizer-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/action_normalizers.json",
+      "--loss-calibration-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/gradient_calibration.json",
+      "--defer-evaluation"
+    ]
+  ],
+  "runs": [
+    {
+      "arm": "A",
+      "name": "A_fresh_uniform_mse",
+      "returncode": 0,
+      "seconds": 73.01641082763672,
+      "log": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/A_fresh_uniform_mse.log",
+      "run_log": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/A_fresh_uniform_mse/train.log"
+    },
+    {
+      "arm": "B",
+      "name": "B_fresh_temporal_mse",
+      "returncode": 0,
+      "seconds": 74.30546426773071,
+      "log": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/B_fresh_temporal_mse.log",
+      "run_log": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/B_fresh_temporal_mse/train.log"
+    }
+  ]
+}

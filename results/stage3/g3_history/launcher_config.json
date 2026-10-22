@@ -1,0 +1,52 @@
+{
+  "sequential": true,
+  "stop_on_first_failure": true,
+  "commands": [
+    [
+      "/venv/stable-wm/bin/python",
+      "/workspace/stable-worldmodel/scripts/train/g3_history_spatial.py",
+      "--arm",
+      "H1",
+      "--output-dir",
+      "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse",
+      "--common-manifest",
+      "/workspace/stable-worldmodel/results/stage3/g3_history/common_windows.json",
+      "--normalizer-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/action_normalizers.json",
+      "--steps",
+      "2000",
+      "--checkpoint-every",
+      "500"
+    ],
+    [
+      "/venv/stable-wm/bin/python",
+      "/workspace/stable-worldmodel/scripts/train/g3_history_spatial.py",
+      "--arm",
+      "H3",
+      "--output-dir",
+      "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse",
+      "--common-manifest",
+      "/workspace/stable-worldmodel/results/stage3/g3_history/common_windows.json",
+      "--normalizer-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/action_normalizers.json",
+      "--steps",
+      "2000",
+      "--checkpoint-every",
+      "500"
+    ]
+  ],
+  "runs": [
+    {
+      "arm": "H1",
+      "returncode": 0,
+      "seconds": 269.9883975710254,
+      "log": "/workspace/stable-worldmodel/results/stage3/g3_history/H1_training.log"
+    },
+    {
+      "arm": "H3",
+      "returncode": 0,
+      "seconds": 413.27217055496294,
+      "log": "/workspace/stable-worldmodel/results/stage3/g3_history/H3_training.log"
+    }
+  ]
+}

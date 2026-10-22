@@ -1,0 +1,35 @@
+{
+  "locked_at_utc": "2026-10-22T00:42:57Z",
+  "final_holdout_results_inspected": false,
+  "model_or_hyperparameter_selection_changed": false,
+  "temporal_coverage_conclusion": "not generally superior; small macro MSE benefit is non-monotonic and environment-dependent",
+  "macro_feature_mse_B_minus_A_percent": {
+    "500": -0.5674228125266146,
+    "1000": 1.6753604399897712,
+    "1500": -1.725712791145595,
+    "2000": -0.9774975954087836
+  },
+  "macro_feature_mae_B_minus_A_percent": {
+    "500": 0.14767832315682364,
+    "1000": 0.8655370348659218,
+    "1500": -0.23072097272180567,
+    "2000": 0.04380188073264869
+  },
+  "step_2000_environment_mse_B_minus_A_percent": {
+    "pusht": 0.12412481836985186,
+    "tworoom": 4.73986273193954,
+    "cube": -2.7685649506959176
+  },
+  "step_2000_paired_bootstrap": {
+    "pusht": "CI crosses zero",
+    "tworoom": "B worse; CI excludes zero",
+    "cube": "B better; CI excludes zero"
+  },
+  "push_t": {
+    "block_xy": "Both arms beat persistence at 1000, 1500, and 2000 development checkpoints; A is better at 2000.",
+    "rotation": "Neither arm beats persistence at any evaluated extension checkpoint."
+  },
+  "convergence": "Not fully converged: every arm/environment feature MSE improved from 1500 to 2000 and final training-loss windows were still decreasing.",
+  "next_experiment_priority": "additional 2000-step seeds before History 3",
+  "final_holdout_policy": "Evaluate only the locked step-2000 A/B checkpoints once; do not use results for selection."
+}

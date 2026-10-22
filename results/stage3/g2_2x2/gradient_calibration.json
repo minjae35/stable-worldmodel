@@ -1,0 +1,19 @@
+{
+  "key": {
+    "checkpoint_sha256": "4f9e8d380df3cf9fdd0581d9637ae3ae79025cb2147d90b67983216b5f9882a5",
+    "seed": 3072,
+    "batch_per_env": 16,
+    "reference_sampling": "s0"
+  },
+  "calibration": {
+    "raw_grad_norm": {
+      "mse": 1.2113854885101318,
+      "l1": 0.5417094826698303
+    },
+    "scale": {
+      "mse": 1.0,
+      "l1": 2.2362272163665744
+    },
+    "reference": "mse"
+  }
+}

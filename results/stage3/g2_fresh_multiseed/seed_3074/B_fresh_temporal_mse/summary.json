@@ -1,0 +1,12 @@
+{
+  "arm": "B",
+  "sampling": "s1",
+  "loss": "mse",
+  "steps_completed": 2000,
+  "initial_model_sha256": "8dd1b3ad57f373fbb11e401a30cd92a228ce7e82df36b1d9d692a44ded5326e5",
+  "final_model_sha256": "74c56c0f84d0dc10046d9f4c830a4ca6e221b13d976868975fb474364bdf11ee",
+  "schedule_sha256": "2602dd61d008539ff6c42240d4ebfcaa5a930e40416936cc7957b98ba6561a7c",
+  "normalizer_key": "238886bc2badfd87ad449c57271ed8720c65eeaf76fd885f373352a63cb581c8",
+  "evaluation": null,
+  "evaluation_deferred": true
+}

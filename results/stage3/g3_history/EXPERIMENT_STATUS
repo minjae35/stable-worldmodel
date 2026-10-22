@@ -1,0 +1,10 @@
+DONE
+training_validation=PASS
+evaluation_validation=PASS
+arms=H1,H3
+updates_per_arm=2000
+checkpoints_per_arm=500,1000,1500,2000
+evaluation_steps=500,1000,1500,2000
+wm_tests=135_passed_4_warnings
+final_holdout_used=false
+single_seed=true

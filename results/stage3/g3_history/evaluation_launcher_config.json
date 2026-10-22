@@ -1,0 +1,314 @@
+{
+  "jobs": [
+    {
+      "kind": "evaluation",
+      "arm": "H1",
+      "step": 500,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/evaluation_development_step500.json",
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g3_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/checkpoint_step500.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/evaluation_development_step500.json",
+        "--history",
+        "1"
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "arm": "H3",
+      "step": 500,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/evaluation_development_step500.json",
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g3_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/checkpoint_step500.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/evaluation_development_step500.json",
+        "--history",
+        "3"
+      ]
+    },
+    {
+      "kind": "paired_bootstrap",
+      "step": 500,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/development_paired_bootstrap_step500.json",
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/compare_g3_history.py",
+        "--checkpoint-h1",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/checkpoint_step500.pt",
+        "--checkpoint-h3",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/checkpoint_step500.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/development_paired_bootstrap_step500.json"
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "arm": "H1",
+      "step": 1000,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/evaluation_development_step1000.json",
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g3_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/checkpoint_step1000.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/evaluation_development_step1000.json",
+        "--history",
+        "1"
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "arm": "H3",
+      "step": 1000,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/evaluation_development_step1000.json",
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g3_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/checkpoint_step1000.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/evaluation_development_step1000.json",
+        "--history",
+        "3"
+      ]
+    },
+    {
+      "kind": "paired_bootstrap",
+      "step": 1000,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/development_paired_bootstrap_step1000.json",
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/compare_g3_history.py",
+        "--checkpoint-h1",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/checkpoint_step1000.pt",
+        "--checkpoint-h3",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/checkpoint_step1000.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/development_paired_bootstrap_step1000.json"
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "arm": "H1",
+      "step": 1500,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/evaluation_development_step1500.json",
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g3_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/checkpoint_step1500.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/evaluation_development_step1500.json",
+        "--history",
+        "1"
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "arm": "H3",
+      "step": 1500,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/evaluation_development_step1500.json",
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g3_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/checkpoint_step1500.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/evaluation_development_step1500.json",
+        "--history",
+        "3"
+      ]
+    },
+    {
+      "kind": "paired_bootstrap",
+      "step": 1500,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/development_paired_bootstrap_step1500.json",
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/compare_g3_history.py",
+        "--checkpoint-h1",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/checkpoint_step1500.pt",
+        "--checkpoint-h3",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/checkpoint_step1500.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/development_paired_bootstrap_step1500.json"
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "arm": "H1",
+      "step": 2000,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/evaluation_development_step2000.json",
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g3_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/checkpoint_step2000.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/evaluation_development_step2000.json",
+        "--history",
+        "1"
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "arm": "H3",
+      "step": 2000,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/evaluation_development_step2000.json",
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g3_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/checkpoint_step2000.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/evaluation_development_step2000.json",
+        "--history",
+        "3"
+      ]
+    },
+    {
+      "kind": "paired_bootstrap",
+      "step": 2000,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/development_paired_bootstrap_step2000.json",
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/compare_g3_history.py",
+        "--checkpoint-h1",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/checkpoint_step2000.pt",
+        "--checkpoint-h3",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/checkpoint_step2000.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/development_paired_bootstrap_step2000.json"
+      ]
+    }
+  ],
+  "completed": [
+    {
+      "kind": "evaluation",
+      "step": 500,
+      "arm": "H1",
+      "returncode": 0,
+      "seconds": 13.05485029798001,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/evaluation_development_step500.json"
+    },
+    {
+      "kind": "evaluation",
+      "step": 500,
+      "arm": "H3",
+      "returncode": 0,
+      "seconds": 20.65727195108775,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/evaluation_development_step500.json"
+    },
+    {
+      "kind": "paired_bootstrap",
+      "step": 500,
+      "arm": null,
+      "returncode": 0,
+      "seconds": 13.334140434977598,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/development_paired_bootstrap_step500.json"
+    },
+    {
+      "kind": "evaluation",
+      "step": 1000,
+      "arm": "H1",
+      "returncode": 0,
+      "seconds": 13.320080116041936,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/evaluation_development_step1000.json"
+    },
+    {
+      "kind": "evaluation",
+      "step": 1000,
+      "arm": "H3",
+      "returncode": 0,
+      "seconds": 20.611866969964467,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/evaluation_development_step1000.json"
+    },
+    {
+      "kind": "paired_bootstrap",
+      "step": 1000,
+      "arm": null,
+      "returncode": 0,
+      "seconds": 13.555798706947826,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/development_paired_bootstrap_step1000.json"
+    },
+    {
+      "kind": "evaluation",
+      "step": 1500,
+      "arm": "H1",
+      "returncode": 0,
+      "seconds": 13.430134903988801,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/evaluation_development_step1500.json"
+    },
+    {
+      "kind": "evaluation",
+      "step": 1500,
+      "arm": "H3",
+      "returncode": 0,
+      "seconds": 21.04284117394127,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/evaluation_development_step1500.json"
+    },
+    {
+      "kind": "paired_bootstrap",
+      "step": 1500,
+      "arm": null,
+      "returncode": 0,
+      "seconds": 13.599221023032442,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/development_paired_bootstrap_step1500.json"
+    },
+    {
+      "kind": "evaluation",
+      "step": 2000,
+      "arm": "H1",
+      "returncode": 0,
+      "seconds": 13.555742488009855,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/evaluation_development_step2000.json"
+    },
+    {
+      "kind": "evaluation",
+      "step": 2000,
+      "arm": "H3",
+      "returncode": 0,
+      "seconds": 20.649870570981875,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/H3_uniform_mse/evaluation_development_step2000.json"
+    },
+    {
+      "kind": "paired_bootstrap",
+      "step": 2000,
+      "arm": null,
+      "returncode": 0,
+      "seconds": 13.621406349935569,
+      "output": "/workspace/stable-worldmodel/results/stage3/g3_history/development_paired_bootstrap_step2000.json"
+    }
+  ]
+}

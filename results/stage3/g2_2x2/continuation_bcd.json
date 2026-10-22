@@ -1,0 +1,70 @@
+{
+  "session_name": "stablewm_stage3_g2",
+  "sequential": true,
+  "arms": [
+    "B",
+    "C",
+    "D"
+  ],
+  "commands": [
+    [
+      "/venv/stable-wm/bin/python",
+      "/workspace/stable-worldmodel/scripts/train/g2_spatial.py",
+      "--arm",
+      "B",
+      "--output-dir",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/B_temporal_mse",
+      "--loss-calibration-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/gradient_calibration.json",
+      "--defer-evaluation"
+    ],
+    [
+      "/venv/stable-wm/bin/python",
+      "/workspace/stable-worldmodel/scripts/train/g2_spatial.py",
+      "--arm",
+      "C",
+      "--output-dir",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/C_uniform_l1",
+      "--loss-calibration-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/gradient_calibration.json",
+      "--defer-evaluation"
+    ],
+    [
+      "/venv/stable-wm/bin/python",
+      "/workspace/stable-worldmodel/scripts/train/g2_spatial.py",
+      "--arm",
+      "D",
+      "--output-dir",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/D_temporal_l1",
+      "--loss-calibration-file",
+      "/workspace/stable-worldmodel/results/stage3/g2_2x2/gradient_calibration.json",
+      "--defer-evaluation"
+    ]
+  ],
+  "runs": [
+    {
+      "arm": "B",
+      "name": "B_temporal_mse",
+      "returncode": 0,
+      "seconds": 72.49654483795166,
+      "log": "/workspace/stable-worldmodel/results/stage3/g2_2x2/B_temporal_mse.log",
+      "run_log": "/workspace/stable-worldmodel/results/stage3/g2_2x2/B_temporal_mse/train.log"
+    },
+    {
+      "arm": "C",
+      "name": "C_uniform_l1",
+      "returncode": 0,
+      "seconds": 72.3140811920166,
+      "log": "/workspace/stable-worldmodel/results/stage3/g2_2x2/C_uniform_l1.log",
+      "run_log": "/workspace/stable-worldmodel/results/stage3/g2_2x2/C_uniform_l1/train.log"
+    },
+    {
+      "arm": "D",
+      "name": "D_temporal_l1",
+      "returncode": 0,
+      "seconds": 73.28294229507446,
+      "log": "/workspace/stable-worldmodel/results/stage3/g2_2x2/D_temporal_l1.log",
+      "run_log": "/workspace/stable-worldmodel/results/stage3/g2_2x2/D_temporal_l1/train.log"
+    }
+  ]
+}

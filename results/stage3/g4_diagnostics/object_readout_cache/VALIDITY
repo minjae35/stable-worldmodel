@@ -1,0 +1,4 @@
+SUPERSEDED
+
+The selected layer-12 object-local probe was fit on pre-final-LayerNorm tokens,
+then applied to post-norm Dynamics features.  Use ../object_readout_cache_postnorm.

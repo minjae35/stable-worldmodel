@@ -1,0 +1,15 @@
+{
+  "cache_key": "c7242c2a7501aa4fdab6fa52773771d16a634b0face2c01e0ebcb32a18feba4e",
+  "identity": {
+    "schema": 1,
+    "purpose": "G4 evaluation-only object-local final-layer DINO readout",
+    "common_manifest_sha256": "37e9194981f29f4b818d6facd36892b171a236d185126522211070e0859c1432",
+    "dino_weights_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+    "representation_report_sha256": "a0d4bec502bbde245bee493bbe6fd1c8179103db91d53f5cc7f6bd123e2853e4",
+    "selected_readout": "L12_object_crop4",
+    "probe_fit": "source development train only; alpha/readout selected on validation only",
+    "test_used_for_selection": false,
+    "oracle_input": "RGB T-block centroid; evaluation-only",
+    "n_test": 224
+  }
+}

@@ -1,0 +1,2822 @@
+{
+  "scope": {
+    "seeds": [
+      3072,
+      3073,
+      3074,
+      3075
+    ],
+    "steps": [
+      500,
+      1000,
+      1500,
+      2000
+    ],
+    "cohort": "development only",
+    "effect": "B temporal minus A uniform; negative favors temporal coverage",
+    "final_holdout_used": false
+  },
+  "across_seed_feature_effects": {
+    "500": {
+      "pusht": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.001719936728477478,
+          "mean_relative_delta_percent": -0.5808451585660532,
+          "sample_variance": 2.5098912244854905e-05,
+          "sample_std": 0.005009881460160001,
+          "standard_error": 0.0025049407300800006,
+          "exploratory_t95_ci_df3": [
+            -0.009691776099876639,
+            0.006251902642921683
+          ],
+          "min_delta": -0.005661457777023315,
+          "max_delta": 0.005383342504501343,
+          "n_B_better": 3,
+          "n_B_worse": 1,
+          "deltas_by_seed": [
+            -0.0018334686756134033,
+            0.005383342504501343,
+            -0.004768162965774536,
+            -0.005661457777023315
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": 1.2256205081939697e-05,
+          "mean_relative_delta_percent": 0.0032110198923365526,
+          "sample_variance": 8.373969681452209e-06,
+          "sample_std": 0.002893781208289979,
+          "standard_error": 0.0014468906041449894,
+          "exploratory_t95_ci_df3": [
+            -0.004592395452229797,
+            0.004616907862393676
+          ],
+          "min_delta": -0.003697007894515991,
+          "max_delta": 0.003279387950897217,
+          "n_B_better": 2,
+          "n_B_worse": 2,
+          "deltas_by_seed": [
+            0.0007770955562591553,
+            0.003279387950897217,
+            -0.00031045079231262207,
+            -0.003697007894515991
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      },
+      "tworoom": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": 0.0005304478108882904,
+          "mean_relative_delta_percent": 0.23559777066740828,
+          "sample_variance": 0.00013674820529191445,
+          "sample_std": 0.011693938827098184,
+          "standard_error": 0.005846969413549092,
+          "exploratory_t95_ci_df3": [
+            -0.018077218396371112,
+            0.019138114018147693
+          ],
+          "min_delta": -0.00812394917011261,
+          "max_delta": 0.017699122428894043,
+          "n_B_better": 3,
+          "n_B_worse": 1,
+          "deltas_by_seed": [
+            -0.005199134349822998,
+            0.017699122428894043,
+            -0.0022542476654052734,
+            -0.00812394917011261
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": 0.0008687973022460938,
+          "mean_relative_delta_percent": 0.2581571909589459,
+          "sample_variance": 5.1084014452011196e-05,
+          "sample_std": 0.007147308196238021,
+          "standard_error": 0.0035736540981190106,
+          "exploratory_t95_ci_df3": [
+            -0.010504164978676716,
+            0.012241759583168903
+          ],
+          "min_delta": -0.006008237600326538,
+          "max_delta": 0.010915398597717285,
+          "n_B_better": 3,
+          "n_B_worse": 1,
+          "deltas_by_seed": [
+            -0.0006918907165527344,
+            0.010915398597717285,
+            -0.0007400810718536377,
+            -0.006008237600326538
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      },
+      "cube": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.004022747278213501,
+          "mean_relative_delta_percent": -0.5670367725537752,
+          "sample_variance": 1.8632681941947265e-05,
+          "sample_std": 0.004316559039553063,
+          "standard_error": 0.0021582795197765316,
+          "exploratory_t95_ci_df3": [
+            -0.010891355961697017,
+            0.0028458614052700153
+          ],
+          "min_delta": -0.009490966796875,
+          "max_delta": 5.888938903808594e-05,
+          "n_B_better": 3,
+          "n_B_worse": 1,
+          "deltas_by_seed": [
+            5.888938903808594e-05,
+            -0.0012830495834350586,
+            -0.009490966796875,
+            -0.005375862121582031
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.0009522885084152222,
+          "mean_relative_delta_percent": -0.15941412670533228,
+          "sample_variance": 7.477155883783837e-06,
+          "sample_std": 0.0027344388608604576,
+          "standard_error": 0.0013672194304302288,
+          "exploratory_t95_ci_df3": [
+            -0.0053033909333007586,
+            0.0033988139164703142
+          ],
+          "min_delta": -0.0042411088943481445,
+          "max_delta": 0.0018557310104370117,
+          "n_B_better": 2,
+          "n_B_worse": 2,
+          "deltas_by_seed": [
+            0.0018557310104370117,
+            0.0006324648857116699,
+            -0.0042411088943481445,
+            -0.0020562410354614258
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      },
+      "macro": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.0017374120652675767,
+          "mean_relative_delta_percent": -0.4235206568621081,
+          "sample_variance": 3.9074941972015606e-05,
+          "sample_std": 0.006250995278514903,
+          "standard_error": 0.0031254976392574513,
+          "exploratory_t95_ci_df3": [
+            -0.011684140479497139,
+            0.008209316348961986
+          ],
+          "min_delta": -0.006387089689572634,
+          "max_delta": 0.007266471783320072,
+          "n_B_better": 3,
+          "n_B_worse": 1,
+          "deltas_by_seed": [
+            -0.002324571212132809,
+            0.007266471783320072,
+            -0.0055044591426849365,
+            -0.006387089689572634
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -2.374500036239624e-05,
+          "mean_relative_delta_percent": -0.0054146489581311545,
+          "sample_variance": 1.4441790618121194e-05,
+          "sample_std": 0.0038002356003439043,
+          "standard_error": 0.0019001178001719521,
+          "exploratory_t95_ci_df3": [
+            -0.006070767873124486,
+            0.006023277872399694
+          ],
+          "min_delta": -0.003920495510101318,
+          "max_delta": 0.004942417144775391,
+          "n_B_better": 2,
+          "n_B_worse": 2,
+          "deltas_by_seed": [
+            0.0006469786167144775,
+            0.004942417144775391,
+            -0.0017638802528381348,
+            -0.003920495510101318
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      }
+    },
+    "1000": {
+      "pusht": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.0038158968091011047,
+          "mean_relative_delta_percent": -1.565659447388652,
+          "sample_variance": 1.7588466218946646e-05,
+          "sample_std": 0.004193860538805105,
+          "standard_error": 0.0020969302694025527,
+          "exploratory_t95_ci_df3": [
+            -0.010489264797399991,
+            0.002857471179197783
+          ],
+          "min_delta": -0.010060027241706848,
+          "max_delta": -0.0011949539184570312,
+          "n_B_better": 4,
+          "n_B_worse": 0,
+          "deltas_by_seed": [
+            -0.0011949539184570312,
+            -0.0015900880098342896,
+            -0.010060027241706848,
+            -0.00241851806640625
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.0016679167747497559,
+          "mean_relative_delta_percent": -0.4819438234392267,
+          "sample_variance": 3.4184683901372637e-06,
+          "sample_std": 0.0018489100546368565,
+          "standard_error": 0.0009244550273184283,
+          "exploratory_t95_ci_df3": [
+            -0.004609945260840751,
+            0.0012741117113412386
+          ],
+          "min_delta": -0.004002779722213745,
+          "max_delta": 0.00019699335098266602,
+          "n_B_better": 3,
+          "n_B_worse": 1,
+          "deltas_by_seed": [
+            0.00019699335098266602,
+            -0.0006533563137054443,
+            -0.004002779722213745,
+            -0.0022125244140625
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      },
+      "tworoom": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": 0.00992119312286377,
+          "mean_relative_delta_percent": 6.2727583868524945,
+          "sample_variance": 0.00012031612997054353,
+          "sample_std": 0.010968870952406338,
+          "standard_error": 0.005484435476203169,
+          "exploratory_t95_ci_df3": [
+            -0.007532728294948943,
+            0.027375114540676482
+          ],
+          "min_delta": 0.0018219351768493652,
+          "max_delta": 0.02556280791759491,
+          "n_B_better": 0,
+          "n_B_worse": 4,
+          "deltas_by_seed": [
+            0.02556280791759491,
+            0.0018219351768493652,
+            0.009485185146331787,
+            0.002814844250679016
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": 0.007851660251617432,
+          "mean_relative_delta_percent": 2.788786876703029,
+          "sample_variance": 1.5568076516814244e-05,
+          "sample_std": 0.003945640190997431,
+          "standard_error": 0.0019728200954987154,
+          "exploratory_t95_ci_df3": [
+            0.0015732662277069985,
+            0.014130054275527864
+          ],
+          "min_delta": 0.0039344727993011475,
+          "max_delta": 0.01325562596321106,
+          "n_B_better": 0,
+          "n_B_worse": 4,
+          "deltas_by_seed": [
+            0.01325562596321106,
+            0.00638309121131897,
+            0.00783345103263855,
+            0.0039344727993011475
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      },
+      "cube": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.005691364407539368,
+          "mean_relative_delta_percent": -0.9625924411060122,
+          "sample_variance": 2.758060696657812e-05,
+          "sample_std": 0.0052517241898807025,
+          "standard_error": 0.0026258620949403512,
+          "exploratory_t95_ci_df3": [
+            -0.014048029529768283,
+            0.0026653007146895478
+          ],
+          "min_delta": -0.011484503746032715,
+          "max_delta": 0.0007830262184143066,
+          "n_B_better": 3,
+          "n_B_worse": 1,
+          "deltas_by_seed": [
+            -0.00790703296661377,
+            0.0007830262184143066,
+            -0.011484503746032715,
+            -0.004156947135925293
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.002374127507209778,
+          "mean_relative_delta_percent": -0.4380995632780478,
+          "sample_variance": 3.038693912493784e-06,
+          "sample_std": 0.0017431849908984944,
+          "standard_error": 0.0008715924954492472,
+          "exploratory_t95_ci_df3": [
+            -0.005147923824065726,
+            0.0003996688096461697
+          ],
+          "min_delta": -0.004238605499267578,
+          "max_delta": -0.00043082237243652344,
+          "n_B_better": 4,
+          "n_B_worse": 0,
+          "deltas_by_seed": [
+            -0.003377974033355713,
+            -0.00043082237243652344,
+            -0.004238605499267578,
+            -0.0014491081237792969
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      },
+      "macro": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": 0.00013797730207443237,
+          "mean_relative_delta_percent": 0.04167904470852317,
+          "sample_variance": 1.5958271504665676e-05,
+          "sample_std": 0.003994780532728385,
+          "standard_error": 0.0019973902663641924,
+          "exploratory_t95_ci_df3": [
+            -0.006218609971327041,
+            0.006494564575475906
+          ],
+          "min_delta": -0.004019781947135925,
+          "max_delta": 0.00548694034417474,
+          "n_B_better": 2,
+          "n_B_worse": 2,
+          "deltas_by_seed": [
+            0.00548694034417474,
+            0.00033829112847644227,
+            -0.004019781947135925,
+            -0.0012535403172175275
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": 0.0012698719898859706,
+          "mean_relative_delta_percent": 0.3257362274646161,
+          "sample_variance": 2.6579669722147345e-06,
+          "sample_std": 0.0016303272592380754,
+          "standard_error": 0.0008151636296190377,
+          "exploratory_t95_ci_df3": [
+            -0.0013243424913972454,
+            0.0038640864711691866
+          ],
+          "min_delta": -0.00013597806294757264,
+          "max_delta": 0.003358215093612671,
+          "n_B_better": 1,
+          "n_B_worse": 3,
+          "deltas_by_seed": [
+            0.003358215093612671,
+            0.0017663041750589636,
+            -0.00013597806294757264,
+            9.094675381982054e-05
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      }
+    },
+    "1500": {
+      "pusht": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.001280359923839569,
+          "mean_relative_delta_percent": -0.5733431644691187,
+          "sample_variance": 1.526323889418831e-05,
+          "sample_std": 0.0039068195369364464,
+          "standard_error": 0.0019534097684682232,
+          "exploratory_t95_ci_df3": [
+            -0.007496981624207454,
+            0.0049362617765283156
+          ],
+          "min_delta": -0.006862848997116089,
+          "max_delta": 0.002142682671546936,
+          "n_B_better": 2,
+          "n_B_worse": 2,
+          "deltas_by_seed": [
+            -0.006862848997116089,
+            0.0003363490104675293,
+            -0.0007376223802566528,
+            0.002142682671546936
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": 7.401406764984131e-05,
+          "mean_relative_delta_percent": 0.02247004109502251,
+          "sample_variance": 3.65438787112519e-06,
+          "sample_std": 0.0019116453308930478,
+          "standard_error": 0.0009558226654465239,
+          "exploratory_t95_ci_df3": [
+            -0.0029678402425074046,
+            0.003115868377807087
+          ],
+          "min_delta": -0.0026134848594665527,
+          "max_delta": 0.0017309188842773438,
+          "n_B_better": 1,
+          "n_B_worse": 3,
+          "deltas_by_seed": [
+            -0.0026134848594665527,
+            0.0010710358619689941,
+            0.00010758638381958008,
+            0.0017309188842773438
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      },
+      "tworoom": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": 0.0007325410842895508,
+          "mean_relative_delta_percent": 0.5317326119393279,
+          "sample_variance": 1.1205904876169607e-05,
+          "sample_std": 0.003347522199503628,
+          "standard_error": 0.001673761099751814,
+          "exploratory_t95_ci_df3": [
+            -0.004594113743544134,
+            0.006059195912123235
+          ],
+          "min_delta": -0.004110440611839294,
+          "max_delta": 0.003361821174621582,
+          "n_B_better": 1,
+          "n_B_worse": 3,
+          "deltas_by_seed": [
+            0.003361821174621582,
+            -0.004110440611839294,
+            0.0012069791555404663,
+            0.0024718046188354492
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": 0.0011378154158592224,
+          "mean_relative_delta_percent": 0.4353286836320805,
+          "sample_variance": 8.046362060420975e-06,
+          "sample_std": 0.0028366110167629566,
+          "standard_error": 0.0014183055083814783,
+          "exploratory_t95_ci_df3": [
+            -0.003375865709053731,
+            0.005651496540772176
+          ],
+          "min_delta": -0.002066493034362793,
+          "max_delta": 0.004836082458496094,
+          "n_B_better": 1,
+          "n_B_worse": 3,
+          "deltas_by_seed": [
+            0.004836082458496094,
+            -0.002066493034362793,
+            0.0010809898376464844,
+            0.0007006824016571045
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      },
+      "cube": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.0017289519309997559,
+          "mean_relative_delta_percent": -0.3181066213185337,
+          "sample_variance": 6.383572852778722e-05,
+          "sample_std": 0.007989726436354828,
+          "standard_error": 0.003994863218177414,
+          "exploratory_t95_ci_df3": [
+            -0.014442389619804468,
+            0.010984485757804956
+          ],
+          "min_delta": -0.012406885623931885,
+          "max_delta": 0.006886839866638184,
+          "n_B_better": 2,
+          "n_B_worse": 2,
+          "deltas_by_seed": [
+            -0.012406885623931885,
+            5.40614128112793e-05,
+            0.006886839866638184,
+            -0.0014498233795166016
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.00018745660781860352,
+          "mean_relative_delta_percent": -0.036301218624406585,
+          "sample_variance": 1.1844668541982628e-05,
+          "sample_std": 0.003441608423685447,
+          "standard_error": 0.0017208042118427235,
+          "exploratory_t95_ci_df3": [
+            -0.005663823613915077,
+            0.00528891039827787
+          ],
+          "min_delta": -0.004796743392944336,
+          "max_delta": 0.003107726573944092,
+          "n_B_better": 2,
+          "n_B_worse": 2,
+          "deltas_by_seed": [
+            -0.004796743392944336,
+            0.001602470874786377,
+            0.003107726573944092,
+            -0.0006632804870605469
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      },
+      "macro": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.0007589235901832442,
+          "mean_relative_delta_percent": -0.2516900607925803,
+          "sample_variance": 1.1492382257764443e-05,
+          "sample_std": 0.003390041630683087,
+          "standard_error": 0.0016950208153415434,
+          "exploratory_t95_ci_df3": [
+            -0.006153236321346857,
+            0.004635389140980369
+          ],
+          "min_delta": -0.005302637815475464,
+          "max_delta": 0.0024520655473073694,
+          "n_B_better": 2,
+          "n_B_worse": 2,
+          "deltas_by_seed": [
+            -0.005302637815475464,
+            -0.0012400100628535138,
+            0.0024520655473073694,
+            0.0010548879702886316
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": 0.0003414576252301349,
+          "mean_relative_delta_percent": 0.09252329426641952,
+          "sample_variance": 9.030558965555117e-07,
+          "sample_std": 0.0009502925320949921,
+          "standard_error": 0.00047514626604749607,
+          "exploratory_t95_ci_df3": [
+            -0.0011706698536223324,
+            0.0018535851040826022
+          ],
+          "min_delta": -0.0008580485979716168,
+          "max_delta": 0.0014321009318033484,
+          "n_B_better": 1,
+          "n_B_worse": 3,
+          "deltas_by_seed": [
+            -0.0008580485979716168,
+            0.00020233790079754455,
+            0.0014321009318033484,
+            0.0005894402662912634
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      }
+    },
+    "2000": {
+      "pusht": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.0007677413523197174,
+          "mean_relative_delta_percent": -0.3598525213877478,
+          "sample_variance": 3.400188367067939e-06,
+          "sample_std": 0.001843959968943995,
+          "standard_error": 0.0009219799844719975,
+          "exploratory_t95_ci_df3": [
+            -0.003701893147448668,
+            0.002166410442809233
+          ],
+          "min_delta": -0.0035265088081359863,
+          "max_delta": 0.0002619922161102295,
+          "n_B_better": 2,
+          "n_B_worse": 2,
+          "deltas_by_seed": [
+            0.0002619922161102295,
+            0.00022837519645690918,
+            -0.0035265088081359863,
+            -3.482401371002197e-05
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -1.0594725608825684e-05,
+          "mean_relative_delta_percent": -0.0033087908849745154,
+          "sample_variance": 4.716041119401382e-06,
+          "sample_std": 0.002171644795863583,
+          "standard_error": 0.0010858223979317914,
+          "exploratory_t95_ci_df3": [
+            -0.003466166204101754,
+            0.0034449767528841025
+          ],
+          "min_delta": -0.0023429393768310547,
+          "max_delta": 0.002199411392211914,
+          "n_B_better": 2,
+          "n_B_worse": 2,
+          "deltas_by_seed": [
+            0.002199411392211914,
+            0.0014320015907287598,
+            -0.0023429393768310547,
+            -0.0013308525085449219
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      },
+      "tworoom": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": 0.005503397434949875,
+          "mean_relative_delta_percent": 4.464355030374726,
+          "sample_variance": 4.33865234944486e-06,
+          "sample_std": 0.002082943194003346,
+          "standard_error": 0.001041471597001673,
+          "exploratory_t95_ci_df3": [
+            0.0021889699990134,
+            0.00881782487088635
+          ],
+          "min_delta": 0.002804204821586609,
+          "max_delta": 0.007869496941566467,
+          "n_B_better": 0,
+          "n_B_worse": 4,
+          "deltas_by_seed": [
+            0.005865409970283508,
+            0.002804204821586609,
+            0.007869496941566467,
+            0.005474478006362915
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": 0.0034061484038829803,
+          "mean_relative_delta_percent": 1.3818015127787975,
+          "sample_variance": 1.5505578893996546e-06,
+          "sample_std": 0.001245213993416254,
+          "standard_error": 0.000622606996708127,
+          "exploratory_t95_ci_df3": [
+            0.0014247350675650702,
+            0.005387561740200891
+          ],
+          "min_delta": 0.002051740884780884,
+          "max_delta": 0.004633694887161255,
+          "n_B_better": 0,
+          "n_B_worse": 4,
+          "deltas_by_seed": [
+            0.004633694887161255,
+            0.0026626288890838623,
+            0.00427652895450592,
+            0.002051740884780884
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      },
+      "cube": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.00833749771118164,
+          "mean_relative_delta_percent": -1.5908769552835116,
+          "sample_variance": 1.8854284052830888e-05,
+          "sample_std": 0.004342152007107868,
+          "standard_error": 0.002171076003553934,
+          "exploratory_t95_ci_df3": [
+            -0.015246830517183181,
+            -0.0014281649051801001
+          ],
+          "min_delta": -0.014530539512634277,
+          "max_delta": -0.004614293575286865,
+          "n_B_better": 4,
+          "n_B_worse": 0,
+          "deltas_by_seed": [
+            -0.014530539512634277,
+            -0.00790780782699585,
+            -0.00629734992980957,
+            -0.004614293575286865
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.0037683844566345215,
+          "mean_relative_delta_percent": -0.7471891842111242,
+          "sample_variance": 3.847662959799436e-06,
+          "sample_std": 0.0019615460636445516,
+          "standard_error": 0.0009807730318222758,
+          "exploratory_t95_ci_df3": [
+            -0.0068896419680797676,
+            -0.000647126945189275
+          ],
+          "min_delta": -0.006364285945892334,
+          "max_delta": -0.0018608570098876953,
+          "n_B_better": 4,
+          "n_B_worse": 0,
+          "deltas_by_seed": [
+            -0.006364285945892334,
+            -0.002742767333984375,
+            -0.004105627536773682,
+            -0.0018608570098876953
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      },
+      "macro": {
+        "feature_mse": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.001200613876183823,
+          "mean_relative_delta_percent": -0.4184757668705334,
+          "sample_variance": 1.7403059442175727e-06,
+          "sample_std": 0.0013192065585864758,
+          "standard_error": 0.0006596032792932379,
+          "exploratory_t95_ci_df3": [
+            -0.0032997658953239717,
+            0.0008985381429563255
+          ],
+          "min_delta": -0.002801045775413513,
+          "max_delta": 0.0002751201391220093,
+          "n_B_better": 3,
+          "n_B_worse": 1,
+          "deltas_by_seed": [
+            -0.002801045775413513,
+            -0.0016250759363174438,
+            -0.0006514539321263446,
+            0.0002751201391220093
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        },
+        "feature_mae": {
+          "effect": "B_minus_A; negative favors temporal coverage",
+          "n_seeds": 4,
+          "mean_delta": -0.00012427692612010377,
+          "mean_relative_delta_percent": -0.034810122366613024,
+          "sample_variance": 2.7809602571994636e-07,
+          "sample_std": 0.0005273481067757296,
+          "standard_error": 0.0002636740533878648,
+          "exploratory_t95_ci_df3": [
+            -0.0009634054431236396,
+            0.0007148515908834321
+          ],
+          "min_delta": -0.0007240126530329016,
+          "max_delta": 0.0004506210486094342,
+          "n_B_better": 2,
+          "n_B_worse": 2,
+          "deltas_by_seed": [
+            0.00015627344449364866,
+            0.0004506210486094342,
+            -0.0007240126530329016,
+            -0.0003799895445505963
+          ],
+          "warning": "Only four seeds; interval and direction counts are exploratory."
+        }
+      }
+    }
+  },
+  "episode_bootstrap": {
+    "description": "Within each seed/environment, episodes are resampled as paired units. These intervals do not estimate between-seed variation.",
+    "rows": [
+      {
+        "seed": 3072,
+        "step": 500,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0018334523774683475,
+        "relative_delta_percent": -0.6180081871920153,
+        "episode_bootstrap_ci95_low": -0.004645041277399287,
+        "episode_bootstrap_ci95_high": 0.0008250755607150483,
+        "episode_bootstrap_probability_B_better": 0.9088
+      },
+      {
+        "seed": 3072,
+        "step": 500,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0007770801894366741,
+        "relative_delta_percent": 0.20357364796122912,
+        "episode_bootstrap_ci95_low": -0.0012087871553376317,
+        "episode_bootstrap_ci95_high": 0.00268158009275794,
+        "episode_bootstrap_probability_B_better": 0.2165
+      },
+      {
+        "seed": 3072,
+        "step": 500,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.005199147621169686,
+        "relative_delta_percent": -2.2615434665162035,
+        "episode_bootstrap_ci95_low": -0.008365422877250239,
+        "episode_bootstrap_ci95_high": -0.0018500514328479768,
+        "episode_bootstrap_probability_B_better": 0.9991
+      },
+      {
+        "seed": 3072,
+        "step": 500,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0006919149309396744,
+        "relative_delta_percent": -0.20444384300466983,
+        "episode_bootstrap_ci95_low": -0.0022878133109770714,
+        "episode_bootstrap_ci95_high": 0.0009338072733953589,
+        "episode_bootstrap_probability_B_better": 0.8031
+      },
+      {
+        "seed": 3072,
+        "step": 500,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 5.89471310377121e-05,
+        "relative_delta_percent": 0.008391643237487954,
+        "episode_bootstrap_ci95_low": -0.003936236561276019,
+        "episode_bootstrap_ci95_high": 0.004167390218935903,
+        "episode_bootstrap_probability_B_better": 0.4984
+      },
+      {
+        "seed": 3072,
+        "step": 500,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0018557226285338402,
+        "relative_delta_percent": 0.31233616422491794,
+        "episode_bootstrap_ci95_low": 0.00017830152064561845,
+        "episode_bootstrap_ci95_high": 0.003571823355741798,
+        "episode_bootstrap_probability_B_better": 0.0143
+      },
+      {
+        "seed": 3072,
+        "step": 1000,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.001194951357319951,
+        "relative_delta_percent": -0.49591489063220257,
+        "episode_bootstrap_ci95_low": -0.004584207932930439,
+        "episode_bootstrap_ci95_high": 0.0022915792069397854,
+        "episode_bootstrap_probability_B_better": 0.7537
+      },
+      {
+        "seed": 3072,
+        "step": 1000,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.00019699987024068832,
+        "relative_delta_percent": 0.057255442898204056,
+        "episode_bootstrap_ci95_low": -0.002153586398344487,
+        "episode_bootstrap_ci95_high": 0.0026366509264335028,
+        "episode_bootstrap_probability_B_better": 0.4442
+      },
+      {
+        "seed": 3072,
+        "step": 1000,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.025562814786098897,
+        "relative_delta_percent": 16.631156257810282,
+        "episode_bootstrap_ci95_low": 0.019739931588992475,
+        "episode_bootstrap_ci95_high": 0.031677121159737,
+        "episode_bootstrap_probability_B_better": 0.0
+      },
+      {
+        "seed": 3072,
+        "step": 1000,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.013255607802420855,
+        "relative_delta_percent": 4.744484243503413,
+        "episode_bootstrap_ci95_low": 0.009559769561747089,
+        "episode_bootstrap_ci95_high": 0.01681942403083667,
+        "episode_bootstrap_probability_B_better": 0.0
+      },
+      {
+        "seed": 3072,
+        "step": 1000,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.007907070219516754,
+        "relative_delta_percent": -1.345058203317804,
+        "episode_bootstrap_ci95_low": -0.013264613621868194,
+        "episode_bootstrap_ci95_high": -0.0024971892824396493,
+        "episode_bootstrap_probability_B_better": 0.9984
+      },
+      {
+        "seed": 3072,
+        "step": 1000,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0033779707737267017,
+        "relative_delta_percent": -0.6249547360053584,
+        "episode_bootstrap_ci95_low": -0.005642910848837346,
+        "episode_bootstrap_ci95_high": -0.0011057329364120975,
+        "episode_bootstrap_probability_B_better": 0.9979
+      },
+      {
+        "seed": 3072,
+        "step": 1500,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0068628317676484585,
+        "relative_delta_percent": -3.0175576180813586,
+        "episode_bootstrap_ci95_low": -0.011746723565738647,
+        "episode_bootstrap_ci95_high": -0.0020823843486141415,
+        "episode_bootstrap_probability_B_better": 0.9975
+      },
+      {
+        "seed": 3072,
+        "step": 1500,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0026134932413697243,
+        "relative_delta_percent": -0.7865448932955815,
+        "episode_bootstrap_ci95_low": -0.006330632045865059,
+        "episode_bootstrap_ci95_high": 0.001134887139778583,
+        "episode_bootstrap_probability_B_better": 0.9145
+      },
+      {
+        "seed": 3072,
+        "step": 1500,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.003361840033903718,
+        "relative_delta_percent": 2.4183999406680234,
+        "episode_bootstrap_ci95_low": -0.001327260534162633,
+        "episode_bootstrap_ci95_high": 0.008082449005451053,
+        "episode_bootstrap_probability_B_better": 0.0795
+      },
+      {
+        "seed": 3072,
+        "step": 1500,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.004836114821955562,
+        "relative_delta_percent": 1.8496639041824612,
+        "episode_bootstrap_ci95_low": 0.0014727892470546068,
+        "episode_bootstrap_ci95_high": 0.008294773299712687,
+        "episode_bootstrap_probability_B_better": 0.0025
+      },
+      {
+        "seed": 3072,
+        "step": 1500,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.012406871654093266,
+        "relative_delta_percent": -2.2339589404016866,
+        "episode_bootstrap_ci95_low": -0.020711897092405708,
+        "episode_bootstrap_ci95_high": -0.004039327159989625,
+        "episode_bootstrap_probability_B_better": 0.9984
+      },
+      {
+        "seed": 3072,
+        "step": 1500,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.004796742927283049,
+        "relative_delta_percent": -0.9189826668987837,
+        "episode_bootstrap_ci95_low": -0.00818591903662309,
+        "episode_bootstrap_ci95_high": -0.0013564507127739494,
+        "episode_bootstrap_probability_B_better": 0.9964
+      },
+      {
+        "seed": 3072,
+        "step": 2000,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0002619948936626315,
+        "relative_delta_percent": 0.12412608692168332,
+        "episode_bootstrap_ci95_low": -0.0035873288463335483,
+        "episode_bootstrap_ci95_high": 0.004147878708317875,
+        "episode_bootstrap_probability_B_better": 0.4575
+      },
+      {
+        "seed": 3072,
+        "step": 2000,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0021993895061314106,
+        "relative_delta_percent": 0.6893124462578462,
+        "episode_bootstrap_ci95_low": -0.0009405640768818557,
+        "episode_bootstrap_ci95_high": 0.005544160644058135,
+        "episode_bootstrap_probability_B_better": 0.0887
+      },
+      {
+        "seed": 3072,
+        "step": 2000,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.005865401704795659,
+        "relative_delta_percent": 4.7398557671842605,
+        "episode_bootstrap_ci95_low": 0.0012613294471520932,
+        "episode_bootstrap_ci95_high": 0.01042606252885889,
+        "episode_bootstrap_probability_B_better": 0.007
+      },
+      {
+        "seed": 3072,
+        "step": 2000,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.004633692791685462,
+        "relative_delta_percent": 1.8824593466035753,
+        "episode_bootstrap_ci95_low": 0.0011454000952653587,
+        "episode_bootstrap_ci95_high": 0.008115069731138647,
+        "episode_bootstrap_probability_B_better": 0.004
+      },
+      {
+        "seed": 3072,
+        "step": 2000,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.014530510641634464,
+        "relative_delta_percent": -2.7685594497826096,
+        "episode_bootstrap_ci95_low": -0.021154540602583437,
+        "episode_bootstrap_ci95_high": -0.008295489137526604,
+        "episode_bootstrap_probability_B_better": 1.0
+      },
+      {
+        "seed": 3072,
+        "step": 2000,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.006364248227328062,
+        "relative_delta_percent": -1.2600001674208225,
+        "episode_bootstrap_ci95_low": -0.009519484802149236,
+        "episode_bootstrap_ci95_high": -0.003380895778536797,
+        "episode_bootstrap_probability_B_better": 1.0
+      },
+      {
+        "seed": 3073,
+        "step": 500,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.005383357405662537,
+        "relative_delta_percent": 1.8378128424237676,
+        "episode_bootstrap_ci95_low": 0.0027194174705073237,
+        "episode_bootstrap_ci95_high": 0.008080884185619652,
+        "episode_bootstrap_probability_B_better": 0.0
+      },
+      {
+        "seed": 3073,
+        "step": 500,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0032793288119137287,
+        "relative_delta_percent": 0.865410064405545,
+        "episode_bootstrap_ci95_low": 0.0014526027604006232,
+        "episode_bootstrap_ci95_high": 0.005092084396164864,
+        "episode_bootstrap_probability_B_better": 0.0003
+      },
+      {
+        "seed": 3073,
+        "step": 500,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.01769913313910365,
+        "relative_delta_percent": 8.058979870678396,
+        "episode_bootstrap_ci95_low": 0.012714679911732673,
+        "episode_bootstrap_ci95_high": 0.02241797362221405,
+        "episode_bootstrap_probability_B_better": 0.0
+      },
+      {
+        "seed": 3073,
+        "step": 500,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.010915372055023909,
+        "relative_delta_percent": 3.2747857281636907,
+        "episode_bootstrap_ci95_low": 0.008042744360864162,
+        "episode_bootstrap_ci95_high": 0.013689811469521373,
+        "episode_bootstrap_probability_B_better": 0.0
+      },
+      {
+        "seed": 3073,
+        "step": 500,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0012830141931772232,
+        "relative_delta_percent": -0.18061228338367308,
+        "episode_bootstrap_ci95_low": -0.006188240926712751,
+        "episode_bootstrap_ci95_high": 0.0036189684178680173,
+        "episode_bootstrap_probability_B_better": 0.6983
+      },
+      {
+        "seed": 3073,
+        "step": 500,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0006324434652924538,
+        "relative_delta_percent": 0.10591666713249884,
+        "episode_bootstrap_ci95_low": -0.0014148838818073273,
+        "episode_bootstrap_ci95_high": 0.002698407671414315,
+        "episode_bootstrap_probability_B_better": 0.2795
+      },
+      {
+        "seed": 3073,
+        "step": 1000,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0015901222359389067,
+        "relative_delta_percent": -0.6573342287101079,
+        "episode_bootstrap_ci95_low": -0.004972396913217381,
+        "episode_bootstrap_ci95_high": 0.0016093543788883835,
+        "episode_bootstrap_probability_B_better": 0.8389
+      },
+      {
+        "seed": 3073,
+        "step": 1000,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0006533581763505936,
+        "relative_delta_percent": -0.18970862420233128,
+        "episode_bootstrap_ci95_low": -0.002689911494962871,
+        "episode_bootstrap_ci95_high": 0.0013529807096347198,
+        "episode_bootstrap_probability_B_better": 0.7269
+      },
+      {
+        "seed": 3073,
+        "step": 1000,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.001821920508518815,
+        "relative_delta_percent": 1.1306399116198442,
+        "episode_bootstrap_ci95_low": -0.0022368480975273994,
+        "episode_bootstrap_ci95_high": 0.00585313765623141,
+        "episode_bootstrap_probability_B_better": 0.1944
+      },
+      {
+        "seed": 3073,
+        "step": 1000,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.006383129162713885,
+        "relative_delta_percent": 2.2644959127593656,
+        "episode_bootstrap_ci95_low": 0.0038284343900159,
+        "episode_bootstrap_ci95_high": 0.009085885941749439,
+        "episode_bootstrap_probability_B_better": 0.0
+      },
+      {
+        "seed": 3073,
+        "step": 1000,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0007830467075109482,
+        "relative_delta_percent": 0.13184576175691798,
+        "episode_bootstrap_ci95_low": -0.007186641672160476,
+        "episode_bootstrap_ci95_high": 0.008918893313966692,
+        "episode_bootstrap_probability_B_better": 0.419
+      },
+      {
+        "seed": 3073,
+        "step": 1000,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.00043083028867840767,
+        "relative_delta_percent": -0.07944130982662594,
+        "episode_bootstrap_ci95_low": -0.0033014521934092043,
+        "episode_bootstrap_ci95_high": 0.0024756814818829285,
+        "episode_bootstrap_probability_B_better": 0.6045
+      },
+      {
+        "seed": 3073,
+        "step": 1500,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0003363594878464937,
+        "relative_delta_percent": 0.15251310158352072,
+        "episode_bootstrap_ci95_low": -0.00351388833951205,
+        "episode_bootstrap_ci95_high": 0.004178847913863137,
+        "episode_bootstrap_probability_B_better": 0.4329
+      },
+      {
+        "seed": 3073,
+        "step": 1500,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0010710619390010834,
+        "relative_delta_percent": 0.327854581632964,
+        "episode_bootstrap_ci95_low": -0.0016394847072660923,
+        "episode_bootstrap_ci95_high": 0.0037417264422401767,
+        "episode_bootstrap_probability_B_better": 0.2263
+      },
+      {
+        "seed": 3073,
+        "step": 1500,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.004110440262593329,
+        "relative_delta_percent": -2.923714606740442,
+        "episode_bootstrap_ci95_low": -0.008871118191746064,
+        "episode_bootstrap_ci95_high": 0.0006775958085199804,
+        "episode_bootstrap_probability_B_better": 0.9552
+      },
+      {
+        "seed": 3073,
+        "step": 1500,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0020665056072175503,
+        "relative_delta_percent": -0.785513535978884,
+        "episode_bootstrap_ci95_low": -0.005580706108594314,
+        "episode_bootstrap_ci95_high": 0.001401618320960549,
+        "episode_bootstrap_probability_B_better": 0.8844
+      },
+      {
+        "seed": 3073,
+        "step": 1500,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 5.412707105278969e-05,
+        "relative_delta_percent": 0.009972401746863958,
+        "episode_bootstrap_ci95_low": -0.007925866486039013,
+        "episode_bootstrap_ci95_high": 0.007721958367619661,
+        "episode_bootstrap_probability_B_better": 0.4859
+      },
+      {
+        "seed": 3073,
+        "step": 1500,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0016025109216570854,
+        "relative_delta_percent": 0.3111458232914112,
+        "episode_bootstrap_ci95_low": -0.0014306448632851244,
+        "episode_bootstrap_ci95_high": 0.004582097090315073,
+        "episode_bootstrap_probability_B_better": 0.1447
+      },
+      {
+        "seed": 3073,
+        "step": 2000,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.00022836972493678331,
+        "relative_delta_percent": 0.10646667374678442,
+        "episode_bootstrap_ci95_low": -0.004407706754864193,
+        "episode_bootstrap_ci95_high": 0.004696179906022734,
+        "episode_bootstrap_probability_B_better": 0.4668
+      },
+      {
+        "seed": 3073,
+        "step": 2000,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0014319578185677528,
+        "relative_delta_percent": 0.4472431179932291,
+        "episode_bootstrap_ci95_low": -0.0017269955889787523,
+        "episode_bootstrap_ci95_high": 0.004709956614533437,
+        "episode_bootstrap_probability_B_better": 0.1984
+      },
+      {
+        "seed": 3073,
+        "step": 2000,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0028041908517479897,
+        "relative_delta_percent": 2.303648535862948,
+        "episode_bootstrap_ci95_low": -0.00328356129466556,
+        "episode_bootstrap_ci95_high": 0.009255834904615763,
+        "episode_bootstrap_probability_B_better": 0.1975
+      },
+      {
+        "seed": 3073,
+        "step": 2000,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.002662640530616045,
+        "relative_delta_percent": 1.0867556784600039,
+        "episode_bootstrap_ci95_low": -0.0016590073413681238,
+        "episode_bootstrap_ci95_high": 0.007354177592787886,
+        "episode_bootstrap_probability_B_better": 0.1198
+      },
+      {
+        "seed": 3073,
+        "step": 2000,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.007907804567366838,
+        "relative_delta_percent": -1.5091705924217358,
+        "episode_bootstrap_ci95_low": -0.016575302206911148,
+        "episode_bootstrap_ci95_high": 0.0005663062678649984,
+        "episode_bootstrap_probability_B_better": 0.9675
+      },
+      {
+        "seed": 3073,
+        "step": 2000,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0027427677996456623,
+        "relative_delta_percent": -0.5442338707054484,
+        "episode_bootstrap_ci95_low": -0.006551575812045484,
+        "episode_bootstrap_ci95_high": 0.000996815192047506,
+        "episode_bootstrap_probability_B_better": 0.9228
+      },
+      {
+        "seed": 3074,
+        "step": 500,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.004768173210322857,
+        "relative_delta_percent": -1.612793530553931,
+        "episode_bootstrap_ci95_low": -0.006605231499997899,
+        "episode_bootstrap_ci95_high": -0.0029831252584699543,
+        "episode_bootstrap_probability_B_better": 1.0
+      },
+      {
+        "seed": 3074,
+        "step": 500,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0003103972412645817,
+        "relative_delta_percent": -0.08169388416135118,
+        "episode_bootstrap_ci95_low": -0.0016075397608801723,
+        "episode_bootstrap_ci95_high": 0.0009764609043486416,
+        "episode_bootstrap_probability_B_better": 0.6854
+      },
+      {
+        "seed": 3074,
+        "step": 500,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0022542420774698257,
+        "relative_delta_percent": -0.988885889946559,
+        "episode_bootstrap_ci95_low": -0.00782754790270701,
+        "episode_bootstrap_ci95_high": 0.003309963032370433,
+        "episode_bootstrap_probability_B_better": 0.7889
+      },
+      {
+        "seed": 3074,
+        "step": 500,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0007401141338050365,
+        "relative_delta_percent": -0.21863038338853064,
+        "episode_bootstrap_ci95_low": -0.004104669962543994,
+        "episode_bootstrap_ci95_high": 0.0024941104697063523,
+        "episode_bootstrap_probability_B_better": 0.6709
+      },
+      {
+        "seed": 3074,
+        "step": 500,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.00949095981195569,
+        "relative_delta_percent": -1.327300461432137,
+        "episode_bootstrap_ci95_low": -0.014056764414999633,
+        "episode_bootstrap_ci95_high": -0.005012377491220832,
+        "episode_bootstrap_probability_B_better": 0.9999
+      },
+      {
+        "seed": 3074,
+        "step": 500,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.004241129849106073,
+        "relative_delta_percent": -0.7071225149492856,
+        "episode_bootstrap_ci95_low": -0.006070078269112855,
+        "episode_bootstrap_ci95_high": -0.002394014294259251,
+        "episode_bootstrap_probability_B_better": 1.0
+      },
+      {
+        "seed": 3074,
+        "step": 1000,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.01006004516966641,
+        "relative_delta_percent": -4.086866874309743,
+        "episode_bootstrap_ci95_low": -0.014273462956771255,
+        "episode_bootstrap_ci95_high": -0.0061044462840072825,
+        "episode_bootstrap_probability_B_better": 1.0
+      },
+      {
+        "seed": 3074,
+        "step": 1000,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.004002828616648912,
+        "relative_delta_percent": -1.156304288133552,
+        "episode_bootstrap_ci95_low": -0.007120960811153054,
+        "episode_bootstrap_ci95_high": -0.0009232767159119257,
+        "episode_bootstrap_probability_B_better": 0.9952
+      },
+      {
+        "seed": 3074,
+        "step": 1000,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.009485170128755271,
+        "relative_delta_percent": 6.157439638902072,
+        "episode_bootstrap_ci95_low": 0.006307107693282887,
+        "episode_bootstrap_ci95_high": 0.012759761192137373,
+        "episode_bootstrap_probability_B_better": 0.0
+      },
+      {
+        "seed": 3074,
+        "step": 1000,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.00783348549157381,
+        "relative_delta_percent": 2.799534521532922,
+        "episode_bootstrap_ci95_low": 0.005271540622925386,
+        "episode_bootstrap_ci95_high": 0.010424813663121313,
+        "episode_bootstrap_probability_B_better": 0.0
+      },
+      {
+        "seed": 3074,
+        "step": 1000,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.01148449257016182,
+        "relative_delta_percent": -1.9282482214440289,
+        "episode_bootstrap_ci95_low": -0.01776061739074066,
+        "episode_bootstrap_ci95_high": -0.005336828983854503,
+        "episode_bootstrap_probability_B_better": 0.9998
+      },
+      {
+        "seed": 3074,
+        "step": 1000,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.004238639026880264,
+        "relative_delta_percent": -0.7791402013968141,
+        "episode_bootstrap_ci95_low": -0.006601753458380699,
+        "episode_bootstrap_ci95_high": -0.0018597189919091763,
+        "episode_bootstrap_probability_B_better": 0.9996
+      },
+      {
+        "seed": 3074,
+        "step": 1500,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0007376165594905615,
+        "relative_delta_percent": -0.33071693387486506,
+        "episode_bootstrap_ci95_low": -0.005249006429221481,
+        "episode_bootstrap_ci95_high": 0.003768082609167321,
+        "episode_bootstrap_probability_B_better": 0.6251
+      },
+      {
+        "seed": 3074,
+        "step": 1500,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.00010756915435194969,
+        "relative_delta_percent": 0.03262856289109698,
+        "episode_bootstrap_ci95_low": -0.0033499574754387138,
+        "episode_bootstrap_ci95_high": 0.0035742160864174356,
+        "episode_bootstrap_probability_B_better": 0.4759
+      },
+      {
+        "seed": 3074,
+        "step": 1500,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0012069819495081902,
+        "relative_delta_percent": 0.8825347294519067,
+        "episode_bootstrap_ci95_low": -0.004489881740300916,
+        "episode_bootstrap_ci95_high": 0.006694773584604263,
+        "episode_bootstrap_probability_B_better": 0.3434
+      },
+      {
+        "seed": 3074,
+        "step": 1500,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0010809993837028742,
+        "relative_delta_percent": 0.4147517818778444,
+        "episode_bootstrap_ci95_low": -0.003264380060136318,
+        "episode_bootstrap_ci95_high": 0.005138707725564017,
+        "episode_bootstrap_probability_B_better": 0.3031
+      },
+      {
+        "seed": 3074,
+        "step": 1500,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.006886847782880068,
+        "relative_delta_percent": 1.284970513312556,
+        "episode_bootstrap_ci95_low": -9.93881141766905e-05,
+        "episode_bootstrap_ci95_high": 0.013846830034162849,
+        "episode_bootstrap_probability_B_better": 0.0264
+      },
+      {
+        "seed": 3074,
+        "step": 1500,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.003107727039605379,
+        "relative_delta_percent": 0.6054252172703907,
+        "episode_bootstrap_ci95_low": -5.544512532650909e-07,
+        "episode_bootstrap_ci95_high": 0.006187694880645721,
+        "episode_bootstrap_probability_B_better": 0.0251
+      },
+      {
+        "seed": 3074,
+        "step": 2000,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0035265267360955477,
+        "relative_delta_percent": -1.6597393377052345,
+        "episode_bootstrap_ci95_low": -0.00790424143197015,
+        "episode_bootstrap_ci95_high": 0.0006679371464997518,
+        "episode_bootstrap_probability_B_better": 0.9472
+      },
+      {
+        "seed": 3074,
+        "step": 2000,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0023429340217262506,
+        "relative_delta_percent": -0.7345164109192202,
+        "episode_bootstrap_ci95_low": -0.0053742097632493826,
+        "episode_bootstrap_ci95_high": 0.0006289386830758297,
+        "episode_bootstrap_probability_B_better": 0.937
+      },
+      {
+        "seed": 3074,
+        "step": 2000,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.00786950415931642,
+        "relative_delta_percent": 6.258590194932153,
+        "episode_bootstrap_ci95_low": 0.0015132590429857379,
+        "episode_bootstrap_ci95_high": 0.014392622327432032,
+        "episode_bootstrap_probability_B_better": 0.0064
+      },
+      {
+        "seed": 3074,
+        "step": 2000,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0042765329126268625,
+        "relative_delta_percent": 1.720134634111286,
+        "episode_bootstrap_ci95_low": 4.707109183073057e-05,
+        "episode_bootstrap_ci95_high": 0.008654854912310836,
+        "episode_bootstrap_probability_B_better": 0.0233
+      },
+      {
+        "seed": 3074,
+        "step": 2000,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.006297342013567686,
+        "relative_delta_percent": -1.195396083079295,
+        "episode_bootstrap_ci95_low": -0.014103899197652935,
+        "episode_bootstrap_ci95_high": 0.0012443609535694106,
+        "episode_bootstrap_probability_B_better": 0.9472
+      },
+      {
+        "seed": 3074,
+        "step": 2000,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.004105608444660902,
+        "relative_delta_percent": -0.8115094620680798,
+        "episode_bootstrap_ci95_low": -0.007368493382818997,
+        "episode_bootstrap_ci95_high": -0.0007709838799200955,
+        "episode_bootstrap_probability_B_better": 0.992
+      },
+      {
+        "seed": 3075,
+        "step": 500,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.005661478731781244,
+        "relative_delta_percent": -1.892222808717339,
+        "episode_bootstrap_ci95_low": -0.008432865783106536,
+        "episode_bootstrap_ci95_high": -0.0028585939668118957,
+        "episode_bootstrap_probability_B_better": 1.0
+      },
+      {
+        "seed": 3075,
+        "step": 500,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0036970116198062897,
+        "relative_delta_percent": -0.9573698752814201,
+        "episode_bootstrap_ci95_low": -0.005645300098694861,
+        "episode_bootstrap_ci95_high": -0.0017591175623238088,
+        "episode_bootstrap_probability_B_better": 0.9999
+      },
+      {
+        "seed": 3075,
+        "step": 500,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.008123955689370632,
+        "relative_delta_percent": -3.640947762005894,
+        "episode_bootstrap_ci95_low": -0.011015699175186456,
+        "episode_bootstrap_ci95_high": -0.00535854843328707,
+        "episode_bootstrap_probability_B_better": 1.0
+      },
+      {
+        "seed": 3075,
+        "step": 500,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.006008257158100605,
+        "relative_delta_percent": -1.788831366393934,
+        "episode_bootstrap_ci95_low": -0.0078529562917538,
+        "episode_bootstrap_ci95_high": -0.004173941269982606,
+        "episode_bootstrap_probability_B_better": 1.0
+      },
+      {
+        "seed": 3075,
+        "step": 500,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.005375829990953207,
+        "relative_delta_percent": -0.757312841106433,
+        "episode_bootstrap_ci95_low": -0.01072649807902053,
+        "episode_bootstrap_ci95_high": -4.540461814031006e-05,
+        "episode_bootstrap_probability_B_better": 0.9759
+      },
+      {
+        "seed": 3075,
+        "step": 500,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0020561683923006058,
+        "relative_delta_percent": -0.3435875183624824,
+        "episode_bootstrap_ci95_low": -0.0044195822207257155,
+        "episode_bootstrap_ci95_high": 0.00026414550375193207,
+        "episode_bootstrap_probability_B_better": 0.9606
+      },
+      {
+        "seed": 3075,
+        "step": 1000,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.002418519463390112,
+        "relative_delta_percent": -0.9836208755932181,
+        "episode_bootstrap_ci95_low": -0.006586440745741128,
+        "episode_bootstrap_ci95_high": 0.0017852893040981132,
+        "episode_bootstrap_probability_B_better": 0.8693
+      },
+      {
+        "seed": 3075,
+        "step": 1000,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.002212571445852518,
+        "relative_delta_percent": -0.6327461872824129,
+        "episode_bootstrap_ci95_low": -0.0053313836338929835,
+        "episode_bootstrap_ci95_high": 0.0007736077299341543,
+        "episode_bootstrap_probability_B_better": 0.9234
+      },
+      {
+        "seed": 3075,
+        "step": 1000,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.002814857754856348,
+        "relative_delta_percent": 1.718854996162415,
+        "episode_bootstrap_ci95_low": -0.003063321197987534,
+        "episode_bootstrap_ci95_high": 0.008740511248470282,
+        "episode_bootstrap_probability_B_better": 0.1728
+      },
+      {
+        "seed": 3075,
+        "step": 1000,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.003934463253244758,
+        "relative_delta_percent": 1.3800613087809865,
+        "episode_bootstrap_ci95_low": -0.000264443317428231,
+        "episode_bootstrap_ci95_high": 0.008143607521196826,
+        "episode_bootstrap_probability_B_better": 0.0334
+      },
+      {
+        "seed": 3075,
+        "step": 1000,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.004156921058893204,
+        "relative_delta_percent": -0.7073789155497349,
+        "episode_bootstrap_ci95_low": -0.010407133668195456,
+        "episode_bootstrap_ci95_high": 0.002125029428862035,
+        "episode_bootstrap_probability_B_better": 0.8997
+      },
+      {
+        "seed": 3075,
+        "step": 1000,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0014491667971014977,
+        "relative_delta_percent": -0.2679644691978982,
+        "episode_bootstrap_ci95_low": -0.004092880489770323,
+        "episode_bootstrap_ci95_high": 0.0012503546546213324,
+        "episode_bootstrap_probability_B_better": 0.8532
+      },
+      {
+        "seed": 3075,
+        "step": 1500,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.002142673823982477,
+        "relative_delta_percent": 0.9640882709652167,
+        "episode_bootstrap_ci95_low": -0.0027339463063981383,
+        "episode_bootstrap_ci95_high": 0.006722790270578113,
+        "episode_bootstrap_probability_B_better": 0.186
+      },
+      {
+        "seed": 3075,
+        "step": 1500,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0017309067770838737,
+        "relative_delta_percent": 0.5262413397901036,
+        "episode_bootstrap_ci95_low": -0.0016943621216341852,
+        "episode_bootstrap_ci95_high": 0.005030198313761502,
+        "episode_bootstrap_probability_B_better": 0.1606
+      },
+      {
+        "seed": 3075,
+        "step": 1500,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0024718046188354492,
+        "relative_delta_percent": 1.8350982565239027,
+        "episode_bootstrap_ci95_low": -0.002304890542291105,
+        "episode_bootstrap_ci95_high": 0.007057885435642674,
+        "episode_bootstrap_probability_B_better": 0.1496
+      },
+      {
+        "seed": 3075,
+        "step": 1500,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.0007006765808910131,
+        "relative_delta_percent": 0.26917696821049814,
+        "episode_bootstrap_ci95_low": -0.0027402990497648713,
+        "episode_bootstrap_ci95_high": 0.004209562705364078,
+        "episode_bootstrap_probability_B_better": 0.3415
+      },
+      {
+        "seed": 3075,
+        "step": 1500,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0014498955570161343,
+        "relative_delta_percent": -0.2685216033829565,
+        "episode_bootstrap_ci95_low": -0.007173698302358389,
+        "episode_bootstrap_ci95_high": 0.00427631502971053,
+        "episode_bootstrap_probability_B_better": 0.6949
+      },
+      {
+        "seed": 3075,
+        "step": 1500,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0006633512675762177,
+        "relative_delta_percent": -0.12874170608054566,
+        "episode_bootstrap_ci95_low": -0.0035310210660099983,
+        "episode_bootstrap_ci95_high": 0.0022688429569825506,
+        "episode_bootstrap_probability_B_better": 0.6663
+      },
+      {
+        "seed": 3075,
+        "step": 2000,
+        "environment": "pusht",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -3.4820870496332645e-05,
+        "relative_delta_percent": -0.016169399907500194,
+        "episode_bootstrap_ci95_low": -0.005673752541770227,
+        "episode_bootstrap_ci95_high": 0.005168964923359453,
+        "episode_bootstrap_probability_B_better": 0.5013
+      },
+      {
+        "seed": 3075,
+        "step": 2000,
+        "environment": "pusht",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0013308452907949686,
+        "relative_delta_percent": -0.41256738867429116,
+        "episode_bootstrap_ci95_low": -0.005267246119910851,
+        "episode_bootstrap_ci95_high": 0.0026457515603397004,
+        "episode_bootstrap_probability_B_better": 0.749
+      },
+      {
+        "seed": 3075,
+        "step": 2000,
+        "environment": "tworoom",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.005474464152939618,
+        "relative_delta_percent": 4.491577952919895,
+        "episode_bootstrap_ci95_low": 0.0006012135709170255,
+        "episode_bootstrap_ci95_high": 0.010685647549689746,
+        "episode_bootstrap_probability_B_better": 0.0148
+      },
+      {
+        "seed": 3075,
+        "step": 2000,
+        "environment": "tworoom",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": 0.002051734598353505,
+        "relative_delta_percent": 0.8332701613386394,
+        "episode_bootstrap_ci95_low": -0.0011115392262581736,
+        "episode_bootstrap_ci95_high": 0.005291299382224679,
+        "episode_bootstrap_probability_B_better": 0.1057
+      },
+      {
+        "seed": 3075,
+        "step": 2000,
+        "environment": "cube",
+        "metric": "mse",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0046142651699483395,
+        "relative_delta_percent": -0.8861586065686833,
+        "episode_bootstrap_ci95_low": -0.012147166882641613,
+        "episode_bootstrap_ci95_high": 0.0024880031938664597,
+        "episode_bootstrap_probability_B_better": 0.8957
+      },
+      {
+        "seed": 3075,
+        "step": 2000,
+        "environment": "cube",
+        "metric": "mae",
+        "n_paired_episodes": 64,
+        "observed_B_minus_A": -0.0018608681857585907,
+        "relative_delta_percent": -0.3704137254427379,
+        "episode_bootstrap_ci95_low": -0.005132005258928984,
+        "episode_bootstrap_ci95_high": 0.0014212766196578738,
+        "episode_bootstrap_probability_B_better": 0.8648
+      }
+    ]
+  },
+  "push_block_vs_persistence": [
+    {
+      "seed": 3072,
+      "step": 500,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 30.836841583251953,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 28.949050903320312,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3072,
+      "step": 500,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 40.49741744995117,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 33.29692840576172,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3072,
+      "step": 500,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 30.625640869140625,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 29.149169921875,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3072,
+      "step": 500,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 50.53873062133789,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 42.58807373046875,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3072,
+      "step": 1000,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 27.971237182617188,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 26.975610733032227,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3072,
+      "step": 1000,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 33.593326568603516,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 30.06899070739746,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3072,
+      "step": 1000,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 25.716049194335938,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 24.106990814208984,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3072,
+      "step": 1000,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 28.884843826293945,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 28.14493179321289,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3072,
+      "step": 1500,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 26.08336639404297,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 26.264812469482422,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3072,
+      "step": 1500,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 44.33033752441406,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 36.291603088378906,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3072,
+      "step": 1500,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 27.288959503173828,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 25.963119506835938,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3072,
+      "step": 1500,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 42.77214813232422,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 38.42745590209961,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3072,
+      "step": 2000,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 24.585561752319336,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 24.89621353149414,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3072,
+      "step": 2000,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 38.875247955322266,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 32.65244674682617,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3072,
+      "step": 2000,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 27.502960205078125,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 25.827289581298828,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3072,
+      "step": 2000,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 42.903465270996094,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 36.87725830078125,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3073,
+      "step": 500,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 31.787866592407227,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 30.577505111694336,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3073,
+      "step": 500,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 49.18446731567383,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 42.26736831665039,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3073,
+      "step": 500,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 34.53304672241211,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 33.16106414794922,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3073,
+      "step": 500,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 46.574100494384766,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 38.60140609741211,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3073,
+      "step": 1000,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 27.155380249023438,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 25.885515213012695,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3073,
+      "step": 1000,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 43.24966812133789,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 36.6299934387207,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3073,
+      "step": 1000,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 28.369182586669922,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 26.470643997192383,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3073,
+      "step": 1000,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 37.39072799682617,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 33.84402847290039,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3073,
+      "step": 1500,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 25.06559944152832,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 24.266298294067383,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3073,
+      "step": 1500,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 39.898319244384766,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 31.817407608032227,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3073,
+      "step": 1500,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 26.876636505126953,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 25.51116371154785,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3073,
+      "step": 1500,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 37.68406295776367,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 31.338489532470703,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3073,
+      "step": 2000,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 25.57866096496582,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 24.92966079711914,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3073,
+      "step": 2000,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 45.99018478393555,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 38.74944305419922,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3073,
+      "step": 2000,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 27.150537490844727,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 25.840932846069336,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3073,
+      "step": 2000,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 35.7313346862793,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 28.30259895324707,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3074,
+      "step": 500,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 32.65559387207031,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 31.97188377380371,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3074,
+      "step": 500,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 39.72428512573242,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 31.85727310180664,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3074,
+      "step": 500,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 31.711091995239258,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 30.494516372680664,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3074,
+      "step": 500,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 37.559783935546875,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 30.905336380004883,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3074,
+      "step": 1000,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 29.316852569580078,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 28.845067977905273,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3074,
+      "step": 1000,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 48.29587173461914,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 39.669063568115234,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3074,
+      "step": 1000,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 27.185718536376953,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 26.269817352294922,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3074,
+      "step": 1000,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 42.989158630371094,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 32.41312789916992,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3074,
+      "step": 1500,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 24.43069839477539,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 23.706228256225586,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3074,
+      "step": 1500,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 41.773048400878906,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 32.01411819458008,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3074,
+      "step": 1500,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 23.070621490478516,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 22.718050003051758,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3074,
+      "step": 1500,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 38.93572998046875,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 28.7271728515625,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3074,
+      "step": 2000,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 26.6248836517334,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 25.6998348236084,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3074,
+      "step": 2000,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 42.84732437133789,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 31.73387336730957,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3074,
+      "step": 2000,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 23.41040802001953,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 22.65481948852539,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3074,
+      "step": 2000,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 34.3784065246582,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 25.709396362304688,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3075,
+      "step": 500,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 30.200838088989258,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 28.52735710144043,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3075,
+      "step": 500,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 47.68928527832031,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 38.70905685424805,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3075,
+      "step": 500,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 30.07724380493164,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 27.995521545410156,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3075,
+      "step": 500,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 45.20299530029297,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 36.261775970458984,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3075,
+      "step": 1000,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 27.186277389526367,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 26.462329864501953,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3075,
+      "step": 1000,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 38.625972747802734,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 30.915712356567383,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3075,
+      "step": 1000,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 29.3994197845459,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 28.346139907836914,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3075,
+      "step": 1000,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 37.43033981323242,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 30.275415420532227,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3075,
+      "step": 1500,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 25.739233016967773,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 25.68347930908203,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3075,
+      "step": 1500,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 49.07102966308594,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 41.4844970703125,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3075,
+      "step": 1500,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 28.346036911010742,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 26.196582794189453,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3075,
+      "step": 1500,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 44.041385650634766,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 36.558982849121094,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3075,
+      "step": 2000,
+      "arm": "A",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 25.8206844329834,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 25.406532287597656,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3075,
+      "step": 2000,
+      "arm": "A",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 44.02554702758789,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 35.470394134521484,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    },
+    {
+      "seed": 3075,
+      "step": 2000,
+      "arm": "B",
+      "target": "block_xy",
+      "probe_gate_pass": true,
+      "correct_mae": 25.794782638549805,
+      "persistence_mae": 28.833528518676758,
+      "correct_beats_persistence": true,
+      "delta_correct_mae": 24.583356857299805,
+      "delta_persistence_mae": 29.888866424560547,
+      "delta_correct_beats_persistence": true
+    },
+    {
+      "seed": 3075,
+      "step": 2000,
+      "arm": "B",
+      "target": "block_angle",
+      "probe_gate_pass": true,
+      "correct_mae": 32.34796142578125,
+      "persistence_mae": 25.234188079833984,
+      "correct_beats_persistence": false,
+      "delta_correct_mae": 26.677522659301758,
+      "delta_persistence_mae": 17.85199737548828,
+      "delta_correct_beats_persistence": false
+    }
+  ],
+  "probe_gate_rule": "State metrics with probe_gate_pass=false are diagnostic_only and excluded from model-improvement claims.",
+  "uncertainty_separation": "across_seed_feature_effects uses four seed-level paired deltas; episode_bootstrap uses episodes within one seed. They answer different questions."
+}

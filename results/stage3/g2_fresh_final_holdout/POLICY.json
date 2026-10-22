@@ -1,0 +1,16 @@
+{
+  "frozen_at_utc": "2026-10-22T00:32:56Z",
+  "manifest": "cohort_seed193072.json",
+  "manifest_sha256": "fadaf13882089ed69e29305ab5e06b1fc7f495578b5b4d3698d23bef9054c704",
+  "role": "final_confirmation_only",
+  "not_for_model_or_hyperparameter_selection": true,
+  "evaluation_timing": "after all 500/1000/1500/2000 development analyses are complete and locked",
+  "episode_disjoint_from": [
+    "training split",
+    "validation split",
+    "development test split",
+    "previously opened sealed cohort seed 93072"
+  ],
+  "episodes_per_environment": 64,
+  "clips_per_environment": 256
+}

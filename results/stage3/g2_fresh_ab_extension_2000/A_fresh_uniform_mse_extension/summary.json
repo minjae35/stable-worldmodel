@@ -1,0 +1,9 @@
+{
+  "arm": "A",
+  "source_step": 500,
+  "steps_completed": 2000,
+  "updates_added": 1500,
+  "final_model_sha256": "101b5de37d1edd819fb4ea77855fde29c5e62f7883666fd40ffcfd1217dac297",
+  "full_schedule_sha256": "02740524eeb47fa4d29eab45c6b131152608856a3665b6caaa5f4feed69d30ab",
+  "evaluation_deferred": true
+}

@@ -1,0 +1,65 @@
+{
+  "cache_key": "5572a24d1baea015d47cfe81136e540e1c2032c826efa306036c100e38d9edf6",
+  "identity": {
+    "schema": 1,
+    "purpose": "sealed_test_not_for_pilot_hyperparameter_selection",
+    "cohort_manifest_sha256": "fadaf13882089ed69e29305ab5e06b1fc7f495578b5b4d3698d23bef9054c704",
+    "dino_weights_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+    "action_normalizer_key": "238886bc2badfd87ad449c57271ed8720c65eeaf76fd885f373352a63cb581c8",
+    "source_probe_key": "fadce4f689600fa12b91559ba9de28ba9166fdc6db0628012a95b16f014058ff",
+    "probe_training_data": "development train/validation only; sealed test unused",
+    "limits": {
+      "test": 0
+    },
+    "preprocessing": {
+      "image_size": [
+        224,
+        224
+      ],
+      "rgb": true,
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "token_shape": [
+        256,
+        384
+      ],
+      "pooling": "adaptive_avg_pool2d_4x4"
+    },
+    "datasets": {
+      "pusht": {
+        "path": "/workspace/datasets/lewm-pusht/train.lance",
+        "version": 40,
+        "rows": 2336736,
+        "schema": "episode_idx: int32\nstep_idx: int32\naction: fixed_size_list<item: float>[2]\n  child 0, item: float\npixels: binary\nproprio: fixed_size_list<item: float>[4]\n  child 0, item: float\nstate: fixed_size_list<item: float>[7]\n  child 0, item: float"
+      },
+      "tworoom": {
+        "path": "/workspace/datasets/lewm-tworooms/train.lance",
+        "version": 2,
+        "rows": 920809,
+        "schema": "episode_idx: int32\nstep_idx: int32\naction: fixed_size_list<item: float>[2]\n  child 0, item: float\ndistance_to_target: fixed_size_list<item: float>[1]\n  child 0, item: float\nep_idx: fixed_size_list<item: float>[1]\n  child 0, item: float\nid: fixed_size_list<item: float>[1]\n  child 0, item: float\nobservation: fixed_size_list<item: float>[10]\n  child 0, item: float\npixels: binary\npos_agent: fixed_size_list<item: float>[2]\n  child 0, item: float\npos_target: fixed_size_list<item: float>[2]\n  child 0, item: float\nproprio: fixed_size_list<item: float>[2]\n  child 0, item: float\nrender_time: fixed_size_list<item: float>[1]\n  child 0, item: float\nreward: fixed_size_list<item: float>[1]\n  child 0, item: float\nterminated: fixed_size_list<item: float>[1]\n  child 0, item: float\ntruncated: fixed_size_list<item: float>[1]\n  child 0, item: float"
+      },
+      "cube": {
+        "path": "/workspace/datasets/lewm-cube/train.lance",
+        "version": 23,
+        "rows": 2010000,
+        "schema": "episode_idx: int32\nstep_idx: int32\naction: fixed_size_list<item: float>[5]\n  child 0, item: float\ncontrol: fixed_size_list<item: float>[7]\n  child 0, item: float\nep_idx: fixed_size_list<item: float>[1]\n  child 0, item: float\nid: fixed_size_list<item: float>[1]\n  child 0, item: float\nobservation: fixed_size_list<item: float>[28]\n  child 0, item: float\npixels: binary\nprev_qpos: fixed_size_list<item: float>[21]\n  child 0, item: float\nprev_qvel: fixed_size_list<item: float>[20]\n  child 0, item: float\nprivileged_block_0_pos: fixed_size_list<item: float>[3]\n  child 0, item: float\nprivileged_block_0_quat: fixed_size_list<item: float>[4]\n  child 0, item: float\nprivileged_block_0_yaw: fixed_size_list<item: float>[1]\n  child 0, item: float\nprivileged_target_block: fixed_size_list<item: float>[1]\n  child 0, item: float\nprivileged_target_block_pos: fixed_size_list<item: float>[3]\n  child 0, item: float\nprivileged_target_block_yaw: fixed_size_list<item: float>[1]\n  child 0, item: float\nproprio_effector_pos: fixed_size_list<item: float>[3]\n  child 0, item: float\nproprio_effector_yaw: fixed_size_list<item: float>[1]\n  child 0, item: float\nproprio_gripper_contact: fixed_size_list<item: float>[1]\n  child 0, item: float\nproprio_gripper_opening: fixed_size_list<item: float>[1]\n  child 0, item: float\nproprio_gripper_vel: fixed_size_list<item: float>[1]\n  child 0, item: float\nproprio_joint_pos: fixed_size_list<item: float>[6]\n  child 0, item: float\nproprio_joint_vel: fixed_size_list<item: float>[6]\n  child 0, item: float\nqpos: fixed_size_list<item: float>[21]\n  child 0, item: float\nqvel: fixed_size_list<item: float>[20]\n  child 0, item: float\nrender_time: fixed_size_list<item: float>[1]\n  child 0, item: float\nreward: fixed_size_list<item: float>[1]\n  child 0, item: float\nsuccess: fixed_size_list<item: float>[1]\n  child 0, item: float\ntarget: fixed_size_list<item: float>[28]\n  child 0, item: float\nterminated: fixed_size_list<item: float>[1]\n  child 0, item: float\ntime: fixed_size_list<item: float>[1]\n  child 0, item: float\ntruncated: fixed_size_list<item: float>[1]\n  child 0, item: float"
+      }
+    }
+  },
+  "timing": {
+    "pusht/lance_decode_s": 0.2668213419383392,
+    "pusht/dino_encode_s": 0.9597959649981931,
+    "tworoom/lance_decode_s": 0.2092027919134125,
+    "tworoom/dino_encode_s": 0.583708852995187,
+    "cube/lance_decode_s": 0.2047265429282561,
+    "cube/dino_encode_s": 0.5572607519570738
+  }
+}

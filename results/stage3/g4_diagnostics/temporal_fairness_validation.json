@@ -1,0 +1,7 @@
+{
+  "same_initial_model": true,
+  "same_schedules": true,
+  "schedule_hash_check_scope": "required_full_run",
+  "same_parameter_count": true,
+  "status": "PASS"
+}

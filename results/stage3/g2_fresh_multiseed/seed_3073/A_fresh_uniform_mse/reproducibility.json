@@ -1,0 +1,41 @@
+{
+  "initial_model_sha256": "eb51550ae0a73a895313ac9c0f54a51d82a44f260071ae47d51053763b03ad45",
+  "schedule_sha256": "41fa7a3cbac77935c492a4d6ea867672276caa7bcb053bb37095f3b664ef6fe7",
+  "loss_calibration": {
+    "raw_grad_norm": {
+      "mse": 3.91945219039917,
+      "l1": 0.6160483360290527
+    },
+    "scale": {
+      "mse": 1.0,
+      "l1": 6.362247832147913
+    },
+    "reference": "mse"
+  },
+  "locally_measured_loss_calibration": {
+    "raw_grad_norm": {
+      "mse": 3.91945219039917,
+      "l1": 0.6160483360290527
+    },
+    "scale": {
+      "mse": 1.0,
+      "l1": 6.362247832147913
+    },
+    "reference": "mse"
+  },
+  "loss_scale": 1.0,
+  "normalizer_key": "238886bc2badfd87ad449c57271ed8720c65eeaf76fd885f373352a63cb581c8",
+  "normalizer_sha256": "dd7194f4747ab0b5ce5be5599d7351ebae48877dd7c6e27892953669470bb0a4",
+  "training_columns": [
+    "episode_idx",
+    "pixels",
+    "action"
+  ],
+  "forbidden_training_inputs": [
+    "object_state",
+    "mask",
+    "reward",
+    "contact",
+    "event_label"
+  ]
+}

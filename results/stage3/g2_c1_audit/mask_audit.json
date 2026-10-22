@@ -1,0 +1,36 @@
+{
+  "convention_search": [
+    {
+      "y_sign": 1,
+      "rot_sign": 1,
+      "iou": 0.21400130614264495
+    },
+    {
+      "y_sign": 1,
+      "rot_sign": -1,
+      "iou": 0.23979427916635607
+    },
+    {
+      "y_sign": -1,
+      "rot_sign": 1,
+      "iou": 0.28320454994701083
+    },
+    {
+      "y_sign": -1,
+      "rot_sign": -1,
+      "iou": 0.214452965188155
+    }
+  ],
+  "chosen_convention": {
+    "y_sign": -1,
+    "rot_sign": 1,
+    "iou": 0.28320454994701083
+  },
+  "n": 24,
+  "iou_visible_mean": 0.29280286607823497,
+  "iou_visible_far": 0.2911416927758707,
+  "iou_visible_near": 0.29683714409826256,
+  "token_count_mean": 10.666666666666666,
+  "pixel_fraction_lost_mean": 0.05179801978203172,
+  "usable_for_loss": 0
+}

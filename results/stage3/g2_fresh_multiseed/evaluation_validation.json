@@ -1,0 +1,181 @@
+{
+  "status": "PASS",
+  "evaluation_files": 24,
+  "paired_bootstrap_files": 12,
+  "all_finite": true,
+  "feature_cache_key": "4ea37543b36812a7f302e2b2e16468f491ffdc26b4dce338dd55425bd9cded5e",
+  "probe_key": "fadce4f689600fa12b91559ba9de28ba9166fdc6db0628012a95b16f014058ff",
+  "development_manifest_sha256": "b9b3fac06ba1828e1e43bf12c85c4c996c823efd24a894ef4751c0473af4aa9f",
+  "action_normalizer_sha256": "dd7194f4747ab0b5ce5be5599d7351ebae48877dd7c6e27892953669470bb0a4",
+  "final_holdout_used": false,
+  "files": [
+    {
+      "seed": 3073,
+      "arm": "A",
+      "step": 500,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3073/A_fresh_uniform_mse/evaluation_development_step500.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3073,
+      "arm": "A",
+      "step": 1000,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3073/A_fresh_uniform_mse/evaluation_development_step1000.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3073,
+      "arm": "A",
+      "step": 1500,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3073/A_fresh_uniform_mse/evaluation_development_step1500.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3073,
+      "arm": "A",
+      "step": 2000,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3073/A_fresh_uniform_mse/evaluation_development_step2000.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3073,
+      "arm": "B",
+      "step": 500,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3073/B_fresh_temporal_mse/evaluation_development_step500.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3073,
+      "arm": "B",
+      "step": 1000,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3073/B_fresh_temporal_mse/evaluation_development_step1000.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3073,
+      "arm": "B",
+      "step": 1500,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3073/B_fresh_temporal_mse/evaluation_development_step1500.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3073,
+      "arm": "B",
+      "step": 2000,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3073/B_fresh_temporal_mse/evaluation_development_step2000.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3074,
+      "arm": "A",
+      "step": 500,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3074/A_fresh_uniform_mse/evaluation_development_step500.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3074,
+      "arm": "A",
+      "step": 1000,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3074/A_fresh_uniform_mse/evaluation_development_step1000.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3074,
+      "arm": "A",
+      "step": 1500,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3074/A_fresh_uniform_mse/evaluation_development_step1500.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3074,
+      "arm": "A",
+      "step": 2000,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3074/A_fresh_uniform_mse/evaluation_development_step2000.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3074,
+      "arm": "B",
+      "step": 500,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3074/B_fresh_temporal_mse/evaluation_development_step500.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3074,
+      "arm": "B",
+      "step": 1000,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3074/B_fresh_temporal_mse/evaluation_development_step1000.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3074,
+      "arm": "B",
+      "step": 1500,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3074/B_fresh_temporal_mse/evaluation_development_step1500.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3074,
+      "arm": "B",
+      "step": 2000,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3074/B_fresh_temporal_mse/evaluation_development_step2000.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3075,
+      "arm": "A",
+      "step": 500,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3075/A_fresh_uniform_mse/evaluation_development_step500.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3075,
+      "arm": "A",
+      "step": 1000,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3075/A_fresh_uniform_mse/evaluation_development_step1000.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3075,
+      "arm": "A",
+      "step": 1500,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3075/A_fresh_uniform_mse/evaluation_development_step1500.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3075,
+      "arm": "A",
+      "step": 2000,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3075/A_fresh_uniform_mse/evaluation_development_step2000.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3075,
+      "arm": "B",
+      "step": 500,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3075/B_fresh_temporal_mse/evaluation_development_step500.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3075,
+      "arm": "B",
+      "step": 1000,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3075/B_fresh_temporal_mse/evaluation_development_step1000.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3075,
+      "arm": "B",
+      "step": 1500,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3075/B_fresh_temporal_mse/evaluation_development_step1500.json",
+      "status": "PASS"
+    },
+    {
+      "seed": 3075,
+      "arm": "B",
+      "step": 2000,
+      "path": "results/stage3/g2_fresh_multiseed/seed_3075/B_fresh_temporal_mse/evaluation_development_step2000.json",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "note": "Window is a 3x3 token neighborhood around state_xy * 224/512. State locates the evaluation region only. It is not a training loss. The same window can be applied to predicted DINO tokens. An RGB centroid cannot.",
+  "block_window": {
+    "name": "block_window",
+    "spearman_block": 0.8111988554434031,
+    "spearman_agent": 0.011103046571909225,
+    "auroc_block_small_vs_still": 0.9118412178437229,
+    "median_still": 5.423896312713623,
+    "median_small": 16.14374542236328,
+    "median_large": 25.141077041625977
+  },
+  "agent_window": {
+    "name": "agent_window",
+    "spearman_block": 0.29088319042469185,
+    "spearman_agent": 0.6458145577986061,
+    "auroc_block_small_vs_still": 0.46150881587821563,
+    "median_still": 22.520835876464844,
+    "median_small": 21.349388122558594,
+    "median_large": 28.968778610229492
+  },
+  "global_mean": {
+    "name": "global_mean",
+    "spearman_block": 0.662045381719138,
+    "spearman_agent": 0.2774487588835101,
+    "auroc_block_small_vs_still": 0.77560458618364,
+    "median_still": 5.815118789672852,
+    "median_small": 8.104433059692383,
+    "median_large": 11.063072204589844
+  }
+}

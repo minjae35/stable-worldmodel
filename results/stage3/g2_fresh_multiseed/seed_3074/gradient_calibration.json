@@ -1,0 +1,20 @@
+{
+  "key": {
+    "initial_model_sha256": "8dd1b3ad57f373fbb11e401a30cd92a228ce7e82df36b1d9d692a44ded5326e5",
+    "normalizer_key": "238886bc2badfd87ad449c57271ed8720c65eeaf76fd885f373352a63cb581c8",
+    "seed": 3074,
+    "batch_per_env": 16,
+    "reference_sampling": "s0"
+  },
+  "calibration": {
+    "raw_grad_norm": {
+      "mse": 3.981989860534668,
+      "l1": 0.6191181540489197
+    },
+    "scale": {
+      "mse": 1.0,
+      "l1": 6.431712322588478
+    },
+    "reference": "mse"
+  }
+}

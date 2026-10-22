@@ -1,0 +1,7 @@
+SUPERSEDED
+
+The layer-12 entries used transformers Dinov2Model.hidden_states[12], which is
+the final transformer block output before the model's terminal LayerNorm.
+SpatialDynamics is trained against Dinov2Model.last_hidden_state (post-norm).
+Use ../representation_postnorm for comparisons to dynamics predictions.
+Intermediate-layer findings remain informative.

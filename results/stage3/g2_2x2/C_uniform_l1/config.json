@@ -1,0 +1,89 @@
+{
+  "seed": 3072,
+  "steps": 500,
+  "batch_per_env": 16,
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "grad_clip": 1.0,
+  "balanced_environments": [
+    "pusht",
+    "tworoom",
+    "cube"
+  ],
+  "model": "Frozen DINOv2-S/14 + shared SpatialDynamics",
+  "initial_checkpoint": "/workspace/stable-worldmodel/results/stage3/g1_spatial/overfit500/checkpoint_step500.pt",
+  "normalizer_source": "G1 checkpoint, identical for all warm-start arms",
+  "manifest": "/workspace/stable-worldmodel/results/stage3/g2_c1_followup/manifest.json",
+  "manifest_sha256": "b9b3fac06ba1828e1e43bf12c85c4c996c823efd24a894ef4751c0473af4aa9f",
+  "checkpoint_sha256": "4f9e8d380df3cf9fdd0581d9637ae3ae79025cb2147d90b67983216b5f9882a5",
+  "dino_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+  "frameskip": 5,
+  "max_train_items": 0,
+  "eval_items": 0,
+  "eval_probe_train_items": 0,
+  "loss_calibration_file": "/workspace/stable-worldmodel/results/stage3/g2_2x2/gradient_calibration.json",
+  "name": "C",
+  "sampling": "s0",
+  "loss": "l1",
+  "output_dir": "/workspace/stable-worldmodel/results/stage3/g2_2x2/C_uniform_l1",
+  "manifest_summary": {
+    "pusht": {
+      "episodes": {
+        "train": 256,
+        "val": 64,
+        "test": 64
+      },
+      "clips": {
+        "s0": {
+          "train": 1024,
+          "val": 256,
+          "test": 256
+        },
+        "s1": {
+          "train": 1024,
+          "val": 256,
+          "test": 256
+        }
+      }
+    },
+    "tworoom": {
+      "episodes": {
+        "train": 256,
+        "val": 64,
+        "test": 64
+      },
+      "clips": {
+        "s0": {
+          "train": 1024,
+          "val": 256,
+          "test": 256
+        },
+        "s1": {
+          "train": 1024,
+          "val": 256,
+          "test": 256
+        }
+      }
+    },
+    "cube": {
+      "episodes": {
+        "train": 256,
+        "val": 64,
+        "test": 64
+      },
+      "clips": {
+        "s0": {
+          "train": 1024,
+          "val": 256,
+          "test": 256
+        },
+        "s1": {
+          "train": 1024,
+          "val": 256,
+          "test": 256
+        }
+      }
+    }
+  }
+}

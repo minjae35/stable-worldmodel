@@ -1,0 +1,91 @@
+{
+  "cohort_manifest": "/workspace/stable-worldmodel/results/stage3/g2_c1_followup/manifest.json",
+  "cohort_manifest_sha256": "b9b3fac06ba1828e1e43bf12c85c4c996c823efd24a894ef4751c0473af4aa9f",
+  "cache_key": "4ea37543b36812a7f302e2b2e16468f491ffdc26b4dce338dd55425bd9cded5e",
+  "checkpoint_a_sha256": "81eee70e4c3a0462796ad0efa13d13b9908dbbda8921777cf5b762498d04b40f",
+  "checkpoint_b_sha256": "dc1889ec24474e522802dae6ae37b02a9971ff55c3004425ed87d72524d090c2",
+  "bootstrap_seed": 43072,
+  "environments": {
+    "pusht": {
+      "n_clips": 256,
+      "mse": {
+        "effect": "B_minus_A; negative favors temporal coverage",
+        "n_paired_episodes": 64,
+        "observed_mean_delta": -3.4820870496332645e-05,
+        "relative_delta_percent": -0.016169399907500194,
+        "ci95": [
+          -0.005673752541770227,
+          0.005168964923359453
+        ],
+        "bootstrap_probability_B_better": 0.5013,
+        "draws": 10000
+      },
+      "mae": {
+        "effect": "B_minus_A; negative favors temporal coverage",
+        "n_paired_episodes": 64,
+        "observed_mean_delta": -0.0013308452907949686,
+        "relative_delta_percent": -0.41256738867429116,
+        "ci95": [
+          -0.005267246119910851,
+          0.0026457515603397004
+        ],
+        "bootstrap_probability_B_better": 0.749,
+        "draws": 10000
+      }
+    },
+    "tworoom": {
+      "n_clips": 256,
+      "mse": {
+        "effect": "B_minus_A; negative favors temporal coverage",
+        "n_paired_episodes": 64,
+        "observed_mean_delta": 0.005474464152939618,
+        "relative_delta_percent": 4.491577952919895,
+        "ci95": [
+          0.0006012135709170255,
+          0.010685647549689746
+        ],
+        "bootstrap_probability_B_better": 0.0148,
+        "draws": 10000
+      },
+      "mae": {
+        "effect": "B_minus_A; negative favors temporal coverage",
+        "n_paired_episodes": 64,
+        "observed_mean_delta": 0.002051734598353505,
+        "relative_delta_percent": 0.8332701613386394,
+        "ci95": [
+          -0.0011115392262581736,
+          0.005291299382224679
+        ],
+        "bootstrap_probability_B_better": 0.1057,
+        "draws": 10000
+      }
+    },
+    "cube": {
+      "n_clips": 256,
+      "mse": {
+        "effect": "B_minus_A; negative favors temporal coverage",
+        "n_paired_episodes": 64,
+        "observed_mean_delta": -0.0046142651699483395,
+        "relative_delta_percent": -0.8861586065686833,
+        "ci95": [
+          -0.012147166882641613,
+          0.0024880031938664597
+        ],
+        "bootstrap_probability_B_better": 0.8957,
+        "draws": 10000
+      },
+      "mae": {
+        "effect": "B_minus_A; negative favors temporal coverage",
+        "n_paired_episodes": 64,
+        "observed_mean_delta": -0.0018608681857585907,
+        "relative_delta_percent": -0.3704137254427379,
+        "ci95": [
+          -0.005132005258928984,
+          0.0014212766196578738
+        ],
+        "bootstrap_probability_B_better": 0.8648,
+        "draws": 10000
+      }
+    }
+  }
+}

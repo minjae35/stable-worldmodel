@@ -1,0 +1,6 @@
+The temporal encoding is added once to the embedded input immediately before
+the factorized spatiotemporal block stack. The generated config phrase "before
+every ... block" meant that the addition precedes all blocks, not that it is
+re-added at every layer. The pre-training preregistration used the unambiguous
+phrase "before transformer blocks", and the implementation was not changed
+during or after training.

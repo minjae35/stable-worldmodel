@@ -1,0 +1,16 @@
+{
+  "arm": "H3",
+  "history": 3,
+  "steps_completed": 2000,
+  "initial_model_sha256": "5d5da87db6e2cf7d1f06004456ab89c9f695c5d14a682ec37c9de0acd554dfa2",
+  "final_model_sha256": "fa369f35a488d3ee9e7fb597d0888428bec9476257f5e1e844b40297fe0c6bc9",
+  "schedule_sha256_by_environment": {
+    "pusht": "5d49efc81f3378d41a00d435fa6f28fd9011dcac2322722355a7fcb60c190b4a",
+    "tworoom": "222a3facf40477141fe6cc7ba5b1a806b51903ba2e294198c3bd4377193847b8",
+    "cube": "88bb8aa98671833558fd32c180a10944e6a8dd7ceb7364976a4b0217da80273e"
+  },
+  "model_parameter_count": 6794368,
+  "evaluation_deferred": true,
+  "temporal_encoding": "sinusoidal",
+  "temporal_encoding_scale": 1.0
+}

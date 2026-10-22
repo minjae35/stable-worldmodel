@@ -39,7 +39,13 @@ def episode_rows(dataset) -> dict[int, tuple[int, int]]:
     return result
 
 
-def build_sealed(source: dict, n_episodes: int, seed: int) -> dict:
+def build_sealed(
+    source: dict,
+    n_episodes: int,
+    seed: int,
+    additionally_excluded: dict[str, set[int]] | None = None,
+) -> dict:
+    additionally_excluded = additionally_excluded or {}
     document = {
         'schema': 1,
         'purpose': 'sealed_test_not_for_pilot_hyperparameter_selection',
@@ -60,6 +66,7 @@ def build_sealed(source: dict, n_episodes: int, seed: int) -> dict:
             {int(value) for value in source[env]['split'][name]}
             for name in ('train', 'val', 'test')
         ))
+        used.update(additionally_excluded.get(env, set()))
         eligible = sorted(
             episode for episode, (_, length) in rows.items()
             if episode not in used and length >= span + 1
@@ -100,12 +107,22 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--episodes-per-env', type=int, default=64)
     parser.add_argument('--seed', type=int, default=93072)
+    parser.add_argument('--exclude-cohort', type=Path, action='append', default=[])
     args = parser.parse_args()
     output = args.output.resolve()
     if output.exists():
         raise FileExistsError(f'refusing to overwrite {output}')
     source = json.loads(MANIFEST.read_text())
-    document = build_sealed(source, args.episodes_per_env, args.seed)
+    excluded = {env: set() for env in DATASETS}
+    for excluded_path in args.exclude_cohort:
+        prior = json.loads(excluded_path.read_text())
+        for env in DATASETS:
+            excluded[env].update(int(value) for value in prior['environments'][env]['episodes'])
+    document = build_sealed(source, args.episodes_per_env, args.seed, excluded)
+    document['excluded_prior_cohorts'] = [
+        {'path': str(path.resolve()), 'sha256': sha256_file(path.resolve())}
+        for path in args.exclude_cohort
+    ]
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open('x') as handle:
         json.dump(document, handle, indent=2)

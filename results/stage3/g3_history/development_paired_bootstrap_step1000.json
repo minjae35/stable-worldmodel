@@ -1,0 +1,256 @@
+{
+  "effect": "H3_minus_H1; negative favors history 3",
+  "checkpoint_h1_sha256": "ba75e6e0cf6d731c6eba0eaae3020f14e2ff1b9628076f141ae4e2884dde3d22",
+  "checkpoint_h3_sha256": "ccac3f9075f97586baca278c670bb8735d98ad271781f352996a82dea365f0c8",
+  "step_h1": 1000,
+  "step_h3": 1000,
+  "bootstrap_seed": 53072,
+  "environments": {
+    "pusht": {
+      "feature": {
+        "mse": {
+          "effect": "H3_minus_H1; negative favors history 3",
+          "n_paired_episodes": 64,
+          "observed_mean_delta": 0.0017918988596647978,
+          "relative_delta_percent": 0.7428574730219705,
+          "ci95": [
+            -0.0010943719709757714,
+            0.00478856157278642
+          ],
+          "bootstrap_probability_H3_better": 0.1172,
+          "draws": 10000
+        },
+        "mae": {
+          "effect": "H3_minus_H1; negative favors history 3",
+          "n_paired_episodes": 64,
+          "observed_mean_delta": 0.00042673153802752495,
+          "relative_delta_percent": 0.12398304031380872,
+          "ci95": [
+            -0.0014179698191583157,
+            0.0023376882192678743
+          ],
+          "bootstrap_probability_H3_better": 0.33,
+          "draws": 10000
+        }
+      },
+      "state": {
+        "agent_xy": {
+          "natural_non_challenge": {
+            "effect": "H3_minus_H1; negative favors history 3",
+            "n_paired_episodes": 19,
+            "observed_mean_delta": 8.780156587299548,
+            "relative_delta_percent": 30.127608295944462,
+            "ci95": [
+              4.984065206427323,
+              12.741796010418943
+            ],
+            "bootstrap_probability_H3_better": 0.0,
+            "draws": 10000
+          },
+          "object_motion_challenge": {
+            "effect": "H3_minus_H1; negative favors history 3",
+            "n_paired_episodes": 64,
+            "observed_mean_delta": 3.5126020312309265,
+            "relative_delta_percent": 10.229505960182575,
+            "ci95": [
+              1.4436574030667544,
+              5.513165741786358
+            ],
+            "bootstrap_probability_H3_better": 0.0008,
+            "draws": 10000
+          }
+        },
+        "block_xy": {
+          "natural_non_challenge": {
+            "effect": "H3_minus_H1; negative favors history 3",
+            "n_paired_episodes": 62,
+            "observed_mean_delta": 0.3196987875046269,
+            "relative_delta_percent": 1.1685981262829752,
+            "ci95": [
+              -1.2076961511565794,
+              1.8824661431774012
+            ],
+            "bootstrap_probability_H3_better": 0.3543,
+            "draws": 10000
+          },
+          "object_motion_challenge": {
+            "effect": "H3_minus_H1; negative favors history 3",
+            "n_paired_episodes": 31,
+            "observed_mean_delta": -0.9099976247356784,
+            "relative_delta_percent": -3.1929459152811366,
+            "ci95": [
+              -3.63684541063924,
+              1.8553696678530769
+            ],
+            "bootstrap_probability_H3_better": 0.7477,
+            "draws": 10000
+          }
+        },
+        "block_angle": {
+          "natural_non_challenge": {
+            "effect": "H3_minus_H1; negative favors history 3",
+            "n_paired_episodes": 64,
+            "observed_mean_delta": 1.6652072854340076,
+            "relative_delta_percent": 7.222548239620704,
+            "ci95": [
+              -1.9227734964340923,
+              5.592525825090706
+            ],
+            "bootstrap_probability_H3_better": 0.1873,
+            "draws": 10000
+          },
+          "object_motion_challenge": {
+            "effect": "H3_minus_H1; negative favors history 3",
+            "n_paired_episodes": 32,
+            "observed_mean_delta": -0.2922969162464142,
+            "relative_delta_percent": -0.8659308489749377,
+            "ci95": [
+              -5.6953454108908765,
+              5.264127030037343
+            ],
+            "bootstrap_probability_H3_better": 0.5457,
+            "draws": 10000
+          }
+        }
+      }
+    },
+    "tworoom": {
+      "feature": {
+        "mse": {
+          "effect": "H3_minus_H1; negative favors history 3",
+          "n_paired_episodes": 64,
+          "observed_mean_delta": -0.012883818708360195,
+          "relative_delta_percent": -7.547163419052245,
+          "ci95": [
+            -0.018838174105621875,
+            -0.007093095852178522
+          ],
+          "bootstrap_probability_H3_better": 1.0,
+          "draws": 10000
+        },
+        "mae": {
+          "effect": "H3_minus_H1; negative favors history 3",
+          "n_paired_episodes": 64,
+          "observed_mean_delta": -0.009387960890308022,
+          "relative_delta_percent": -3.225333003017814,
+          "ci95": [
+            -0.013215362816117704,
+            -0.0056014072266407314
+          ],
+          "bootstrap_probability_H3_better": 1.0,
+          "draws": 10000
+        }
+      },
+      "state": {
+        "agent_xy": {
+          "natural_non_challenge": {
+            "effect": "H3_minus_H1; negative favors history 3",
+            "n_paired_episodes": 59,
+            "observed_mean_delta": -0.4042277343697467,
+            "relative_delta_percent": -7.948699763618646,
+            "ci95": [
+              -0.8286786571081917,
+              0.01750308434336856
+            ],
+            "bootstrap_probability_H3_better": 0.97,
+            "draws": 10000
+          },
+          "object_motion_challenge": {
+            "effect": "H3_minus_H1; negative favors history 3",
+            "n_paired_episodes": 44,
+            "observed_mean_delta": -0.38838603821667755,
+            "relative_delta_percent": -7.590529316642604,
+            "ci95": [
+              -0.9222653303634036,
+              0.13795995793559335
+            ],
+            "bootstrap_probability_H3_better": 0.9252,
+            "draws": 10000
+          }
+        }
+      }
+    },
+    "cube": {
+      "feature": {
+        "mse": {
+          "effect": "H3_minus_H1; negative favors history 3",
+          "n_paired_episodes": 64,
+          "observed_mean_delta": 0.009374295361340046,
+          "relative_delta_percent": 1.6016325047797058,
+          "ci95": [
+            0.0040587206953205165,
+            0.014533923158887773
+          ],
+          "bootstrap_probability_H3_better": 0.0005,
+          "draws": 10000
+        },
+        "mae": {
+          "effect": "H3_minus_H1; negative favors history 3",
+          "n_paired_episodes": 64,
+          "observed_mean_delta": 0.00035429373383522034,
+          "relative_delta_percent": 0.06570666197085635,
+          "ci95": [
+            -0.001632472570054233,
+            0.0022328168735839416
+          ],
+          "bootstrap_probability_H3_better": 0.361,
+          "draws": 10000
+        }
+      },
+      "state": {
+        "block_xyz": {
+          "natural_non_challenge": {
+            "effect": "H3_minus_H1; negative favors history 3",
+            "n_paired_episodes": 63,
+            "observed_mean_delta": 0.0006079897136678772,
+            "relative_delta_percent": 1.5318333309406766,
+            "ci95": [
+              -0.0018336703272772922,
+              0.0030948178827880854
+            ],
+            "bootstrap_probability_H3_better": 0.3079,
+            "draws": 10000
+          },
+          "object_motion_challenge": {
+            "effect": "H3_minus_H1; negative favors history 3",
+            "n_paired_episodes": 57,
+            "observed_mean_delta": 0.0009783463748662096,
+            "relative_delta_percent": 2.177569710893144,
+            "ci95": [
+              -0.00218184639928503,
+              0.0043758944301915004
+            ],
+            "bootstrap_probability_H3_better": 0.2787,
+            "draws": 10000
+          }
+        },
+        "effector_xyz": {
+          "natural_non_challenge": {
+            "effect": "H3_minus_H1; negative favors history 3",
+            "n_paired_episodes": 28,
+            "observed_mean_delta": 0.0029397082814414588,
+            "relative_delta_percent": 13.237449063586206,
+            "ci95": [
+              0.0010806245962157847,
+              0.004669922788993321
+            ],
+            "bootstrap_probability_H3_better": 0.0013,
+            "draws": 10000
+          },
+          "object_motion_challenge": {
+            "effect": "H3_minus_H1; negative favors history 3",
+            "n_paired_episodes": 64,
+            "observed_mean_delta": 0.0029322200862225145,
+            "relative_delta_percent": 10.367374883926924,
+            "ci95": [
+              0.0014251522057747933,
+              0.004368756206895341
+            ],
+            "bootstrap_probability_H3_better": 0.0,
+            "draws": 10000
+          }
+        }
+      }
+    }
+  }
+}

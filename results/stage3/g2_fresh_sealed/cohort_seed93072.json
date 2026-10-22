@@ -1,0 +1,6376 @@
+{
+  "schema": 1,
+  "purpose": "sealed_test_not_for_pilot_hyperparameter_selection",
+  "frozen_before_training": true,
+  "source_manifest": "/workspace/stable-worldmodel/results/stage3/g2_c1_followup/manifest.json",
+  "source_manifest_sha256": "b9b3fac06ba1828e1e43bf12c85c4c996c823efd24a894ef4751c0473af4aa9f",
+  "selection_seed": 93072,
+  "frameskip": 5,
+  "span": 10,
+  "clips_per_episode": 4,
+  "environments": {
+    "pusht": {
+      "dataset": "/workspace/datasets/lewm-pusht/train.lance",
+      "dataset_version": 40,
+      "dataset_rows": 2336736,
+      "episodes": [
+        17653,
+        17606,
+        4759,
+        15087,
+        9225,
+        17534,
+        8069,
+        16061,
+        10367,
+        9757,
+        8906,
+        18611,
+        12047,
+        18176,
+        6497,
+        11774,
+        18352,
+        3660,
+        4881,
+        9027,
+        10111,
+        13701,
+        16395,
+        11071,
+        14135,
+        9556,
+        1019,
+        1090,
+        5568,
+        12622,
+        2674,
+        734,
+        5923,
+        17443,
+        8486,
+        9851,
+        7990,
+        6204,
+        16092,
+        421,
+        18493,
+        14903,
+        17256,
+        15845,
+        15522,
+        12513,
+        13234,
+        3405,
+        3162,
+        8527,
+        8293,
+        9936,
+        8436,
+        7539,
+        3653,
+        1816,
+        8613,
+        7123,
+        6522,
+        2608,
+        11495,
+        2968,
+        13033,
+        1045
+      ],
+      "clips": [
+        {
+          "episode": 17653,
+          "start": 0,
+          "row": 2218081,
+          "length": 146,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 17653,
+          "start": 45,
+          "row": 2218126,
+          "length": 146,
+          "normalized_time": 0.33088235294117646,
+          "quartile": 1
+        },
+        {
+          "episode": 17653,
+          "start": 91,
+          "row": 2218172,
+          "length": 146,
+          "normalized_time": 0.6691176470588235,
+          "quartile": 2
+        },
+        {
+          "episode": 17653,
+          "start": 136,
+          "row": 2218217,
+          "length": 146,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 17606,
+          "start": 0,
+          "row": 2211219,
+          "length": 146,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 17606,
+          "start": 45,
+          "row": 2211264,
+          "length": 146,
+          "normalized_time": 0.33088235294117646,
+          "quartile": 1
+        },
+        {
+          "episode": 17606,
+          "start": 91,
+          "row": 2211310,
+          "length": 146,
+          "normalized_time": 0.6691176470588235,
+          "quartile": 2
+        },
+        {
+          "episode": 17606,
+          "start": 136,
+          "row": 2211355,
+          "length": 146,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4759,
+          "start": 0,
+          "row": 587071,
+          "length": 148,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4759,
+          "start": 46,
+          "row": 587117,
+          "length": 148,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 4759,
+          "start": 92,
+          "row": 587163,
+          "length": 148,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 4759,
+          "start": 138,
+          "row": 587209,
+          "length": 148,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 15087,
+          "start": 0,
+          "row": 1893086,
+          "length": 142,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 15087,
+          "start": 44,
+          "row": 1893130,
+          "length": 142,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 15087,
+          "start": 88,
+          "row": 1893174,
+          "length": 142,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 15087,
+          "start": 132,
+          "row": 1893218,
+          "length": 142,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9225,
+          "start": 0,
+          "row": 1136929,
+          "length": 118,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9225,
+          "start": 36,
+          "row": 1136965,
+          "length": 118,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 9225,
+          "start": 72,
+          "row": 1137001,
+          "length": 118,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 9225,
+          "start": 108,
+          "row": 1137037,
+          "length": 118,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 17534,
+          "start": 0,
+          "row": 2202387,
+          "length": 104,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 17534,
+          "start": 31,
+          "row": 2202418,
+          "length": 104,
+          "normalized_time": 0.32978723404255317,
+          "quartile": 1
+        },
+        {
+          "episode": 17534,
+          "start": 63,
+          "row": 2202450,
+          "length": 104,
+          "normalized_time": 0.6702127659574468,
+          "quartile": 2
+        },
+        {
+          "episode": 17534,
+          "start": 94,
+          "row": 2202481,
+          "length": 104,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8069,
+          "start": 0,
+          "row": 993130,
+          "length": 138,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8069,
+          "start": 43,
+          "row": 993173,
+          "length": 138,
+          "normalized_time": 0.3359375,
+          "quartile": 1
+        },
+        {
+          "episode": 8069,
+          "start": 85,
+          "row": 993215,
+          "length": 138,
+          "normalized_time": 0.6640625,
+          "quartile": 2
+        },
+        {
+          "episode": 8069,
+          "start": 128,
+          "row": 993258,
+          "length": 138,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 16061,
+          "start": 0,
+          "row": 2013122,
+          "length": 197,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 16061,
+          "start": 62,
+          "row": 2013184,
+          "length": 197,
+          "normalized_time": 0.3315508021390374,
+          "quartile": 1
+        },
+        {
+          "episode": 16061,
+          "start": 125,
+          "row": 2013247,
+          "length": 197,
+          "normalized_time": 0.6684491978609626,
+          "quartile": 2
+        },
+        {
+          "episode": 16061,
+          "start": 187,
+          "row": 2013309,
+          "length": 197,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 10367,
+          "start": 0,
+          "row": 1277588,
+          "length": 142,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 10367,
+          "start": 44,
+          "row": 1277632,
+          "length": 142,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 10367,
+          "start": 88,
+          "row": 1277676,
+          "length": 142,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 10367,
+          "start": 132,
+          "row": 1277720,
+          "length": 142,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9757,
+          "start": 0,
+          "row": 1193277,
+          "length": 107,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9757,
+          "start": 32,
+          "row": 1193309,
+          "length": 107,
+          "normalized_time": 0.32989690721649484,
+          "quartile": 1
+        },
+        {
+          "episode": 9757,
+          "start": 65,
+          "row": 1193342,
+          "length": 107,
+          "normalized_time": 0.6701030927835051,
+          "quartile": 2
+        },
+        {
+          "episode": 9757,
+          "start": 97,
+          "row": 1193374,
+          "length": 107,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8906,
+          "start": 0,
+          "row": 1103095,
+          "length": 150,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8906,
+          "start": 47,
+          "row": 1103142,
+          "length": 150,
+          "normalized_time": 0.3357142857142857,
+          "quartile": 1
+        },
+        {
+          "episode": 8906,
+          "start": 93,
+          "row": 1103188,
+          "length": 150,
+          "normalized_time": 0.6642857142857143,
+          "quartile": 2
+        },
+        {
+          "episode": 8906,
+          "start": 140,
+          "row": 1103235,
+          "length": 150,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 18611,
+          "start": 0,
+          "row": 2328374,
+          "length": 113,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 18611,
+          "start": 34,
+          "row": 2328408,
+          "length": 113,
+          "normalized_time": 0.3300970873786408,
+          "quartile": 1
+        },
+        {
+          "episode": 18611,
+          "start": 69,
+          "row": 2328443,
+          "length": 113,
+          "normalized_time": 0.6699029126213593,
+          "quartile": 2
+        },
+        {
+          "episode": 18611,
+          "start": 103,
+          "row": 2328477,
+          "length": 113,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 12047,
+          "start": 0,
+          "row": 1504841,
+          "length": 153,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 12047,
+          "start": 48,
+          "row": 1504889,
+          "length": 153,
+          "normalized_time": 0.3356643356643357,
+          "quartile": 1
+        },
+        {
+          "episode": 12047,
+          "start": 95,
+          "row": 1504936,
+          "length": 153,
+          "normalized_time": 0.6643356643356644,
+          "quartile": 2
+        },
+        {
+          "episode": 12047,
+          "start": 143,
+          "row": 1504984,
+          "length": 153,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 18176,
+          "start": 0,
+          "row": 2286765,
+          "length": 95,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 18176,
+          "start": 28,
+          "row": 2286793,
+          "length": 95,
+          "normalized_time": 0.32941176470588235,
+          "quartile": 1
+        },
+        {
+          "episode": 18176,
+          "start": 57,
+          "row": 2286822,
+          "length": 95,
+          "normalized_time": 0.6705882352941176,
+          "quartile": 2
+        },
+        {
+          "episode": 18176,
+          "start": 85,
+          "row": 2286850,
+          "length": 95,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 6497,
+          "start": 0,
+          "row": 809071,
+          "length": 161,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 6497,
+          "start": 50,
+          "row": 809121,
+          "length": 161,
+          "normalized_time": 0.33112582781456956,
+          "quartile": 1
+        },
+        {
+          "episode": 6497,
+          "start": 101,
+          "row": 809172,
+          "length": 161,
+          "normalized_time": 0.6688741721854304,
+          "quartile": 2
+        },
+        {
+          "episode": 6497,
+          "start": 151,
+          "row": 809222,
+          "length": 161,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 11774,
+          "start": 0,
+          "row": 1475184,
+          "length": 125,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 11774,
+          "start": 38,
+          "row": 1475222,
+          "length": 125,
+          "normalized_time": 0.33043478260869563,
+          "quartile": 1
+        },
+        {
+          "episode": 11774,
+          "start": 77,
+          "row": 1475261,
+          "length": 125,
+          "normalized_time": 0.6695652173913044,
+          "quartile": 2
+        },
+        {
+          "episode": 11774,
+          "start": 115,
+          "row": 1475299,
+          "length": 125,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 18352,
+          "start": 0,
+          "row": 2302772,
+          "length": 75,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 18352,
+          "start": 22,
+          "row": 2302794,
+          "length": 75,
+          "normalized_time": 0.3384615384615385,
+          "quartile": 1
+        },
+        {
+          "episode": 18352,
+          "start": 43,
+          "row": 2302815,
+          "length": 75,
+          "normalized_time": 0.6615384615384615,
+          "quartile": 2
+        },
+        {
+          "episode": 18352,
+          "start": 65,
+          "row": 2302837,
+          "length": 75,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3660,
+          "start": 0,
+          "row": 447399,
+          "length": 146,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3660,
+          "start": 45,
+          "row": 447444,
+          "length": 146,
+          "normalized_time": 0.33088235294117646,
+          "quartile": 1
+        },
+        {
+          "episode": 3660,
+          "start": 91,
+          "row": 447490,
+          "length": 146,
+          "normalized_time": 0.6691176470588235,
+          "quartile": 2
+        },
+        {
+          "episode": 3660,
+          "start": 136,
+          "row": 447535,
+          "length": 146,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4881,
+          "start": 0,
+          "row": 605028,
+          "length": 145,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4881,
+          "start": 45,
+          "row": 605073,
+          "length": 145,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 4881,
+          "start": 90,
+          "row": 605118,
+          "length": 145,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 4881,
+          "start": 135,
+          "row": 605163,
+          "length": 145,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9027,
+          "start": 0,
+          "row": 1117825,
+          "length": 60,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9027,
+          "start": 17,
+          "row": 1117842,
+          "length": 60,
+          "normalized_time": 0.34,
+          "quartile": 1
+        },
+        {
+          "episode": 9027,
+          "start": 33,
+          "row": 1117858,
+          "length": 60,
+          "normalized_time": 0.66,
+          "quartile": 2
+        },
+        {
+          "episode": 9027,
+          "start": 50,
+          "row": 1117875,
+          "length": 60,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 10111,
+          "start": 0,
+          "row": 1235963,
+          "length": 186,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 10111,
+          "start": 59,
+          "row": 1236022,
+          "length": 186,
+          "normalized_time": 0.3352272727272727,
+          "quartile": 1
+        },
+        {
+          "episode": 10111,
+          "start": 117,
+          "row": 1236080,
+          "length": 186,
+          "normalized_time": 0.6647727272727273,
+          "quartile": 2
+        },
+        {
+          "episode": 10111,
+          "start": 176,
+          "row": 1236139,
+          "length": 186,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 13701,
+          "start": 0,
+          "row": 1729057,
+          "length": 123,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 13701,
+          "start": 38,
+          "row": 1729095,
+          "length": 123,
+          "normalized_time": 0.336283185840708,
+          "quartile": 1
+        },
+        {
+          "episode": 13701,
+          "start": 75,
+          "row": 1729132,
+          "length": 123,
+          "normalized_time": 0.6637168141592921,
+          "quartile": 2
+        },
+        {
+          "episode": 13701,
+          "start": 113,
+          "row": 1729170,
+          "length": 123,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 16395,
+          "start": 0,
+          "row": 2069490,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 16395,
+          "start": 30,
+          "row": 2069520,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 16395,
+          "start": 61,
+          "row": 2069551,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 16395,
+          "start": 91,
+          "row": 2069581,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 11071,
+          "start": 0,
+          "row": 1371969,
+          "length": 148,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 11071,
+          "start": 46,
+          "row": 1372015,
+          "length": 148,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 11071,
+          "start": 92,
+          "row": 1372061,
+          "length": 148,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 11071,
+          "start": 138,
+          "row": 1372107,
+          "length": 148,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 14135,
+          "start": 0,
+          "row": 1778236,
+          "length": 95,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 14135,
+          "start": 28,
+          "row": 1778264,
+          "length": 95,
+          "normalized_time": 0.32941176470588235,
+          "quartile": 1
+        },
+        {
+          "episode": 14135,
+          "start": 57,
+          "row": 1778293,
+          "length": 95,
+          "normalized_time": 0.6705882352941176,
+          "quartile": 2
+        },
+        {
+          "episode": 14135,
+          "start": 85,
+          "row": 1778321,
+          "length": 95,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9556,
+          "start": 0,
+          "row": 1170437,
+          "length": 136,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9556,
+          "start": 42,
+          "row": 1170479,
+          "length": 136,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 9556,
+          "start": 84,
+          "row": 1170521,
+          "length": 136,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 9556,
+          "start": 126,
+          "row": 1170563,
+          "length": 136,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 1019,
+          "start": 0,
+          "row": 126596,
+          "length": 117,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 1019,
+          "start": 36,
+          "row": 126632,
+          "length": 117,
+          "normalized_time": 0.3364485981308411,
+          "quartile": 1
+        },
+        {
+          "episode": 1019,
+          "start": 71,
+          "row": 126667,
+          "length": 117,
+          "normalized_time": 0.6635514018691588,
+          "quartile": 2
+        },
+        {
+          "episode": 1019,
+          "start": 107,
+          "row": 126703,
+          "length": 117,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 1090,
+          "start": 0,
+          "row": 134903,
+          "length": 117,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 1090,
+          "start": 36,
+          "row": 134939,
+          "length": 117,
+          "normalized_time": 0.3364485981308411,
+          "quartile": 1
+        },
+        {
+          "episode": 1090,
+          "start": 71,
+          "row": 134974,
+          "length": 117,
+          "normalized_time": 0.6635514018691588,
+          "quartile": 2
+        },
+        {
+          "episode": 1090,
+          "start": 107,
+          "row": 135010,
+          "length": 117,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5568,
+          "start": 0,
+          "row": 701873,
+          "length": 64,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5568,
+          "start": 18,
+          "row": 701891,
+          "length": 64,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 5568,
+          "start": 36,
+          "row": 701909,
+          "length": 64,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 5568,
+          "start": 54,
+          "row": 701927,
+          "length": 64,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 12622,
+          "start": 0,
+          "row": 1588418,
+          "length": 205,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 12622,
+          "start": 65,
+          "row": 1588483,
+          "length": 205,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 12622,
+          "start": 130,
+          "row": 1588548,
+          "length": 205,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 12622,
+          "start": 195,
+          "row": 1588613,
+          "length": 205,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2674,
+          "start": 0,
+          "row": 310778,
+          "length": 141,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2674,
+          "start": 44,
+          "row": 310822,
+          "length": 141,
+          "normalized_time": 0.33587786259541985,
+          "quartile": 1
+        },
+        {
+          "episode": 2674,
+          "start": 87,
+          "row": 310865,
+          "length": 141,
+          "normalized_time": 0.6641221374045801,
+          "quartile": 2
+        },
+        {
+          "episode": 2674,
+          "start": 131,
+          "row": 310909,
+          "length": 141,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 734,
+          "start": 0,
+          "row": 85286,
+          "length": 125,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 734,
+          "start": 38,
+          "row": 85324,
+          "length": 125,
+          "normalized_time": 0.33043478260869563,
+          "quartile": 1
+        },
+        {
+          "episode": 734,
+          "start": 77,
+          "row": 85363,
+          "length": 125,
+          "normalized_time": 0.6695652173913044,
+          "quartile": 2
+        },
+        {
+          "episode": 734,
+          "start": 115,
+          "row": 85401,
+          "length": 125,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5923,
+          "start": 0,
+          "row": 739143,
+          "length": 148,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5923,
+          "start": 46,
+          "row": 739189,
+          "length": 148,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 5923,
+          "start": 92,
+          "row": 739235,
+          "length": 148,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 5923,
+          "start": 138,
+          "row": 739281,
+          "length": 148,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 17443,
+          "start": 0,
+          "row": 2192983,
+          "length": 102,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 17443,
+          "start": 31,
+          "row": 2193014,
+          "length": 102,
+          "normalized_time": 0.33695652173913043,
+          "quartile": 1
+        },
+        {
+          "episode": 17443,
+          "start": 61,
+          "row": 2193044,
+          "length": 102,
+          "normalized_time": 0.6630434782608695,
+          "quartile": 2
+        },
+        {
+          "episode": 17443,
+          "start": 92,
+          "row": 2193075,
+          "length": 102,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8486,
+          "start": 0,
+          "row": 1054145,
+          "length": 105,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8486,
+          "start": 32,
+          "row": 1054177,
+          "length": 105,
+          "normalized_time": 0.3368421052631579,
+          "quartile": 1
+        },
+        {
+          "episode": 8486,
+          "start": 63,
+          "row": 1054208,
+          "length": 105,
+          "normalized_time": 0.6631578947368421,
+          "quartile": 2
+        },
+        {
+          "episode": 8486,
+          "start": 95,
+          "row": 1054240,
+          "length": 105,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9851,
+          "start": 0,
+          "row": 1204415,
+          "length": 127,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9851,
+          "start": 39,
+          "row": 1204454,
+          "length": 127,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 9851,
+          "start": 78,
+          "row": 1204493,
+          "length": 127,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 9851,
+          "start": 117,
+          "row": 1204532,
+          "length": 127,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7990,
+          "start": 0,
+          "row": 982228,
+          "length": 138,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7990,
+          "start": 43,
+          "row": 982271,
+          "length": 138,
+          "normalized_time": 0.3359375,
+          "quartile": 1
+        },
+        {
+          "episode": 7990,
+          "start": 85,
+          "row": 982313,
+          "length": 138,
+          "normalized_time": 0.6640625,
+          "quartile": 2
+        },
+        {
+          "episode": 7990,
+          "start": 128,
+          "row": 982356,
+          "length": 138,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 6204,
+          "start": 0,
+          "row": 778511,
+          "length": 141,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 6204,
+          "start": 44,
+          "row": 778555,
+          "length": 141,
+          "normalized_time": 0.33587786259541985,
+          "quartile": 1
+        },
+        {
+          "episode": 6204,
+          "start": 87,
+          "row": 778598,
+          "length": 141,
+          "normalized_time": 0.6641221374045801,
+          "quartile": 2
+        },
+        {
+          "episode": 6204,
+          "start": 131,
+          "row": 778642,
+          "length": 141,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 16092,
+          "start": 0,
+          "row": 2019229,
+          "length": 197,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 16092,
+          "start": 62,
+          "row": 2019291,
+          "length": 197,
+          "normalized_time": 0.3315508021390374,
+          "quartile": 1
+        },
+        {
+          "episode": 16092,
+          "start": 125,
+          "row": 2019354,
+          "length": 197,
+          "normalized_time": 0.6684491978609626,
+          "quartile": 2
+        },
+        {
+          "episode": 16092,
+          "start": 187,
+          "row": 2019416,
+          "length": 197,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 421,
+          "start": 0,
+          "row": 47431,
+          "length": 69,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 421,
+          "start": 20,
+          "row": 47451,
+          "length": 69,
+          "normalized_time": 0.3389830508474576,
+          "quartile": 1
+        },
+        {
+          "episode": 421,
+          "start": 39,
+          "row": 47470,
+          "length": 69,
+          "normalized_time": 0.6610169491525424,
+          "quartile": 2
+        },
+        {
+          "episode": 421,
+          "start": 59,
+          "row": 47490,
+          "length": 69,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 18493,
+          "start": 0,
+          "row": 2315768,
+          "length": 105,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 18493,
+          "start": 32,
+          "row": 2315800,
+          "length": 105,
+          "normalized_time": 0.3368421052631579,
+          "quartile": 1
+        },
+        {
+          "episode": 18493,
+          "start": 63,
+          "row": 2315831,
+          "length": 105,
+          "normalized_time": 0.6631578947368421,
+          "quartile": 2
+        },
+        {
+          "episode": 18493,
+          "start": 95,
+          "row": 2315863,
+          "length": 105,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 14903,
+          "start": 0,
+          "row": 1876000,
+          "length": 69,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 14903,
+          "start": 20,
+          "row": 1876020,
+          "length": 69,
+          "normalized_time": 0.3389830508474576,
+          "quartile": 1
+        },
+        {
+          "episode": 14903,
+          "start": 39,
+          "row": 1876039,
+          "length": 69,
+          "normalized_time": 0.6610169491525424,
+          "quartile": 2
+        },
+        {
+          "episode": 14903,
+          "start": 59,
+          "row": 1876059,
+          "length": 69,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 17256,
+          "start": 0,
+          "row": 2163247,
+          "length": 126,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 17256,
+          "start": 39,
+          "row": 2163286,
+          "length": 126,
+          "normalized_time": 0.33620689655172414,
+          "quartile": 1
+        },
+        {
+          "episode": 17256,
+          "start": 77,
+          "row": 2163324,
+          "length": 126,
+          "normalized_time": 0.6637931034482759,
+          "quartile": 2
+        },
+        {
+          "episode": 17256,
+          "start": 116,
+          "row": 2163363,
+          "length": 126,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 15845,
+          "start": 0,
+          "row": 1980684,
+          "length": 78,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 15845,
+          "start": 23,
+          "row": 1980707,
+          "length": 78,
+          "normalized_time": 0.3382352941176471,
+          "quartile": 1
+        },
+        {
+          "episode": 15845,
+          "start": 45,
+          "row": 1980729,
+          "length": 78,
+          "normalized_time": 0.6617647058823529,
+          "quartile": 2
+        },
+        {
+          "episode": 15845,
+          "start": 68,
+          "row": 1980752,
+          "length": 78,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 15522,
+          "start": 0,
+          "row": 1939490,
+          "length": 73,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 15522,
+          "start": 21,
+          "row": 1939511,
+          "length": 73,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 15522,
+          "start": 42,
+          "row": 1939532,
+          "length": 73,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 15522,
+          "start": 63,
+          "row": 1939553,
+          "length": 73,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 12513,
+          "start": 0,
+          "row": 1567415,
+          "length": 83,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 12513,
+          "start": 24,
+          "row": 1567439,
+          "length": 83,
+          "normalized_time": 0.3287671232876712,
+          "quartile": 1
+        },
+        {
+          "episode": 12513,
+          "start": 49,
+          "row": 1567464,
+          "length": 83,
+          "normalized_time": 0.6712328767123288,
+          "quartile": 2
+        },
+        {
+          "episode": 12513,
+          "start": 73,
+          "row": 1567488,
+          "length": 83,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 13234,
+          "start": 0,
+          "row": 1663323,
+          "length": 153,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 13234,
+          "start": 48,
+          "row": 1663371,
+          "length": 153,
+          "normalized_time": 0.3356643356643357,
+          "quartile": 1
+        },
+        {
+          "episode": 13234,
+          "start": 95,
+          "row": 1663418,
+          "length": 153,
+          "normalized_time": 0.6643356643356644,
+          "quartile": 2
+        },
+        {
+          "episode": 13234,
+          "start": 143,
+          "row": 1663466,
+          "length": 153,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3405,
+          "start": 0,
+          "row": 416692,
+          "length": 137,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3405,
+          "start": 42,
+          "row": 416734,
+          "length": 137,
+          "normalized_time": 0.33070866141732286,
+          "quartile": 1
+        },
+        {
+          "episode": 3405,
+          "start": 85,
+          "row": 416777,
+          "length": 137,
+          "normalized_time": 0.6692913385826772,
+          "quartile": 2
+        },
+        {
+          "episode": 3405,
+          "start": 127,
+          "row": 416819,
+          "length": 137,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3162,
+          "start": 0,
+          "row": 385273,
+          "length": 142,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3162,
+          "start": 44,
+          "row": 385317,
+          "length": 142,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 3162,
+          "start": 88,
+          "row": 385361,
+          "length": 142,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 3162,
+          "start": 132,
+          "row": 385405,
+          "length": 142,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8527,
+          "start": 0,
+          "row": 1058450,
+          "length": 105,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8527,
+          "start": 32,
+          "row": 1058482,
+          "length": 105,
+          "normalized_time": 0.3368421052631579,
+          "quartile": 1
+        },
+        {
+          "episode": 8527,
+          "start": 63,
+          "row": 1058513,
+          "length": 105,
+          "normalized_time": 0.6631578947368421,
+          "quartile": 2
+        },
+        {
+          "episode": 8527,
+          "start": 95,
+          "row": 1058545,
+          "length": 105,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8293,
+          "start": 0,
+          "row": 1024866,
+          "length": 167,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8293,
+          "start": 52,
+          "row": 1024918,
+          "length": 167,
+          "normalized_time": 0.33121019108280253,
+          "quartile": 1
+        },
+        {
+          "episode": 8293,
+          "start": 105,
+          "row": 1024971,
+          "length": 167,
+          "normalized_time": 0.6687898089171974,
+          "quartile": 2
+        },
+        {
+          "episode": 8293,
+          "start": 157,
+          "row": 1025023,
+          "length": 167,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9936,
+          "start": 0,
+          "row": 1215742,
+          "length": 141,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9936,
+          "start": 44,
+          "row": 1215786,
+          "length": 141,
+          "normalized_time": 0.33587786259541985,
+          "quartile": 1
+        },
+        {
+          "episode": 9936,
+          "start": 87,
+          "row": 1215829,
+          "length": 141,
+          "normalized_time": 0.6641221374045801,
+          "quartile": 2
+        },
+        {
+          "episode": 9936,
+          "start": 131,
+          "row": 1215873,
+          "length": 141,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8436,
+          "start": 0,
+          "row": 1047263,
+          "length": 139,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8436,
+          "start": 43,
+          "row": 1047306,
+          "length": 139,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 8436,
+          "start": 86,
+          "row": 1047349,
+          "length": 139,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 8436,
+          "start": 129,
+          "row": 1047392,
+          "length": 139,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7539,
+          "start": 0,
+          "row": 936087,
+          "length": 165,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7539,
+          "start": 52,
+          "row": 936139,
+          "length": 165,
+          "normalized_time": 0.33548387096774196,
+          "quartile": 1
+        },
+        {
+          "episode": 7539,
+          "start": 103,
+          "row": 936190,
+          "length": 165,
+          "normalized_time": 0.6645161290322581,
+          "quartile": 2
+        },
+        {
+          "episode": 7539,
+          "start": 155,
+          "row": 936242,
+          "length": 165,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3653,
+          "start": 0,
+          "row": 446377,
+          "length": 146,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3653,
+          "start": 45,
+          "row": 446422,
+          "length": 146,
+          "normalized_time": 0.33088235294117646,
+          "quartile": 1
+        },
+        {
+          "episode": 3653,
+          "start": 91,
+          "row": 446468,
+          "length": 146,
+          "normalized_time": 0.6691176470588235,
+          "quartile": 2
+        },
+        {
+          "episode": 3653,
+          "start": 136,
+          "row": 446513,
+          "length": 146,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 1816,
+          "start": 0,
+          "row": 221212,
+          "length": 90,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 1816,
+          "start": 27,
+          "row": 221239,
+          "length": 90,
+          "normalized_time": 0.3375,
+          "quartile": 1
+        },
+        {
+          "episode": 1816,
+          "start": 53,
+          "row": 221265,
+          "length": 90,
+          "normalized_time": 0.6625,
+          "quartile": 2
+        },
+        {
+          "episode": 1816,
+          "start": 80,
+          "row": 221292,
+          "length": 90,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8613,
+          "start": 0,
+          "row": 1067760,
+          "length": 115,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8613,
+          "start": 35,
+          "row": 1067795,
+          "length": 115,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 8613,
+          "start": 70,
+          "row": 1067830,
+          "length": 115,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 8613,
+          "start": 105,
+          "row": 1067865,
+          "length": 115,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7123,
+          "start": 0,
+          "row": 882553,
+          "length": 107,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7123,
+          "start": 32,
+          "row": 882585,
+          "length": 107,
+          "normalized_time": 0.32989690721649484,
+          "quartile": 1
+        },
+        {
+          "episode": 7123,
+          "start": 65,
+          "row": 882618,
+          "length": 107,
+          "normalized_time": 0.6701030927835051,
+          "quartile": 2
+        },
+        {
+          "episode": 7123,
+          "start": 97,
+          "row": 882650,
+          "length": 107,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 6522,
+          "start": 0,
+          "row": 813096,
+          "length": 161,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 6522,
+          "start": 50,
+          "row": 813146,
+          "length": 161,
+          "normalized_time": 0.33112582781456956,
+          "quartile": 1
+        },
+        {
+          "episode": 6522,
+          "start": 101,
+          "row": 813197,
+          "length": 161,
+          "normalized_time": 0.6688741721854304,
+          "quartile": 2
+        },
+        {
+          "episode": 6522,
+          "start": 151,
+          "row": 813247,
+          "length": 161,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2608,
+          "start": 0,
+          "row": 302804,
+          "length": 67,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2608,
+          "start": 19,
+          "row": 302823,
+          "length": 67,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 2608,
+          "start": 38,
+          "row": 302842,
+          "length": 67,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 2608,
+          "start": 57,
+          "row": 302861,
+          "length": 67,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 11495,
+          "start": 0,
+          "row": 1439752,
+          "length": 149,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 11495,
+          "start": 46,
+          "row": 1439798,
+          "length": 149,
+          "normalized_time": 0.33093525179856115,
+          "quartile": 1
+        },
+        {
+          "episode": 11495,
+          "start": 93,
+          "row": 1439845,
+          "length": 149,
+          "normalized_time": 0.6690647482014388,
+          "quartile": 2
+        },
+        {
+          "episode": 11495,
+          "start": 139,
+          "row": 1439891,
+          "length": 149,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2968,
+          "start": 0,
+          "row": 352186,
+          "length": 246,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2968,
+          "start": 79,
+          "row": 352265,
+          "length": 246,
+          "normalized_time": 0.3347457627118644,
+          "quartile": 1
+        },
+        {
+          "episode": 2968,
+          "start": 157,
+          "row": 352343,
+          "length": 246,
+          "normalized_time": 0.6652542372881356,
+          "quartile": 2
+        },
+        {
+          "episode": 2968,
+          "start": 236,
+          "row": 352422,
+          "length": 246,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 13033,
+          "start": 0,
+          "row": 1635872,
+          "length": 120,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 13033,
+          "start": 37,
+          "row": 1635909,
+          "length": 120,
+          "normalized_time": 0.33636363636363636,
+          "quartile": 1
+        },
+        {
+          "episode": 13033,
+          "start": 73,
+          "row": 1635945,
+          "length": 120,
+          "normalized_time": 0.6636363636363637,
+          "quartile": 2
+        },
+        {
+          "episode": 13033,
+          "start": 110,
+          "row": 1635982,
+          "length": 120,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 1045,
+          "start": 0,
+          "row": 129638,
+          "length": 117,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 1045,
+          "start": 36,
+          "row": 129674,
+          "length": 117,
+          "normalized_time": 0.3364485981308411,
+          "quartile": 1
+        },
+        {
+          "episode": 1045,
+          "start": 71,
+          "row": 129709,
+          "length": 117,
+          "normalized_time": 0.6635514018691588,
+          "quartile": 2
+        },
+        {
+          "episode": 1045,
+          "start": 107,
+          "row": 129745,
+          "length": 117,
+          "normalized_time": 1.0,
+          "quartile": 3
+        }
+      ]
+    },
+    "tworoom": {
+      "dataset": "/workspace/datasets/lewm-tworooms/train.lance",
+      "dataset_version": 2,
+      "dataset_rows": 920809,
+      "episodes": [
+        6031,
+        3734,
+        7911,
+        9134,
+        8018,
+        8720,
+        3017,
+        4702,
+        2355,
+        2640,
+        6530,
+        22,
+        8244,
+        2546,
+        3478,
+        9250,
+        8657,
+        6422,
+        5630,
+        8875,
+        8553,
+        8013,
+        3125,
+        7259,
+        2378,
+        4719,
+        7694,
+        1505,
+        9314,
+        3568,
+        8732,
+        7049,
+        261,
+        9836,
+        2983,
+        8329,
+        9394,
+        5208,
+        6810,
+        8842,
+        8554,
+        8802,
+        4873,
+        1227,
+        3198,
+        4511,
+        9750,
+        6581,
+        8341,
+        7473,
+        7747,
+        4078,
+        3052,
+        9897,
+        2303,
+        7479,
+        9108,
+        5705,
+        7572,
+        3778,
+        7957,
+        1845,
+        6468,
+        5493
+      ],
+      "clips": [
+        {
+          "episode": 6031,
+          "start": 0,
+          "row": 555039,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 6031,
+          "start": 30,
+          "row": 555069,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 6031,
+          "start": 61,
+          "row": 555100,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 6031,
+          "start": 91,
+          "row": 555130,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3734,
+          "start": 0,
+          "row": 343051,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3734,
+          "start": 30,
+          "row": 343081,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 3734,
+          "start": 61,
+          "row": 343112,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 3734,
+          "start": 91,
+          "row": 343142,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7911,
+          "start": 0,
+          "row": 727594,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7911,
+          "start": 30,
+          "row": 727624,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 7911,
+          "start": 61,
+          "row": 727655,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 7911,
+          "start": 91,
+          "row": 727685,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9134,
+          "start": 0,
+          "row": 840176,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9134,
+          "start": 30,
+          "row": 840206,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 9134,
+          "start": 61,
+          "row": 840237,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 9134,
+          "start": 91,
+          "row": 840267,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8018,
+          "start": 0,
+          "row": 737378,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8018,
+          "start": 30,
+          "row": 737408,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 8018,
+          "start": 61,
+          "row": 737439,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 8018,
+          "start": 91,
+          "row": 737469,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8720,
+          "start": 0,
+          "row": 801673,
+          "length": 89,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8720,
+          "start": 26,
+          "row": 801699,
+          "length": 89,
+          "normalized_time": 0.3291139240506329,
+          "quartile": 1
+        },
+        {
+          "episode": 8720,
+          "start": 53,
+          "row": 801726,
+          "length": 89,
+          "normalized_time": 0.6708860759493671,
+          "quartile": 2
+        },
+        {
+          "episode": 8720,
+          "start": 79,
+          "row": 801752,
+          "length": 89,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3017,
+          "start": 0,
+          "row": 277433,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3017,
+          "start": 30,
+          "row": 277463,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 3017,
+          "start": 61,
+          "row": 277494,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 3017,
+          "start": 91,
+          "row": 277524,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4702,
+          "start": 0,
+          "row": 432415,
+          "length": 67,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4702,
+          "start": 19,
+          "row": 432434,
+          "length": 67,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 4702,
+          "start": 38,
+          "row": 432453,
+          "length": 67,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 4702,
+          "start": 57,
+          "row": 432472,
+          "length": 67,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2355,
+          "start": 0,
+          "row": 216059,
+          "length": 90,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2355,
+          "start": 27,
+          "row": 216086,
+          "length": 90,
+          "normalized_time": 0.3375,
+          "quartile": 1
+        },
+        {
+          "episode": 2355,
+          "start": 53,
+          "row": 216112,
+          "length": 90,
+          "normalized_time": 0.6625,
+          "quartile": 2
+        },
+        {
+          "episode": 2355,
+          "start": 80,
+          "row": 216139,
+          "length": 90,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2640,
+          "start": 0,
+          "row": 242481,
+          "length": 84,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2640,
+          "start": 25,
+          "row": 242506,
+          "length": 84,
+          "normalized_time": 0.33783783783783783,
+          "quartile": 1
+        },
+        {
+          "episode": 2640,
+          "start": 49,
+          "row": 242530,
+          "length": 84,
+          "normalized_time": 0.6621621621621622,
+          "quartile": 2
+        },
+        {
+          "episode": 2640,
+          "start": 74,
+          "row": 242555,
+          "length": 84,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 6530,
+          "start": 0,
+          "row": 600818,
+          "length": 39,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 6530,
+          "start": 10,
+          "row": 600828,
+          "length": 39,
+          "normalized_time": 0.3448275862068966,
+          "quartile": 1
+        },
+        {
+          "episode": 6530,
+          "start": 19,
+          "row": 600837,
+          "length": 39,
+          "normalized_time": 0.6551724137931034,
+          "quartile": 2
+        },
+        {
+          "episode": 6530,
+          "start": 29,
+          "row": 600847,
+          "length": 39,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 22,
+          "start": 0,
+          "row": 1956,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 22,
+          "start": 30,
+          "row": 1986,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 22,
+          "start": 61,
+          "row": 2017,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 22,
+          "start": 91,
+          "row": 2047,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8244,
+          "start": 0,
+          "row": 758194,
+          "length": 70,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8244,
+          "start": 20,
+          "row": 758214,
+          "length": 70,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 8244,
+          "start": 40,
+          "row": 758234,
+          "length": 70,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 8244,
+          "start": 60,
+          "row": 758254,
+          "length": 70,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2546,
+          "start": 0,
+          "row": 233637,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2546,
+          "start": 30,
+          "row": 233667,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 2546,
+          "start": 61,
+          "row": 233698,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 2546,
+          "start": 91,
+          "row": 233728,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3478,
+          "start": 0,
+          "row": 319390,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3478,
+          "start": 30,
+          "row": 319420,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 3478,
+          "start": 61,
+          "row": 319451,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 3478,
+          "start": 91,
+          "row": 319481,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9250,
+          "start": 0,
+          "row": 851039,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9250,
+          "start": 30,
+          "row": 851069,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 9250,
+          "start": 61,
+          "row": 851100,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 9250,
+          "start": 91,
+          "row": 851130,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8657,
+          "start": 0,
+          "row": 795930,
+          "length": 88,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8657,
+          "start": 26,
+          "row": 795956,
+          "length": 88,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 8657,
+          "start": 52,
+          "row": 795982,
+          "length": 88,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 8657,
+          "start": 78,
+          "row": 796008,
+          "length": 88,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 6422,
+          "start": 0,
+          "row": 590799,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 6422,
+          "start": 30,
+          "row": 590829,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 6422,
+          "start": 61,
+          "row": 590860,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 6422,
+          "start": 91,
+          "row": 590890,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5630,
+          "start": 0,
+          "row": 517869,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5630,
+          "start": 30,
+          "row": 517899,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 5630,
+          "start": 61,
+          "row": 517930,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 5630,
+          "start": 91,
+          "row": 517960,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8875,
+          "start": 0,
+          "row": 816079,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8875,
+          "start": 30,
+          "row": 816109,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 8875,
+          "start": 61,
+          "row": 816140,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 8875,
+          "start": 91,
+          "row": 816170,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8553,
+          "start": 0,
+          "row": 786527,
+          "length": 75,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8553,
+          "start": 22,
+          "row": 786549,
+          "length": 75,
+          "normalized_time": 0.3384615384615385,
+          "quartile": 1
+        },
+        {
+          "episode": 8553,
+          "start": 43,
+          "row": 786570,
+          "length": 75,
+          "normalized_time": 0.6615384615384615,
+          "quartile": 2
+        },
+        {
+          "episode": 8553,
+          "start": 65,
+          "row": 786592,
+          "length": 75,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8013,
+          "start": 0,
+          "row": 736973,
+          "length": 57,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8013,
+          "start": 16,
+          "row": 736989,
+          "length": 57,
+          "normalized_time": 0.3404255319148936,
+          "quartile": 1
+        },
+        {
+          "episode": 8013,
+          "start": 31,
+          "row": 737004,
+          "length": 57,
+          "normalized_time": 0.6595744680851063,
+          "quartile": 2
+        },
+        {
+          "episode": 8013,
+          "start": 47,
+          "row": 737020,
+          "length": 57,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3125,
+          "start": 0,
+          "row": 287468,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3125,
+          "start": 30,
+          "row": 287498,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 3125,
+          "start": 61,
+          "row": 287529,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 3125,
+          "start": 91,
+          "row": 287559,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7259,
+          "start": 0,
+          "row": 667324,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7259,
+          "start": 30,
+          "row": 667354,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 7259,
+          "start": 61,
+          "row": 667385,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 7259,
+          "start": 91,
+          "row": 667415,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2378,
+          "start": 0,
+          "row": 218287,
+          "length": 78,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2378,
+          "start": 23,
+          "row": 218310,
+          "length": 78,
+          "normalized_time": 0.3382352941176471,
+          "quartile": 1
+        },
+        {
+          "episode": 2378,
+          "start": 45,
+          "row": 218332,
+          "length": 78,
+          "normalized_time": 0.6617647058823529,
+          "quartile": 2
+        },
+        {
+          "episode": 2378,
+          "start": 68,
+          "row": 218355,
+          "length": 78,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4719,
+          "start": 0,
+          "row": 433920,
+          "length": 72,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4719,
+          "start": 21,
+          "row": 433941,
+          "length": 72,
+          "normalized_time": 0.3387096774193548,
+          "quartile": 1
+        },
+        {
+          "episode": 4719,
+          "start": 41,
+          "row": 433961,
+          "length": 72,
+          "normalized_time": 0.6612903225806451,
+          "quartile": 2
+        },
+        {
+          "episode": 4719,
+          "start": 62,
+          "row": 433982,
+          "length": 72,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7694,
+          "start": 0,
+          "row": 707574,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7694,
+          "start": 30,
+          "row": 707604,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 7694,
+          "start": 61,
+          "row": 707635,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 7694,
+          "start": 91,
+          "row": 707665,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 1505,
+          "start": 0,
+          "row": 137823,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 1505,
+          "start": 30,
+          "row": 137853,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 1505,
+          "start": 61,
+          "row": 137884,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 1505,
+          "start": 91,
+          "row": 137914,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9314,
+          "start": 0,
+          "row": 856995,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9314,
+          "start": 30,
+          "row": 857025,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 9314,
+          "start": 61,
+          "row": 857056,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 9314,
+          "start": 91,
+          "row": 857086,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3568,
+          "start": 0,
+          "row": 327697,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3568,
+          "start": 30,
+          "row": 327727,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 3568,
+          "start": 61,
+          "row": 327758,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 3568,
+          "start": 91,
+          "row": 327788,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8732,
+          "start": 0,
+          "row": 802840,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8732,
+          "start": 30,
+          "row": 802870,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 8732,
+          "start": 61,
+          "row": 802901,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 8732,
+          "start": 91,
+          "row": 802931,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7049,
+          "start": 0,
+          "row": 648082,
+          "length": 85,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7049,
+          "start": 25,
+          "row": 648107,
+          "length": 85,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 7049,
+          "start": 50,
+          "row": 648132,
+          "length": 85,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 7049,
+          "start": 75,
+          "row": 648157,
+          "length": 85,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 261,
+          "start": 0,
+          "row": 23860,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 261,
+          "start": 30,
+          "row": 23890,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 261,
+          "start": 61,
+          "row": 23921,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 261,
+          "start": 91,
+          "row": 23951,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9836,
+          "start": 0,
+          "row": 905616,
+          "length": 77,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9836,
+          "start": 22,
+          "row": 905638,
+          "length": 77,
+          "normalized_time": 0.3283582089552239,
+          "quartile": 1
+        },
+        {
+          "episode": 9836,
+          "start": 45,
+          "row": 905661,
+          "length": 77,
+          "normalized_time": 0.6716417910447762,
+          "quartile": 2
+        },
+        {
+          "episode": 9836,
+          "start": 67,
+          "row": 905683,
+          "length": 77,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2983,
+          "start": 0,
+          "row": 274368,
+          "length": 70,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2983,
+          "start": 20,
+          "row": 274388,
+          "length": 70,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 2983,
+          "start": 40,
+          "row": 274408,
+          "length": 70,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 2983,
+          "start": 60,
+          "row": 274428,
+          "length": 70,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8329,
+          "start": 0,
+          "row": 766032,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8329,
+          "start": 30,
+          "row": 766062,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 8329,
+          "start": 61,
+          "row": 766093,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 8329,
+          "start": 91,
+          "row": 766123,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9394,
+          "start": 0,
+          "row": 864521,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9394,
+          "start": 30,
+          "row": 864551,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 9394,
+          "start": 61,
+          "row": 864582,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 9394,
+          "start": 91,
+          "row": 864612,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5208,
+          "start": 0,
+          "row": 478980,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5208,
+          "start": 30,
+          "row": 479010,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 5208,
+          "start": 61,
+          "row": 479041,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 5208,
+          "start": 91,
+          "row": 479071,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 6810,
+          "start": 0,
+          "row": 626203,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 6810,
+          "start": 30,
+          "row": 626233,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 6810,
+          "start": 61,
+          "row": 626264,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 6810,
+          "start": 91,
+          "row": 626294,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8842,
+          "start": 0,
+          "row": 813103,
+          "length": 46,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8842,
+          "start": 12,
+          "row": 813115,
+          "length": 46,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 8842,
+          "start": 24,
+          "row": 813127,
+          "length": 46,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 8842,
+          "start": 36,
+          "row": 813139,
+          "length": 46,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8554,
+          "start": 0,
+          "row": 786602,
+          "length": 77,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8554,
+          "start": 22,
+          "row": 786624,
+          "length": 77,
+          "normalized_time": 0.3283582089552239,
+          "quartile": 1
+        },
+        {
+          "episode": 8554,
+          "start": 45,
+          "row": 786647,
+          "length": 77,
+          "normalized_time": 0.6716417910447762,
+          "quartile": 2
+        },
+        {
+          "episode": 8554,
+          "start": 67,
+          "row": 786669,
+          "length": 77,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8802,
+          "start": 0,
+          "row": 809253,
+          "length": 96,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8802,
+          "start": 29,
+          "row": 809282,
+          "length": 96,
+          "normalized_time": 0.3372093023255814,
+          "quartile": 1
+        },
+        {
+          "episode": 8802,
+          "start": 57,
+          "row": 809310,
+          "length": 96,
+          "normalized_time": 0.6627906976744186,
+          "quartile": 2
+        },
+        {
+          "episode": 8802,
+          "start": 86,
+          "row": 809339,
+          "length": 96,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4873,
+          "start": 0,
+          "row": 448053,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4873,
+          "start": 30,
+          "row": 448083,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 4873,
+          "start": 61,
+          "row": 448114,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 4873,
+          "start": 91,
+          "row": 448144,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 1227,
+          "start": 0,
+          "row": 112397,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 1227,
+          "start": 30,
+          "row": 112427,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 1227,
+          "start": 61,
+          "row": 112458,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 1227,
+          "start": 91,
+          "row": 112488,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3198,
+          "start": 0,
+          "row": 294090,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3198,
+          "start": 30,
+          "row": 294120,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 3198,
+          "start": 61,
+          "row": 294151,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 3198,
+          "start": 91,
+          "row": 294181,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4511,
+          "start": 0,
+          "row": 414623,
+          "length": 66,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4511,
+          "start": 19,
+          "row": 414642,
+          "length": 66,
+          "normalized_time": 0.3392857142857143,
+          "quartile": 1
+        },
+        {
+          "episode": 4511,
+          "start": 37,
+          "row": 414660,
+          "length": 66,
+          "normalized_time": 0.6607142857142857,
+          "quartile": 2
+        },
+        {
+          "episode": 4511,
+          "start": 56,
+          "row": 414679,
+          "length": 66,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9750,
+          "start": 0,
+          "row": 897604,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9750,
+          "start": 30,
+          "row": 897634,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 9750,
+          "start": 61,
+          "row": 897665,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 9750,
+          "start": 91,
+          "row": 897695,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 6581,
+          "start": 0,
+          "row": 605533,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 6581,
+          "start": 30,
+          "row": 605563,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 6581,
+          "start": 61,
+          "row": 605594,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 6581,
+          "start": 91,
+          "row": 605624,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8341,
+          "start": 0,
+          "row": 767121,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8341,
+          "start": 30,
+          "row": 767151,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 8341,
+          "start": 61,
+          "row": 767182,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 8341,
+          "start": 91,
+          "row": 767212,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7473,
+          "start": 0,
+          "row": 687083,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7473,
+          "start": 30,
+          "row": 687113,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 7473,
+          "start": 61,
+          "row": 687144,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 7473,
+          "start": 91,
+          "row": 687174,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7747,
+          "start": 0,
+          "row": 712512,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7747,
+          "start": 30,
+          "row": 712542,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 7747,
+          "start": 61,
+          "row": 712573,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 7747,
+          "start": 91,
+          "row": 712603,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4078,
+          "start": 0,
+          "row": 374876,
+          "length": 48,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4078,
+          "start": 13,
+          "row": 374889,
+          "length": 48,
+          "normalized_time": 0.34210526315789475,
+          "quartile": 1
+        },
+        {
+          "episode": 4078,
+          "start": 25,
+          "row": 374901,
+          "length": 48,
+          "normalized_time": 0.6578947368421053,
+          "quartile": 2
+        },
+        {
+          "episode": 4078,
+          "start": 38,
+          "row": 374914,
+          "length": 48,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3052,
+          "start": 0,
+          "row": 280599,
+          "length": 74,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3052,
+          "start": 21,
+          "row": 280620,
+          "length": 74,
+          "normalized_time": 0.328125,
+          "quartile": 1
+        },
+        {
+          "episode": 3052,
+          "start": 43,
+          "row": 280642,
+          "length": 74,
+          "normalized_time": 0.671875,
+          "quartile": 2
+        },
+        {
+          "episode": 3052,
+          "start": 64,
+          "row": 280663,
+          "length": 74,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9897,
+          "start": 0,
+          "row": 911255,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9897,
+          "start": 30,
+          "row": 911285,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 9897,
+          "start": 61,
+          "row": 911316,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 9897,
+          "start": 91,
+          "row": 911346,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2303,
+          "start": 0,
+          "row": 211392,
+          "length": 84,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2303,
+          "start": 25,
+          "row": 211417,
+          "length": 84,
+          "normalized_time": 0.33783783783783783,
+          "quartile": 1
+        },
+        {
+          "episode": 2303,
+          "start": 49,
+          "row": 211441,
+          "length": 84,
+          "normalized_time": 0.6621621621621622,
+          "quartile": 2
+        },
+        {
+          "episode": 2303,
+          "start": 74,
+          "row": 211466,
+          "length": 84,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7479,
+          "start": 0,
+          "row": 687659,
+          "length": 70,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7479,
+          "start": 20,
+          "row": 687679,
+          "length": 70,
+          "normalized_time": 0.3333333333333333,
+          "quartile": 1
+        },
+        {
+          "episode": 7479,
+          "start": 40,
+          "row": 687699,
+          "length": 70,
+          "normalized_time": 0.6666666666666666,
+          "quartile": 2
+        },
+        {
+          "episode": 7479,
+          "start": 60,
+          "row": 687719,
+          "length": 70,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9108,
+          "start": 0,
+          "row": 837766,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9108,
+          "start": 30,
+          "row": 837796,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 9108,
+          "start": 61,
+          "row": 837827,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 9108,
+          "start": 91,
+          "row": 837857,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5705,
+          "start": 0,
+          "row": 524742,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5705,
+          "start": 30,
+          "row": 524772,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 5705,
+          "start": 61,
+          "row": 524803,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 5705,
+          "start": 91,
+          "row": 524833,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7572,
+          "start": 0,
+          "row": 696172,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7572,
+          "start": 30,
+          "row": 696202,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 7572,
+          "start": 61,
+          "row": 696233,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 7572,
+          "start": 91,
+          "row": 696263,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3778,
+          "start": 0,
+          "row": 347101,
+          "length": 69,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3778,
+          "start": 20,
+          "row": 347121,
+          "length": 69,
+          "normalized_time": 0.3389830508474576,
+          "quartile": 1
+        },
+        {
+          "episode": 3778,
+          "start": 39,
+          "row": 347140,
+          "length": 69,
+          "normalized_time": 0.6610169491525424,
+          "quartile": 2
+        },
+        {
+          "episode": 3778,
+          "start": 59,
+          "row": 347160,
+          "length": 69,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7957,
+          "start": 0,
+          "row": 731983,
+          "length": 77,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7957,
+          "start": 22,
+          "row": 732005,
+          "length": 77,
+          "normalized_time": 0.3283582089552239,
+          "quartile": 1
+        },
+        {
+          "episode": 7957,
+          "start": 45,
+          "row": 732028,
+          "length": 77,
+          "normalized_time": 0.6716417910447762,
+          "quartile": 2
+        },
+        {
+          "episode": 7957,
+          "start": 67,
+          "row": 732050,
+          "length": 77,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 1845,
+          "start": 0,
+          "row": 169461,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 1845,
+          "start": 30,
+          "row": 169491,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 1845,
+          "start": 61,
+          "row": 169522,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 1845,
+          "start": 91,
+          "row": 169552,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 6468,
+          "start": 0,
+          "row": 595167,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 6468,
+          "start": 30,
+          "row": 595197,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 6468,
+          "start": 61,
+          "row": 595228,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 6468,
+          "start": 91,
+          "row": 595258,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5493,
+          "start": 0,
+          "row": 505513,
+          "length": 101,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5493,
+          "start": 30,
+          "row": 505543,
+          "length": 101,
+          "normalized_time": 0.32967032967032966,
+          "quartile": 1
+        },
+        {
+          "episode": 5493,
+          "start": 61,
+          "row": 505574,
+          "length": 101,
+          "normalized_time": 0.6703296703296703,
+          "quartile": 2
+        },
+        {
+          "episode": 5493,
+          "start": 91,
+          "row": 505604,
+          "length": 101,
+          "normalized_time": 1.0,
+          "quartile": 3
+        }
+      ]
+    },
+    "cube": {
+      "dataset": "/workspace/datasets/lewm-cube/train.lance",
+      "dataset_version": 23,
+      "dataset_rows": 2010000,
+      "episodes": [
+        2383,
+        5533,
+        3552,
+        2322,
+        3459,
+        2430,
+        8474,
+        4018,
+        4416,
+        6791,
+        5444,
+        7293,
+        3642,
+        448,
+        732,
+        1481,
+        5821,
+        6163,
+        4427,
+        395,
+        2753,
+        8016,
+        291,
+        3239,
+        97,
+        7393,
+        2037,
+        5214,
+        9723,
+        3931,
+        8405,
+        8182,
+        9620,
+        5512,
+        9153,
+        2364,
+        6553,
+        1700,
+        5453,
+        7698,
+        5317,
+        4211,
+        4219,
+        2295,
+        3565,
+        8970,
+        4694,
+        8153,
+        8924,
+        7553,
+        7498,
+        8241,
+        7612,
+        3869,
+        9004,
+        8783,
+        5063,
+        5132,
+        2452,
+        7860,
+        4710,
+        5897,
+        4830,
+        4060
+      ],
+      "clips": [
+        {
+          "episode": 2383,
+          "start": 0,
+          "row": 478983,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2383,
+          "start": 64,
+          "row": 479047,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 2383,
+          "start": 127,
+          "row": 479110,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 2383,
+          "start": 191,
+          "row": 479174,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5533,
+          "start": 0,
+          "row": 1112133,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5533,
+          "start": 64,
+          "row": 1112197,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 5533,
+          "start": 127,
+          "row": 1112260,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 5533,
+          "start": 191,
+          "row": 1112324,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3552,
+          "start": 0,
+          "row": 713952,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3552,
+          "start": 64,
+          "row": 714016,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 3552,
+          "start": 127,
+          "row": 714079,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 3552,
+          "start": 191,
+          "row": 714143,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2322,
+          "start": 0,
+          "row": 466722,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2322,
+          "start": 64,
+          "row": 466786,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 2322,
+          "start": 127,
+          "row": 466849,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 2322,
+          "start": 191,
+          "row": 466913,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3459,
+          "start": 0,
+          "row": 695259,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3459,
+          "start": 64,
+          "row": 695323,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 3459,
+          "start": 127,
+          "row": 695386,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 3459,
+          "start": 191,
+          "row": 695450,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2430,
+          "start": 0,
+          "row": 488430,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2430,
+          "start": 64,
+          "row": 488494,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 2430,
+          "start": 127,
+          "row": 488557,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 2430,
+          "start": 191,
+          "row": 488621,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8474,
+          "start": 0,
+          "row": 1703274,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8474,
+          "start": 64,
+          "row": 1703338,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 8474,
+          "start": 127,
+          "row": 1703401,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 8474,
+          "start": 191,
+          "row": 1703465,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4018,
+          "start": 0,
+          "row": 807618,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4018,
+          "start": 64,
+          "row": 807682,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 4018,
+          "start": 127,
+          "row": 807745,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 4018,
+          "start": 191,
+          "row": 807809,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4416,
+          "start": 0,
+          "row": 887616,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4416,
+          "start": 64,
+          "row": 887680,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 4416,
+          "start": 127,
+          "row": 887743,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 4416,
+          "start": 191,
+          "row": 887807,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 6791,
+          "start": 0,
+          "row": 1364991,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 6791,
+          "start": 64,
+          "row": 1365055,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 6791,
+          "start": 127,
+          "row": 1365118,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 6791,
+          "start": 191,
+          "row": 1365182,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5444,
+          "start": 0,
+          "row": 1094244,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5444,
+          "start": 64,
+          "row": 1094308,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 5444,
+          "start": 127,
+          "row": 1094371,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 5444,
+          "start": 191,
+          "row": 1094435,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7293,
+          "start": 0,
+          "row": 1465893,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7293,
+          "start": 64,
+          "row": 1465957,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 7293,
+          "start": 127,
+          "row": 1466020,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 7293,
+          "start": 191,
+          "row": 1466084,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3642,
+          "start": 0,
+          "row": 732042,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3642,
+          "start": 64,
+          "row": 732106,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 3642,
+          "start": 127,
+          "row": 732169,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 3642,
+          "start": 191,
+          "row": 732233,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 448,
+          "start": 0,
+          "row": 90048,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 448,
+          "start": 64,
+          "row": 90112,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 448,
+          "start": 127,
+          "row": 90175,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 448,
+          "start": 191,
+          "row": 90239,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 732,
+          "start": 0,
+          "row": 147132,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 732,
+          "start": 64,
+          "row": 147196,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 732,
+          "start": 127,
+          "row": 147259,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 732,
+          "start": 191,
+          "row": 147323,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 1481,
+          "start": 0,
+          "row": 297681,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 1481,
+          "start": 64,
+          "row": 297745,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 1481,
+          "start": 127,
+          "row": 297808,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 1481,
+          "start": 191,
+          "row": 297872,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5821,
+          "start": 0,
+          "row": 1170021,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5821,
+          "start": 64,
+          "row": 1170085,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 5821,
+          "start": 127,
+          "row": 1170148,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 5821,
+          "start": 191,
+          "row": 1170212,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 6163,
+          "start": 0,
+          "row": 1238763,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 6163,
+          "start": 64,
+          "row": 1238827,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 6163,
+          "start": 127,
+          "row": 1238890,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 6163,
+          "start": 191,
+          "row": 1238954,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4427,
+          "start": 0,
+          "row": 889827,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4427,
+          "start": 64,
+          "row": 889891,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 4427,
+          "start": 127,
+          "row": 889954,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 4427,
+          "start": 191,
+          "row": 890018,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 395,
+          "start": 0,
+          "row": 79395,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 395,
+          "start": 64,
+          "row": 79459,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 395,
+          "start": 127,
+          "row": 79522,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 395,
+          "start": 191,
+          "row": 79586,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2753,
+          "start": 0,
+          "row": 553353,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2753,
+          "start": 64,
+          "row": 553417,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 2753,
+          "start": 127,
+          "row": 553480,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 2753,
+          "start": 191,
+          "row": 553544,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8016,
+          "start": 0,
+          "row": 1611216,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8016,
+          "start": 64,
+          "row": 1611280,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 8016,
+          "start": 127,
+          "row": 1611343,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 8016,
+          "start": 191,
+          "row": 1611407,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 291,
+          "start": 0,
+          "row": 58491,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 291,
+          "start": 64,
+          "row": 58555,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 291,
+          "start": 127,
+          "row": 58618,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 291,
+          "start": 191,
+          "row": 58682,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3239,
+          "start": 0,
+          "row": 651039,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3239,
+          "start": 64,
+          "row": 651103,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 3239,
+          "start": 127,
+          "row": 651166,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 3239,
+          "start": 191,
+          "row": 651230,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 97,
+          "start": 0,
+          "row": 19497,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 97,
+          "start": 64,
+          "row": 19561,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 97,
+          "start": 127,
+          "row": 19624,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 97,
+          "start": 191,
+          "row": 19688,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7393,
+          "start": 0,
+          "row": 1485993,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7393,
+          "start": 64,
+          "row": 1486057,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 7393,
+          "start": 127,
+          "row": 1486120,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 7393,
+          "start": 191,
+          "row": 1486184,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2037,
+          "start": 0,
+          "row": 409437,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2037,
+          "start": 64,
+          "row": 409501,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 2037,
+          "start": 127,
+          "row": 409564,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 2037,
+          "start": 191,
+          "row": 409628,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5214,
+          "start": 0,
+          "row": 1048014,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5214,
+          "start": 64,
+          "row": 1048078,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 5214,
+          "start": 127,
+          "row": 1048141,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 5214,
+          "start": 191,
+          "row": 1048205,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9723,
+          "start": 0,
+          "row": 1954323,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9723,
+          "start": 64,
+          "row": 1954387,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 9723,
+          "start": 127,
+          "row": 1954450,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 9723,
+          "start": 191,
+          "row": 1954514,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3931,
+          "start": 0,
+          "row": 790131,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3931,
+          "start": 64,
+          "row": 790195,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 3931,
+          "start": 127,
+          "row": 790258,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 3931,
+          "start": 191,
+          "row": 790322,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8405,
+          "start": 0,
+          "row": 1689405,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8405,
+          "start": 64,
+          "row": 1689469,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 8405,
+          "start": 127,
+          "row": 1689532,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 8405,
+          "start": 191,
+          "row": 1689596,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8182,
+          "start": 0,
+          "row": 1644582,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8182,
+          "start": 64,
+          "row": 1644646,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 8182,
+          "start": 127,
+          "row": 1644709,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 8182,
+          "start": 191,
+          "row": 1644773,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9620,
+          "start": 0,
+          "row": 1933620,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9620,
+          "start": 64,
+          "row": 1933684,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 9620,
+          "start": 127,
+          "row": 1933747,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 9620,
+          "start": 191,
+          "row": 1933811,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5512,
+          "start": 0,
+          "row": 1107912,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5512,
+          "start": 64,
+          "row": 1107976,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 5512,
+          "start": 127,
+          "row": 1108039,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 5512,
+          "start": 191,
+          "row": 1108103,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9153,
+          "start": 0,
+          "row": 1839753,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9153,
+          "start": 64,
+          "row": 1839817,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 9153,
+          "start": 127,
+          "row": 1839880,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 9153,
+          "start": 191,
+          "row": 1839944,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2364,
+          "start": 0,
+          "row": 475164,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2364,
+          "start": 64,
+          "row": 475228,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 2364,
+          "start": 127,
+          "row": 475291,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 2364,
+          "start": 191,
+          "row": 475355,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 6553,
+          "start": 0,
+          "row": 1317153,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 6553,
+          "start": 64,
+          "row": 1317217,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 6553,
+          "start": 127,
+          "row": 1317280,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 6553,
+          "start": 191,
+          "row": 1317344,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 1700,
+          "start": 0,
+          "row": 341700,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 1700,
+          "start": 64,
+          "row": 341764,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 1700,
+          "start": 127,
+          "row": 341827,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 1700,
+          "start": 191,
+          "row": 341891,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5453,
+          "start": 0,
+          "row": 1096053,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5453,
+          "start": 64,
+          "row": 1096117,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 5453,
+          "start": 127,
+          "row": 1096180,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 5453,
+          "start": 191,
+          "row": 1096244,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7698,
+          "start": 0,
+          "row": 1547298,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7698,
+          "start": 64,
+          "row": 1547362,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 7698,
+          "start": 127,
+          "row": 1547425,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 7698,
+          "start": 191,
+          "row": 1547489,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5317,
+          "start": 0,
+          "row": 1068717,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5317,
+          "start": 64,
+          "row": 1068781,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 5317,
+          "start": 127,
+          "row": 1068844,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 5317,
+          "start": 191,
+          "row": 1068908,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4211,
+          "start": 0,
+          "row": 846411,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4211,
+          "start": 64,
+          "row": 846475,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 4211,
+          "start": 127,
+          "row": 846538,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 4211,
+          "start": 191,
+          "row": 846602,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4219,
+          "start": 0,
+          "row": 848019,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4219,
+          "start": 64,
+          "row": 848083,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 4219,
+          "start": 127,
+          "row": 848146,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 4219,
+          "start": 191,
+          "row": 848210,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2295,
+          "start": 0,
+          "row": 461295,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2295,
+          "start": 64,
+          "row": 461359,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 2295,
+          "start": 127,
+          "row": 461422,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 2295,
+          "start": 191,
+          "row": 461486,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3565,
+          "start": 0,
+          "row": 716565,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3565,
+          "start": 64,
+          "row": 716629,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 3565,
+          "start": 127,
+          "row": 716692,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 3565,
+          "start": 191,
+          "row": 716756,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8970,
+          "start": 0,
+          "row": 1802970,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8970,
+          "start": 64,
+          "row": 1803034,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 8970,
+          "start": 127,
+          "row": 1803097,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 8970,
+          "start": 191,
+          "row": 1803161,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4694,
+          "start": 0,
+          "row": 943494,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4694,
+          "start": 64,
+          "row": 943558,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 4694,
+          "start": 127,
+          "row": 943621,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 4694,
+          "start": 191,
+          "row": 943685,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8153,
+          "start": 0,
+          "row": 1638753,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8153,
+          "start": 64,
+          "row": 1638817,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 8153,
+          "start": 127,
+          "row": 1638880,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 8153,
+          "start": 191,
+          "row": 1638944,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8924,
+          "start": 0,
+          "row": 1793724,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8924,
+          "start": 64,
+          "row": 1793788,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 8924,
+          "start": 127,
+          "row": 1793851,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 8924,
+          "start": 191,
+          "row": 1793915,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7553,
+          "start": 0,
+          "row": 1518153,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7553,
+          "start": 64,
+          "row": 1518217,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 7553,
+          "start": 127,
+          "row": 1518280,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 7553,
+          "start": 191,
+          "row": 1518344,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7498,
+          "start": 0,
+          "row": 1507098,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7498,
+          "start": 64,
+          "row": 1507162,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 7498,
+          "start": 127,
+          "row": 1507225,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 7498,
+          "start": 191,
+          "row": 1507289,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8241,
+          "start": 0,
+          "row": 1656441,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8241,
+          "start": 64,
+          "row": 1656505,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 8241,
+          "start": 127,
+          "row": 1656568,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 8241,
+          "start": 191,
+          "row": 1656632,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7612,
+          "start": 0,
+          "row": 1530012,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7612,
+          "start": 64,
+          "row": 1530076,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 7612,
+          "start": 127,
+          "row": 1530139,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 7612,
+          "start": 191,
+          "row": 1530203,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 3869,
+          "start": 0,
+          "row": 777669,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 3869,
+          "start": 64,
+          "row": 777733,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 3869,
+          "start": 127,
+          "row": 777796,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 3869,
+          "start": 191,
+          "row": 777860,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 9004,
+          "start": 0,
+          "row": 1809804,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 9004,
+          "start": 64,
+          "row": 1809868,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 9004,
+          "start": 127,
+          "row": 1809931,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 9004,
+          "start": 191,
+          "row": 1809995,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 8783,
+          "start": 0,
+          "row": 1765383,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 8783,
+          "start": 64,
+          "row": 1765447,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 8783,
+          "start": 127,
+          "row": 1765510,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 8783,
+          "start": 191,
+          "row": 1765574,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5063,
+          "start": 0,
+          "row": 1017663,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5063,
+          "start": 64,
+          "row": 1017727,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 5063,
+          "start": 127,
+          "row": 1017790,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 5063,
+          "start": 191,
+          "row": 1017854,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5132,
+          "start": 0,
+          "row": 1031532,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5132,
+          "start": 64,
+          "row": 1031596,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 5132,
+          "start": 127,
+          "row": 1031659,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 5132,
+          "start": 191,
+          "row": 1031723,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 2452,
+          "start": 0,
+          "row": 492852,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 2452,
+          "start": 64,
+          "row": 492916,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 2452,
+          "start": 127,
+          "row": 492979,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 2452,
+          "start": 191,
+          "row": 493043,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 7860,
+          "start": 0,
+          "row": 1579860,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 7860,
+          "start": 64,
+          "row": 1579924,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 7860,
+          "start": 127,
+          "row": 1579987,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 7860,
+          "start": 191,
+          "row": 1580051,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4710,
+          "start": 0,
+          "row": 946710,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4710,
+          "start": 64,
+          "row": 946774,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 4710,
+          "start": 127,
+          "row": 946837,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 4710,
+          "start": 191,
+          "row": 946901,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 5897,
+          "start": 0,
+          "row": 1185297,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 5897,
+          "start": 64,
+          "row": 1185361,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 5897,
+          "start": 127,
+          "row": 1185424,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 5897,
+          "start": 191,
+          "row": 1185488,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4830,
+          "start": 0,
+          "row": 970830,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4830,
+          "start": 64,
+          "row": 970894,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 4830,
+          "start": 127,
+          "row": 970957,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 4830,
+          "start": 191,
+          "row": 971021,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        },
+        {
+          "episode": 4060,
+          "start": 0,
+          "row": 816060,
+          "length": 201,
+          "normalized_time": 0.0,
+          "quartile": 0
+        },
+        {
+          "episode": 4060,
+          "start": 64,
+          "row": 816124,
+          "length": 201,
+          "normalized_time": 0.33507853403141363,
+          "quartile": 1
+        },
+        {
+          "episode": 4060,
+          "start": 127,
+          "row": 816187,
+          "length": 201,
+          "normalized_time": 0.6649214659685864,
+          "quartile": 2
+        },
+        {
+          "episode": 4060,
+          "start": 191,
+          "row": 816251,
+          "length": 201,
+          "normalized_time": 1.0,
+          "quartile": 3
+        }
+      ]
+    }
+  }
+}

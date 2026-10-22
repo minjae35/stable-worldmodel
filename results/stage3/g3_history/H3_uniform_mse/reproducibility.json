@@ -1,0 +1,50 @@
+{
+  "initial_model_sha256": "5d5da87db6e2cf7d1f06004456ab89c9f695c5d14a682ec37c9de0acd554dfa2",
+  "schedule_sha256_by_environment": {
+    "pusht": "5d49efc81f3378d41a00d435fa6f28fd9011dcac2322722355a7fcb60c190b4a",
+    "tworoom": "222a3facf40477141fe6cc7ba5b1a806b51903ba2e294198c3bd4377193847b8",
+    "cube": "88bb8aa98671833558fd32c180a10944e6a8dd7ceb7364976a4b0217da80273e"
+  },
+  "schedule_set_sha256": "dc8f8059e87d5381ee0e68b36f43a7bb200ac514bb2a3a96ce5b23f2140a1d93",
+  "normalizer_key": "238886bc2badfd87ad449c57271ed8720c65eeaf76fd885f373352a63cb581c8",
+  "normalizer_sha256": "dd7194f4747ab0b5ce5be5599d7351ebae48877dd7c6e27892953669470bb0a4",
+  "training_columns": [
+    "episode_idx",
+    "pixels",
+    "action"
+  ],
+  "forbidden_training_inputs": [
+    "object_state",
+    "mask",
+    "reward",
+    "contact",
+    "event_label"
+  ],
+  "history_alignment": {
+    "H1": {
+      "observations": [
+        "t"
+      ],
+      "actions": [
+        "[t,t+5)"
+      ],
+      "target": "t+5"
+    },
+    "H3": {
+      "observations": [
+        "t-10",
+        "t-5",
+        "t"
+      ],
+      "actions": [
+        "[t-10,t-5)",
+        "[t-5,t)",
+        "[t,t+5)"
+      ],
+      "target": "t+5"
+    },
+    "target_anchor_shared": true,
+    "future_information_used": false
+  },
+  "model_parameter_count": 6794368
+}

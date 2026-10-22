@@ -1,0 +1,218 @@
+{
+  "probe_key": "fadce4f689600fa12b91559ba9de28ba9166fdc6db0628012a95b16f014058ff",
+  "identity": {
+    "feature_cache_key": "4ea37543b36812a7f302e2b2e16468f491ffdc26b4dce338dd55425bd9cded5e",
+    "solver": "sklearn_cholesky",
+    "alphas": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0
+    ],
+    "alpha_selection": "validation_only",
+    "targets": "environment_state_targets"
+  },
+  "fits": {
+    "pusht": {
+      "agent_xy": {
+        "solver": "sklearn_cholesky",
+        "alpha_search": [
+          {
+            "alpha": 0.01,
+            "val_mae": 20.40976333618164
+          },
+          {
+            "alpha": 0.1,
+            "val_mae": 20.3048038482666
+          },
+          {
+            "alpha": 1.0,
+            "val_mae": 19.718887329101562
+          },
+          {
+            "alpha": 10.0,
+            "val_mae": 18.132396697998047
+          },
+          {
+            "alpha": 100.0,
+            "val_mae": 18.184539794921875
+          },
+          {
+            "alpha": 1000.0,
+            "val_mae": 22.094940185546875
+          }
+        ],
+        "chosen_alpha": 10.0,
+        "val_mae": 18.132396697998047,
+        "seconds": 4.776486436021514
+      },
+      "block_xy": {
+        "solver": "sklearn_cholesky",
+        "alpha_search": [
+          {
+            "alpha": 0.01,
+            "val_mae": 13.006278991699219
+          },
+          {
+            "alpha": 0.1,
+            "val_mae": 12.983095169067383
+          },
+          {
+            "alpha": 1.0,
+            "val_mae": 12.800069808959961
+          },
+          {
+            "alpha": 10.0,
+            "val_mae": 12.452919006347656
+          },
+          {
+            "alpha": 100.0,
+            "val_mae": 12.861812591552734
+          },
+          {
+            "alpha": 1000.0,
+            "val_mae": 15.346790313720703
+          }
+        ],
+        "chosen_alpha": 10.0,
+        "val_mae": 12.452919006347656,
+        "seconds": 2.7937602680176497
+      },
+      "block_angle": {
+        "solver": "sklearn_cholesky",
+        "alpha_search": [
+          {
+            "alpha": 0.01,
+            "val_mae": 11.741355895996094
+          },
+          {
+            "alpha": 0.1,
+            "val_mae": 11.696830749511719
+          },
+          {
+            "alpha": 1.0,
+            "val_mae": 11.309085845947266
+          },
+          {
+            "alpha": 10.0,
+            "val_mae": 10.403359413146973
+          },
+          {
+            "alpha": 100.0,
+            "val_mae": 10.237056732177734
+          },
+          {
+            "alpha": 1000.0,
+            "val_mae": 12.820732116699219
+          }
+        ],
+        "chosen_alpha": 100.0,
+        "val_mae": 10.237056732177734,
+        "seconds": 3.1044080939609557
+      }
+    },
+    "tworoom": {
+      "agent_xy": {
+        "solver": "sklearn_cholesky",
+        "alpha_search": [
+          {
+            "alpha": 0.01,
+            "val_mae": 0.5540865659713745
+          },
+          {
+            "alpha": 0.1,
+            "val_mae": 0.5241296291351318
+          },
+          {
+            "alpha": 1.0,
+            "val_mae": 0.48718029260635376
+          },
+          {
+            "alpha": 10.0,
+            "val_mae": 0.5250161290168762
+          },
+          {
+            "alpha": 100.0,
+            "val_mae": 0.6817284822463989
+          },
+          {
+            "alpha": 1000.0,
+            "val_mae": 1.0806721448898315
+          }
+        ],
+        "chosen_alpha": 1.0,
+        "val_mae": 0.48718029260635376,
+        "seconds": 3.1864499469520524
+      }
+    },
+    "cube": {
+      "block_xyz": {
+        "solver": "sklearn_cholesky",
+        "alpha_search": [
+          {
+            "alpha": 0.01,
+            "val_mae": 0.030761953443288803
+          },
+          {
+            "alpha": 0.1,
+            "val_mae": 0.030733712017536163
+          },
+          {
+            "alpha": 1.0,
+            "val_mae": 0.030473804101347923
+          },
+          {
+            "alpha": 10.0,
+            "val_mae": 0.028878189623355865
+          },
+          {
+            "alpha": 100.0,
+            "val_mae": 0.02621046081185341
+          },
+          {
+            "alpha": 1000.0,
+            "val_mae": 0.026625938713550568
+          }
+        ],
+        "chosen_alpha": 100.0,
+        "val_mae": 0.02621046081185341,
+        "seconds": 3.1324515339219943
+      },
+      "effector_xyz": {
+        "solver": "sklearn_cholesky",
+        "alpha_search": [
+          {
+            "alpha": 0.01,
+            "val_mae": 0.014121834188699722
+          },
+          {
+            "alpha": 0.1,
+            "val_mae": 0.014108576811850071
+          },
+          {
+            "alpha": 1.0,
+            "val_mae": 0.013980628922581673
+          },
+          {
+            "alpha": 10.0,
+            "val_mae": 0.013171114027500153
+          },
+          {
+            "alpha": 100.0,
+            "val_mae": 0.011866051703691483
+          },
+          {
+            "alpha": 1000.0,
+            "val_mae": 0.012826476246118546
+          }
+        ],
+        "chosen_alpha": 100.0,
+        "val_mae": 0.011866051703691483,
+        "seconds": 3.695302218082361
+      }
+    }
+  },
+  "total_seconds": 23.13146375096403
+}

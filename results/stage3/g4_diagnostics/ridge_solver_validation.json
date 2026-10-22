@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "protocol": "synthetic identical-input CPU sklearn cholesky vs CUDA float32 dual eig",
+  "seed": 7,
+  "train_shape": [192, 48],
+  "validation_shape": [64, 48],
+  "cpu_chosen_alpha": 1000.0,
+  "cuda_chosen_alpha": 1000.0,
+  "cpu_validation_circular_mae_deg": 87.09745025634766,
+  "cuda_validation_circular_mae_deg": 87.09821319580078,
+  "prediction_mean_circular_difference_deg": 0.0014637282583862543,
+  "prediction_max_circular_difference_deg": 0.010016472078859806
+}

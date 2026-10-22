@@ -1,0 +1,62 @@
+[
+  {
+    "step": 1000,
+    "arm": "A",
+    "kind": "evaluation",
+    "returncode": 0,
+    "seconds": 14.103146100998856
+  },
+  {
+    "step": 1000,
+    "arm": "B",
+    "kind": "evaluation",
+    "returncode": 0,
+    "seconds": 14.034275174024515
+  },
+  {
+    "step": 1000,
+    "kind": "paired_bootstrap",
+    "returncode": 0,
+    "seconds": 10.7697047770489
+  },
+  {
+    "step": 1500,
+    "arm": "A",
+    "kind": "evaluation",
+    "returncode": 0,
+    "seconds": 13.66484585404396
+  },
+  {
+    "step": 1500,
+    "arm": "B",
+    "kind": "evaluation",
+    "returncode": 0,
+    "seconds": 14.116756804985926
+  },
+  {
+    "step": 1500,
+    "kind": "paired_bootstrap",
+    "returncode": 0,
+    "seconds": 10.819397811079398
+  },
+  {
+    "step": 2000,
+    "arm": "A",
+    "kind": "evaluation",
+    "returncode": 0,
+    "seconds": 14.003375508938916
+  },
+  {
+    "step": 2000,
+    "arm": "B",
+    "kind": "evaluation",
+    "returncode": 0,
+    "seconds": 13.825601289048791
+  },
+  {
+    "step": 2000,
+    "kind": "paired_bootstrap",
+    "returncode": 0,
+    "seconds": 10.640528627904132
+  }
+]

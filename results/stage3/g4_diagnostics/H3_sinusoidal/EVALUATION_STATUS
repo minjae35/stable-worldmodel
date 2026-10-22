@@ -1,0 +1,6 @@
+DONE
+
+Standard Development evaluation, episode-paired bootstrap, history/action
+ablations, and corrected post-final-LayerNorm object-local evaluation completed.
+The original checkpoint STATUS is retained as TRAINING_DONE_EVALUATION_DEFERRED
+to preserve the state written by the training process itself.
