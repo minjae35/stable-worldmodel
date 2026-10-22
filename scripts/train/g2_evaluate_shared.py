@@ -32,6 +32,7 @@ from scripts.train.g2_spatial import (  # noqa: E402
     sha256_file,
 )
 from stable_worldmodel.wm.spatial.g2 import ENV_NAMES, load_label_free_clips  # noqa: E402
+from stable_worldmodel.wm.spatial.g2 import load_label_free_actions  # noqa: E402
 from stable_worldmodel.wm.spatial.g2_eval import (  # noqa: E402
     ArrayLinearModel,
     RidgeProbe,
@@ -44,6 +45,7 @@ from stable_worldmodel.wm.spatial.g2_eval import (  # noqa: E402
     token_error_metrics,
 )
 from stable_worldmodel.wm.spatial.model import FrozenDINOv2, SpatialDynamics  # noqa: E402
+from stable_worldmodel.wm.spatial.g2_fresh import torch_normalizers  # noqa: E402
 
 CACHE_SCHEMA = 1
 ALPHAS = (0.01, 0.1, 1.0, 10.0, 100.0, 1000.0)
@@ -306,6 +308,7 @@ def evaluate_checkpoint(
     output: Path,
     seed: int,
     eval_batch: int,
+    action_normalizer_path: Path | None = None,
 ):
     if output.exists():
         raise FileExistsError(f'refusing to overwrite {output}')
@@ -329,9 +332,36 @@ def evaluate_checkpoint(
         'environments': {},
         'timing': {},
     }
+    action_normalizers = None
+    if action_normalizer_path is not None:
+        normalizer_artifact = json.loads(action_normalizer_path.read_text())
+        action_normalizers = torch_normalizers(normalizer_artifact)
+        report['action_normalizer'] = {
+            'path': str(action_normalizer_path.resolve()),
+            'sha256': sha256_file(action_normalizer_path),
+            'key': normalizer_artifact['key'],
+            'source': 'direct label-free Lance actions from cached cohort rows',
+        }
+        manifest = json.loads(MANIFEST.read_text())
+        import lance
     device = torch.device('cuda:0')
     for env_index, env in enumerate(ENV_NAMES):
         test = load_shard(cache_dir, env, 'test')
+        if action_normalizers is not None:
+            limit = int(feature_metadata['identity']['limits']['test'])
+            items = cache_items(manifest, env, 'test', limit)
+            raw_actions = load_label_free_actions(
+                lance.dataset(str(DATASETS[env])), items, env,
+                int(manifest['frameskip']),
+            )
+            if not np.array_equal(raw_actions['episode'], test['episode'].numpy()):
+                raise RuntimeError(f'{env} cached episode order mismatch')
+            if not np.array_equal(raw_actions['start'], test['start'].numpy()):
+                raise RuntimeError(f'{env} cached start order mismatch')
+            test = dict(test)
+            test['actions'] = normalize_actions(
+                raw_actions['actions'], action_normalizers[env]
+            )
         torch.cuda.synchronize()
         began = time.perf_counter()
         correct, shuffled, _ = predict_bundle(
@@ -415,6 +445,7 @@ def main():
     parser.add_argument('--train-items', type=int, default=0)
     parser.add_argument('--val-items', type=int, default=0)
     parser.add_argument('--test-items', type=int, default=0)
+    parser.add_argument('--action-normalizers', type=Path)
     args = parser.parse_args()
     cache_dir = args.cache_dir.resolve()
     limits = {
@@ -438,7 +469,9 @@ def main():
     if args.checkpoint is None or args.output is None:
         raise ValueError('--checkpoint and --output are required unless --prepare-only')
     report = evaluate_checkpoint(
-        args.checkpoint.resolve(), cache_dir, args.output.resolve(), args.seed, args.eval_batch
+        args.checkpoint.resolve(), cache_dir, args.output.resolve(), args.seed,
+        args.eval_batch,
+        None if args.action_normalizers is None else args.action_normalizers.resolve(),
     )
     print(json.dumps({'output': str(args.output), 'timing': report['timing']}, indent=2))
 

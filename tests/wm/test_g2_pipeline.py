@@ -30,6 +30,12 @@ from stable_worldmodel.wm.spatial.g2_eval import (
     token_error_metrics,
 )
 from stable_worldmodel.wm.spatial.model import SpatialDynamics
+from stable_worldmodel.wm.spatial.g2_fresh import (
+    packed_normalizer_from_raw_actions,
+    renormalize_actions,
+    train_episode_row_plan,
+    validate_sampling_episode_alignment,
+)
 
 
 def _manifest():
@@ -122,6 +128,35 @@ def test_schedule_is_reproducible_and_seed_sensitive():
     assert np.array_equal(first, second)
     assert schedule_sha256(first) == schedule_sha256(second)
     assert not np.array_equal(first, other)
+
+
+def test_fresh_sampling_keeps_episode_order_but_allows_window_difference():
+    manifest = _manifest()
+    manifest['pusht']['s1']['train'][0]['start'] = 3
+    manifest['pusht']['s1']['train'][0]['row'] = 3
+    validate_sampling_episode_alignment(manifest)
+    manifest['pusht']['s1']['train'][0]['episode'] = 99
+    with pytest.raises(ValueError, match='episode order'):
+        validate_sampling_episode_alignment(manifest)
+
+
+def test_fresh_train_episode_row_plan_and_tiled_action_normalizer():
+    manifest = _manifest()
+    plan = train_episode_row_plan(manifest, 'pusht')
+    assert plan == [(0, 0, 20), (1, 100, 20)]
+    raw = np.asarray([[0, 2], [2, 4], [4, 6], [6, 8]], dtype=np.float32)
+    normalizer = packed_normalizer_from_raw_actions(raw, frameskip=2)
+    assert normalizer['mean'] == pytest.approx([3, 5, 3, 5])
+    assert normalizer['std'] == pytest.approx([np.sqrt(5), np.sqrt(5)] * 2)
+
+
+def test_action_coordinate_renormalization_matches_direct_normalization():
+    raw = torch.tensor([[1.0, 4.0], [3.0, 8.0]])
+    source = {'mean': torch.tensor([1.0, 2.0]), 'std': torch.tensor([2.0, 4.0])}
+    target = {'mean': torch.tensor([2.0, 3.0]), 'std': torch.tensor([0.5, 2.0])}
+    source_coordinates = (raw - source['mean']) / source['std']
+    converted = renormalize_actions(source_coordinates, source, target)
+    assert torch.allclose(converted, (raw - target['mean']) / target['std'])
 
 
 def test_mse_and_l1_have_finite_nonzero_gradients():
@@ -295,6 +330,30 @@ def _load_launcher():
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def _load_fresh_launcher():
+    path = Path(__file__).parents[2] / 'scripts/train/launch_g2_fresh_ab.py'
+    spec = importlib.util.spec_from_file_location('g2_fresh_launcher_test', path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def test_fresh_launcher_builds_only_ab_with_shared_artifacts(tmp_path):
+    launcher = _load_fresh_launcher()
+    output = tmp_path / 'fresh'
+    commands = launcher.build_commands('/venv/stable-wm/bin/python', output, False)
+    assert [command[command.index('--arm') + 1] for command in commands] == ['A', 'B']
+    assert all('--defer-evaluation' in command for command in commands)
+    assert {
+        command[command.index('--normalizer-file') + 1] for command in commands
+    } == {str(output / 'action_normalizers.json')}
+    assert all('--resume' not in command for command in commands)
+    launcher.preflight(output, commands)
+    output.mkdir()
+    with pytest.raises(FileExistsError):
+        launcher.preflight(output, commands)
 
 
 def test_launcher_builds_four_sequential_commands_and_refuses_existing_root(tmp_path, monkeypatch):

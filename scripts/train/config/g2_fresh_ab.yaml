@@ -1,0 +1,37 @@
+experiment: stage3_g2_fresh_ab
+seed: 3072
+steps: 500
+batch_per_env: 16
+optimizer:
+  name: AdamW
+  lr: 0.001
+  weight_decay: 0.0001
+grad_clip: 1.0
+checkpoint_every: 100
+frameskip: 5
+history: 1
+model:
+  encoder: frozen_dinov2_s14
+  dynamics: shared_spatial_dynamics
+  initialization: deterministic_fresh_seed_3072
+  checkpoint: null
+normalization:
+  fit_split: manifest_train_episodes
+  columns: [episode_idx, action]
+  method: finite_raw_action_zscore_tiled_over_frameskip
+  terminal_nonfinite_policy: exclude
+sampling_control:
+  shared_index_schedule: true
+  shared_episode_order: true
+  only_window_selection_differs: true
+arms:
+  A: {sampling: s0_uniform, loss: mse}
+  B: {sampling: s1_temporal_coverage, loss: mse}
+evaluation:
+  development_cohort: results/stage3/g2_2x2/shared_eval_cache
+  reuse_frozen_dino_features: true
+  reuse_ridge_probes: true
+  action_source: direct_label_free_lance_rows
+  sealed_cohort:
+    frozen_before_training: true
+    used_for_hyperparameter_selection: false

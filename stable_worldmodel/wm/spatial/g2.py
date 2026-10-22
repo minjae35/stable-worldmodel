@@ -209,6 +209,43 @@ def load_label_free_clips(
     }
 
 
+def load_label_free_actions(
+    dataset,
+    clips: list[dict],
+    env: str,
+    frameskip: int,
+) -> dict:
+    """Read only episode ids and causal action blocks for cached evaluation."""
+    columns = assert_label_free_columns(('episode_idx', 'action'))
+    rows = []
+    plans = []
+    for clip in clips:
+        context, target, actions = clip_rows(clip, frameskip)
+        plans.append((clip, context, target, actions))
+        rows.extend([context, target, *actions])
+    _, by_row = _take(dataset, rows, columns)
+    blocked_actions = []
+    for clip, context, target, actions in plans:
+        expected_episode = int(clip['episode'])
+        observed = {int(by_row[row]['episode_idx']) for row in [context, target, *actions]}
+        if observed != {expected_episode}:
+            raise RuntimeError(
+                f'{env} action clip crosses episode: expected {expected_episode}, got {observed}'
+            )
+        raw = np.stack(
+            [np.asarray(by_row[row]['action'], dtype=np.float32).reshape(-1) for row in actions]
+        )
+        expected_shape = (frameskip, RAW_ACTION_DIMS[env])
+        if raw.shape != expected_shape:
+            raise RuntimeError(f'{env} action shape {raw.shape}, expected {expected_shape}')
+        blocked_actions.append(pack_blocked_action(raw, 1, frameskip)[0])
+    return {
+        'actions': np.stack(blocked_actions).astype(np.float32),
+        'episode': np.asarray([int(clip['episode']) for clip in clips], dtype=np.int64),
+        'start': np.asarray([int(clip['start']) for clip in clips], dtype=np.int64),
+    }
+
+
 def make_index_schedule(
     n_items: int,
     batch_size: int,
