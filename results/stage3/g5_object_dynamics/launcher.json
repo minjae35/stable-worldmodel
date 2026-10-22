@@ -1,0 +1,178 @@
+{
+  "sequential": true,
+  "stop_on_first_failure": true,
+  "phases": [
+    {
+      "name": "smoke_prefix_in_budget",
+      "runs": [
+        {
+          "arm": "A_uniform_control",
+          "command": [
+            "/venv/stable-wm/bin/python",
+            "/workspace/stable-worldmodel/scripts/train/g5_object_dynamics.py",
+            "--arm",
+            "A_uniform_control",
+            "--output-dir",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/A_uniform_control",
+            "--plan",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/experiment_plan.json",
+            "--stop-after-update",
+            "10"
+          ],
+          "returncode": 0,
+          "seconds": 11.381674276082776
+        },
+        {
+          "arm": "B_motion_balanced",
+          "command": [
+            "/venv/stable-wm/bin/python",
+            "/workspace/stable-worldmodel/scripts/train/g5_object_dynamics.py",
+            "--arm",
+            "B_motion_balanced",
+            "--output-dir",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/B_motion_balanced",
+            "--plan",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/experiment_plan.json",
+            "--stop-after-update",
+            "10"
+          ],
+          "returncode": 0,
+          "seconds": 11.467204857966863
+        },
+        {
+          "arm": "C_action_sensitive",
+          "command": [
+            "/venv/stable-wm/bin/python",
+            "/workspace/stable-worldmodel/scripts/train/g5_object_dynamics.py",
+            "--arm",
+            "C_action_sensitive",
+            "--output-dir",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/C_action_sensitive",
+            "--plan",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/experiment_plan.json",
+            "--stop-after-update",
+            "10"
+          ],
+          "returncode": 0,
+          "seconds": 11.180411283043213
+        },
+        {
+          "arm": "D_combined",
+          "command": [
+            "/venv/stable-wm/bin/python",
+            "/workspace/stable-worldmodel/scripts/train/g5_object_dynamics.py",
+            "--arm",
+            "D_combined",
+            "--output-dir",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/D_combined",
+            "--plan",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/experiment_plan.json",
+            "--stop-after-update",
+            "10"
+          ],
+          "returncode": 0,
+          "seconds": 11.547814639983699
+        }
+      ],
+      "validation": {
+        "A_uniform_control": {
+          "updates": 10,
+          "checkpoint": "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/A_uniform_control/checkpoint_step2010.pt",
+          "last_objective": 0.21202069520950317,
+          "peak_vram_gb": 2.3490962982177734
+        },
+        "B_motion_balanced": {
+          "updates": 10,
+          "checkpoint": "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/B_motion_balanced/checkpoint_step2010.pt",
+          "last_objective": 0.2002829909324646,
+          "peak_vram_gb": 2.349081039428711
+        },
+        "C_action_sensitive": {
+          "updates": 10,
+          "checkpoint": "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/C_action_sensitive/checkpoint_step2010.pt",
+          "last_objective": 0.18770790100097656,
+          "peak_vram_gb": 3.027388572692871
+        },
+        "D_combined": {
+          "updates": 10,
+          "checkpoint": "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/D_combined/checkpoint_step2010.pt",
+          "last_objective": 0.1816505491733551,
+          "peak_vram_gb": 3.027419090270996
+        }
+      }
+    },
+    {
+      "name": "resume_to_500",
+      "runs": [
+        {
+          "arm": "A_uniform_control",
+          "command": [
+            "/venv/stable-wm/bin/python",
+            "/workspace/stable-worldmodel/scripts/train/g5_object_dynamics.py",
+            "--arm",
+            "A_uniform_control",
+            "--output-dir",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/A_uniform_control",
+            "--plan",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/experiment_plan.json",
+            "--resume",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/A_uniform_control/checkpoint_step2010.pt"
+          ],
+          "returncode": 0,
+          "seconds": 72.92192754510324
+        },
+        {
+          "arm": "B_motion_balanced",
+          "command": [
+            "/venv/stable-wm/bin/python",
+            "/workspace/stable-worldmodel/scripts/train/g5_object_dynamics.py",
+            "--arm",
+            "B_motion_balanced",
+            "--output-dir",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/B_motion_balanced",
+            "--plan",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/experiment_plan.json",
+            "--resume",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/B_motion_balanced/checkpoint_step2010.pt"
+          ],
+          "returncode": 0,
+          "seconds": 74.48503441503271
+        },
+        {
+          "arm": "C_action_sensitive",
+          "command": [
+            "/venv/stable-wm/bin/python",
+            "/workspace/stable-worldmodel/scripts/train/g5_object_dynamics.py",
+            "--arm",
+            "C_action_sensitive",
+            "--output-dir",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/C_action_sensitive",
+            "--plan",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/experiment_plan.json",
+            "--resume",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/C_action_sensitive/checkpoint_step2010.pt"
+          ],
+          "returncode": 0,
+          "seconds": 79.0819843710633
+        },
+        {
+          "arm": "D_combined",
+          "command": [
+            "/venv/stable-wm/bin/python",
+            "/workspace/stable-worldmodel/scripts/train/g5_object_dynamics.py",
+            "--arm",
+            "D_combined",
+            "--output-dir",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/D_combined",
+            "--plan",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/experiment_plan.json",
+            "--resume",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/D_combined/checkpoint_step2010.pt"
+          ],
+          "returncode": 0,
+          "seconds": 77.70827017398551
+        }
+      ]
+    }
+  ]
+}

@@ -7,6 +7,7 @@ MSE is the training loss, not a planning objective.
 
 from __future__ import annotations
 
+import argparse
 import csv
 import hashlib
 import io
@@ -474,10 +475,17 @@ def set_seed(seed: int):
     torch.cuda.manual_seed_all(seed)
 
 
-def main():
+def main(argv=None):
+    global OUT
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--output-dir', type=Path, default=OUT)
+    args = parser.parse_args(argv)
+    OUT = args.output_dir.resolve()
+    if OUT.exists():
+        raise FileExistsError(f'refusing to overwrite G1 output directory {OUT}')
     if (OUT / 'metrics.csv').exists():
         raise SystemExit(f'{OUT} already has a run. Refusing to overwrite it.')
-    OUT.mkdir(parents=True, exist_ok=True)
+    OUT.mkdir(parents=True, exist_ok=False)
     log_path = OUT / 'train.log'
     (OUT / 'STATUS').write_text('RUNNING\n')
     device = torch.device('cuda')
@@ -907,7 +915,7 @@ if __name__ == '__main__':
         traceback.print_exc()
         try:
             status = OUT / 'STATUS'
-            if OUT.exists():
+            if status.exists() and status.read_text().strip() == 'RUNNING':
                 status.write_text('FAILED\n')
                 with open(OUT / 'train.log', 'a', buffering=1) as handle:
                     handle.write('G1_DONE exit=1\n')

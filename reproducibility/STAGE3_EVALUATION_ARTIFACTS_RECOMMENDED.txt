@@ -1,0 +1,6 @@
+results/stage3/g2_2x2/shared_eval_cache/probes.pt
+results/stage3/g3_history/shared_eval_cache/pusht_test.pt
+results/stage3/g3_history/shared_eval_cache/tworoom_test.pt
+results/stage3/g3_history/shared_eval_cache/cube_test.pt
+results/stage3/g4_diagnostics/representation_postnorm/selected_probes.pt
+results/stage3/g4_diagnostics/object_readout_cache_postnorm/pusht_object_readout.pt

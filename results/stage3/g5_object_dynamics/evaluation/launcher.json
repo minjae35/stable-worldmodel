@@ -1,0 +1,185 @@
+{
+  "cohort": "G3 Development; final holdout not used",
+  "runs": [
+    {
+      "model": "H1_source",
+      "kind": "common",
+      "seconds": 13.405946276034229,
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g3_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/checkpoint_step2000.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/evaluation/H1_source_common.json",
+        "--history",
+        "1"
+      ]
+    },
+    {
+      "model": "H1_source",
+      "kind": "object_postnorm",
+      "seconds": 7.298577311099507,
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g4_object_readout_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/checkpoint_step2000.pt",
+        "--g3-cache",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--object-cache",
+        "/workspace/stable-worldmodel/results/stage3/g4_diagnostics/object_readout_cache_postnorm",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/evaluation/H1_source_object_postnorm.json",
+        "--history",
+        "1"
+      ]
+    },
+    {
+      "model": "A_uniform_control",
+      "kind": "common",
+      "seconds": 13.173882388975471,
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g3_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/A_uniform_control/checkpoint_step2500.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/evaluation/A_uniform_control_common.json",
+        "--history",
+        "1"
+      ]
+    },
+    {
+      "model": "A_uniform_control",
+      "kind": "object_postnorm",
+      "seconds": 7.287820628029294,
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g4_object_readout_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/A_uniform_control/checkpoint_step2500.pt",
+        "--g3-cache",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--object-cache",
+        "/workspace/stable-worldmodel/results/stage3/g4_diagnostics/object_readout_cache_postnorm",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/evaluation/A_uniform_control_object_postnorm.json",
+        "--history",
+        "1"
+      ]
+    },
+    {
+      "model": "B_motion_balanced",
+      "kind": "common",
+      "seconds": 13.761526552960277,
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g3_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/B_motion_balanced/checkpoint_step2500.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/evaluation/B_motion_balanced_common.json",
+        "--history",
+        "1"
+      ]
+    },
+    {
+      "model": "B_motion_balanced",
+      "kind": "object_postnorm",
+      "seconds": 7.58918932499364,
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g4_object_readout_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/B_motion_balanced/checkpoint_step2500.pt",
+        "--g3-cache",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--object-cache",
+        "/workspace/stable-worldmodel/results/stage3/g4_diagnostics/object_readout_cache_postnorm",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/evaluation/B_motion_balanced_object_postnorm.json",
+        "--history",
+        "1"
+      ]
+    },
+    {
+      "model": "C_action_sensitive",
+      "kind": "common",
+      "seconds": 13.83273963094689,
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g3_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/C_action_sensitive/checkpoint_step2500.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/evaluation/C_action_sensitive_common.json",
+        "--history",
+        "1"
+      ]
+    },
+    {
+      "model": "C_action_sensitive",
+      "kind": "object_postnorm",
+      "seconds": 7.559493393986486,
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g4_object_readout_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/C_action_sensitive/checkpoint_step2500.pt",
+        "--g3-cache",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--object-cache",
+        "/workspace/stable-worldmodel/results/stage3/g4_diagnostics/object_readout_cache_postnorm",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/evaluation/C_action_sensitive_object_postnorm.json",
+        "--history",
+        "1"
+      ]
+    },
+    {
+      "model": "D_combined",
+      "kind": "common",
+      "seconds": 13.325046150013804,
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g3_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/D_combined/checkpoint_step2500.pt",
+        "--cache-dir",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/evaluation/D_combined_common.json",
+        "--history",
+        "1"
+      ]
+    },
+    {
+      "model": "D_combined",
+      "kind": "object_postnorm",
+      "seconds": 7.664138711988926,
+      "command": [
+        "/venv/stable-wm/bin/python",
+        "/workspace/stable-worldmodel/scripts/train/g4_object_readout_evaluate.py",
+        "--checkpoint",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/D_combined/checkpoint_step2500.pt",
+        "--g3-cache",
+        "/workspace/stable-worldmodel/results/stage3/g3_history/shared_eval_cache",
+        "--object-cache",
+        "/workspace/stable-worldmodel/results/stage3/g4_diagnostics/object_readout_cache_postnorm",
+        "--output",
+        "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/evaluation/D_combined_object_postnorm.json",
+        "--history",
+        "1"
+      ]
+    }
+  ]
+}

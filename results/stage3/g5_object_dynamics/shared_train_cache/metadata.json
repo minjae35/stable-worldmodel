@@ -1,0 +1,13 @@
+{
+  "common_manifest_sha256": "37e9194981f29f4b818d6facd36892b171a236d185126522211070e0859c1432",
+  "normalizer_sha256": "dd7194f4747ab0b5ce5be5599d7351ebae48877dd7c6e27892953669470bb0a4",
+  "dino_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+  "preprocessing": "ImageNet mean/std; Frozen DINOv2-S/14 final postnorm patch tokens",
+  "history": 1,
+  "frameskip": 5,
+  "cache_file_sha256": {
+    "pusht": "48921e578c71a9fa25bf239a22d17caad92ecfdf2f0c9438c6b585c51cbe1ab1",
+    "tworoom": "261b69442ccc21b77762ddee6f69d548ac6be60b49e9846651590b7b704b490f",
+    "cube": "45ff485741de1546ee070ad1b3bbf3e381667ccec4ff7616c986693c9dbaf54b"
+  }
+}

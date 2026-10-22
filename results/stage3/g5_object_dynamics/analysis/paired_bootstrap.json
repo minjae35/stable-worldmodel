@@ -1,0 +1,987 @@
+{
+  "cohort": "G3 Development only; no final holdout use",
+  "bootstrap_unit": "episode (per-episode means, 10000 paired resamples)",
+  "comparison_reference": "A_uniform_control",
+  "metric_direction": {
+    "errors": "lower_is_better",
+    "persistence_advantage": "higher_is_better",
+    "action_shuffle_gap": "higher_is_more_action_sensitive"
+  },
+  "paired_bootstrap": {
+    "B_motion_balanced": {
+      "pusht": {
+        "action_shuffle_gap_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.0022679029498249292,
+          "ci95": [
+            -0.005337920039892197,
+            0.0008118809200823307
+          ],
+          "probability_B_better_for_lower_metric": 0.925
+        },
+        "feature_mae": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.003153473138809204,
+          "ci95": [
+            0.001088244142010808,
+            0.00523024145513773
+          ],
+          "probability_B_better_for_lower_metric": 0.0013
+        },
+        "feature_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.003800195176154375,
+          "ci95": [
+            0.000654521572869271,
+            0.0068421983160078526
+          ],
+          "probability_B_better_for_lower_metric": 0.0093
+        },
+        "persistence_advantage_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.003800193313509226,
+          "ci95": [
+            -0.006842200644314289,
+            -0.0006545201758854091
+          ],
+          "probability_B_better_for_lower_metric": 0.9907
+        },
+        "postnorm_block_angle_challenge_absolute_error": {
+          "n_episodes": 32,
+          "mean_B_minus_A": -0.18843640387058258,
+          "ci95": [
+            -1.51607346534729,
+            1.167277216911316
+          ],
+          "probability_B_better_for_lower_metric": 0.6158
+        },
+        "postnorm_block_angle_challenge_delta_error": {
+          "n_episodes": 32,
+          "mean_B_minus_A": 0.13767142593860626,
+          "ci95": [
+            -1.2938741445541382,
+            1.5676188468933105
+          ],
+          "probability_B_better_for_lower_metric": 0.4383
+        },
+        "postnorm_block_angle_challenge_persistence_advantage": {
+          "n_episodes": 32,
+          "mean_B_minus_A": 0.1884363889694214,
+          "ci95": [
+            -1.1672773361206055,
+            1.51607346534729
+          ],
+          "probability_B_better_for_lower_metric": 0.3842
+        },
+        "postnorm_block_angle_natural_absolute_error": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.20169205963611603,
+          "ci95": [
+            -0.6464173793792725,
+            0.2320026308298111
+          ],
+          "probability_B_better_for_lower_metric": 0.8187
+        },
+        "postnorm_block_angle_natural_delta_error": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.08189646154642105,
+          "ci95": [
+            -0.38313403725624084,
+            0.5361107587814331
+          ],
+          "probability_B_better_for_lower_metric": 0.3691
+        },
+        "postnorm_block_angle_natural_persistence_advantage": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.20169201493263245,
+          "ci95": [
+            -0.23200269043445587,
+            0.6464173793792725
+          ],
+          "probability_B_better_for_lower_metric": 0.1813
+        },
+        "postnorm_block_xy_challenge_absolute_error": {
+          "n_episodes": 31,
+          "mean_B_minus_A": 0.22292210161685944,
+          "ci95": [
+            -0.7055155038833618,
+            1.1762503385543823
+          ],
+          "probability_B_better_for_lower_metric": 0.3231
+        },
+        "postnorm_block_xy_challenge_delta_error": {
+          "n_episodes": 31,
+          "mean_B_minus_A": 0.11941280961036682,
+          "ci95": [
+            -0.7990099191665649,
+            1.0266727209091187
+          ],
+          "probability_B_better_for_lower_metric": 0.3941
+        },
+        "postnorm_block_xy_challenge_persistence_advantage": {
+          "n_episodes": 31,
+          "mean_B_minus_A": -0.22292175889015198,
+          "ci95": [
+            -1.1762499809265137,
+            0.7055158615112305
+          ],
+          "probability_B_better_for_lower_metric": 0.6769
+        },
+        "postnorm_block_xy_natural_absolute_error": {
+          "n_episodes": 62,
+          "mean_B_minus_A": 0.4617106318473816,
+          "ci95": [
+            -0.08043056726455688,
+            0.9881765842437744
+          ],
+          "probability_B_better_for_lower_metric": 0.0487
+        },
+        "postnorm_block_xy_natural_delta_error": {
+          "n_episodes": 62,
+          "mean_B_minus_A": 0.3519248366355896,
+          "ci95": [
+            -0.1451275646686554,
+            0.8166888356208801
+          ],
+          "probability_B_better_for_lower_metric": 0.0809
+        },
+        "postnorm_block_xy_natural_persistence_advantage": {
+          "n_episodes": 62,
+          "mean_B_minus_A": -0.4617105722427368,
+          "ci95": [
+            -0.9881762266159058,
+            0.08043061196804047
+          ],
+          "probability_B_better_for_lower_metric": 0.9513
+        },
+        "static_quartile_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.0026165263504177947,
+          "ci95": [
+            0.0011707421220004707,
+            0.004035567747996537
+          ],
+          "probability_B_better_for_lower_metric": 0.0004
+        }
+      },
+      "tworoom": {
+        "action_shuffle_gap_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.011932078748941422,
+          "ci95": [
+            -0.021876659244298935,
+            -0.0032238499261438847
+          ],
+          "probability_B_better_for_lower_metric": 0.997
+        },
+        "feature_mae": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.006668373476713896,
+          "ci95": [
+            0.0038119913078844547,
+            0.009677039459347725
+          ],
+          "probability_B_better_for_lower_metric": 0.0
+        },
+        "feature_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.009237894788384438,
+          "ci95": [
+            0.004301139153540134,
+            0.01577470451593399
+          ],
+          "probability_B_better_for_lower_metric": 0.0
+        },
+        "persistence_advantage_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.009237894788384438,
+          "ci95": [
+            -0.01577470637857914,
+            -0.004301136825233698
+          ],
+          "probability_B_better_for_lower_metric": 1.0
+        },
+        "static_quartile_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.0026694322417218546,
+          "ci95": [
+            0.0017767049532267265,
+            0.0036516350861347745
+          ],
+          "probability_B_better_for_lower_metric": 0.0
+        }
+      },
+      "cube": {
+        "action_shuffle_gap_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.0059675127267837524,
+          "ci95": [
+            0.001223885454237461,
+            0.010898387059569359
+          ],
+          "probability_B_better_for_lower_metric": 0.0066
+        },
+        "feature_mae": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.0006469190120697021,
+          "ci95": [
+            -0.0005810557049699128,
+            0.001839635893702507
+          ],
+          "probability_B_better_for_lower_metric": 0.1471
+        },
+        "feature_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.0007894504815340042,
+          "ci95": [
+            -0.004307714756578207,
+            0.00246106437407434
+          ],
+          "probability_B_better_for_lower_metric": 0.6777
+        },
+        "persistence_advantage_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.0007894444279372692,
+          "ci95": [
+            -0.0024610660038888454,
+            0.004307711496949196
+          ],
+          "probability_B_better_for_lower_metric": 0.3223
+        },
+        "static_quartile_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.001360993880856161,
+          "ci95": [
+            -0.0003195914830333402,
+            0.0029522816652994754
+          ],
+          "probability_B_better_for_lower_metric": 0.055
+        }
+      }
+    },
+    "C_action_sensitive": {
+      "pusht": {
+        "action_shuffle_gap_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.003964562900364399,
+          "ci95": [
+            -0.007161302957683802,
+            -0.0006561189657077193
+          ],
+          "probability_B_better_for_lower_metric": 0.9908
+        },
+        "feature_mae": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.002163425786420703,
+          "ci95": [
+            -0.0038162905257195234,
+            -0.0005383155075833201
+          ],
+          "probability_B_better_for_lower_metric": 0.9952
+        },
+        "feature_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.0022058323957026005,
+          "ci95": [
+            -0.004719937685877085,
+            0.00026736586005426943
+          ],
+          "probability_B_better_for_lower_metric": 0.9596
+        },
+        "persistence_advantage_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.002205834025517106,
+          "ci95": [
+            -0.0002673629205673933,
+            0.004719939548522234
+          ],
+          "probability_B_better_for_lower_metric": 0.0404
+        },
+        "postnorm_block_angle_challenge_absolute_error": {
+          "n_episodes": 32,
+          "mean_B_minus_A": 0.319378525018692,
+          "ci95": [
+            -1.1711474657058716,
+            1.9050644636154175
+          ],
+          "probability_B_better_for_lower_metric": 0.3416
+        },
+        "postnorm_block_angle_challenge_delta_error": {
+          "n_episodes": 32,
+          "mean_B_minus_A": 0.520603358745575,
+          "ci95": [
+            -1.041074275970459,
+            2.142927646636963
+          ],
+          "probability_B_better_for_lower_metric": 0.2603
+        },
+        "postnorm_block_angle_challenge_persistence_advantage": {
+          "n_episodes": 32,
+          "mean_B_minus_A": -0.3193785548210144,
+          "ci95": [
+            -1.905064344406128,
+            1.171147346496582
+          ],
+          "probability_B_better_for_lower_metric": 0.6584
+        },
+        "postnorm_block_angle_natural_absolute_error": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.2604887783527374,
+          "ci95": [
+            -0.7252156734466553,
+            0.2202947586774826
+          ],
+          "probability_B_better_for_lower_metric": 0.8619
+        },
+        "postnorm_block_angle_natural_delta_error": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.19149312376976013,
+          "ci95": [
+            -0.6778114438056946,
+            0.295009583234787
+          ],
+          "probability_B_better_for_lower_metric": 0.7814
+        },
+        "postnorm_block_angle_natural_persistence_advantage": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.2604887783527374,
+          "ci95": [
+            -0.22029471397399902,
+            0.7252156138420105
+          ],
+          "probability_B_better_for_lower_metric": 0.1381
+        },
+        "postnorm_block_xy_challenge_absolute_error": {
+          "n_episodes": 31,
+          "mean_B_minus_A": -0.31410449743270874,
+          "ci95": [
+            -1.253282070159912,
+            0.5933120250701904
+          ],
+          "probability_B_better_for_lower_metric": 0.745
+        },
+        "postnorm_block_xy_challenge_delta_error": {
+          "n_episodes": 31,
+          "mean_B_minus_A": -0.5668140649795532,
+          "ci95": [
+            -1.424202799797058,
+            0.2812488079071045
+          ],
+          "probability_B_better_for_lower_metric": 0.9067
+        },
+        "postnorm_block_xy_challenge_persistence_advantage": {
+          "n_episodes": 31,
+          "mean_B_minus_A": 0.314104825258255,
+          "ci95": [
+            -0.5933118462562561,
+            1.253282904624939
+          ],
+          "probability_B_better_for_lower_metric": 0.255
+        },
+        "postnorm_block_xy_natural_absolute_error": {
+          "n_episodes": 62,
+          "mean_B_minus_A": -1.5281232595443726,
+          "ci95": [
+            -2.147785186767578,
+            -0.9551956057548523
+          ],
+          "probability_B_better_for_lower_metric": 1.0
+        },
+        "postnorm_block_xy_natural_delta_error": {
+          "n_episodes": 62,
+          "mean_B_minus_A": -1.3881912231445312,
+          "ci95": [
+            -1.9647207260131836,
+            -0.839479923248291
+          ],
+          "probability_B_better_for_lower_metric": 1.0
+        },
+        "postnorm_block_xy_natural_persistence_advantage": {
+          "n_episodes": 62,
+          "mean_B_minus_A": 1.5281232595443726,
+          "ci95": [
+            0.9551954865455627,
+            2.147785186767578
+          ],
+          "probability_B_better_for_lower_metric": 0.0
+        },
+        "static_quartile_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.000621670318651013,
+          "ci95": [
+            -0.0017420417992980216,
+            0.00048093155031286503
+          ],
+          "probability_B_better_for_lower_metric": 0.8636
+        }
+      },
+      "tworoom": {
+        "action_shuffle_gap_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.0056894379667937756,
+          "ci95": [
+            0.00152053392957896,
+            0.010014638304710388
+          ],
+          "probability_B_better_for_lower_metric": 0.0037
+        },
+        "feature_mae": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.0015651264693588018,
+          "ci95": [
+            -0.003662066301330924,
+            0.00042460503755137324
+          ],
+          "probability_B_better_for_lower_metric": 0.9349
+        },
+        "feature_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.0021426097955554724,
+          "ci95": [
+            -0.005000857170671225,
+            0.0005895818467251956
+          ],
+          "probability_B_better_for_lower_metric": 0.9384
+        },
+        "persistence_advantage_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.0021426058374345303,
+          "ci95": [
+            -0.0005895812646485865,
+            0.005000856705009937
+          ],
+          "probability_B_better_for_lower_metric": 0.0616
+        },
+        "static_quartile_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 6.114072554434341e-05,
+          "ci95": [
+            -0.0007698400412361178,
+            0.0008386486980574164
+          ],
+          "probability_B_better_for_lower_metric": 0.4312
+        }
+      },
+      "cube": {
+        "action_shuffle_gap_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.010884243063628674,
+          "ci95": [
+            -0.015345320105552673,
+            -0.006267020478844643
+          ],
+          "probability_B_better_for_lower_metric": 1.0
+        },
+        "feature_mae": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.0016534528695046902,
+          "ci95": [
+            -0.00013259441766422242,
+            0.0034267143346369267
+          ],
+          "probability_B_better_for_lower_metric": 0.0343
+        },
+        "feature_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.0035076583735644817,
+          "ci95": [
+            -0.001220467733219266,
+            0.008129839785397053
+          ],
+          "probability_B_better_for_lower_metric": 0.0734
+        },
+        "persistence_advantage_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.0035076483618468046,
+          "ci95": [
+            -0.008129834197461605,
+            0.0012204733211547136
+          ],
+          "probability_B_better_for_lower_metric": 0.9266
+        },
+        "static_quartile_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.00017137051327153932,
+          "ci95": [
+            -0.001389211336451506,
+            0.0016567439827970987
+          ],
+          "probability_B_better_for_lower_metric": 0.4043
+        }
+      }
+    },
+    "D_combined": {
+      "pusht": {
+        "action_shuffle_gap_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.001896468922495842,
+          "ci95": [
+            -0.004752816632390022,
+            0.0010605124989524484
+          ],
+          "probability_B_better_for_lower_metric": 0.899
+        },
+        "feature_mae": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.00022851862013339996,
+          "ci95": [
+            -0.0017536408267915249,
+            0.0012954394333064556
+          ],
+          "probability_B_better_for_lower_metric": 0.6042
+        },
+        "feature_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.00034790823701769114,
+          "ci95": [
+            -0.0024250424467027187,
+            0.0017093658680096269
+          ],
+          "probability_B_better_for_lower_metric": 0.6192
+        },
+        "persistence_advantage_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.0003479084698483348,
+          "ci95": [
+            -0.0017093624919652939,
+            0.0024250419810414314
+          ],
+          "probability_B_better_for_lower_metric": 0.3808
+        },
+        "postnorm_block_angle_challenge_absolute_error": {
+          "n_episodes": 32,
+          "mean_B_minus_A": -0.43292516469955444,
+          "ci95": [
+            -1.4698066711425781,
+            0.5532243251800537
+          ],
+          "probability_B_better_for_lower_metric": 0.7884
+        },
+        "postnorm_block_angle_challenge_delta_error": {
+          "n_episodes": 32,
+          "mean_B_minus_A": 0.06517298519611359,
+          "ci95": [
+            -0.9920176267623901,
+            1.1202616691589355
+          ],
+          "probability_B_better_for_lower_metric": 0.4448
+        },
+        "postnorm_block_angle_challenge_persistence_advantage": {
+          "n_episodes": 32,
+          "mean_B_minus_A": 0.43292486667633057,
+          "ci95": [
+            -0.5532244443893433,
+            1.4698065519332886
+          ],
+          "probability_B_better_for_lower_metric": 0.2116
+        },
+        "postnorm_block_angle_natural_absolute_error": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.028191789984703064,
+          "ci95": [
+            -0.4178980588912964,
+            0.49971693754196167
+          ],
+          "probability_B_better_for_lower_metric": 0.4703
+        },
+        "postnorm_block_angle_natural_delta_error": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.2629890739917755,
+          "ci95": [
+            -0.19946332275867462,
+            0.7372584342956543
+          ],
+          "probability_B_better_for_lower_metric": 0.1388
+        },
+        "postnorm_block_angle_natural_persistence_advantage": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.028191782534122467,
+          "ci95": [
+            -0.49971699714660645,
+            0.41789788007736206
+          ],
+          "probability_B_better_for_lower_metric": 0.5297
+        },
+        "postnorm_block_xy_challenge_absolute_error": {
+          "n_episodes": 31,
+          "mean_B_minus_A": -0.18314629793167114,
+          "ci95": [
+            -1.013475775718689,
+            0.7634379863739014
+          ],
+          "probability_B_better_for_lower_metric": 0.6632
+        },
+        "postnorm_block_xy_challenge_delta_error": {
+          "n_episodes": 31,
+          "mean_B_minus_A": -0.19070123136043549,
+          "ci95": [
+            -1.0171198844909668,
+            0.7293389439582825
+          ],
+          "probability_B_better_for_lower_metric": 0.6693
+        },
+        "postnorm_block_xy_challenge_persistence_advantage": {
+          "n_episodes": 31,
+          "mean_B_minus_A": 0.18314629793167114,
+          "ci95": [
+            -0.7634381055831909,
+            1.0134756565093994
+          ],
+          "probability_B_better_for_lower_metric": 0.3368
+        },
+        "postnorm_block_xy_natural_absolute_error": {
+          "n_episodes": 62,
+          "mean_B_minus_A": -0.4577159583568573,
+          "ci95": [
+            -0.9365071654319763,
+            0.009859910234808922
+          ],
+          "probability_B_better_for_lower_metric": 0.9721
+        },
+        "postnorm_block_xy_natural_delta_error": {
+          "n_episodes": 62,
+          "mean_B_minus_A": -0.3833227753639221,
+          "ci95": [
+            -0.8351765871047974,
+            0.056928783655166626
+          ],
+          "probability_B_better_for_lower_metric": 0.9557
+        },
+        "postnorm_block_xy_natural_persistence_advantage": {
+          "n_episodes": 62,
+          "mean_B_minus_A": 0.45771586894989014,
+          "ci95": [
+            -0.009859886951744556,
+            0.9365070462226868
+          ],
+          "probability_B_better_for_lower_metric": 0.0279
+        },
+        "static_quartile_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -8.900238511462945e-05,
+          "ci95": [
+            -0.0010432143899379292,
+            0.0008406040225963818
+          ],
+          "probability_B_better_for_lower_metric": 0.5694
+        }
+      },
+      "tworoom": {
+        "action_shuffle_gap_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.00259287073276937,
+          "ci95": [
+            -0.000951094669289887,
+            0.0062588234432041645
+          ],
+          "probability_B_better_for_lower_metric": 0.078
+        },
+        "feature_mae": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.0025475730653852224,
+          "ci95": [
+            -0.004549494944512844,
+            -0.0006239077774807811
+          ],
+          "probability_B_better_for_lower_metric": 0.9948
+        },
+        "feature_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.0033974479883909225,
+          "ci95": [
+            -0.006196470465511084,
+            -0.0008297517779283226
+          ],
+          "probability_B_better_for_lower_metric": 0.995
+        },
+        "persistence_advantage_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.0033974472898989916,
+          "ci95": [
+            0.000829750148113817,
+            0.006196469534188509
+          ],
+          "probability_B_better_for_lower_metric": 0.005
+        },
+        "static_quartile_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.0005981631717683439,
+          "ci95": [
+            -0.00013036062973696943,
+            0.001310302735206884
+          ],
+          "probability_B_better_for_lower_metric": 0.0537
+        }
+      },
+      "cube": {
+        "action_shuffle_gap_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.0018494348041713238,
+          "ci95": [
+            -0.00798005796968937,
+            0.004322632681578398
+          ],
+          "probability_B_better_for_lower_metric": 0.7255
+        },
+        "feature_mae": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.00027643097564578056,
+          "ci95": [
+            -0.0015637907199561596,
+            0.0009401933057233691
+          ],
+          "probability_B_better_for_lower_metric": 0.6686
+        },
+        "feature_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": -0.0018890309147536755,
+          "ci95": [
+            -0.0057081496343016624,
+            0.0016468854155391455
+          ],
+          "probability_B_better_for_lower_metric": 0.8417
+        },
+        "persistence_advantage_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.001889026490971446,
+          "ci95": [
+            -0.0016468946123495698,
+            0.005708147305995226
+          ],
+          "probability_B_better_for_lower_metric": 0.1583
+        },
+        "static_quartile_mse": {
+          "n_episodes": 64,
+          "mean_B_minus_A": 0.00037553368989998994,
+          "ci95": [
+            -0.0010124986011457325,
+            0.0017002997005571758
+          ],
+          "probability_B_better_for_lower_metric": 0.2864
+        }
+      }
+    }
+  },
+  "probe_gates": {
+    "H1_source": {
+      "common": {
+        "pusht": {
+          "agent_xy": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "block_xy": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "block_angle": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": false
+          }
+        },
+        "tworoom": {
+          "agent_xy": {
+            "natural_non_challenge": true,
+            "object_motion_challenge": true
+          }
+        },
+        "cube": {
+          "block_xyz": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "effector_xyz": {
+            "natural_non_challenge": true,
+            "object_motion_challenge": true
+          }
+        }
+      },
+      "postnorm_pusht": {
+        "block_xy": {
+          "natural_non_challenge": false,
+          "object_motion_challenge": true
+        },
+        "block_angle": {
+          "natural_non_challenge": false,
+          "object_motion_challenge": true
+        }
+      }
+    },
+    "A_uniform_control": {
+      "common": {
+        "pusht": {
+          "agent_xy": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "block_xy": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "block_angle": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": false
+          }
+        },
+        "tworoom": {
+          "agent_xy": {
+            "natural_non_challenge": true,
+            "object_motion_challenge": true
+          }
+        },
+        "cube": {
+          "block_xyz": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "effector_xyz": {
+            "natural_non_challenge": true,
+            "object_motion_challenge": true
+          }
+        }
+      },
+      "postnorm_pusht": {
+        "block_xy": {
+          "natural_non_challenge": false,
+          "object_motion_challenge": true
+        },
+        "block_angle": {
+          "natural_non_challenge": false,
+          "object_motion_challenge": true
+        }
+      }
+    },
+    "B_motion_balanced": {
+      "common": {
+        "pusht": {
+          "agent_xy": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "block_xy": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "block_angle": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": false
+          }
+        },
+        "tworoom": {
+          "agent_xy": {
+            "natural_non_challenge": true,
+            "object_motion_challenge": true
+          }
+        },
+        "cube": {
+          "block_xyz": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "effector_xyz": {
+            "natural_non_challenge": true,
+            "object_motion_challenge": true
+          }
+        }
+      },
+      "postnorm_pusht": {
+        "block_xy": {
+          "natural_non_challenge": false,
+          "object_motion_challenge": true
+        },
+        "block_angle": {
+          "natural_non_challenge": false,
+          "object_motion_challenge": true
+        }
+      }
+    },
+    "C_action_sensitive": {
+      "common": {
+        "pusht": {
+          "agent_xy": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "block_xy": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "block_angle": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": false
+          }
+        },
+        "tworoom": {
+          "agent_xy": {
+            "natural_non_challenge": true,
+            "object_motion_challenge": true
+          }
+        },
+        "cube": {
+          "block_xyz": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "effector_xyz": {
+            "natural_non_challenge": true,
+            "object_motion_challenge": true
+          }
+        }
+      },
+      "postnorm_pusht": {
+        "block_xy": {
+          "natural_non_challenge": false,
+          "object_motion_challenge": true
+        },
+        "block_angle": {
+          "natural_non_challenge": false,
+          "object_motion_challenge": true
+        }
+      }
+    },
+    "D_combined": {
+      "common": {
+        "pusht": {
+          "agent_xy": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "block_xy": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "block_angle": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": false
+          }
+        },
+        "tworoom": {
+          "agent_xy": {
+            "natural_non_challenge": true,
+            "object_motion_challenge": true
+          }
+        },
+        "cube": {
+          "block_xyz": {
+            "natural_non_challenge": false,
+            "object_motion_challenge": true
+          },
+          "effector_xyz": {
+            "natural_non_challenge": true,
+            "object_motion_challenge": true
+          }
+        }
+      },
+      "postnorm_pusht": {
+        "block_xy": {
+          "natural_non_challenge": false,
+          "object_motion_challenge": true
+        },
+        "block_angle": {
+          "natural_non_challenge": false,
+          "object_motion_challenge": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "scope": "G0 frozen encoder plus production G1-G5 checkpoints",
+  "excludes": [
+    "smoke checkpoints",
+    "feature/probe caches",
+    "logs",
+    "datasets"
+  ],
+  "file_count": 100,
+  "total_bytes": 8177176312,
+  "total_gib": 7.615588895976543,
+  "resume_class_counts": {
+    "frozen_pretrained_backbone": 1,
+    "model_optimizer_no_rng": 33,
+    "exact_model_optimizer_rng": 66
+  },
+  "all_checkpoint_files": 134,
+  "all_checkpoint_bytes": 10948475661,
+  "regenerable_smoke_checkpoint_files": 35,
+  "regenerable_smoke_checkpoint_bytes": 2859549309,
+  "manifest": "reproducibility/STAGE3_CHECKPOINT_MANIFEST.tsv",
+  "rsync_files_from": "reproducibility/STAGE3_CHECKPOINTS_REQUIRED.txt",
+  "recommended_evaluation_artifacts": {
+    "file_count": 6,
+    "total_bytes": 1111601950,
+    "total_gib": 1.0352599900215864,
+    "note": "Regenerable, but required to reproduce evaluations byte-for-byte."
+  }
+}

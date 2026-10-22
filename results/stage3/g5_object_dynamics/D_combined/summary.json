@@ -1,0 +1,9 @@
+{
+  "arm": "D_combined",
+  "source_step": 2000,
+  "new_updates_completed": 500,
+  "final_step": 2500,
+  "source_model_sha256": "1c6d2f5e81f36e6603a0c3b0e271bb47affdcdfedba58e01ca86f6ff48ff2342",
+  "final_model_sha256": "13b28e09bcb4f4963ab2e64874138a01ec741e5df617ad481ace93225bcb677a",
+  "evaluation_deferred": true
+}

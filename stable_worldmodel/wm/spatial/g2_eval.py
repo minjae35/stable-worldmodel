@@ -37,6 +37,8 @@ def token_error_metrics(
     per_patch_motion = (target - current).float().square().mean(dim=-1)
     threshold = torch.quantile(per_patch_motion, 0.75, dim=-1, keepdim=True)
     moving = per_patch_motion >= threshold
+    static_threshold = torch.quantile(per_patch_motion, 0.25, dim=-1, keepdim=True)
+    static = per_patch_motion <= static_threshold
     weights = per_patch_motion / per_patch_motion.sum(dim=-1, keepdim=True).clamp_min(1e-12)
 
     def errors(value):
@@ -48,6 +50,8 @@ def token_error_metrics(
             'l1': float(l1_patch.mean()),
             'moving_quartile_mse': float(mse_patch[moving].mean()),
             'moving_quartile_l1': float(l1_patch[moving].mean()),
+            'static_quartile_mse': float(mse_patch[static].mean()),
+            'static_quartile_l1': float(l1_patch[static].mean()),
             'motion_weighted_mse': float((mse_patch * weights).sum(dim=-1).mean()),
             'motion_weighted_l1': float((l1_patch * weights).sum(dim=-1).mean()),
         }

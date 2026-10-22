@@ -1,0 +1,97 @@
+{
+  "checkpoint": "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/D_combined/checkpoint_step2500.pt",
+  "checkpoint_sha256": "8d3550bba9e4f7ae64742462934d14fef6ee728a3c1e28086408c2fa7a8fefda",
+  "step": 2500,
+  "history": 1,
+  "temporal_encoding": "none",
+  "cache_key": "b7b86ae31cb3152a0c1f7e3d3d4d8e117e524c027ef28b87482e6bbd05cd3215",
+  "readout": "validation-selected L12 object-local crop4; oracle RGB centroid",
+  "evaluation_only": true,
+  "final_holdout_used": false,
+  "targets": {
+    "block_xy": {
+      "natural_non_challenge": {
+        "n": 177,
+        "probe_true_dino_mae": 7.650095462799072,
+        "probe_true_dino_delta_mae": 5.396081447601318,
+        "mean_true_motion": 2.168154239654541,
+        "eligible_for_model_claim": false,
+        "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+        "correct_action_mae": 16.156600952148438,
+        "persistence_mae": 8.991442680358887,
+        "action_shuffle_mae": 16.781845092773438,
+        "delta_motion": {
+          "correct_action_mae": 13.923054695129395,
+          "persistence_mae": 2.168154239654541,
+          "action_shuffle_mae": 14.552190780639648
+        },
+        "interpretation": "diagnostic_only: probe error is not below the motion being measured"
+      },
+      "object_motion_challenge": {
+        "n": 47,
+        "probe_true_dino_mae": 6.9110426902771,
+        "probe_true_dino_delta_mae": 8.553959846496582,
+        "mean_true_motion": 30.235004425048828,
+        "eligible_for_model_claim": true,
+        "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+        "correct_action_mae": 22.863433837890625,
+        "persistence_mae": 28.9959774017334,
+        "action_shuffle_mae": 22.35527229309082,
+        "delta_motion": {
+          "correct_action_mae": 21.198244094848633,
+          "persistence_mae": 30.235004425048828,
+          "action_shuffle_mae": 21.055192947387695
+        }
+      }
+    },
+    "block_angle": {
+      "natural_non_challenge": {
+        "n": 180,
+        "probe_true_dino_mae": 4.2517523765563965,
+        "probe_true_dino_delta_mae": 3.350630760192871,
+        "mean_true_motion": 1.184871792793274,
+        "eligible_for_model_claim": false,
+        "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+        "correct_action_mae": 7.468203544616699,
+        "persistence_mae": 4.289036750793457,
+        "action_shuffle_mae": 7.232508182525635,
+        "delta_motion": {
+          "correct_action_mae": 7.182771682739258,
+          "persistence_mae": 1.184871792793274,
+          "action_shuffle_mae": 6.6722283363342285
+        },
+        "interpretation": "diagnostic_only",
+        "probe_motion_margin": 0.27867845722307377,
+        "claim_gate": "legacy gate and motion/probe-error >= 1.5",
+        "rotation_diagnostics": {
+          "direction_accuracy_ge1deg": 0.5370370370370371,
+          "delta_rotation_mae_deg": 7.182771682739258,
+          "magnitude_mae_deg": 6.381399154663086
+        }
+      },
+      "object_motion_challenge": {
+        "n": 44,
+        "probe_true_dino_mae": 4.940151214599609,
+        "probe_true_dino_delta_mae": 6.875378608703613,
+        "mean_true_motion": 17.701217651367188,
+        "eligible_for_model_claim": true,
+        "gate": "max(probe_true_dino_mae, probe_true_dino_delta_mae) < mean_true_motion",
+        "correct_action_mae": 19.111387252807617,
+        "persistence_mae": 17.256994247436523,
+        "action_shuffle_mae": 21.3405704498291,
+        "delta_motion": {
+          "correct_action_mae": 19.196931838989258,
+          "persistence_mae": 17.701217651367188,
+          "action_shuffle_mae": 20.966737747192383
+        },
+        "probe_motion_margin": 2.5745807843889543,
+        "claim_gate": "legacy gate and motion/probe-error >= 1.5",
+        "rotation_diagnostics": {
+          "direction_accuracy_ge1deg": 0.7272727272727273,
+          "delta_rotation_mae_deg": 19.196931838989258,
+          "magnitude_mae_deg": 15.279135704040527
+        }
+      }
+    }
+  }
+}

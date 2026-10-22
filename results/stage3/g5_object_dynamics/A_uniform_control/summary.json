@@ -1,0 +1,9 @@
+{
+  "arm": "A_uniform_control",
+  "source_step": 2000,
+  "new_updates_completed": 500,
+  "final_step": 2500,
+  "source_model_sha256": "1c6d2f5e81f36e6603a0c3b0e271bb47affdcdfedba58e01ca86f6ff48ff2342",
+  "final_model_sha256": "ea3f37bef80d12f5ce94b59e45fe435760fab419b141bb9e42d1899ed7d13861",
+  "evaluation_deferred": true
+}

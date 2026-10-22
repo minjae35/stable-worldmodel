@@ -1,0 +1,30 @@
+{
+  "A_uniform_control": {
+    "base_grad_norm": 0.2067723125219345,
+    "ranking_lambda": 0.0,
+    "ranking_grad_norm_unit_lambda": 0.0,
+    "combined_grad_norm": 0.2067723125219345,
+    "objective_scale": 1.0
+  },
+  "B_motion_balanced": {
+    "base_grad_norm": 0.2316182553768158,
+    "ranking_lambda": 0.0,
+    "ranking_grad_norm_unit_lambda": 0.0,
+    "combined_grad_norm": 0.2316182553768158,
+    "objective_scale": 0.8927289094097534
+  },
+  "C_action_sensitive": {
+    "base_grad_norm": 0.2067723125219345,
+    "ranking_lambda": 0.890112853536084,
+    "ranking_grad_norm_unit_lambda": 0.058074746280908585,
+    "combined_grad_norm": 0.23974643647670746,
+    "objective_scale": 0.8624625064740992
+  },
+  "D_combined": {
+    "base_grad_norm": 0.2316182553768158,
+    "ranking_lambda": 0.8511983973521812,
+    "ranking_grad_norm_unit_lambda": 0.06072976440191269,
+    "combined_grad_norm": 0.26261478662490845,
+    "objective_scale": 0.7873597491571048
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "sequential": true,
+  "stop_on_first_failure": true,
+  "phases": [
+    {
+      "name": "smoke_prefix_in_budget",
+      "runs": [
+        {
+          "arm": "A_uniform_control",
+          "command": [
+            "/venv/stable-wm/bin/python",
+            "/workspace/stable-worldmodel/scripts/train/g5_object_dynamics.py",
+            "--arm",
+            "A_uniform_control",
+            "--output-dir",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/A_uniform_control",
+            "--plan",
+            "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/experiment_plan.json",
+            "--stop-after-update",
+            "10"
+          ],
+          "returncode": 1,
+          "seconds": 7.163893233053386
+        }
+      ]
+    }
+  ]
+}

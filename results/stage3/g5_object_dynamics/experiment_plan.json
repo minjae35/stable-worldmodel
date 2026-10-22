@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "seed": 3072,
+  "batch_per_environment": 16,
+  "new_updates_per_arm": 500,
+  "total_optimizer_updates": 2000,
+  "smoke_updates_included_in_budget": 10,
+  "arms": [
+    "A_uniform_control",
+    "B_motion_balanced",
+    "C_action_sensitive",
+    "D_combined"
+  ],
+  "source": {
+    "step": 2000,
+    "model_sha256": "1c6d2f5e81f36e6603a0c3b0e271bb47affdcdfedba58e01ca86f6ff48ff2342",
+    "optimizer_steps": [
+      2000
+    ],
+    "rng_present": true,
+    "checkpoint": "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/checkpoint_step2000.pt",
+    "checkpoint_sha256": "66a531c3a7791a759cd3b29ff6862430fb814eb87865c039c903785468cdfda9",
+    "config": "/workspace/stable-worldmodel/results/stage3/g3_history/H1_uniform_mse/config.json"
+  },
+  "common_manifest": "/workspace/stable-worldmodel/results/stage3/g3_history/common_windows.json",
+  "common_manifest_sha256": "37e9194981f29f4b818d6facd36892b171a236d185126522211070e0859c1432",
+  "normalizer_file": "/workspace/stable-worldmodel/results/stage3/g2_fresh_ab/action_normalizers.json",
+  "normalizer_sha256": "dd7194f4747ab0b5ce5be5599d7351ebae48877dd7c6e27892953669470bb0a4",
+  "dino_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+  "train_cache_key": "f6f6deaa911dccb4e01cdb28dc1f9bd055d2d70fd3d502fe73b9e14a0a4f8110",
+  "cache_file_sha256": {
+    "pusht": "48921e578c71a9fa25bf239a22d17caad92ecfdf2f0c9438c6b585c51cbe1ab1",
+    "tworoom": "261b69442ccc21b77762ddee6f69d548ac6be60b49e9846651590b7b704b490f",
+    "cube": "45ff485741de1546ee070ad1b3bbf3e381667ccec4ff7616c986693c9dbaf54b"
+  },
+  "schedule_file": "/workspace/stable-worldmodel/results/stage3/g5_object_dynamics/shared_train_cache/schedules.pt",
+  "schedule_file_sha256": "c11313df05ab3314b300d7fcd4b20a20cf7edd31958e41d8658997f6825e868d",
+  "schedule_sha256": {
+    "pusht": "90e37c78e632691a1e9094f63513c1ac5f0eaa899dc9683a5938498d1a997148",
+    "tworoom": "a0dc8a63bfbaec7452ab13c0456a844771dac4a1b9d5ba074b9b96bdd5d238b9",
+    "cube": "f3553d9165e3ebe56932569c299e2d44164a8bcade47586ea186bc2048dc9b0a"
+  },
+  "schedule_set_sha256": "a627f1daa692c0411c8263c57e3cd4700d263c0d69ee1731f54ebcb408eb825b",
+  "derangement_sha256": {
+    "pusht": "db305c316785ebd3154681e42c5fbf4e96944fa57d90dc1a06dee407c17aacdf",
+    "tworoom": "840e6fe116389ee44800cca9330b90a087788957ba71b2b77388688685f6c441",
+    "cube": "bb4718914f3ff237d56be51df0029c84202cb17f3b73af0507987a616c8e0748"
+  },
+  "derangement_set_sha256": "df24db0ca4a53e9bf592ead0fc3de42bb7f15f18603f89faf152d16813799694",
+  "objective": {
+    "motion_blend": 0.5,
+    "relative_cap": 4.0,
+    "margin_fraction": 0.05
+  },
+  "calibration": {
+    "A_uniform_control": {
+      "base_grad_norm": 0.2067723125219345,
+      "ranking_lambda": 0.0,
+      "ranking_grad_norm_unit_lambda": 0.0,
+      "combined_grad_norm": 0.2067723125219345,
+      "objective_scale": 1.0
+    },
+    "B_motion_balanced": {
+      "base_grad_norm": 0.2316182553768158,
+      "ranking_lambda": 0.0,
+      "ranking_grad_norm_unit_lambda": 0.0,
+      "combined_grad_norm": 0.2316182553768158,
+      "objective_scale": 0.8927289094097534
+    },
+    "C_action_sensitive": {
+      "base_grad_norm": 0.2067723125219345,
+      "ranking_lambda": 0.890112853536084,
+      "ranking_grad_norm_unit_lambda": 0.058074746280908585,
+      "combined_grad_norm": 0.23974643647670746,
+      "objective_scale": 0.8624625064740992
+    },
+    "D_combined": {
+      "base_grad_norm": 0.2316182553768158,
+      "ranking_lambda": 0.8511983973521812,
+      "ranking_grad_norm_unit_lambda": 0.06072976440191269,
+      "combined_grad_norm": 0.26261478662490845,
+      "objective_scale": 0.7873597491571048
+    }
+  },
+  "training_columns": [
+    "episode_idx",
+    "pixels",
+    "action"
+  ],
+  "forbidden_training_inputs": [
+    "object_state",
+    "mask",
+    "reward",
+    "contact",
+    "event_label"
+  ],
+  "architecture": "unchanged Shared SpatialDynamics H1; no temporal encoding",
+  "evaluation_only_labels": true,
+  "schedule_serialization": "tensor_only_weights_only_safe"
+}

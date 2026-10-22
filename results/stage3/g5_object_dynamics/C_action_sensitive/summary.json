@@ -1,0 +1,9 @@
+{
+  "arm": "C_action_sensitive",
+  "source_step": 2000,
+  "new_updates_completed": 500,
+  "final_step": 2500,
+  "source_model_sha256": "1c6d2f5e81f36e6603a0c3b0e271bb47affdcdfedba58e01ca86f6ff48ff2342",
+  "final_model_sha256": "0c24b5b680b3305ff0dd2b30cbbb63b58ffb33b6dd923831b481dcbec9a12c2e",
+  "evaluation_deferred": true
+}

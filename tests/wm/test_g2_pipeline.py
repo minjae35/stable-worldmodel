@@ -335,6 +335,8 @@ def test_common_token_metrics_compare_all_three_baselines():
     assert report['correct_action']['mse'] == 0
     assert report['persistence']['mse'] > 0
     assert report['correct_action']['moving_quartile_mse'] == 0
+    assert report['correct_action']['static_quartile_mse'] == 0
+    assert report['persistence']['static_quartile_mse'] == 0
 
 
 class _IdentityProbe:
